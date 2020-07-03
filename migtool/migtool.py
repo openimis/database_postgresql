@@ -4,8 +4,8 @@ import configparser     # used to read settings from file
 import datetime         # used to properly format dates and datetimes
 import time             # used to calculate time taken
 
-
 # loads connection configuration and migration settings from a file.
+# In future the settings file could be specified with a parameter.
 def getSettingsFromFile():
     print("Loading settings")
     try:
@@ -30,10 +30,11 @@ def getSettingsFromFile():
             global now
             today = datetime.date.today()
             now = datetime.datetime.now()
-    except KeyError:
-        print("\x1b[0;31;48m" + "Error while trying to load settings. Please make sure the settings.ini file " +\
-              "exists in your working directory and has all the necessary settings present." + "\x1b[0m")
+    except KeyError as e:
+        print("\x1b[0;31;48m" + "Error while trying to load settings. " +\
+              "Please make sure the settings.ini file exists in your working directory." + "\x1b[0m")
         exit(1)
+
 
 
 # tries to connect to both databases
@@ -47,12 +48,13 @@ def connect():
         global old_connection
         old_connection = pyodbc.connect(old_connection_string)
     except pyodbc.InterfaceError:
-        print("\x1b[0;31;48m" + "ERROR: Could not connect to the SQL Server database. " +\
-              "Make sure the server is running and check your settings." + "\x1b[0m")
+        print("\x1b[0;31;48m" + \
+              "ERROR: Could not connect to the SQL Server database. Make sure the server is running and check your settings." +\
+              "\x1b[0m")
         exit(1)
     print("  Connection to SQL Server database established.")
 
-    # Establish a connection the the PostgreSQL Database
+    #Establish a connection the the PostgreSQL Database
     new_connection_string = "host=" + settings["NewDB"]["host"] + " port=" + settings["NewDB"]["port"] + " dbname=" +\
                             settings["NewDB"]["name"] + " user=" + settings["NewDB"]["user"] + " password=" +\
                             settings["NewDB"]["pwd"]
@@ -60,8 +62,9 @@ def connect():
         global new_connection
         new_connection = psycopg2.connect(new_connection_string)
     except psycopg2.OperationalError:
-        print("\x1b[0;31;48m" + "ERROR: Could not connect to the PostgreSQL database. " +\
-              "Make sure the server is running and check your settings." + "\x1b[0m")
+        print("\x1b[0;31;48m" + \
+              "ERROR: Could not connect to the PostgreSQL database. Make sure the server is running and check your settings." +\
+              "\x1b[0m")
         exit(1)
 
     # Make cursors for each database
@@ -71,16 +74,16 @@ def connect():
     new_cursor = new_connection.cursor()
     print("  Connection to PostgreSQL database established.\n")
 
-
 # get an ordered list of all tables from a file
 def getTablesFromFile():
-    print("Finding all tables that need to be migrated.")
+    print("Finding all tables that need to be migrated.\n")
     try:
         table_file = open('tables.txt', 'r')
     except FileNotFoundError:
         print("\x1b[0;31;48m" + "Error while trying to load tables.txt. " +\
-              "Please make sure the file exists in your working directory." + "\x1b[0m")
+              "Please make sure the file exists in your working directory. \x1b[0m")
         exit(1)
+
     file_content = table_file.readlines()
 
     tables = list()
@@ -90,7 +93,6 @@ def getTablesFromFile():
             # strip("\r\n") removes line endings from strings
             tables.append(line.strip("\r\n"))
     return tables
-
 
 # get Tables of both databases. This is done to make sure that we're not trying to read from (or write to) a table
 # that does not exist
@@ -109,8 +111,69 @@ def getDBTables():
         # Remove special characters at the start and end of each item when adding it to the list.
         # This way the entries in the old and new list match
         new_tables.append(str(x)[2:-3])
-    return old_tables, new_tables
+    return (old_tables, new_tables)
 
+# This function puts the data from a SELECT statement into string and formats it correctly so that postgres can work
+# with it.
+def generateInsertionString(row):
+    row_str = "("
+    for x in row:
+        # Strings must be enclosed in apostrophes, also escape singe quotes in a string by doubling them
+        if isinstance(x, str):
+            row_str = row_str + "'" + str(x).replace("'", "''") + "', "
+        # Dates and datetimes must be enclosed in apostrophes
+        elif isinstance(x, datetime.datetime) or isinstance(x, datetime.date):
+            row_str = row_str + "'" + str(x) + "', "
+        # If x is NoneType then str(x) get transtlated to "None", but sql wants "null"
+        elif x is None:
+            row_str = row_str + "null, "
+        # If x is bytes we need to make them nice (start with \x and append the data converted to hex):
+        elif isinstance(x, bytes):
+            row_str = row_str + "'\\x" + str(x.hex()) + "', "
+        else:
+            row_str = row_str + str(x) + ", "
+    row_str = row_str[:-2] + ")"
+    return row_str
+
+# When not migrating historical data, this function figures out what colums "ValidityTo" is so we can later check for
+# each row if it is still valid or already historical
+def getValidityIndex(rows):
+    vi = -1
+    try:
+        # rows is a list of tuples. This seems to be the easiest way to get an index out of a list of tuples
+        vi = [x[0] for x in rows].index("ValidityTo")
+    # ValueError occurs if no result has been found. It's fine when that happens
+    except ValueError:
+        pass
+    # Sometimes, the row is called validity_to. Only check if the first bit didn't give a result
+    if vi == -1:
+        try:
+            vi = [x[0] for x in rows].index("validity_to")
+        except ValueError:
+            pass
+    return vi
+
+# This function checks wether
+def getValidity(vi, row):
+    if historical or ((not historical) and vi == -1):
+        return True
+    elif (not historical) and vi != -1:
+        # validity is stored as some form of date.
+        # I cover my bases by checking for a datetime (with time of day) and a date (without time of day)
+        if type(row[vi]) == datetime.datetime:
+            if row[vi] > now:
+                return True
+            else:
+                return False
+        elif type(row[vi]) == datetime.date:
+            if row[vi] > today:
+                return True
+            else:
+                return False
+        # else usually happens when ValidityTo is NoneType (meaning no expiration date is set). This means
+        # that the data must be migrated anyway (no expiration date = it's still valid).
+        else:
+            return True
 
 def migrate():
     # This list collects all db tables that exist only in one of the databases but not the other.
@@ -139,18 +202,7 @@ def migrate():
             # stores in which column the date (ValidityTo) is stored
             validity_index = -1
             if not historical:
-                try:
-                    # rows is a list of tuples. This seems to be the easiest way to get an index out of a list of tuples
-                    validity_index =[x[0] for x in rows].index("ValidityTo")
-                # ValueError occurs if no result has been found. It's fine when that happens
-                except ValueError:
-                    pass
-                # Sometimes, the row is called validity_to. Only check if the first bit didn't give a result
-                if validity_index == -1:
-                    try:
-                        validity_index = [x[0] for x in rows].index("validity_to")
-                    except ValueError:
-                        pass
+                validity_index = getValidityIndex(rows)
             # Finally, setup the columns to migrate
             old_cols = ""
             new_cols = "("
@@ -171,64 +223,38 @@ def migrate():
             for row in old_cursor:
                 # row_str contains all the data in sql format for the insert statement.
                 # We have to adapt the raw data to comply with postgres' syntax.
-                row_str = "("
-                for x in row:
-                    # Strings must be enclosed in apostrophes, also escape singe quotes in a string by doubling them
-                    if isinstance(x,str):
-                        row_str = row_str + "'" + str(x).replace("'","''") + "', "
-                    # Dates and datetimes must be enclosed in apostrophes
-                    elif isinstance(x,datetime.datetime) or isinstance(x,datetime.date):
-                        row_str = row_str + "'" + str(x) + "', "
-                    # If x is NoneType then str(x) get transtlated to "None", but sql wants "null"
-                    elif x is None:
-                        row_str = row_str + "null, "
-                    # If x is bytes we need to make them nice (start with \x and append the data converted to hex):
-                    elif isinstance(x,bytes):
-                        row_str = row_str + "'\\x" + str(x.hex()) + "', "
-                    else:
-                        row_str = row_str + str(x) + ", "
-                row_str = row_str[:-2] + ")"
+                row_str = generateInsertionString(row)
                 # A boolean is used to check wether this row needs to be migrated (because of historical data settings)
-                migrate_bool = False
-                if historical or ((not historical) and validity_index == -1):
-                    migrate_bool = True
-                elif (not historical) and validity_index != -1:
-                    # validity is stored as some form of date.
-                    # I cover my bases by checking for a datetime (with time of day) and a date (without time of day)
-                    if type(row[validity_index]) == datetime.datetime:
-                        if row[validity_index] > now:
-                           migrate_bool = True
-                    elif type(row[validity_index]) ==datetime.date:
-                        if row[validity_index] > today:
-                            migrate_bool = True
-                    # else usually happens when ValidityTo is NoneType (meaning no expiration date is set). This means
-                    # that the data must be migrated anyway (no expiration date = it's still valid).
-                    else:
-                        migrate_bool = True
-                if migrate_bool:
+                # The boolean value is generated in the getValidity function
+                if getValidity(validity_index, row):
                     try:
                         new_cursor.execute("INSERT INTO \"" + table + "\" " + new_cols + " VALUES " + row_str + ";")
                     except psycopg2.errors.UniqueViolation as e:
-                        print("\x1b[0;31;48m" + e.pgerror + "\x1b[0m")
+                        print("\x1b[0;31;48m" + e.pgerror + "\x1b[0m\n")
                         # Not rolling back leads to an InFailedSqlTransaction exception.
                         new_connection.rollback()
                         pass
+
             print("  Table " + table + " has been migrated.\n")
 
         # Table doesn't exist
         else:
             print("\x1b[0;31;48m" + "WARNING: Table " + table + \
-                  " only exists in one of the databases (but not the other)! Is this correct?" + "\x1b[0m")
+                  " only exists in one of the databases (but not the other)! Is this correct?" + "\x1b[0m\n")
             print("")
             lonely_tables.append(table)
 
-    # Finally print all tables that have not been migrated:
-    print("  The following tables do not exist in one of the databases and therefore have not been migrated:")
-    i = 1
-    for x in lonely_tables:
-        print("    {:0>2d}".format(i) + ": " + x)
-        i += 1
+    # Print all tables that have not been migrated due to missing schemas:
+    if len(lonely_tables) != 0:
+        print("The following tables do not exist in one of the databases and therefore have not been migrated:")
+        i = 1
+        for x in lonely_tables:
+            print("    {:0>2d}".format(i) + ": " + x)
+            i += 1
+    else:
+        print("There were no missing tables. All tables have been migrated.")
 
+    # Finally, commit the transaction and close the connections
     print("\nCommiting transaction.")
     new_cursor.execute("COMMIT;")
     print("Closing Connections.")

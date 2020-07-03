@@ -16,7 +16,7 @@ django_session
 auth_group
 auth_permission
 auth_group_permissions
-core_User_Groups
+core_User_groups
 core_ModuleConfiguration
 core_FieldControl
 tblLanguages
@@ -28,7 +28,8 @@ tblRoleRight
 tblUserRole
 core_User_user_permissions
 tblFeedback
-claim_ClaimAttachmentsCountView
+# the following "table" exists as a Django model but it is actually a view
+# claim_ClaimAttachmentsCountView
 tblConfirmationTypes
 tblEducations
 tblFamilyTypes
@@ -72,3 +73,23 @@ tblClaimItems
 tblClaimDedRem
 claim_ClaimAttachment
 health_check_db_testmodel
+# the following tables have not yet been modeled in Django
+tblCeilingInterpretation
+tblControlNumber
+tblControls
+tblEmailSettings
+tblExtracts
+tblFeedbackPrompt
+tblHealthStatus
+tblIdentificationTypes
+tblIMISDefaults
+tblIMISDefaultsPhone
+tblLogins
+tblOfficerVillages
+tblPayerType
+tblPayment
+tblPaymentDetails
+tblPolicyRenewalDetails
+tblPolicyRenewals
+tblReporting
+tblSubmittedPhotos
