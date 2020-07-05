@@ -1,5 +1,6 @@
 # database scripts
-In this directory all scripts to create the openIMIS database in PostgreSQL can be found.
+In this directory all scripts to create the openIMIS database in PostgreSQL can be found. To create these scripts, 
+version 1.4.2 of the openIMIS database was used.
 
 
 ## Contents of the Folder
