@@ -1,5 +1,9 @@
 # database-data-migration_py
-Migration tool to copy the data from MSSQL database to PostgreSQL database
+Migration tool to copy the data from MSSQL database to PostgreSQL database.
+
+## Folders
+The migration tool itself can be found in the "migtool" folder. In the "database scripts" folder are all the SQL scripts 
+needed to create the openIMIS database schema in PostgreSQL. What follows here is a description of the migration tool.
 
 
 ## Prerequisites
@@ -12,7 +16,7 @@ You can install them with the command "pip install pyodbc psycopg2" or by using 
 
 ## Usage
 The migration tool consists of three files:
-* migtool.py - The python code
+* migtool.py - The python code of the script
 * settings.ini - The tool's configuration file
 * tables.txt - The list of all tables that need migrating
 
