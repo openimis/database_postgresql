@@ -4,9 +4,10 @@ import configparser     # used to read settings from file
 import datetime         # used to properly format dates and datetimes
 import time             # used to calculate time taken
 
+
 # loads connection configuration and migration settings from a file.
 # In future the settings file could be specified with a parameter.
-def getSettingsFromFile():
+def get_settings_from_file():
     print("Loading settings")
     try:
         global settings
@@ -36,7 +37,6 @@ def getSettingsFromFile():
         exit(1)
 
 
-
 # tries to connect to both databases
 def connect():
     print("Setting up connection to the databases:")
@@ -47,24 +47,27 @@ def connect():
     try:
         global old_connection
         old_connection = pyodbc.connect(old_connection_string)
-    except pyodbc.InterfaceError:
-        print("\x1b[0;31;48m" + \
-              "ERROR: Could not connect to the SQL Server database. Make sure the server is running and check your settings." +\
+    except pyodbc.InterfaceError as exc:
+        print("\x1b[0;31;48m" +
+              "ERROR: Could not connect to the SQL Server database. Make sure the server is running and check your settings." +
               "\x1b[0m")
+        print(exc)
         exit(1)
     print("  Connection to SQL Server database established.")
 
-    #Establish a connection the the PostgreSQL Database
-    new_connection_string = "host=" + settings["NewDB"]["host"] + " port=" + settings["NewDB"]["port"] + " dbname=" +\
-                            settings["NewDB"]["name"] + " user=" + settings["NewDB"]["user"] + " password=" +\
-                            settings["NewDB"]["pwd"]
+    # Establish a connection the the PostgreSQL Database
+    new_db = settings["NewDB"]
+    new_connection_string = f'host={new_db["host"]} port={new_db["port"]} dbname={new_db["name"]} ' \
+                            f'user={new_db["user"]} password={new_db["pwd"]}'
+    new_connection_string = f'postgres://{new_db["user"]}@{new_db["host"]}:{new_db["port"]}/{new_db["name"]}'
     try:
         global new_connection
         new_connection = psycopg2.connect(new_connection_string)
-    except psycopg2.OperationalError:
-        print("\x1b[0;31;48m" + \
-              "ERROR: Could not connect to the PostgreSQL database. Make sure the server is running and check your settings." +\
+    except psycopg2.OperationalError as exc:
+        print("\x1b[0;31;48m" +
+              "ERROR: Could not connect to the PostgreSQL database. Make sure the server is running and check your settings." +
               "\x1b[0m")
+        print(exc)
         exit(1)
 
     # Make cursors for each database
@@ -74,8 +77,9 @@ def connect():
     new_cursor = new_connection.cursor()
     print("  Connection to PostgreSQL database established.\n")
 
+
 # get an ordered list of all tables from a file
-def getTablesFromFile():
+def get_tables_from_file():
     print("Finding all tables that need to be migrated.\n")
     try:
         table_file = open('tables.txt', 'r')
@@ -94,9 +98,10 @@ def getTablesFromFile():
             tables.append(line.strip("\r\n"))
     return tables
 
+
 # get Tables of both databases. This is done to make sure that we're not trying to read from (or write to) a table
 # that does not exist
-def getDBTables():
+def get_db_tables():
     # Get a list of all tables in each database
     print("Finding tables in both databases.\n")
     old_cursor.execute("SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE';")
@@ -111,11 +116,12 @@ def getDBTables():
         # Remove special characters at the start and end of each item when adding it to the list.
         # This way the entries in the old and new list match
         new_tables.append(str(x)[2:-3])
-    return (old_tables, new_tables)
+    return old_tables, new_tables
+
 
 # This function puts the data from a SELECT statement into string and formats it correctly so that postgres can work
 # with it.
-def generateInsertionString(row):
+def generate_insertion_string(row):
     row_str = "("
     for x in row:
         # Strings must be enclosed in apostrophes, also escape singe quotes in a string by doubling them
@@ -135,9 +141,10 @@ def generateInsertionString(row):
     row_str = row_str[:-2] + ")"
     return row_str
 
+
 # When not migrating historical data, this function figures out what colums "ValidityTo" is so we can later check for
 # each row if it is still valid or already historical
-def getValidityIndex(rows):
+def get_validity_index(rows):
     vi = -1
     try:
         # rows is a list of tuples. This seems to be the easiest way to get an index out of a list of tuples
@@ -153,8 +160,8 @@ def getValidityIndex(rows):
             pass
     return vi
 
-# This function checks wether
-def getValidity(vi, row):
+
+def get_validity(vi, row):
     if historical or ((not historical) and vi == -1):
         return True
     elif (not historical) and vi != -1:
@@ -175,11 +182,12 @@ def getValidity(vi, row):
         else:
             return True
 
+
 def migrate():
     # This list collects all db tables that exist only in one of the databases but not the other.
     lonely_tables = list()
-    tables = getTablesFromFile()
-    (old_tables, new_tables) = getDBTables()
+    tables = get_tables_from_file()
+    (old_tables, new_tables) = get_db_tables()
     print("Starting migration transaction:")
     # Defer all constraint checking to make sure that cross-dependencies are satisfied
     new_cursor.execute("SET CONSTRAINTS ALL DEFERRED;")
@@ -192,7 +200,7 @@ def migrate():
                 print("    Cleaning up table " + table + " in new database.")
                 new_cursor.execute("DELETE FROM \"" + table + "\";")
                 if table == "tblFeedback" and demo_fix:
-                    new_cursor.execute("insert into \"" + table + "\" (\"ValidityFrom\", \"FeedbackID\", " +\
+                    new_cursor.execute("insert into \"" + table + "\" (\"ValidityFrom\", \"FeedbackID\", " +
                             "\"FeedbackUUID\", \"AuditUserID\") VALUES ('2000 01 01 00:00:00.000000', 0, 0, 0);")
 
             # Set up all the columns we're going to migrate.
@@ -202,7 +210,7 @@ def migrate():
             # stores in which column the date (ValidityTo) is stored
             validity_index = -1
             if not historical:
-                validity_index = getValidityIndex(rows)
+                validity_index = get_validity_index(rows)
             # Finally, setup the columns to migrate
             old_cols = ""
             new_cols = "("
@@ -223,10 +231,10 @@ def migrate():
             for row in old_cursor:
                 # row_str contains all the data in sql format for the insert statement.
                 # We have to adapt the raw data to comply with postgres' syntax.
-                row_str = generateInsertionString(row)
+                row_str = generate_insertion_string(row)
                 # A boolean is used to check wether this row needs to be migrated (because of historical data settings)
                 # The boolean value is generated in the getValidity function
-                if getValidity(validity_index, row):
+                if get_validity(validity_index, row):
                     try:
                         new_cursor.execute("INSERT INTO \"" + table + "\" " + new_cols + " VALUES " + row_str + ";")
                     except psycopg2.errors.UniqueViolation as e:
@@ -255,7 +263,7 @@ def migrate():
         print("There were no missing tables. All tables have been migrated.")
 
     # Finally, commit the transaction and close the connections
-    print("\nCommiting transaction.")
+    print("\nCommitting transaction.")
     new_cursor.execute("COMMIT;")
     print("Closing Connections.")
     old_cursor.close()
@@ -265,10 +273,11 @@ def migrate():
     print("Database migration is complete.")
     # Print time taken to finish the job
 
+
 if __name__ == "__main__":
     # start_time is used to calculate how long the migration takes.
     start_time = time.time()
-    getSettingsFromFile()
+    get_settings_from_file()
     connect()
     migrate()
     print("Time taken (h:m:s): " + str(datetime.timedelta(seconds=time.time() - start_time)))

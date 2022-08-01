@@ -2524,7 +2524,9 @@ CREATE TABLE "public"."core_User" (
     "id" "uuid" NOT NULL,
     "username" character varying(25) NOT NULL,
     "i_user_id" integer,
-    "t_user_id" "uuid"
+    "t_user_id" "uuid",
+    claim_admin_id integer,
+    officer_id integer
 );
 
 
@@ -2746,6 +2748,26 @@ CREATE TABLE "public"."django_session" (
 
 ALTER TABLE "public"."django_session" OWNER TO "postgres";
 
+
+create table refresh_token_refreshtoken
+(
+    id bigserial primary key,
+    token   varchar(255) not null,
+    created timestamp with time zone not null,
+    revoked timestamp with time zone,
+    user_id uuid not null
+        constraint refresh_token_refreshtoken_user_id_45383307_fk_core_User_id
+            references "core_User"(id)
+);
+
+create unique index refresh_token_refreshtoken_token_revoked_b683a545_uniq
+    on refresh_token_refreshtoken (token, revoked)
+    where token IS NOT NULL AND revoked IS NOT NULL;
+
+create index refresh_token_refreshtoken_user_id_45383307
+    on refresh_token_refreshtoken (user_id);
+
+
 --
 -- TOC entry 307 (class 1259 OID 21276)
 -- Name: health_check_db_testmodel; Type: TABLE; Schema: public; Owner: postgres
@@ -2940,7 +2962,8 @@ CREATE TABLE "public"."tblClaim" (
     "ICDID3" integer,
     "ICDID4" integer,
     "InsureeID" integer NOT NULL,
-    "RowID" "bytea"
+    "RowID" "bytea",
+    "JsonExt" "text"
 );
 
 
@@ -3087,7 +3110,8 @@ CREATE TABLE "public"."tblClaimItems" (
     "ClaimID" integer NOT NULL,
     "ItemID" integer NOT NULL,
     "PolicyID" integer,
-    "ProdID" integer
+    "ProdID" integer,
+    "JsonExt" text
 );
 
 
@@ -3152,7 +3176,8 @@ CREATE TABLE "public"."tblClaimServices" (
     "ClaimID" integer NOT NULL,
     "PolicyID" integer,
     "ProdID" integer,
-    "ServiceID" integer NOT NULL
+    "ServiceID" integer NOT NULL,
+    "JsonExt" text
 );
 
 
@@ -3387,7 +3412,8 @@ CREATE TABLE "public"."tblFamilies" (
     "FamilyType" character varying(2),
     "InsureeID" integer NOT NULL,
     "LocationId" integer,
-    "RowID" "text"
+    "RowID" "text",
+    "JsonExt" "text"
 );
 
 
@@ -3797,35 +3823,38 @@ ALTER TABLE "public"."tblIdentificationTypes" OWNER TO "postgres";
 --
 
 CREATE TABLE "public"."tblInsuree" (
-    "ValidityFrom" timestamp with time zone NOT NULL,
-    "ValidityTo" timestamp with time zone,
-    "LegacyID" integer,
     "InsureeID" integer NOT NULL,
-    "InsureeUUID" character varying(36) NOT NULL,
-    "CHFID" character varying(12),
-    "LastName" character varying(100) NOT NULL,
-    "OtherNames" character varying(100) NOT NULL,
-    "DOB" "date" NOT NULL,
-    "IsHead" boolean NOT NULL,
-    "Marital" character varying(1),
-    "passport" character varying(25),
-    "Phone" character varying(50),
-    "Email" character varying(100),
-    "CurrentAddress" character varying(200),
-    "GeoLocation" character varying(250),
-    "CurrentVillage" integer,
-    "PhotoDate" "date",
-    "CardIssued" boolean NOT NULL,
-    "isOffline" boolean,
     "AuditUserID" integer NOT NULL,
+    "CHFID" character varying(12),
+    "CardIssued" boolean NOT NULL,
+    "CurrentAddress" character varying(200),
+    "CurrentVillage" integer,
+    "DOB" "date" NOT NULL,
     "Education" smallint,
+    "Email" character varying(100),
     "FamilyID" integer NOT NULL,
     "Gender" character varying(1),
+    "GeoLocation" character varying(250),
     "HFID" integer,
+    "InsureeUUID" character varying(36) NOT NULL,
+    "IsHead" boolean NOT NULL,
+    "LastName" character varying(100) NOT NULL,
+    "LegacyID" integer,
+    "Marital" character varying(1),
+    "OtherNames" character varying(100) NOT NULL,
+    "Phone" character varying(50),
+    "PhotoDate" "date",
     "PhotoID" integer,
     "Profession" smallint,
     "Relationship" smallint,
-    "RowID" "bytea"
+    "RowID" "bytea",
+    "TypeOfId" character varying(1),
+    "ValidityFrom" timestamp with time zone NOT NULL,
+    "ValidityTo" timestamp with time zone,
+    "Vulnerability" boolean,
+    "isOffline" boolean,
+    "passport" character varying(25),
+    "JsonExt" "text"
 );
 
 
@@ -3847,7 +3876,7 @@ CREATE TABLE "public"."tblInsureePolicy" (
     "ExpiryDate" "date",
     "isOffline" boolean,
     "AuditUserID" integer NOT NULL,
-    "InsureeId" integer NOT NULL,
+    "InsureeID" integer NOT NULL,
     "PolicyId" integer NOT NULL,
     "RowID" "bytea"
 );
@@ -3914,6 +3943,7 @@ CREATE TABLE "public"."tblItems" (
     "ItemID" integer NOT NULL,
     "ItemUUID" character varying(36) NOT NULL,
     "LegacyID" integer,
+	"Quantity" decimal(18,2),
     "ItemCode" character varying(6) NOT NULL,
     "ItemName" character varying(100) NOT NULL,
     "ItemType" character varying(1) NOT NULL,
@@ -4071,13 +4101,28 @@ CREATE TABLE "public"."tblOfficerVillages" (
     "LocationId" integer,
     "ValidityFrom" timestamp with time zone,
     "ValidityTo" timestamp with time zone,
-    "LegacyId" integer,
-    "AuditUserId" integer,
-    "RowId" "text" NOT NULL
+    "LegacyID" integer,
+    "AuditUserID" integer,
+    "RowId" "text"  -- NOT NULL
 );
 
 
 ALTER TABLE "public"."tblOfficerVillages" OWNER TO "postgres";
+
+CREATE SEQUENCE "public"."tblOfficerVillages_OfficerVillageId_seq"
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE "public"."tblOfficerVillages_OfficerVillageId_seq" OWNER TO "postgres";
+
+ALTER SEQUENCE "public"."tblOfficerVillages_OfficerVillageId_seq" OWNED BY "public"."tblOfficerVillages"."OfficerVillageId";
+
+
 
 --
 -- TOC entry 221 (class 1259 OID 20346)
@@ -4111,7 +4156,7 @@ ALTER SEQUENCE "public"."tblOfficer_OfficerID_seq" OWNED BY "public"."tblOfficer
 
 CREATE TABLE "public"."tblPLItems" (
     "PLItemID" integer NOT NULL,
-    "PLItemUUID" character varying(36) NOT NULL,
+    "PLItemUUID" uuid NOT NULL,
     "PLItemName" character varying(100) NOT NULL,
     "DatePL" "date" NOT NULL,
     "ValidityFrom" timestamp with time zone NOT NULL,
@@ -4201,7 +4246,7 @@ ALTER SEQUENCE "public"."tblPLItems_PLItemID_seq" OWNED BY "public"."tblPLItems"
 
 CREATE TABLE "public"."tblPLServices" (
     "PLServiceID" integer NOT NULL,
-    "PLServiceUUID" character varying(36) NOT NULL,
+    "PLServiceUUID" uuid NOT NULL,
     "PLServName" character varying(100) NOT NULL,
     "DatePL" "date" NOT NULL,
     "ValidityFrom" timestamp with time zone NOT NULL,
@@ -4427,7 +4472,8 @@ CREATE TABLE "public"."tblPhotos" (
     "ValidityFrom" timestamp with time zone NOT NULL,
     "ValidityTo" timestamp with time zone,
     "AuditUserID" integer,
-    "RowID" "text"
+    "RowID" "text",
+    photo "text"
 );
 
 
@@ -4690,6 +4736,10 @@ CREATE TABLE "public"."tblProduct" (
     "Level2" character varying(1),
     "Level3" character varying(1),
     "Level4" character varying(1),
+    "Sublevel1" character varying(1),
+    "Sublevel2" character varying(1),
+    "Sublevel3" character varying(1),
+    "Sublevel4" character varying(1),
     "RegistrationFee" numeric(18,2),
     "RegistrationLumpSum" numeric(18,2),
     "RowID" "text",
@@ -4703,7 +4753,8 @@ CREATE TABLE "public"."tblProduct" (
     "WeightNumberFamilies" numeric(5,2),
     "WeightNumberInsuredFamilies" numeric(5,2),
     "WeightNumberVisits" numeric(5,2),
-    "WeightPopulation" numeric(5,2)
+    "WeightPopulation" numeric(5,2),
+    "Recurrence" smallint
 );
 
 
@@ -5228,25 +5279,27 @@ ALTER SEQUENCE "public"."tblUserRole_UserRoleID_seq" OWNED BY "public"."tblUserR
 --
 
 CREATE TABLE "public"."tblUsers" (
-    "ValidityFrom" timestamp with time zone NOT NULL,
-    "ValidityTo" timestamp with time zone,
-    "LegacyID" integer,
-    "UserID" integer NOT NULL,
-    "UserUUID" character varying(36) NOT NULL,
-    "LastName" character varying(100) NOT NULL,
-    "OtherNames" character varying(100) NOT NULL,
-    "Phone" character varying(50),
-    "LoginName" character varying(25) NOT NULL,
-    "HFID" integer,
     "AuditUserID" integer NOT NULL,
-    "password" "bytea",
     "DummyPwd" character varying(25),
     "EmailId" character varying(200),
+    "HFID" integer,
+    "IsAssociated" boolean,
+    "LanguageID" character varying(5) NOT NULL,
+    "LastLogin" timestamp with time zone,
+    "LastName" character varying(100) NOT NULL,
+    "LegacyID" integer,
+    "LoginName" character varying(25) NOT NULL,
+    "OtherNames" character varying(100) NOT NULL,
+    "PasswordValidity" timestamp with time zone,
+    "Phone" character varying(50),
     "PrivateKey" character varying(256),
     "StoredPassword" character varying(256),
-    "PasswordValidity" timestamp with time zone,
-    "IsAssociated" boolean,
-    "LanguageID" character varying(5) NOT NULL
+    "RoleID" integer,
+    "UserID" integer NOT NULL,
+    "UserUUID" character varying(36) NOT NULL,
+    "ValidityFrom" timestamp with time zone NOT NULL,
+    "ValidityTo" timestamp with time zone,
+    "password" "bytea"
 );
 
 
@@ -5293,6 +5346,66 @@ ALTER TABLE "public"."tblUsersDistricts_UserDistrictID_seq" OWNER TO "postgres";
 --
 
 ALTER SEQUENCE "public"."tblUsersDistricts_UserDistrictID_seq" OWNED BY "public"."tblUsersDistricts"."UserDistrictID";
+
+
+-- SECTION mutations
+
+create table "core_UserMutation"
+(
+    id          uuid primary key,
+    core_user_id   integer not null,
+    mutation_id uuid not null
+);
+
+
+create index "core_UserMutation_mutation_id_10b94d76"
+    on "core_UserMutation" (mutation_id);
+
+create index "core_UserMutation_core_user_id_12d89786"
+    on "core_UserMutation" (core_user_id);
+
+create table "insuree_FamilyMutation"
+(
+    id          uuid primary key,
+    family_id   integer not null,
+    mutation_id uuid not null
+);
+
+
+create index "insuree_FamilyMutation_mutation_id_10b94d76"
+    on "insuree_FamilyMutation" (mutation_id);
+
+create index "insuree_FamilyMutation_family_id_12d89786"
+    on "insuree_FamilyMutation" (family_id);
+
+create table "insuree_InsureeMutation"
+(
+    id          uuid primary key,
+    insuree_id   integer not null,
+    mutation_id uuid not null
+);
+
+
+create index "insuree_InsureeMutation_mutation_id_88cab16e"
+    on "insuree_InsureeMutation" (mutation_id);
+
+create index "insuree_InsureeMutation_insuree_id_d9f5ddbd"
+    on "insuree_InsureeMutation" (insuree_id);
+
+-- create table "insuree_batch_InsureeBatchMutation"
+-- (
+--     id          uuid primary key,
+--     insuree_batch_id   integer not null,
+--     mutation_id uuid not null
+-- );
+--
+--
+-- create index "insuree_batch_InsureeBatchMutation_mutation_id_d2502256"
+--     on "insuree_InsureeMutation" (mutation_id);
+--
+-- create index "insuree_batch_InsureeBatchMutation_insuree_batch_id_ae5ea5f0"
+--     on "insuree_batch_insureebatch" (insuree_batch_id);
+
 
 
 --
@@ -6715,6 +6828,9 @@ CREATE VIEW "public"."uvwVisit" AS
 
 ALTER TABLE "public"."uvwVisit" OWNER TO "postgres";
 
+
+ALTER TABLE ONLY "public"."tblOfficerVillages" ALTER COLUMN "OfficerVillageId" SET DEFAULT "nextval"('"public"."tblOfficerVillages_OfficerVillageId_seq"'::"regclass");
+
 --
 -- TOC entry 3327 (class 2604 OID 20254)
 -- Name: auth_group id; Type: DEFAULT; Schema: public; Owner: postgres
@@ -7326,15 +7442,6 @@ ALTER TABLE ONLY "public"."location_HealthFacilityMutation"
 
 ALTER TABLE ONLY "public"."location_LocationMutation"
     ADD CONSTRAINT "location_LocationMutation_pkey" PRIMARY KEY ("id");
-
-
---
--- TOC entry 3679 (class 2606 OID 21367)
--- Name: report_ReportDefinition report_ReportDefinition_name_key; Type: CONSTRAINT; Schema: public; Owner: postgres
---
-
-ALTER TABLE ONLY "public"."report_ReportDefinition"
-    ADD CONSTRAINT "report_ReportDefinition_name_key" UNIQUE ("name");
 
 
 --
@@ -8176,6 +8283,9 @@ CREATE INDEX "core_User_groups_user_id_06a128ce" ON "public"."core_User_groups" 
 --
 
 CREATE INDEX "core_User_i_user_id_0537e04c" ON "public"."core_User" USING "btree" ("i_user_id");
+
+CREATE INDEX "core_User_officer_id" ON "public"."core_User" USING "btree" ("officer_id");
+CREATE INDEX "core_User_claim_admin_id" ON "public"."core_User" USING "btree" ("claim_admin_id");
 
 
 --
@@ -10041,6 +10151,45 @@ ALTER TABLE ONLY "public"."tblUsersDistricts"
 
 ALTER TABLE ONLY "public"."tblUsers"
     ADD CONSTRAINT "tblUsers_LanguageID_41388727_fk_tblLanguages_LanguageCode" FOREIGN KEY ("LanguageID") REFERENCES "public"."tblLanguages"("LanguageCode") DEFERRABLE INITIALLY DEFERRED;
+
+
+-- Mutations
+
+ALTER TABLE ONLY "public"."core_UserMutation"
+    ADD CONSTRAINT "FK_core_UserMutation_core_user_id"
+        FOREIGN KEY ("core_user_id") REFERENCES "public"."core_User"("id")
+            DEFERRABLE INITIALLY DEFERRED;
+ALTER TABLE ONLY "public"."core_UserMutation"
+    ADD CONSTRAINT "FK_core_UserMutation_core_Mutation_Log_id"
+        FOREIGN KEY ("mutation_id") REFERENCES "public"."core_Mutation_Log"("id")
+            DEFERRABLE INITIALLY DEFERRED;
+
+ALTER TABLE ONLY "public"."insuree_FamilyMutation"
+    ADD CONSTRAINT "FK_insuree_FamilyMutation_tblFamilies_FamilyID"
+        FOREIGN KEY ("family_id") REFERENCES "public"."tblFamilies"("FamilyID")
+            DEFERRABLE INITIALLY DEFERRED;
+ALTER TABLE ONLY "public"."insuree_FamilyMutation"
+    ADD CONSTRAINT "FK_insuree_FamilyMutation_core_Mutation_Log_id"
+        FOREIGN KEY ("mutation_id") REFERENCES "public"."core_Mutation_Log"("id")
+            DEFERRABLE INITIALLY DEFERRED;
+
+ALTER TABLE ONLY "public"."insuree_InsureeMutation"
+    ADD CONSTRAINT "FK_insuree_InsureeMutation_tblInsuree_InsureeID"
+        FOREIGN KEY ("insuree_id") REFERENCES "public"."tblInsuree"("InsureeID")
+            DEFERRABLE INITIALLY DEFERRED;
+ALTER TABLE ONLY "public"."insuree_InsureeMutation"
+    ADD CONSTRAINT "FK_insuree_InsureeMutation_core_Mutation_Log_id"
+        FOREIGN KEY ("mutation_id") REFERENCES "public"."core_Mutation_Log"("id")
+            DEFERRABLE INITIALLY DEFERRED;
+
+-- ALTER TABLE ONLY "public"."insuree_batch_InsureeBatchMutation"
+--     ADD CONSTRAINT "FK_insuree_batch_InsureeBatchMutation_insuree_batch"
+--         FOREIGN KEY ("insuree_batch_id") REFERENCES "public"."insuree_batch_insureebatch"("insuree_batch_id")
+--             DEFERRABLE INITIALLY DEFERRED;
+-- ALTER TABLE ONLY "public"."insuree_batch_InsureeBatchMutation"
+--     ADD CONSTRAINT "FK_insuree_batch_InsureeBatchMutation_core_Mutation_Log_id"
+--         FOREIGN KEY ("mutation_id") REFERENCES "public"."core_Mutation_Log"("id")
+--             DEFERRABLE INITIALLY DEFERRED;
 
 
 --

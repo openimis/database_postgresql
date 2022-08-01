@@ -7,12 +7,20 @@ needed to create the openIMIS database schema in PostgreSQL. What follows here i
 
 
 ## Prerequisites
+
+The unixodbc module needs to be installed with your package manager. (apt/yum/brew)
+
 The migration tool requires two packages to be installed.
 * pyodbc
 * psycopg2
 
 You can install them with the command "pip install pyodbc psycopg2" or by using the provided requirements.txt file.
 
+ARM systems like M1 Macs will need to force the following flags when installing the pyodbc module:
+```
+export LDFLAGS="-L/opt/homebrew/Cellar/unixodbc/2.3.11/lib"
+export CPPFLAGS="-I/opt/homebrew/Cellar/unixodbc/2.3.11/include"
+```
 
 ## Usage
 The migration tool consists of three files:
@@ -85,3 +93,4 @@ establishes. If You re-order the list it may be possible that You run into an is
 will be violated because the order of tables to migrate is wrong. There's also the possibility that some tables that 
 should exist are missing completely (from both databases). If no tables.txt is present to check against how would You 
 ever know if that happens?
+
