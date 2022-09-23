@@ -1,35 +1,35 @@
+-- --
+-- -- PostgreSQL database dump
+-- --
 --
--- PostgreSQL database dump
+-- -- Dumped from database version 10.12
+-- -- Dumped by pg_dump version 10.12
 --
-
--- Dumped from database version 10.12
--- Dumped by pg_dump version 10.12
-
--- Started on 2020-07-05 14:18:37
-
-SET statement_timeout = 0;
-SET lock_timeout = 0;
-SET idle_in_transaction_session_timeout = 0;
-SET client_encoding = 'UTF8';
-SET standard_conforming_strings = on;
-SELECT pg_catalog.set_config('search_path', '', false);
-SET check_function_bodies = false;
-SET xmloption = content;
-SET client_min_messages = warning;
-SET row_security = off;
-
-DROP DATABASE "openimis";
+-- -- Started on 2020-07-05 14:18:37
 --
--- TOC entry 3987 (class 1262 OID 16393)
--- Name: openimis; Type: DATABASE; Schema: -; Owner: postgres
+-- SET statement_timeout = 0;
+-- SET lock_timeout = 0;
+-- SET idle_in_transaction_session_timeout = 0;
+-- SET client_encoding = 'UTF8';
+-- SET standard_conforming_strings = on;
+-- SELECT pg_catalog.set_config('search_path', '', false);
+-- SET check_function_bodies = false;
+-- SET xmloption = content;
+-- SET client_min_messages = warning;
+-- SET row_security = off;
 --
-
-CREATE DATABASE "openimis" WITH TEMPLATE = template0 ENCODING = 'UTF8' LC_COLLATE = 'English_United States.1252' LC_CTYPE = 'English_United States.1252';
-
-
-ALTER DATABASE "openimis" OWNER TO "postgres";
-
-\connect "openimis"
+-- DROP DATABASE "openimis";
+-- --
+-- -- TOC entry 3987 (class 1262 OID 16393)
+-- -- Name: openimis; Type: DATABASE; Schema: -; Owner: postgres
+-- --
+--
+-- CREATE DATABASE "openimis" WITH TEMPLATE = template0 ENCODING = 'UTF8' LC_COLLATE = 'English_United States.1252' LC_CTYPE = 'English_United States.1252';
+--
+--
+-- ALTER DATABASE "openimis" OWNER TO "postgres";
+--
+-- \connect "openimis"
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -80,7 +80,7 @@ CREATE FUNCTION "public"."dateadd_day"(integer, "date") RETURNS timestamp withou
 $_$;
 
 
-ALTER FUNCTION "public"."dateadd_day"(integer, "date") OWNER TO "postgres";
+-- ALTER FUNCTION "public"."dateadd_day"(integer, "date") OWNER TO "postgres";
 
 --
 -- TOC entry 401 (class 1255 OID 21906)
@@ -94,7 +94,7 @@ CREATE FUNCTION "public"."dateadd_day"(integer, timestamp without time zone) RET
 $_$;
 
 
-ALTER FUNCTION "public"."dateadd_day"(integer, timestamp without time zone) OWNER TO "postgres";
+-- ALTER FUNCTION "public"."dateadd_day"(integer, timestamp without time zone) OWNER TO "postgres";
 
 --
 -- TOC entry 402 (class 1255 OID 21907)
@@ -108,7 +108,7 @@ CREATE FUNCTION "public"."dateadd_day"(integer, timestamp with time zone) RETURN
 $_$;
 
 
-ALTER FUNCTION "public"."dateadd_day"(integer, timestamp with time zone) OWNER TO "postgres";
+-- ALTER FUNCTION "public"."dateadd_day"(integer, timestamp with time zone) OWNER TO "postgres";
 
 --
 -- TOC entry 400 (class 1255 OID 21905)
@@ -122,7 +122,7 @@ CREATE FUNCTION "public"."dateadd_month"(integer, "date") RETURNS timestamp with
 $_$;
 
 
-ALTER FUNCTION "public"."dateadd_month"(integer, "date") OWNER TO "postgres";
+-- ALTER FUNCTION "public"."dateadd_month"(integer, "date") OWNER TO "postgres";
 
 --
 -- TOC entry 398 (class 1255 OID 21903)
@@ -136,7 +136,7 @@ CREATE FUNCTION "public"."dateadd_month"(integer, timestamp without time zone) R
 $_$;
 
 
-ALTER FUNCTION "public"."dateadd_month"(integer, timestamp without time zone) OWNER TO "postgres";
+-- ALTER FUNCTION "public"."dateadd_month"(integer, timestamp without time zone) OWNER TO "postgres";
 
 --
 -- TOC entry 399 (class 1255 OID 21904)
@@ -150,7 +150,7 @@ CREATE FUNCTION "public"."dateadd_month"(integer, timestamp with time zone) RETU
 $_$;
 
 
-ALTER FUNCTION "public"."dateadd_month"(integer, timestamp with time zone) OWNER TO "postgres";
+-- ALTER FUNCTION "public"."dateadd_month"(integer, timestamp with time zone) OWNER TO "postgres";
 
 --
 -- TOC entry 410 (class 1255 OID 25749)
@@ -164,7 +164,7 @@ CREATE FUNCTION "public"."dateadd_year"(integer, "date") RETURNS timestamp witho
 $_$;
 
 
-ALTER FUNCTION "public"."dateadd_year"(integer, "date") OWNER TO "postgres";
+-- ALTER FUNCTION "public"."dateadd_year"(integer, "date") OWNER TO "postgres";
 
 --
 -- TOC entry 407 (class 1255 OID 25747)
@@ -178,7 +178,7 @@ CREATE FUNCTION "public"."dateadd_year"(integer, timestamp without time zone) RE
 $_$;
 
 
-ALTER FUNCTION "public"."dateadd_year"(integer, timestamp without time zone) OWNER TO "postgres";
+-- ALTER FUNCTION "public"."dateadd_year"(integer, timestamp without time zone) OWNER TO "postgres";
 
 --
 -- TOC entry 409 (class 1255 OID 25748)
@@ -192,7 +192,7 @@ CREATE FUNCTION "public"."dateadd_year"(integer, timestamp with time zone) RETUR
 $_$;
 
 
-ALTER FUNCTION "public"."dateadd_year"(integer, timestamp with time zone) OWNER TO "postgres";
+-- ALTER FUNCTION "public"."dateadd_year"(integer, timestamp with time zone) OWNER TO "postgres";
 
 --
 -- TOC entry 390 (class 1255 OID 21590)
@@ -206,7 +206,7 @@ CREATE FUNCTION "public"."datediff_day"("date", "date") RETURNS integer
 $_$;
 
 
-ALTER FUNCTION "public"."datediff_day"("date", "date") OWNER TO "postgres";
+-- ALTER FUNCTION "public"."datediff_day"("date", "date") OWNER TO "postgres";
 
 --
 -- TOC entry 389 (class 1255 OID 21587)
@@ -220,7 +220,7 @@ CREATE FUNCTION "public"."datediff_day"(timestamp without time zone, timestamp w
 $_$;
 
 
-ALTER FUNCTION "public"."datediff_day"(timestamp without time zone, timestamp without time zone) OWNER TO "postgres";
+-- ALTER FUNCTION "public"."datediff_day"(timestamp without time zone, timestamp without time zone) OWNER TO "postgres";
 
 --
 -- TOC entry 375 (class 1255 OID 21588)
@@ -234,7 +234,7 @@ CREATE FUNCTION "public"."datediff_day"(timestamp with time zone, timestamp with
 $_$;
 
 
-ALTER FUNCTION "public"."datediff_day"(timestamp with time zone, timestamp with time zone) OWNER TO "postgres";
+-- ALTER FUNCTION "public"."datediff_day"(timestamp with time zone, timestamp with time zone) OWNER TO "postgres";
 
 --
 -- TOC entry 388 (class 1255 OID 21578)
@@ -248,7 +248,7 @@ CREATE FUNCTION "public"."datediff_year"("date", "date") RETURNS integer
 $_$;
 
 
-ALTER FUNCTION "public"."datediff_year"("date", "date") OWNER TO "postgres";
+-- ALTER FUNCTION "public"."datediff_year"("date", "date") OWNER TO "postgres";
 
 --
 -- TOC entry 373 (class 1255 OID 21576)
@@ -262,7 +262,7 @@ CREATE FUNCTION "public"."datediff_year"(timestamp without time zone, timestamp 
 $_$;
 
 
-ALTER FUNCTION "public"."datediff_year"(timestamp without time zone, timestamp without time zone) OWNER TO "postgres";
+-- ALTER FUNCTION "public"."datediff_year"(timestamp without time zone, timestamp without time zone) OWNER TO "postgres";
 
 --
 -- TOC entry 374 (class 1255 OID 21577)
@@ -276,7 +276,7 @@ CREATE FUNCTION "public"."datediff_year"(timestamp with time zone, timestamp wit
 $_$;
 
 
-ALTER FUNCTION "public"."datediff_year"(timestamp with time zone, timestamp with time zone) OWNER TO "postgres";
+-- ALTER FUNCTION "public"."datediff_year"(timestamp with time zone, timestamp with time zone) OWNER TO "postgres";
 
 --
 -- TOC entry 393 (class 1255 OID 21648)
@@ -290,7 +290,7 @@ CREATE FUNCTION "public"."datename_q"("date") RETURNS "text"
 $_$;
 
 
-ALTER FUNCTION "public"."datename_q"("date") OWNER TO "postgres";
+-- ALTER FUNCTION "public"."datename_q"("date") OWNER TO "postgres";
 
 --
 -- TOC entry 391 (class 1255 OID 21646)
@@ -304,7 +304,7 @@ CREATE FUNCTION "public"."datename_q"(timestamp without time zone) RETURNS "text
 $_$;
 
 
-ALTER FUNCTION "public"."datename_q"(timestamp without time zone) OWNER TO "postgres";
+-- ALTER FUNCTION "public"."datename_q"(timestamp without time zone) OWNER TO "postgres";
 
 --
 -- TOC entry 392 (class 1255 OID 21647)
@@ -318,7 +318,7 @@ CREATE FUNCTION "public"."datename_q"(timestamp with time zone) RETURNS "text"
 $_$;
 
 
-ALTER FUNCTION "public"."datename_q"(timestamp with time zone) OWNER TO "postgres";
+-- ALTER FUNCTION "public"."datename_q"(timestamp with time zone) OWNER TO "postgres";
 
 --
 -- TOC entry 396 (class 1255 OID 21668)
@@ -332,7 +332,7 @@ CREATE FUNCTION "public"."eomonth"("date") RETURNS timestamp with time zone
 $_$;
 
 
-ALTER FUNCTION "public"."eomonth"("date") OWNER TO "postgres";
+-- ALTER FUNCTION "public"."eomonth"("date") OWNER TO "postgres";
 
 --
 -- TOC entry 394 (class 1255 OID 21666)
@@ -346,7 +346,7 @@ CREATE FUNCTION "public"."eomonth"(timestamp without time zone) RETURNS timestam
 $_$;
 
 
-ALTER FUNCTION "public"."eomonth"(timestamp without time zone) OWNER TO "postgres";
+-- ALTER FUNCTION "public"."eomonth"(timestamp without time zone) OWNER TO "postgres";
 
 --
 -- TOC entry 395 (class 1255 OID 21667)
@@ -360,7 +360,7 @@ CREATE FUNCTION "public"."eomonth"(timestamp with time zone) RETURNS timestamp w
 $_$;
 
 
-ALTER FUNCTION "public"."eomonth"(timestamp with time zone) OWNER TO "postgres";
+-- ALTER FUNCTION "public"."eomonth"(timestamp with time zone) OWNER TO "postgres";
 
 --
 -- TOC entry 367 (class 1255 OID 21427)
@@ -374,7 +374,7 @@ CREATE FUNCTION "public"."month"("date") RETURNS integer
 $_$;
 
 
-ALTER FUNCTION "public"."month"("date") OWNER TO "postgres";
+-- ALTER FUNCTION "public"."month"("date") OWNER TO "postgres";
 
 --
 -- TOC entry 364 (class 1255 OID 21425)
@@ -388,7 +388,7 @@ CREATE FUNCTION "public"."month"(timestamp without time zone) RETURNS integer
 $_$;
 
 
-ALTER FUNCTION "public"."month"(timestamp without time zone) OWNER TO "postgres";
+-- ALTER FUNCTION "public"."month"(timestamp without time zone) OWNER TO "postgres";
 
 --
 -- TOC entry 366 (class 1255 OID 21426)
@@ -402,7 +402,7 @@ CREATE FUNCTION "public"."month"(timestamp with time zone) RETURNS integer
 $_$;
 
 
-ALTER FUNCTION "public"."month"(timestamp with time zone) OWNER TO "postgres";
+-- ALTER FUNCTION "public"."month"(timestamp with time zone) OWNER TO "postgres";
 
 --
 -- TOC entry 372 (class 1255 OID 21433)
@@ -416,7 +416,7 @@ CREATE FUNCTION "public"."quarter"("date") RETURNS integer
 $_$;
 
 
-ALTER FUNCTION "public"."quarter"("date") OWNER TO "postgres";
+-- ALTER FUNCTION "public"."quarter"("date") OWNER TO "postgres";
 
 --
 -- TOC entry 370 (class 1255 OID 21431)
@@ -430,7 +430,7 @@ CREATE FUNCTION "public"."quarter"(timestamp without time zone) RETURNS integer
 $_$;
 
 
-ALTER FUNCTION "public"."quarter"(timestamp without time zone) OWNER TO "postgres";
+-- ALTER FUNCTION "public"."quarter"(timestamp without time zone) OWNER TO "postgres";
 
 --
 -- TOC entry 371 (class 1255 OID 21432)
@@ -444,7 +444,7 @@ CREATE FUNCTION "public"."quarter"(timestamp with time zone) RETURNS integer
 $_$;
 
 
-ALTER FUNCTION "public"."quarter"(timestamp with time zone) OWNER TO "postgres";
+-- ALTER FUNCTION "public"."quarter"(timestamp with time zone) OWNER TO "postgres";
 
 --
 -- TOC entry 397 (class 1255 OID 21807)
@@ -470,7 +470,7 @@ END
 $$;
 
 
-ALTER FUNCTION "public"."udfAPIisValidMaritalStatus"("maritalstatuscode" character varying) OWNER TO "postgres";
+-- ALTER FUNCTION "public"."udfAPIisValidMaritalStatus"("maritalstatuscode" character varying) OWNER TO "postgres";
 
 --
 -- TOC entry 404 (class 1255 OID 21986)
@@ -559,7 +559,7 @@ BEGIN
 END $$;
 
 
-ALTER FUNCTION "public"."udfAvailablePremium"("theMonth" integer, "theYear" integer, "theMode" integer, "ProdID" integer, "LocationId" integer) OWNER TO "postgres";
+-- ALTER FUNCTION "public"."udfAvailablePremium"("theMonth" integer, "theYear" integer, "theMode" integer, "ProdID" integer, "LocationId" integer) OWNER TO "postgres";
 
 --
 -- TOC entry 405 (class 1255 OID 22017)
@@ -599,7 +599,7 @@ BEGIN
 END $$;
 
 
-ALTER FUNCTION "public"."udfCollectedContribution"("datefrom" "date", "dateto" "date", "officerid" integer) OWNER TO "postgres";
+-- ALTER FUNCTION "public"."udfCollectedContribution"("datefrom" "date", "dateto" "date", "officerid" integer) OWNER TO "postgres";
 
 --
 -- TOC entry 411 (class 1255 OID 25790)
@@ -648,7 +648,7 @@ BEGIN
 END $$;
 
 
-ALTER FUNCTION "public"."udfExpiredPolicies"("themonth" integer, "theyear" integer, "themode" integer, "prodid" integer, "locationid" integer) OWNER TO "postgres";
+-- ALTER FUNCTION "public"."udfExpiredPolicies"("themonth" integer, "theyear" integer, "themode" integer, "prodid" integer, "locationid" integer) OWNER TO "postgres";
 
 --
 -- TOC entry 414 (class 1255 OID 25794)
@@ -701,7 +701,7 @@ BEGIN
 END $$;
 
 
-ALTER FUNCTION "public"."udfExpiredPoliciesPhoneStatistics"("datefrom" "date", "dateto" "date", "officerid" integer) OWNER TO "postgres";
+-- ALTER FUNCTION "public"."udfExpiredPoliciesPhoneStatistics"("datefrom" "date", "dateto" "date", "officerid" integer) OWNER TO "postgres";
 
 --
 -- TOC entry 413 (class 1255 OID 25798)
@@ -783,7 +783,7 @@ CREATE FUNCTION "public"."udfGetSnapshotIndicators"("thedate" "date", "officerid
 	END $$;
 
 
-ALTER FUNCTION "public"."udfGetSnapshotIndicators"("thedate" "date", "officerid" integer) OWNER TO "postgres";
+-- ALTER FUNCTION "public"."udfGetSnapshotIndicators"("thedate" "date", "officerid" integer) OWNER TO "postgres";
 
 --
 -- TOC entry 423 (class 1255 OID 25804)
@@ -875,7 +875,7 @@ RETURN;
 END $$;
 
 
-ALTER FUNCTION "public"."udfNewPolicies"("themonth" integer, "theyear" integer, "themode" integer, "prodid" integer, "locationid" integer) OWNER TO "postgres";
+-- ALTER FUNCTION "public"."udfNewPolicies"("themonth" integer, "theyear" integer, "themode" integer, "prodid" integer, "locationid" integer) OWNER TO "postgres";
 
 --
 -- TOC entry 412 (class 1255 OID 25932)
@@ -910,7 +910,7 @@ BEGIN
 END $$;
 
 
-ALTER FUNCTION "public"."udfNewPoliciesPhoneStatistics"("datefrom" "date", "dateto" "date", "officerid" integer) OWNER TO "postgres";
+-- ALTER FUNCTION "public"."udfNewPoliciesPhoneStatistics"("datefrom" "date", "dateto" "date", "officerid" integer) OWNER TO "postgres";
 
 --
 -- TOC entry 422 (class 1255 OID 25937)
@@ -1007,7 +1007,7 @@ RETURN;
 END $$;
 
 
-ALTER FUNCTION "public"."udfNewPolicyInsuree"("themonth" integer, "theyear" integer, "themode" integer, "prodid" integer, "locationid" integer) OWNER TO "postgres";
+-- ALTER FUNCTION "public"."udfNewPolicyInsuree"("themonth" integer, "theyear" integer, "themode" integer, "prodid" integer, "locationid" integer) OWNER TO "postgres";
 
 --
 -- TOC entry 415 (class 1255 OID 25800)
@@ -1053,7 +1053,7 @@ RETURN;
 END $$;
 
 
-ALTER FUNCTION "public"."udfNewlyPremiumCollected"("themonth" integer, "theyear" integer, "themode" integer, "prodid" integer, "locationid" integer) OWNER TO "postgres";
+-- ALTER FUNCTION "public"."udfNewlyPremiumCollected"("themonth" integer, "theyear" integer, "themode" integer, "prodid" integer, "locationid" integer) OWNER TO "postgres";
 
 --
 -- TOC entry 419 (class 1255 OID 25943)
@@ -1123,7 +1123,7 @@ BEGIN
 END $$;
 
 
-ALTER FUNCTION "public"."udfNumberOfCurrentInsuree"() OWNER TO "postgres";
+-- ALTER FUNCTION "public"."udfNumberOfCurrentInsuree"() OWNER TO "postgres";
 
 --
 -- TOC entry 420 (class 1255 OID 25950)
@@ -1207,7 +1207,7 @@ BEGIN
 END $$;
 
 
-ALTER FUNCTION "public"."udfNumberOfCurrentPolicies"() OWNER TO "postgres";
+-- ALTER FUNCTION "public"."udfNumberOfCurrentPolicies"() OWNER TO "postgres";
 
 --
 -- TOC entry 421 (class 1255 OID 25951)
@@ -1260,7 +1260,7 @@ BEGIN
 END $$;
 
 
-ALTER FUNCTION "public"."udfNumberOfPoliciesExpired"() OWNER TO "postgres";
+-- ALTER FUNCTION "public"."udfNumberOfPoliciesExpired"() OWNER TO "postgres";
 
 --
 -- TOC entry 426 (class 1255 OID 25954)
@@ -1347,7 +1347,7 @@ RETURN;
 END $$;
 
 
-ALTER FUNCTION "public"."udfPolicyInsuree"("lastday" "date", "themode" integer, "prodid" integer, "locationid" integer) OWNER TO "postgres";
+-- ALTER FUNCTION "public"."udfPolicyInsuree"("lastday" "date", "themode" integer, "prodid" integer, "locationid" integer) OWNER TO "postgres";
 
 --
 -- TOC entry 424 (class 1255 OID 25956)
@@ -1400,7 +1400,7 @@ RETURN;
 END $$;
 
 
-ALTER FUNCTION "public"."udfPolicyRenewal"("themonth" integer, "theyear" integer, "themode" integer, "prodid" integer, "locationid" integer) OWNER TO "postgres";
+-- ALTER FUNCTION "public"."udfPolicyRenewal"("themonth" integer, "theyear" integer, "themode" integer, "prodid" integer, "locationid" integer) OWNER TO "postgres";
 
 --
 -- TOC entry 425 (class 1255 OID 25958)
@@ -1432,7 +1432,7 @@ RETURN;
 END $$;
 
 
-ALTER FUNCTION "public"."udfPremiumComposition"() OWNER TO "postgres";
+-- ALTER FUNCTION "public"."udfPremiumComposition"() OWNER TO "postgres";
 
 --
 -- TOC entry 428 (class 1255 OID 25975)
@@ -1482,7 +1482,7 @@ BEGIN
 END $$;
 
 
-ALTER FUNCTION "public"."udfRejectedClaims"("themonth" integer, "theyear" integer, "prodid" integer, "hfid" integer, "locationid" integer) OWNER TO "postgres";
+-- ALTER FUNCTION "public"."udfRejectedClaims"("themonth" integer, "theyear" integer, "prodid" integer, "hfid" integer, "locationid" integer) OWNER TO "postgres";
 
 --
 -- TOC entry 429 (class 1255 OID 25976)
@@ -1535,7 +1535,7 @@ BEGIN
 END $$;
 
 
-ALTER FUNCTION "public"."udfRemunerated"("themonth" integer, "theyear" integer, "hfid" integer, "prodid" integer, "locationid" integer) OWNER TO "postgres";
+-- ALTER FUNCTION "public"."udfRemunerated"("themonth" integer, "theyear" integer, "hfid" integer, "prodid" integer, "locationid" integer) OWNER TO "postgres";
 
 --
 -- TOC entry 416 (class 1255 OID 25961)
@@ -1573,7 +1573,7 @@ BEGIN
 END $$;
 
 
-ALTER FUNCTION "public"."udfRenewedPoliciesPhoneStatistics"("datefrom" "date", "dateto" "date", "officerid" integer) OWNER TO "postgres";
+-- ALTER FUNCTION "public"."udfRenewedPoliciesPhoneStatistics"("datefrom" "date", "dateto" "date", "officerid" integer) OWNER TO "postgres";
 
 --
 -- TOC entry 417 (class 1255 OID 25965)
@@ -1622,7 +1622,7 @@ RETURN;
 END $$;
 
 
-ALTER FUNCTION "public"."udfSuspendedPolicies"("themonth" integer, "theyear" integer, "themode" integer, "locationid" integer, "prodid" integer) OWNER TO "postgres";
+-- ALTER FUNCTION "public"."udfSuspendedPolicies"("themonth" integer, "theyear" integer, "themode" integer, "locationid" integer, "prodid" integer) OWNER TO "postgres";
 
 --
 -- TOC entry 418 (class 1255 OID 25970)
@@ -1661,7 +1661,7 @@ BEGIN
 END $$;
 
 
-ALTER FUNCTION "public"."udfSuspendedPoliciesPhoneStatistics"("datefrom" "date", "dateto" "date", "officerid" integer) OWNER TO "postgres";
+-- ALTER FUNCTION "public"."udfSuspendedPoliciesPhoneStatistics"("datefrom" "date", "dateto" "date", "officerid" integer) OWNER TO "postgres";
 
 --
 -- TOC entry 430 (class 1255 OID 25977)
@@ -1711,7 +1711,7 @@ BEGIN
 END $$;
 
 
-ALTER FUNCTION "public"."udfTotalClaims"("themonth" integer, "theyear" integer, "prodid" integer, "hfid" integer, "locationid" integer) OWNER TO "postgres";
+-- ALTER FUNCTION "public"."udfTotalClaims"("themonth" integer, "theyear" integer, "prodid" integer, "hfid" integer, "locationid" integer) OWNER TO "postgres";
 
 --
 -- TOC entry 427 (class 1255 OID 25973)
@@ -1797,7 +1797,7 @@ RETURN;
 END $$;
 
 
-ALTER FUNCTION "public"."udfTotalPolicies"("lastday" "date", "themode" integer, "prodid" integer, "locationid" integer) OWNER TO "postgres";
+-- ALTER FUNCTION "public"."udfTotalPolicies"("lastday" "date", "themode" integer, "prodid" integer, "locationid" integer) OWNER TO "postgres";
 
 --
 -- TOC entry 408 (class 1255 OID 25059)
@@ -1870,7 +1870,7 @@ CREATE FUNCTION "public"."uspGetPolicyPeriod"("prodid" integer, "enroldate" "dat
 END $$;
 
 
-ALTER FUNCTION "public"."uspGetPolicyPeriod"("prodid" integer, "enroldate" "date", "hascycles" bit, "policystage" character varying) OWNER TO "postgres";
+-- ALTER FUNCTION "public"."uspGetPolicyPeriod"("prodid" integer, "enroldate" "date", "hascycles" bit, "policystage" character varying) OWNER TO "postgres";
 
 --
 -- TOC entry 406 (class 1255 OID 22629)
@@ -2064,7 +2064,7 @@ CREATE FUNCTION "public"."uspPolicyValue"("familyid" integer DEFAULT 0, "prodid"
 END $$;
 
 
-ALTER FUNCTION "public"."uspPolicyValue"("familyid" integer, "prodid" integer, "policyid" integer, "policystage" character, "enrolldate" "date", "previouspolicyid" integer, "errorcode" integer) OWNER TO "postgres";
+-- ALTER FUNCTION "public"."uspPolicyValue"("familyid" integer, "prodid" integer, "policyid" integer, "policystage" character, "enrolldate" "date", "previouspolicyid" integer, "errorcode" integer) OWNER TO "postgres";
 
 --
 -- TOC entry 431 (class 1255 OID 23620)
@@ -2226,7 +2226,7 @@ CREATE FUNCTION "public"."uspSSRSPolicyStatus"("rangefrom" timestamp without tim
 END $$;
 
 
-ALTER FUNCTION "public"."uspSSRSPolicyStatus"("rangefrom" timestamp without time zone, "rangeto" timestamp without time zone, "OfficerID" integer, "RegionID" integer, "DistrictID" integer, "villageid" integer, "wardid" integer, "policystatus" integer) OWNER TO "postgres";
+-- ALTER FUNCTION "public"."uspSSRSPolicyStatus"("rangefrom" timestamp without time zone, "rangeto" timestamp without time zone, "OfficerID" integer, "RegionID" integer, "DistrictID" integer, "villageid" integer, "wardid" integer, "policystatus" integer) OWNER TO "postgres";
 
 --
 -- TOC entry 369 (class 1255 OID 21430)
@@ -2240,7 +2240,7 @@ CREATE FUNCTION "public"."year"("date") RETURNS integer
 $_$;
 
 
-ALTER FUNCTION "public"."year"("date") OWNER TO "postgres";
+-- ALTER FUNCTION "public"."year"("date") OWNER TO "postgres";
 
 --
 -- TOC entry 365 (class 1255 OID 21428)
@@ -2254,7 +2254,7 @@ CREATE FUNCTION "public"."year"(timestamp without time zone) RETURNS integer
 $_$;
 
 
-ALTER FUNCTION "public"."year"(timestamp without time zone) OWNER TO "postgres";
+-- ALTER FUNCTION "public"."year"(timestamp without time zone) OWNER TO "postgres";
 
 --
 -- TOC entry 368 (class 1255 OID 21429)
@@ -2268,7 +2268,7 @@ CREATE FUNCTION "public"."year"(timestamp with time zone) RETURNS integer
 $_$;
 
 
-ALTER FUNCTION "public"."year"(timestamp with time zone) OWNER TO "postgres";
+-- ALTER FUNCTION "public"."year"(timestamp with time zone) OWNER TO "postgres";
 
 SET default_tablespace = '';
 
@@ -2285,7 +2285,7 @@ CREATE TABLE "public"."auth_group" (
 );
 
 
-ALTER TABLE "public"."auth_group" OWNER TO "postgres";
+-- ALTER TABLE "public"."auth_group" OWNER TO "postgres";
 
 --
 -- TOC entry 208 (class 1259 OID 20249)
@@ -2301,7 +2301,7 @@ CREATE SEQUENCE "public"."auth_group_id_seq"
     CACHE 1;
 
 
-ALTER TABLE "public"."auth_group_id_seq" OWNER TO "postgres";
+-- ALTER TABLE "public"."auth_group_id_seq" OWNER TO "postgres";
 
 --
 -- TOC entry 3991 (class 0 OID 0)
@@ -2324,7 +2324,7 @@ CREATE TABLE "public"."auth_group_permissions" (
 );
 
 
-ALTER TABLE "public"."auth_group_permissions" OWNER TO "postgres";
+-- ALTER TABLE "public"."auth_group_permissions" OWNER TO "postgres";
 
 --
 -- TOC entry 210 (class 1259 OID 20259)
@@ -2340,7 +2340,7 @@ CREATE SEQUENCE "public"."auth_group_permissions_id_seq"
     CACHE 1;
 
 
-ALTER TABLE "public"."auth_group_permissions_id_seq" OWNER TO "postgres";
+-- ALTER TABLE "public"."auth_group_permissions_id_seq" OWNER TO "postgres";
 
 --
 -- TOC entry 3992 (class 0 OID 0)
@@ -2364,7 +2364,7 @@ CREATE TABLE "public"."auth_permission" (
 );
 
 
-ALTER TABLE "public"."auth_permission" OWNER TO "postgres";
+-- ALTER TABLE "public"."auth_permission" OWNER TO "postgres";
 
 --
 -- TOC entry 206 (class 1259 OID 20241)
@@ -2380,7 +2380,7 @@ CREATE SEQUENCE "public"."auth_permission_id_seq"
     CACHE 1;
 
 
-ALTER TABLE "public"."auth_permission_id_seq" OWNER TO "postgres";
+-- ALTER TABLE "public"."auth_permission_id_seq" OWNER TO "postgres";
 
 --
 -- TOC entry 3993 (class 0 OID 0)
@@ -2412,7 +2412,7 @@ CREATE TABLE "public"."claim_ClaimAttachment" (
 );
 
 
-ALTER TABLE "public"."claim_ClaimAttachment" OWNER TO "postgres";
+-- ALTER TABLE "public"."claim_ClaimAttachment" OWNER TO "postgres";
 
 --
 -- TOC entry 339 (class 1259 OID 21734)
@@ -2426,7 +2426,7 @@ CREATE VIEW "public"."claim_ClaimAttachmentsCountView" AS
   GROUP BY "claim_ClaimAttachment"."claim_id";
 
 
-ALTER TABLE "public"."claim_ClaimAttachmentsCountView" OWNER TO "postgres";
+-- ALTER TABLE "public"."claim_ClaimAttachmentsCountView" OWNER TO "postgres";
 
 --
 -- TOC entry 297 (class 1259 OID 21030)
@@ -2440,7 +2440,7 @@ CREATE TABLE "public"."claim_ClaimMutation" (
 );
 
 
-ALTER TABLE "public"."claim_ClaimMutation" OWNER TO "postgres";
+-- ALTER TABLE "public"."claim_ClaimMutation" OWNER TO "postgres";
 
 --
 -- TOC entry 215 (class 1259 OID 20305)
@@ -2455,7 +2455,7 @@ CREATE TABLE "public"."core_FieldControl" (
 );
 
 
-ALTER TABLE "public"."core_FieldControl" OWNER TO "postgres";
+-- ALTER TABLE "public"."core_FieldControl" OWNER TO "postgres";
 
 --
 -- TOC entry 219 (class 1259 OID 20330)
@@ -2473,7 +2473,7 @@ CREATE TABLE "public"."core_ModuleConfiguration" (
 );
 
 
-ALTER TABLE "public"."core_ModuleConfiguration" OWNER TO "postgres";
+-- ALTER TABLE "public"."core_ModuleConfiguration" OWNER TO "postgres";
 
 --
 -- TOC entry 220 (class 1259 OID 20338)
@@ -2493,7 +2493,7 @@ CREATE TABLE "public"."core_Mutation_Log" (
 );
 
 
-ALTER TABLE "public"."core_Mutation_Log" OWNER TO "postgres";
+-- ALTER TABLE "public"."core_Mutation_Log" OWNER TO "postgres";
 
 --
 -- TOC entry 227 (class 1259 OID 20372)
@@ -2513,7 +2513,7 @@ CREATE TABLE "public"."core_TechnicalUser" (
 );
 
 
-ALTER TABLE "public"."core_TechnicalUser" OWNER TO "postgres";
+-- ALTER TABLE "public"."core_TechnicalUser" OWNER TO "postgres";
 
 --
 -- TOC entry 212 (class 1259 OID 20290)
@@ -2530,7 +2530,7 @@ CREATE TABLE "public"."core_User" (
 );
 
 
-ALTER TABLE "public"."core_User" OWNER TO "postgres";
+-- ALTER TABLE "public"."core_User" OWNER TO "postgres";
 
 --
 -- TOC entry 214 (class 1259 OID 20299)
@@ -2544,7 +2544,7 @@ CREATE TABLE "public"."core_User_groups" (
 );
 
 
-ALTER TABLE "public"."core_User_groups" OWNER TO "postgres";
+-- ALTER TABLE "public"."core_User_groups" OWNER TO "postgres";
 
 --
 -- TOC entry 213 (class 1259 OID 20297)
@@ -2560,7 +2560,7 @@ CREATE SEQUENCE "public"."core_User_groups_id_seq"
     CACHE 1;
 
 
-ALTER TABLE "public"."core_User_groups_id_seq" OWNER TO "postgres";
+-- ALTER TABLE "public"."core_User_groups_id_seq" OWNER TO "postgres";
 
 --
 -- TOC entry 3994 (class 0 OID 0)
@@ -2583,7 +2583,7 @@ CREATE TABLE "public"."core_User_user_permissions" (
 );
 
 
-ALTER TABLE "public"."core_User_user_permissions" OWNER TO "postgres";
+-- ALTER TABLE "public"."core_User_user_permissions" OWNER TO "postgres";
 
 --
 -- TOC entry 230 (class 1259 OID 20390)
@@ -2599,7 +2599,7 @@ CREATE SEQUENCE "public"."core_User_user_permissions_id_seq"
     CACHE 1;
 
 
-ALTER TABLE "public"."core_User_user_permissions_id_seq" OWNER TO "postgres";
+-- ALTER TABLE "public"."core_User_user_permissions_id_seq" OWNER TO "postgres";
 
 --
 -- TOC entry 3995 (class 0 OID 0)
@@ -2628,7 +2628,7 @@ CREATE TABLE "public"."django_admin_log" (
 );
 
 
-ALTER TABLE "public"."django_admin_log" OWNER TO "postgres";
+-- ALTER TABLE "public"."django_admin_log" OWNER TO "postgres";
 
 --
 -- TOC entry 232 (class 1259 OID 20481)
@@ -2644,7 +2644,7 @@ CREATE SEQUENCE "public"."django_admin_log_id_seq"
     CACHE 1;
 
 
-ALTER TABLE "public"."django_admin_log_id_seq" OWNER TO "postgres";
+-- ALTER TABLE "public"."django_admin_log_id_seq" OWNER TO "postgres";
 
 --
 -- TOC entry 3996 (class 0 OID 0)
@@ -2667,7 +2667,7 @@ CREATE TABLE "public"."django_content_type" (
 );
 
 
-ALTER TABLE "public"."django_content_type" OWNER TO "postgres";
+-- ALTER TABLE "public"."django_content_type" OWNER TO "postgres";
 
 --
 -- TOC entry 204 (class 1259 OID 20221)
@@ -2683,7 +2683,7 @@ CREATE SEQUENCE "public"."django_content_type_id_seq"
     CACHE 1;
 
 
-ALTER TABLE "public"."django_content_type_id_seq" OWNER TO "postgres";
+-- ALTER TABLE "public"."django_content_type_id_seq" OWNER TO "postgres";
 
 --
 -- TOC entry 3997 (class 0 OID 0)
@@ -2707,7 +2707,7 @@ CREATE TABLE "public"."django_migrations" (
 );
 
 
-ALTER TABLE "public"."django_migrations" OWNER TO "postgres";
+-- ALTER TABLE "public"."django_migrations" OWNER TO "postgres";
 
 --
 -- TOC entry 202 (class 1259 OID 20210)
@@ -2723,7 +2723,7 @@ CREATE SEQUENCE "public"."django_migrations_id_seq"
     CACHE 1;
 
 
-ALTER TABLE "public"."django_migrations_id_seq" OWNER TO "postgres";
+-- ALTER TABLE "public"."django_migrations_id_seq" OWNER TO "postgres";
 
 --
 -- TOC entry 3998 (class 0 OID 0)
@@ -2746,27 +2746,7 @@ CREATE TABLE "public"."django_session" (
 );
 
 
-ALTER TABLE "public"."django_session" OWNER TO "postgres";
-
-
-create table refresh_token_refreshtoken
-(
-    id bigserial primary key,
-    token   varchar(255) not null,
-    created timestamp with time zone not null,
-    revoked timestamp with time zone,
-    user_id uuid not null
-        constraint refresh_token_refreshtoken_user_id_45383307_fk_core_User_id
-            references "core_User"(id)
-);
-
-create unique index refresh_token_refreshtoken_token_revoked_b683a545_uniq
-    on refresh_token_refreshtoken (token, revoked)
-    where token IS NOT NULL AND revoked IS NOT NULL;
-
-create index refresh_token_refreshtoken_user_id_45383307
-    on refresh_token_refreshtoken (user_id);
-
+-- ALTER TABLE "public"."django_session" OWNER TO "postgres";
 
 --
 -- TOC entry 307 (class 1259 OID 21276)
@@ -2779,7 +2759,7 @@ CREATE TABLE "public"."health_check_db_testmodel" (
 );
 
 
-ALTER TABLE "public"."health_check_db_testmodel" OWNER TO "postgres";
+-- ALTER TABLE "public"."health_check_db_testmodel" OWNER TO "postgres";
 
 --
 -- TOC entry 306 (class 1259 OID 21274)
@@ -2795,7 +2775,7 @@ CREATE SEQUENCE "public"."health_check_db_testmodel_id_seq"
     CACHE 1;
 
 
-ALTER TABLE "public"."health_check_db_testmodel_id_seq" OWNER TO "postgres";
+-- ALTER TABLE "public"."health_check_db_testmodel_id_seq" OWNER TO "postgres";
 
 --
 -- TOC entry 3999 (class 0 OID 0)
@@ -2818,7 +2798,7 @@ CREATE TABLE "public"."location_HealthFacilityMutation" (
 );
 
 
-ALTER TABLE "public"."location_HealthFacilityMutation" OWNER TO "postgres";
+-- ALTER TABLE "public"."location_HealthFacilityMutation" OWNER TO "postgres";
 
 --
 -- TOC entry 249 (class 1259 OID 20578)
@@ -2832,7 +2812,7 @@ CREATE TABLE "public"."location_LocationMutation" (
 );
 
 
-ALTER TABLE "public"."location_LocationMutation" OWNER TO "postgres";
+-- ALTER TABLE "public"."location_LocationMutation" OWNER TO "postgres";
 
 --
 -- TOC entry 308 (class 1259 OID 21358)
@@ -2849,7 +2829,7 @@ CREATE TABLE "public"."report_ReportDefinition" (
 );
 
 
-ALTER TABLE "public"."report_ReportDefinition" OWNER TO "postgres";
+-- ALTER TABLE "public"."report_ReportDefinition" OWNER TO "postgres";
 
 --
 -- TOC entry 283 (class 1259 OID 20929)
@@ -2869,7 +2849,7 @@ CREATE TABLE "public"."tblBatchRun" (
 );
 
 
-ALTER TABLE "public"."tblBatchRun" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblBatchRun" OWNER TO "postgres";
 
 --
 -- TOC entry 282 (class 1259 OID 20927)
@@ -2885,7 +2865,7 @@ CREATE SEQUENCE "public"."tblBatchRun_RunID_seq"
     CACHE 1;
 
 
-ALTER TABLE "public"."tblBatchRun_RunID_seq" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblBatchRun_RunID_seq" OWNER TO "postgres";
 
 --
 -- TOC entry 4000 (class 0 OID 0)
@@ -2909,7 +2889,7 @@ CREATE TABLE "public"."tblCeilingInterpretation" (
 );
 
 
-ALTER TABLE "public"."tblCeilingInterpretation" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblCeilingInterpretation" OWNER TO "postgres";
 
 --
 -- TOC entry 289 (class 1259 OID 20977)
@@ -2967,7 +2947,7 @@ CREATE TABLE "public"."tblClaim" (
 );
 
 
-ALTER TABLE "public"."tblClaim" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblClaim" OWNER TO "postgres";
 
 --
 -- TOC entry 291 (class 1259 OID 20992)
@@ -2993,7 +2973,7 @@ CREATE TABLE "public"."tblClaimAdmin" (
 );
 
 
-ALTER TABLE "public"."tblClaimAdmin" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblClaimAdmin" OWNER TO "postgres";
 
 --
 -- TOC entry 290 (class 1259 OID 20990)
@@ -3009,7 +2989,7 @@ CREATE SEQUENCE "public"."tblClaimAdmin_ClaimAdminId_seq"
     CACHE 1;
 
 
-ALTER TABLE "public"."tblClaimAdmin_ClaimAdminId_seq" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblClaimAdmin_ClaimAdminId_seq" OWNER TO "postgres";
 
 --
 -- TOC entry 4001 (class 0 OID 0)
@@ -3048,7 +3028,7 @@ CREATE TABLE "public"."tblClaimDedRem" (
 );
 
 
-ALTER TABLE "public"."tblClaimDedRem" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblClaimDedRem" OWNER TO "postgres";
 
 --
 -- TOC entry 293 (class 1259 OID 21011)
@@ -3064,7 +3044,7 @@ CREATE SEQUENCE "public"."tblClaimDedRem_ExpenditureID_seq"
     CACHE 1;
 
 
-ALTER TABLE "public"."tblClaimDedRem_ExpenditureID_seq" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblClaimDedRem_ExpenditureID_seq" OWNER TO "postgres";
 
 --
 -- TOC entry 4002 (class 0 OID 0)
@@ -3115,7 +3095,7 @@ CREATE TABLE "public"."tblClaimItems" (
 );
 
 
-ALTER TABLE "public"."tblClaimItems" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblClaimItems" OWNER TO "postgres";
 
 --
 -- TOC entry 295 (class 1259 OID 21019)
@@ -3131,7 +3111,7 @@ CREATE SEQUENCE "public"."tblClaimItems_ClaimItemID_seq"
     CACHE 1;
 
 
-ALTER TABLE "public"."tblClaimItems_ClaimItemID_seq" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblClaimItems_ClaimItemID_seq" OWNER TO "postgres";
 
 --
 -- TOC entry 4003 (class 0 OID 0)
@@ -3181,7 +3161,7 @@ CREATE TABLE "public"."tblClaimServices" (
 );
 
 
-ALTER TABLE "public"."tblClaimServices" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblClaimServices" OWNER TO "postgres";
 
 --
 -- TOC entry 298 (class 1259 OID 21035)
@@ -3197,7 +3177,7 @@ CREATE SEQUENCE "public"."tblClaimServices_ClaimServiceID_seq"
     CACHE 1;
 
 
-ALTER TABLE "public"."tblClaimServices_ClaimServiceID_seq" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblClaimServices_ClaimServiceID_seq" OWNER TO "postgres";
 
 --
 -- TOC entry 4004 (class 0 OID 0)
@@ -3222,7 +3202,7 @@ CREATE SEQUENCE "public"."tblClaim_ClaimID_seq"
     CACHE 1;
 
 
-ALTER TABLE "public"."tblClaim_ClaimID_seq" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblClaim_ClaimID_seq" OWNER TO "postgres";
 
 --
 -- TOC entry 4005 (class 0 OID 0)
@@ -3246,7 +3226,7 @@ CREATE TABLE "public"."tblConfirmationTypes" (
 );
 
 
-ALTER TABLE "public"."tblConfirmationTypes" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblConfirmationTypes" OWNER TO "postgres";
 
 --
 -- TOC entry 357 (class 1259 OID 25546)
@@ -3271,7 +3251,7 @@ CREATE TABLE "public"."tblControlNumber" (
 );
 
 
-ALTER TABLE "public"."tblControlNumber" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblControlNumber" OWNER TO "postgres";
 
 --
 -- TOC entry 356 (class 1259 OID 25533)
@@ -3285,7 +3265,7 @@ CREATE TABLE "public"."tblControls" (
 );
 
 
-ALTER TABLE "public"."tblControls" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblControls" OWNER TO "postgres";
 
 --
 -- TOC entry 248 (class 1259 OID 20570)
@@ -3311,7 +3291,7 @@ CREATE TABLE "public"."tblLocations" (
 );
 
 
-ALTER TABLE "public"."tblLocations" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblLocations" OWNER TO "postgres";
 
 --
 -- TOC entry 311 (class 1259 OID 21421)
@@ -3331,7 +3311,7 @@ CREATE VIEW "public"."tblDistricts" AS
   WHERE (("tblLocations"."ValidityTo" IS NULL) AND (("tblLocations"."LocationType")::"bpchar" = 'D'::"bpchar"));
 
 
-ALTER TABLE "public"."tblDistricts" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblDistricts" OWNER TO "postgres";
 
 --
 -- TOC entry 259 (class 1259 OID 20711)
@@ -3346,7 +3326,7 @@ CREATE TABLE "public"."tblEducations" (
 );
 
 
-ALTER TABLE "public"."tblEducations" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblEducations" OWNER TO "postgres";
 
 --
 -- TOC entry 355 (class 1259 OID 25527)
@@ -3362,7 +3342,7 @@ CREATE TABLE "public"."tblEmailSettings" (
 );
 
 
-ALTER TABLE "public"."tblEmailSettings" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblEmailSettings" OWNER TO "postgres";
 
 --
 -- TOC entry 354 (class 1259 OID 25519)
@@ -3389,7 +3369,7 @@ CREATE TABLE "public"."tblExtracts" (
 );
 
 
-ALTER TABLE "public"."tblExtracts" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblExtracts" OWNER TO "postgres";
 
 --
 -- TOC entry 261 (class 1259 OID 20718)
@@ -3417,7 +3397,7 @@ CREATE TABLE "public"."tblFamilies" (
 );
 
 
-ALTER TABLE "public"."tblFamilies" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblFamilies" OWNER TO "postgres";
 
 --
 -- TOC entry 260 (class 1259 OID 20716)
@@ -3433,7 +3413,7 @@ CREATE SEQUENCE "public"."tblFamilies_FamilyID_seq"
     CACHE 1;
 
 
-ALTER TABLE "public"."tblFamilies_FamilyID_seq" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblFamilies_FamilyID_seq" OWNER TO "postgres";
 
 --
 -- TOC entry 4006 (class 0 OID 0)
@@ -3457,7 +3437,7 @@ CREATE TABLE "public"."tblFamilyTypes" (
 );
 
 
-ALTER TABLE "public"."tblFamilyTypes" OWNER TO "postgres";
+-- -- ALTER TABLE "public"."tblFamilyTypes" OWNER TO "postgres";
 
 --
 -- TOC entry 301 (class 1259 OID 21048)
@@ -3482,7 +3462,7 @@ CREATE TABLE "public"."tblFeedback" (
 );
 
 
-ALTER TABLE "public"."tblFeedback" OWNER TO "postgres";
+-- -- ALTER TABLE "public"."tblFeedback" OWNER TO "postgres";
 
 --
 -- TOC entry 343 (class 1259 OID 25387)
@@ -3503,7 +3483,7 @@ CREATE TABLE "public"."tblFeedbackPrompt" (
 );
 
 
-ALTER TABLE "public"."tblFeedbackPrompt" OWNER TO "postgres";
+-- -- ALTER TABLE "public"."tblFeedbackPrompt" OWNER TO "postgres";
 
 --
 -- TOC entry 300 (class 1259 OID 21046)
@@ -3519,7 +3499,7 @@ CREATE SEQUENCE "public"."tblFeedback_FeedbackID_seq"
     CACHE 1;
 
 
-ALTER TABLE "public"."tblFeedback_FeedbackID_seq" OWNER TO "postgres";
+-- -- ALTER TABLE "public"."tblFeedback_FeedbackID_seq" OWNER TO "postgres";
 
 --
 -- TOC entry 4007 (class 0 OID 0)
@@ -3549,7 +3529,7 @@ CREATE TABLE "public"."tblFromPhone" (
 );
 
 
-ALTER TABLE "public"."tblFromPhone" OWNER TO "postgres";
+-- -- ALTER TABLE "public"."tblFromPhone" OWNER TO "postgres";
 
 --
 -- TOC entry 263 (class 1259 OID 20731)
@@ -3564,7 +3544,7 @@ CREATE TABLE "public"."tblGender" (
 );
 
 
-ALTER TABLE "public"."tblGender" OWNER TO "postgres";
+-- -- ALTER TABLE "public"."tblGender" OWNER TO "postgres";
 
 --
 -- TOC entry 241 (class 1259 OID 20537)
@@ -3597,7 +3577,7 @@ CREATE TABLE "public"."tblHF" (
 );
 
 
-ALTER TABLE "public"."tblHF" OWNER TO "postgres";
+-- -- ALTER TABLE "public"."tblHF" OWNER TO "postgres";
 
 --
 -- TOC entry 243 (class 1259 OID 20547)
@@ -3616,7 +3596,7 @@ CREATE TABLE "public"."tblHFCatchment" (
 );
 
 
-ALTER TABLE "public"."tblHFCatchment" OWNER TO "postgres";
+-- -- ALTER TABLE "public"."tblHFCatchment" OWNER TO "postgres";
 
 --
 -- TOC entry 242 (class 1259 OID 20545)
@@ -3632,7 +3612,7 @@ CREATE SEQUENCE "public"."tblHFCatchment_HFCatchmentId_seq"
     CACHE 1;
 
 
-ALTER TABLE "public"."tblHFCatchment_HFCatchmentId_seq" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblHFCatchment_HFCatchmentId_seq" OWNER TO "postgres";
 
 --
 -- TOC entry 4008 (class 0 OID 0)
@@ -3656,7 +3636,7 @@ CREATE TABLE "public"."tblHFSublevel" (
 );
 
 
-ALTER TABLE "public"."tblHFSublevel" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblHFSublevel" OWNER TO "postgres";
 
 --
 -- TOC entry 240 (class 1259 OID 20535)
@@ -3672,7 +3652,7 @@ CREATE SEQUENCE "public"."tblHF_HfID_seq"
     CACHE 1;
 
 
-ALTER TABLE "public"."tblHF_HfID_seq" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblHF_HfID_seq" OWNER TO "postgres";
 
 --
 -- TOC entry 4009 (class 0 OID 0)
@@ -3699,7 +3679,7 @@ CREATE TABLE "public"."tblHealthStatus" (
 );
 
 
-ALTER TABLE "public"."tblHealthStatus" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblHealthStatus" OWNER TO "postgres";
 
 --
 -- TOC entry 235 (class 1259 OID 20507)
@@ -3718,7 +3698,7 @@ CREATE TABLE "public"."tblICDCodes" (
 );
 
 
-ALTER TABLE "public"."tblICDCodes" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblICDCodes" OWNER TO "postgres";
 
 --
 -- TOC entry 234 (class 1259 OID 20505)
@@ -3734,7 +3714,7 @@ CREATE SEQUENCE "public"."tblICDCodes_ICDID_seq"
     CACHE 1;
 
 
-ALTER TABLE "public"."tblICDCodes_ICDID_seq" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblICDCodes_ICDID_seq" OWNER TO "postgres";
 
 --
 -- TOC entry 4010 (class 0 OID 0)
@@ -3787,7 +3767,7 @@ CREATE TABLE "public"."tblIMISDefaults" (
 );
 
 
-ALTER TABLE "public"."tblIMISDefaults" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblIMISDefaults" OWNER TO "postgres";
 
 --
 -- TOC entry 362 (class 1259 OID 25582)
@@ -3800,7 +3780,7 @@ CREATE TABLE "public"."tblIMISDefaultsPhone" (
 );
 
 
-ALTER TABLE "public"."tblIMISDefaultsPhone" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblIMISDefaultsPhone" OWNER TO "postgres";
 
 --
 -- TOC entry 351 (class 1259 OID 25492)
@@ -3815,7 +3795,7 @@ CREATE TABLE "public"."tblIdentificationTypes" (
 );
 
 
-ALTER TABLE "public"."tblIdentificationTypes" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblIdentificationTypes" OWNER TO "postgres";
 
 --
 -- TOC entry 265 (class 1259 OID 20738)
@@ -3858,7 +3838,7 @@ CREATE TABLE "public"."tblInsuree" (
 );
 
 
-ALTER TABLE "public"."tblInsuree" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblInsuree" OWNER TO "postgres";
 
 --
 -- TOC entry 267 (class 1259 OID 20751)
@@ -3882,7 +3862,7 @@ CREATE TABLE "public"."tblInsureePolicy" (
 );
 
 
-ALTER TABLE "public"."tblInsureePolicy" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblInsureePolicy" OWNER TO "postgres";
 
 --
 -- TOC entry 266 (class 1259 OID 20749)
@@ -3898,7 +3878,7 @@ CREATE SEQUENCE "public"."tblInsureePolicy_InsureePolicyID_seq"
     CACHE 1;
 
 
-ALTER TABLE "public"."tblInsureePolicy_InsureePolicyID_seq" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblInsureePolicy_InsureePolicyID_seq" OWNER TO "postgres";
 
 --
 -- TOC entry 4011 (class 0 OID 0)
@@ -3923,7 +3903,7 @@ CREATE SEQUENCE "public"."tblInsuree_InsureeID_seq"
     CACHE 1;
 
 
-ALTER TABLE "public"."tblInsuree_InsureeID_seq" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblInsuree_InsureeID_seq" OWNER TO "postgres";
 
 --
 -- TOC entry 4012 (class 0 OID 0)
@@ -3959,7 +3939,7 @@ CREATE TABLE "public"."tblItems" (
 );
 
 
-ALTER TABLE "public"."tblItems" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblItems" OWNER TO "postgres";
 
 --
 -- TOC entry 236 (class 1259 OID 20513)
@@ -3975,7 +3955,7 @@ CREATE SEQUENCE "public"."tblItems_ItemID_seq"
     CACHE 1;
 
 
-ALTER TABLE "public"."tblItems_ItemID_seq" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblItems_ItemID_seq" OWNER TO "postgres";
 
 --
 -- TOC entry 4013 (class 0 OID 0)
@@ -3998,7 +3978,7 @@ CREATE TABLE "public"."tblLanguages" (
 );
 
 
-ALTER TABLE "public"."tblLanguages" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblLanguages" OWNER TO "postgres";
 
 --
 -- TOC entry 244 (class 1259 OID 20553)
@@ -4013,7 +3993,7 @@ CREATE TABLE "public"."tblLegalForms" (
 );
 
 
-ALTER TABLE "public"."tblLegalForms" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblLegalForms" OWNER TO "postgres";
 
 --
 -- TOC entry 247 (class 1259 OID 20568)
@@ -4029,7 +4009,7 @@ CREATE SEQUENCE "public"."tblLocations_LocationId_seq"
     CACHE 1;
 
 
-ALTER TABLE "public"."tblLocations_LocationId_seq" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblLocations_LocationId_seq" OWNER TO "postgres";
 
 --
 -- TOC entry 4014 (class 0 OID 0)
@@ -4053,7 +4033,7 @@ CREATE TABLE "public"."tblLogins" (
 );
 
 
-ALTER TABLE "public"."tblLogins" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblLogins" OWNER TO "postgres";
 
 --
 -- TOC entry 222 (class 1259 OID 20348)
@@ -4088,7 +4068,7 @@ CREATE TABLE "public"."tblOfficer" (
 );
 
 
-ALTER TABLE "public"."tblOfficer" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblOfficer" OWNER TO "postgres";
 
 --
 -- TOC entry 363 (class 1259 OID 25585)
@@ -4107,7 +4087,7 @@ CREATE TABLE "public"."tblOfficerVillages" (
 );
 
 
-ALTER TABLE "public"."tblOfficerVillages" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblOfficerVillages" OWNER TO "postgres";
 
 CREATE SEQUENCE "public"."tblOfficerVillages_OfficerVillageId_seq"
     AS integer
@@ -4118,7 +4098,7 @@ CREATE SEQUENCE "public"."tblOfficerVillages_OfficerVillageId_seq"
     CACHE 1;
 
 
-ALTER TABLE "public"."tblOfficerVillages_OfficerVillageId_seq" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblOfficerVillages_OfficerVillageId_seq" OWNER TO "postgres";
 
 ALTER SEQUENCE "public"."tblOfficerVillages_OfficerVillageId_seq" OWNED BY "public"."tblOfficerVillages"."OfficerVillageId";
 
@@ -4138,7 +4118,7 @@ CREATE SEQUENCE "public"."tblOfficer_OfficerID_seq"
     CACHE 1;
 
 
-ALTER TABLE "public"."tblOfficer_OfficerID_seq" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblOfficer_OfficerID_seq" OWNER TO "postgres";
 
 --
 -- TOC entry 4015 (class 0 OID 0)
@@ -4167,7 +4147,7 @@ CREATE TABLE "public"."tblPLItems" (
 );
 
 
-ALTER TABLE "public"."tblPLItems" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblPLItems" OWNER TO "postgres";
 
 --
 -- TOC entry 277 (class 1259 OID 20833)
@@ -4187,7 +4167,7 @@ CREATE TABLE "public"."tblPLItemsDetail" (
 );
 
 
-ALTER TABLE "public"."tblPLItemsDetail" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblPLItemsDetail" OWNER TO "postgres";
 
 --
 -- TOC entry 276 (class 1259 OID 20831)
@@ -4203,7 +4183,7 @@ CREATE SEQUENCE "public"."tblPLItemsDetail_PLItemDetailID_seq"
     CACHE 1;
 
 
-ALTER TABLE "public"."tblPLItemsDetail_PLItemDetailID_seq" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblPLItemsDetail_PLItemDetailID_seq" OWNER TO "postgres";
 
 --
 -- TOC entry 4016 (class 0 OID 0)
@@ -4228,7 +4208,7 @@ CREATE SEQUENCE "public"."tblPLItems_PLItemID_seq"
     CACHE 1;
 
 
-ALTER TABLE "public"."tblPLItems_PLItemID_seq" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblPLItems_PLItemID_seq" OWNER TO "postgres";
 
 --
 -- TOC entry 4017 (class 0 OID 0)
@@ -4258,7 +4238,7 @@ CREATE TABLE "public"."tblPLServices" (
 );
 
 
-ALTER TABLE "public"."tblPLServices" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblPLServices" OWNER TO "postgres";
 
 --
 -- TOC entry 281 (class 1259 OID 20851)
@@ -4278,7 +4258,7 @@ CREATE TABLE "public"."tblPLServicesDetail" (
 );
 
 
-ALTER TABLE "public"."tblPLServicesDetail" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblPLServicesDetail" OWNER TO "postgres";
 
 --
 -- TOC entry 280 (class 1259 OID 20849)
@@ -4294,7 +4274,7 @@ CREATE SEQUENCE "public"."tblPLServicesDetail_PLServiceDetailID_seq"
     CACHE 1;
 
 
-ALTER TABLE "public"."tblPLServicesDetail_PLServiceDetailID_seq" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblPLServicesDetail_PLServiceDetailID_seq" OWNER TO "postgres";
 
 --
 -- TOC entry 4018 (class 0 OID 0)
@@ -4319,7 +4299,7 @@ CREATE SEQUENCE "public"."tblPLServices_PLServiceID_seq"
     CACHE 1;
 
 
-ALTER TABLE "public"."tblPLServices_PLServiceID_seq" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblPLServices_PLServiceID_seq" OWNER TO "postgres";
 
 --
 -- TOC entry 4019 (class 0 OID 0)
@@ -4353,7 +4333,7 @@ CREATE TABLE "public"."tblPayer" (
 );
 
 
-ALTER TABLE "public"."tblPayer" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblPayer" OWNER TO "postgres";
 
 --
 -- TOC entry 359 (class 1259 OID 25564)
@@ -4368,7 +4348,7 @@ CREATE TABLE "public"."tblPayerType" (
 );
 
 
-ALTER TABLE "public"."tblPayerType" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblPayerType" OWNER TO "postgres";
 
 --
 -- TOC entry 302 (class 1259 OID 21234)
@@ -4384,7 +4364,7 @@ CREATE SEQUENCE "public"."tblPayer_PayerID_seq"
     CACHE 1;
 
 
-ALTER TABLE "public"."tblPayer_PayerID_seq" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblPayer_PayerID_seq" OWNER TO "postgres";
 
 --
 -- TOC entry 4020 (class 0 OID 0)
@@ -4428,7 +4408,7 @@ CREATE TABLE "public"."tblPayment" (
 );
 
 
-ALTER TABLE "public"."tblPayment" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblPayment" OWNER TO "postgres";
 
 --
 -- TOC entry 346 (class 1259 OID 25437)
@@ -4453,7 +4433,7 @@ CREATE TABLE "public"."tblPaymentDetails" (
 );
 
 
-ALTER TABLE "public"."tblPaymentDetails" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblPaymentDetails" OWNER TO "postgres";
 
 --
 -- TOC entry 269 (class 1259 OID 20759)
@@ -4477,7 +4457,7 @@ CREATE TABLE "public"."tblPhotos" (
 );
 
 
-ALTER TABLE "public"."tblPhotos" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblPhotos" OWNER TO "postgres";
 
 --
 -- TOC entry 268 (class 1259 OID 20757)
@@ -4493,7 +4473,7 @@ CREATE SEQUENCE "public"."tblPhotos_PhotoID_seq"
     CACHE 1;
 
 
-ALTER TABLE "public"."tblPhotos_PhotoID_seq" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblPhotos_PhotoID_seq" OWNER TO "postgres";
 
 --
 -- TOC entry 4021 (class 0 OID 0)
@@ -4531,7 +4511,7 @@ CREATE TABLE "public"."tblPolicy" (
 );
 
 
-ALTER TABLE "public"."tblPolicy" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblPolicy" OWNER TO "postgres";
 
 --
 -- TOC entry 348 (class 1259 OID 25467)
@@ -4549,7 +4529,7 @@ CREATE TABLE "public"."tblPolicyRenewalDetails" (
 );
 
 
-ALTER TABLE "public"."tblPolicyRenewalDetails" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblPolicyRenewalDetails" OWNER TO "postgres";
 
 --
 -- TOC entry 347 (class 1259 OID 25442)
@@ -4577,7 +4557,7 @@ CREATE TABLE "public"."tblPolicyRenewals" (
 );
 
 
-ALTER TABLE "public"."tblPolicyRenewals" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblPolicyRenewals" OWNER TO "postgres";
 
 --
 -- TOC entry 272 (class 1259 OID 20792)
@@ -4593,7 +4573,7 @@ CREATE SEQUENCE "public"."tblPolicy_PolicyID_seq"
     CACHE 1;
 
 
-ALTER TABLE "public"."tblPolicy_PolicyID_seq" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblPolicy_PolicyID_seq" OWNER TO "postgres";
 
 --
 -- TOC entry 4022 (class 0 OID 0)
@@ -4629,7 +4609,7 @@ CREATE TABLE "public"."tblPremium" (
 );
 
 
-ALTER TABLE "public"."tblPremium" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblPremium" OWNER TO "postgres";
 
 --
 -- TOC entry 304 (class 1259 OID 21244)
@@ -4645,7 +4625,7 @@ CREATE SEQUENCE "public"."tblPremium_PremiumId_seq"
     CACHE 1;
 
 
-ALTER TABLE "public"."tblPremium_PremiumId_seq" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblPremium_PremiumId_seq" OWNER TO "postgres";
 
 --
 -- TOC entry 4023 (class 0 OID 0)
@@ -4758,7 +4738,7 @@ CREATE TABLE "public"."tblProduct" (
 );
 
 
-ALTER TABLE "public"."tblProduct" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblProduct" OWNER TO "postgres";
 
 --
 -- TOC entry 255 (class 1259 OID 20661)
@@ -4793,7 +4773,7 @@ CREATE TABLE "public"."tblProductItems" (
 );
 
 
-ALTER TABLE "public"."tblProductItems" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblProductItems" OWNER TO "postgres";
 
 --
 -- TOC entry 254 (class 1259 OID 20659)
@@ -4809,7 +4789,7 @@ CREATE SEQUENCE "public"."tblProductItems_ProdItemID_seq"
     CACHE 1;
 
 
-ALTER TABLE "public"."tblProductItems_ProdItemID_seq" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblProductItems_ProdItemID_seq" OWNER TO "postgres";
 
 --
 -- TOC entry 4024 (class 0 OID 0)
@@ -4853,7 +4833,7 @@ CREATE TABLE "public"."tblProductServices" (
 );
 
 
-ALTER TABLE "public"."tblProductServices" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblProductServices" OWNER TO "postgres";
 
 --
 -- TOC entry 256 (class 1259 OID 20667)
@@ -4869,7 +4849,7 @@ CREATE SEQUENCE "public"."tblProductServices_ProdServiceID_seq"
     CACHE 1;
 
 
-ALTER TABLE "public"."tblProductServices_ProdServiceID_seq" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblProductServices_ProdServiceID_seq" OWNER TO "postgres";
 
 --
 -- TOC entry 4025 (class 0 OID 0)
@@ -4894,7 +4874,7 @@ CREATE SEQUENCE "public"."tblProduct_ProdID_seq"
     CACHE 1;
 
 
-ALTER TABLE "public"."tblProduct_ProdID_seq" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblProduct_ProdID_seq" OWNER TO "postgres";
 
 --
 -- TOC entry 4026 (class 0 OID 0)
@@ -4918,7 +4898,7 @@ CREATE TABLE "public"."tblProfessions" (
 );
 
 
-ALTER TABLE "public"."tblProfessions" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblProfessions" OWNER TO "postgres";
 
 --
 -- TOC entry 310 (class 1259 OID 21404)
@@ -4937,7 +4917,7 @@ CREATE VIEW "public"."tblRegions" AS
   WHERE (("tblLocations"."ValidityTo" IS NULL) AND (("tblLocations"."LocationType")::"bpchar" = 'R'::"bpchar"));
 
 
-ALTER TABLE "public"."tblRegions" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblRegions" OWNER TO "postgres";
 
 --
 -- TOC entry 285 (class 1259 OID 20937)
@@ -4958,7 +4938,7 @@ CREATE TABLE "public"."tblRelDistr" (
 );
 
 
-ALTER TABLE "public"."tblRelDistr" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblRelDistr" OWNER TO "postgres";
 
 --
 -- TOC entry 284 (class 1259 OID 20935)
@@ -4974,7 +4954,7 @@ CREATE SEQUENCE "public"."tblRelDistr_DistrID_seq"
     CACHE 1;
 
 
-ALTER TABLE "public"."tblRelDistr_DistrID_seq" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblRelDistr_DistrID_seq" OWNER TO "postgres";
 
 --
 -- TOC entry 4027 (class 0 OID 0)
@@ -5007,7 +4987,7 @@ CREATE TABLE "public"."tblRelIndex" (
 );
 
 
-ALTER TABLE "public"."tblRelIndex" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblRelIndex" OWNER TO "postgres";
 
 --
 -- TOC entry 286 (class 1259 OID 20943)
@@ -5023,7 +5003,7 @@ CREATE SEQUENCE "public"."tblRelIndex_RelIndexID_seq"
     CACHE 1;
 
 
-ALTER TABLE "public"."tblRelIndex_RelIndexID_seq" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblRelIndex_RelIndexID_seq" OWNER TO "postgres";
 
 --
 -- TOC entry 4028 (class 0 OID 0)
@@ -5047,7 +5027,7 @@ CREATE TABLE "public"."tblRelations" (
 );
 
 
-ALTER TABLE "public"."tblRelations" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblRelations" OWNER TO "postgres";
 
 --
 -- TOC entry 349 (class 1259 OID 25482)
@@ -5070,7 +5050,7 @@ CREATE TABLE "public"."tblReporting" (
 );
 
 
-ALTER TABLE "public"."tblReporting" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblReporting" OWNER TO "postgres";
 
 --
 -- TOC entry 224 (class 1259 OID 20358)
@@ -5091,7 +5071,7 @@ CREATE TABLE "public"."tblRole" (
 );
 
 
-ALTER TABLE "public"."tblRole" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblRole" OWNER TO "postgres";
 
 --
 -- TOC entry 226 (class 1259 OID 20366)
@@ -5109,7 +5089,7 @@ CREATE TABLE "public"."tblRoleRight" (
 );
 
 
-ALTER TABLE "public"."tblRoleRight" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblRoleRight" OWNER TO "postgres";
 
 --
 -- TOC entry 225 (class 1259 OID 20364)
@@ -5125,7 +5105,7 @@ CREATE SEQUENCE "public"."tblRoleRight_RoleRightID_seq"
     CACHE 1;
 
 
-ALTER TABLE "public"."tblRoleRight_RoleRightID_seq" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblRoleRight_RoleRightID_seq" OWNER TO "postgres";
 
 --
 -- TOC entry 4029 (class 0 OID 0)
@@ -5150,7 +5130,7 @@ CREATE SEQUENCE "public"."tblRole_RoleID_seq"
     CACHE 1;
 
 
-ALTER TABLE "public"."tblRole_RoleID_seq" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblRole_RoleID_seq" OWNER TO "postgres";
 
 --
 -- TOC entry 4030 (class 0 OID 0)
@@ -5186,7 +5166,7 @@ CREATE TABLE "public"."tblServices" (
 );
 
 
-ALTER TABLE "public"."tblServices" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblServices" OWNER TO "postgres";
 
 --
 -- TOC entry 238 (class 1259 OID 20523)
@@ -5202,7 +5182,7 @@ CREATE SEQUENCE "public"."tblServices_ServiceID_seq"
     CACHE 1;
 
 
-ALTER TABLE "public"."tblServices_ServiceID_seq" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblServices_ServiceID_seq" OWNER TO "postgres";
 
 --
 -- TOC entry 4031 (class 0 OID 0)
@@ -5228,7 +5208,7 @@ CREATE TABLE "public"."tblSubmittedPhotos" (
 );
 
 
-ALTER TABLE "public"."tblSubmittedPhotos" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblSubmittedPhotos" OWNER TO "postgres";
 
 --
 -- TOC entry 229 (class 1259 OID 20384)
@@ -5246,7 +5226,7 @@ CREATE TABLE "public"."tblUserRole" (
 );
 
 
-ALTER TABLE "public"."tblUserRole" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblUserRole" OWNER TO "postgres";
 
 --
 -- TOC entry 228 (class 1259 OID 20382)
@@ -5262,7 +5242,7 @@ CREATE SEQUENCE "public"."tblUserRole_UserRoleID_seq"
     CACHE 1;
 
 
-ALTER TABLE "public"."tblUserRole_UserRoleID_seq" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblUserRole_UserRoleID_seq" OWNER TO "postgres";
 
 --
 -- TOC entry 4032 (class 0 OID 0)
@@ -5303,7 +5283,7 @@ CREATE TABLE "public"."tblUsers" (
 );
 
 
-ALTER TABLE "public"."tblUsers" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblUsers" OWNER TO "postgres";
 
 --
 -- TOC entry 251 (class 1259 OID 20585)
@@ -5321,7 +5301,7 @@ CREATE TABLE "public"."tblUsersDistricts" (
 );
 
 
-ALTER TABLE "public"."tblUsersDistricts" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblUsersDistricts" OWNER TO "postgres";
 
 --
 -- TOC entry 250 (class 1259 OID 20583)
@@ -5337,7 +5317,7 @@ CREATE SEQUENCE "public"."tblUsersDistricts_UserDistrictID_seq"
     CACHE 1;
 
 
-ALTER TABLE "public"."tblUsersDistricts_UserDistrictID_seq" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblUsersDistricts_UserDistrictID_seq" OWNER TO "postgres";
 
 --
 -- TOC entry 4033 (class 0 OID 0)
@@ -5350,7 +5330,7 @@ ALTER SEQUENCE "public"."tblUsersDistricts_UserDistrictID_seq" OWNED BY "public"
 
 -- SECTION mutations
 
-create table "core_UserMutation"
+create table "public"."core_UserMutation"
 (
     id          uuid primary key,
     core_user_id   integer not null,
@@ -5359,12 +5339,12 @@ create table "core_UserMutation"
 
 
 create index "core_UserMutation_mutation_id_10b94d76"
-    on "core_UserMutation" (mutation_id);
+    on "public"."core_UserMutation" (mutation_id);
 
 create index "core_UserMutation_core_user_id_12d89786"
-    on "core_UserMutation" (core_user_id);
+    on "public"."core_UserMutation" (core_user_id);
 
-create table "insuree_FamilyMutation"
+create table "public"."insuree_FamilyMutation"
 (
     id          uuid primary key,
     family_id   integer not null,
@@ -5373,12 +5353,12 @@ create table "insuree_FamilyMutation"
 
 
 create index "insuree_FamilyMutation_mutation_id_10b94d76"
-    on "insuree_FamilyMutation" (mutation_id);
+    on "public"."insuree_FamilyMutation" (mutation_id);
 
 create index "insuree_FamilyMutation_family_id_12d89786"
-    on "insuree_FamilyMutation" (family_id);
+    on "public"."insuree_FamilyMutation" (family_id);
 
-create table "insuree_InsureeMutation"
+create table "public"."insuree_InsureeMutation"
 (
     id          uuid primary key,
     insuree_id   integer not null,
@@ -5387,10 +5367,10 @@ create table "insuree_InsureeMutation"
 
 
 create index "insuree_InsureeMutation_mutation_id_88cab16e"
-    on "insuree_InsureeMutation" (mutation_id);
+    on "public"."insuree_InsureeMutation" (mutation_id);
 
 create index "insuree_InsureeMutation_insuree_id_d9f5ddbd"
-    on "insuree_InsureeMutation" (insuree_id);
+    on "public"."insuree_InsureeMutation" (insuree_id);
 
 -- create table "insuree_batch_InsureeBatchMutation"
 -- (
@@ -5422,7 +5402,7 @@ CREATE SEQUENCE "public"."tblUsers_UserID_seq"
     CACHE 1;
 
 
-ALTER TABLE "public"."tblUsers_UserID_seq" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblUsers_UserID_seq" OWNER TO "postgres";
 
 --
 -- TOC entry 4034 (class 0 OID 0)
@@ -5455,7 +5435,7 @@ CREATE VIEW "public"."tblVillages" AS
   WHERE (("tblLocations"."ValidityTo" IS NULL) AND (("tblLocations"."LocationType")::"bpchar" = 'V'::"bpchar"));
 
 
-ALTER TABLE "public"."tblVillages" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblVillages" OWNER TO "postgres";
 
 --
 -- TOC entry 320 (class 1259 OID 21606)
@@ -5475,7 +5455,7 @@ CREATE VIEW "public"."tblWards" AS
   WHERE (("tblLocations"."ValidityTo" IS NULL) AND (("tblLocations"."LocationType")::"bpchar" = 'W'::"bpchar"));
 
 
-ALTER TABLE "public"."tblWards" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblWards" OWNER TO "postgres";
 
 --
 -- TOC entry 338 (class 1259 OID 21724)
@@ -5518,7 +5498,7 @@ CREATE VIEW "public"."uvwAmountApproved" AS
   GROUP BY ("public"."month"(COALESCE("C"."DateTo", "C"."DateFrom"))), ("public"."quarter"(COALESCE("C"."DateTo", "C"."DateFrom"))), ("public"."year"(COALESCE("C"."DateTo", "C"."DateFrom"))), "HF"."HFLevel", "HF"."HFCode", "HF"."HFName", "Prod"."ProductCode", "Prod"."ProductName", "HFD"."DistrictName", "HFR"."RegionName";
 
 
-ALTER TABLE "public"."uvwAmountApproved" OWNER TO "postgres";
+-- ALTER TABLE "public"."uvwAmountApproved" OWNER TO "postgres";
 
 --
 -- TOC entry 340 (class 1259 OID 21738)
@@ -5561,7 +5541,7 @@ CREATE VIEW "public"."uvwAmountClaimed" AS
   GROUP BY ("public"."month"(COALESCE("C"."DateTo", "C"."DateFrom"))), ("public"."quarter"(COALESCE("C"."DateTo", "C"."DateFrom"))), ("public"."year"(COALESCE("C"."DateTo", "C"."DateFrom"))), "HF"."HFLevel", "HF"."HFCode", "HF"."HFName", "Prod"."ProductCode", "Prod"."ProductName", "HFD"."DistrictName", "HFR"."RegionName";
 
 
-ALTER TABLE "public"."uvwAmountClaimed" OWNER TO "postgres";
+-- ALTER TABLE "public"."uvwAmountClaimed" OWNER TO "postgres";
 
 --
 -- TOC entry 312 (class 1259 OID 21434)
@@ -5604,7 +5584,7 @@ CREATE VIEW "public"."uvwAmountRejected" AS
   GROUP BY ("public"."month"(COALESCE("C"."DateTo", "C"."DateFrom"))), ("public"."quarter"(COALESCE("C"."DateTo", "C"."DateFrom"))), ("public"."year"(COALESCE("C"."DateTo", "C"."DateFrom"))), "HF"."HFLevel", "HF"."HFCode", "HF"."HFName", "Prod"."ProductCode", "Prod"."ProductName", "HFD"."DistrictName", "HFR"."RegionName";
 
 
-ALTER TABLE "public"."uvwAmountRejected" OWNER TO "postgres";
+-- ALTER TABLE "public"."uvwAmountRejected" OWNER TO "postgres";
 
 --
 -- TOC entry 342 (class 1259 OID 21748)
@@ -5647,7 +5627,7 @@ CREATE VIEW "public"."uvwAmountValuated" AS
   GROUP BY ("public"."month"(COALESCE("C"."DateTo", "C"."DateFrom"))), ("public"."quarter"(COALESCE("C"."DateTo", "C"."DateFrom"))), ("public"."year"(COALESCE("C"."DateTo", "C"."DateFrom"))), "HF"."HFLevel", "HF"."HFCode", "HF"."HFName", "Prod"."ProductCode", "Prod"."ProductName", "HFD"."DistrictName", "HFR"."RegionName";
 
 
-ALTER TABLE "public"."uvwAmountValuated" OWNER TO "postgres";
+-- ALTER TABLE "public"."uvwAmountValuated" OWNER TO "postgres";
 
 --
 -- TOC entry 313 (class 1259 OID 21444)
@@ -5672,7 +5652,7 @@ CREATE VIEW "public"."uvwClaimEntered" AS
   GROUP BY ("public"."month"(COALESCE("C"."DateTo", "C"."DateFrom"))), ("public"."quarter"(COALESCE("C"."DateTo", "C"."DateFrom"))), ("public"."year"(COALESCE("C"."DateTo", "C"."DateFrom"))), "HF"."HFLevel", "HF"."HFCode", "HF"."HFName", "HFD"."DistrictName", "HFR"."RegionName";
 
 
-ALTER TABLE "public"."uvwClaimEntered" OWNER TO "postgres";
+-- ALTER TABLE "public"."uvwClaimEntered" OWNER TO "postgres";
 
 --
 -- TOC entry 314 (class 1259 OID 21449)
@@ -5713,7 +5693,7 @@ CREATE VIEW "public"."uvwClaimProcessed" AS
   GROUP BY ("public"."month"(COALESCE("C"."DateTo", "C"."DateFrom"))), ("public"."quarter"(COALESCE("C"."DateTo", "C"."DateFrom"))), ("public"."year"(COALESCE("C"."DateTo", "C"."DateFrom"))), "HF"."HFLevel", "HF"."HFCode", "HF"."HFName", "HFD"."DistrictName", "Prod"."ProductCode", "Prod"."ProductName", "HFR"."RegionName";
 
 
-ALTER TABLE "public"."uvwClaimProcessed" OWNER TO "postgres";
+-- ALTER TABLE "public"."uvwClaimProcessed" OWNER TO "postgres";
 
 --
 -- TOC entry 315 (class 1259 OID 21454)
@@ -5738,7 +5718,7 @@ CREATE VIEW "public"."uvwClaimRejected" AS
   GROUP BY ("public"."month"(COALESCE("C"."DateTo", "C"."DateFrom"))), ("public"."quarter"(COALESCE("C"."DateTo", "C"."DateFrom"))), ("public"."year"(COALESCE("C"."DateTo", "C"."DateFrom"))), "HF"."HFLevel", "HF"."HFCode", "HF"."HFName", "HFD"."DistrictName", "HFR"."RegionName";
 
 
-ALTER TABLE "public"."uvwClaimRejected" OWNER TO "postgres";
+-- ALTER TABLE "public"."uvwClaimRejected" OWNER TO "postgres";
 
 --
 -- TOC entry 316 (class 1259 OID 21459)
@@ -5777,7 +5757,7 @@ CREATE VIEW "public"."uvwClaimSent" AS
   GROUP BY ("public"."month"("C"."DateClaimed")), ("public"."quarter"("C"."DateClaimed")), ("public"."year"("C"."DateClaimed")), "HF"."HFLevel", "HF"."HFCode", "HF"."HFName", "Prod"."ProductCode", "Prod"."ProductName", "HFD"."DistrictName", "HFR"."RegionName";
 
 
-ALTER TABLE "public"."uvwClaimSent" OWNER TO "postgres";
+-- ALTER TABLE "public"."uvwClaimSent" OWNER TO "postgres";
 
 --
 -- TOC entry 317 (class 1259 OID 21529)
@@ -5802,7 +5782,7 @@ CREATE VIEW "public"."uvwClaimSubmitted" AS
   GROUP BY ("public"."month"(COALESCE("C"."DateTo", "C"."DateFrom"))), ("public"."quarter"(COALESCE("C"."DateTo", "C"."DateFrom"))), ("public"."year"(COALESCE("C"."DateTo", "C"."DateFrom"))), "HF"."HFLevel", "HF"."HFCode", "HF"."HFName", "HFD"."DistrictName", "HFR"."RegionName";
 
 
-ALTER TABLE "public"."uvwClaimSubmitted" OWNER TO "postgres";
+-- ALTER TABLE "public"."uvwClaimSubmitted" OWNER TO "postgres";
 
 --
 -- TOC entry 318 (class 1259 OID 21534)
@@ -5843,7 +5823,7 @@ CREATE VIEW "public"."uvwClaimValuated" AS
   GROUP BY ("public"."month"(COALESCE("C"."DateTo", "C"."DateFrom"))), ("public"."quarter"(COALESCE("C"."DateTo", "C"."DateFrom"))), ("public"."year"(COALESCE("C"."DateTo", "C"."DateFrom"))), "HF"."HFLevel", "HF"."HFCode", "HF"."HFName", "HFD"."DistrictName", "Prod"."ProductCode", "Prod"."ProductName", "HFR"."RegionName";
 
 
-ALTER TABLE "public"."uvwClaimValuated" OWNER TO "postgres";
+-- ALTER TABLE "public"."uvwClaimValuated" OWNER TO "postgres";
 
 --
 -- TOC entry 321 (class 1259 OID 21610)
@@ -5890,7 +5870,7 @@ CREATE VIEW "public"."uvwExpenditureInsureeRange" AS
   GROUP BY "C"."ClaimID", ("public"."month"(COALESCE("C"."DateTo", "C"."DateFrom"))), ("public"."quarter"(COALESCE("C"."DateTo", "C"."DateFrom"))), ("public"."year"(COALESCE("C"."DateTo", "C"."DateFrom"))), "R"."RegionName", "D"."DistrictName", "Prod"."ProductCode", "Prod"."ProductName", ("public"."datediff_year"("I"."DOB", COALESCE("C"."DateTo", "C"."DateFrom"))), "I"."Gender";
 
 
-ALTER TABLE "public"."uvwExpenditureInsureeRange" OWNER TO "postgres";
+-- ALTER TABLE "public"."uvwExpenditureInsureeRange" OWNER TO "postgres";
 
 --
 -- TOC entry 322 (class 1259 OID 21615)
@@ -5936,7 +5916,7 @@ CREATE VIEW "public"."uvwHospitalAdmissions" AS
   GROUP BY ("public"."month"(COALESCE("C"."DateTo", "C"."DateFrom"))), ("public"."quarter"(COALESCE("C"."DateTo", "C"."DateFrom"))), ("public"."year"(COALESCE("C"."DateTo", "C"."DateFrom"))), "Prod"."ProductCode", "Prod"."ProductName", ("public"."datediff_year"("I"."DOB", COALESCE("C"."DateTo", "C"."DateFrom"))), "I"."Gender", "HF"."HFLevel", "HF"."HFCode", "HF"."HFName", "C"."VisitType", "ICD"."ICDCode", "ICD"."ICDName", "HFD"."DistrictName", "HFR"."RegionName";
 
 
-ALTER TABLE "public"."uvwHospitalAdmissions" OWNER TO "postgres";
+-- ALTER TABLE "public"."uvwHospitalAdmissions" OWNER TO "postgres";
 
 --
 -- TOC entry 323 (class 1259 OID 21620)
@@ -5982,7 +5962,7 @@ CREATE VIEW "public"."uvwHospitalDays" AS
   GROUP BY ("public"."month"(COALESCE("C"."DateTo", "C"."DateFrom"))), ("public"."quarter"(COALESCE("C"."DateTo", "C"."DateFrom"))), ("public"."year"(COALESCE("C"."DateTo", "C"."DateFrom"))), "Prod"."ProductCode", "Prod"."ProductName", ("public"."datediff_year"("I"."DOB", COALESCE("C"."DateTo", "C"."DateFrom"))), "I"."Gender", "HF"."HFLevel", "HF"."HFCode", "HF"."HFName", "C"."VisitType", "ICD"."ICDCode", "ICD"."ICDName", "HFD"."DistrictName", "HFR"."RegionName";
 
 
-ALTER TABLE "public"."uvwHospitalDays" OWNER TO "postgres";
+-- ALTER TABLE "public"."uvwHospitalDays" OWNER TO "postgres";
 
 --
 -- TOC entry 324 (class 1259 OID 21625)
@@ -6037,7 +6017,7 @@ CREATE VIEW "public"."uvwItemExpenditures" AS
   GROUP BY ("public"."month"(COALESCE("C"."DateTo", "C"."DateFrom"))), ("public"."quarter"(COALESCE("C"."DateTo", "C"."DateFrom"))), ("public"."year"(COALESCE("C"."DateTo", "C"."DateFrom"))), "R"."RegionName", "PR"."ProductCode", "PR"."ProductName", ("public"."datediff_year"("I"."DOB", COALESCE("C"."DateTo", "C"."DateFrom"))), "I"."Gender", "Itm"."ItemType", "Itm"."ItemCode", "Itm"."ItemName", ("public"."datediff_day"("C"."DateFrom", "C"."DateTo")), "HF"."HFLevel", "HF"."HFCode", "HF"."HFName", "C"."VisitType", "ICD"."ICDCode", "ICD"."ICDName", "DIns"."DistrictName", "W"."WardName", "V"."VillageName", "HFD"."DistrictName", "HFR"."RegionName";
 
 
-ALTER TABLE "public"."uvwItemExpenditures" OWNER TO "postgres";
+-- ALTER TABLE "public"."uvwItemExpenditures" OWNER TO "postgres";
 
 --
 -- TOC entry 325 (class 1259 OID 21630)
@@ -6092,7 +6072,7 @@ CREATE VIEW "public"."uvwItemUtilization" AS
   GROUP BY ("public"."month"(COALESCE("C"."DateTo", "C"."DateFrom"))), ("public"."quarter"(COALESCE("C"."DateTo", "C"."DateFrom"))), ("public"."year"(COALESCE("C"."DateTo", "C"."DateFrom"))), "R"."RegionName", "Prod"."ProductCode", "Prod"."ProductName", ("public"."datediff_year"("I"."DOB", COALESCE("C"."DateTo", "C"."DateFrom"))), "I"."Gender", "Itm"."ItemType", "Itm"."ItemCode", "Itm"."ItemName", ("public"."datediff_day"("C"."DateFrom", "C"."DateTo")), "HF"."HFLevel", "HF"."HFCode", "HF"."HFName", "ICD"."ICDCode", "ICD"."ICDName", "DIns"."DistrictName", "W"."WardName", "V"."VillageName", "C"."VisitType", "HFD"."DistrictName", "HFR"."RegionName";
 
 
-ALTER TABLE "public"."uvwItemUtilization" OWNER TO "postgres";
+-- ALTER TABLE "public"."uvwItemUtilization" OWNER TO "postgres";
 
 --
 -- TOC entry 337 (class 1259 OID 21719)
@@ -6186,7 +6166,7 @@ UNION ALL
      JOIN "public"."tblVillages" "V" ON (("V"."WardId" = "W"."WardId")));
 
 
-ALTER TABLE "public"."uvwLocations" OWNER TO "postgres";
+-- ALTER TABLE "public"."uvwLocations" OWNER TO "postgres";
 
 --
 -- TOC entry 326 (class 1259 OID 21635)
@@ -6323,7 +6303,7 @@ UNION ALL
   GROUP BY ("public"."month"("F"."FeedbackDate")), ("public"."quarter"("F"."FeedbackDate")), ("public"."year"("F"."FeedbackDate")), "HF"."HFLevel", "HF"."HFCode", "HF"."HFName", "Prod"."ProductCode", "Prod"."ProductName", "HFD"."DistrictName", "HFR"."RegionName";
 
 
-ALTER TABLE "public"."uvwNumberFeedbackAnswerYes" OWNER TO "postgres";
+-- ALTER TABLE "public"."uvwNumberFeedbackAnswerYes" OWNER TO "postgres";
 
 --
 -- TOC entry 327 (class 1259 OID 21640)
@@ -6363,7 +6343,7 @@ CREATE VIEW "public"."uvwNumberFeedbackResponded" AS
   GROUP BY ("public"."year"("F"."FeedbackDate")), ("public"."month"("F"."FeedbackDate")), ("public"."quarter"("F"."FeedbackDate")), "Prod"."ProductCode", "Prod"."ProductName", "HF"."HFLevel", "HF"."HFCode", "HF"."HFName", "HFD"."DistrictName", "HFR"."RegionName";
 
 
-ALTER TABLE "public"."uvwNumberFeedbackResponded" OWNER TO "postgres";
+-- ALTER TABLE "public"."uvwNumberFeedbackResponded" OWNER TO "postgres";
 
 --
 -- TOC entry 361 (class 1259 OID 25577)
@@ -6403,7 +6383,7 @@ CREATE VIEW "public"."uvwNumberFeedbackSent" AS
   GROUP BY ("public"."year"("F"."FeedbackPromptDate")), ("public"."month"("F"."FeedbackPromptDate")), ("public"."quarter"("F"."FeedbackPromptDate")), "Prod"."ProductCode", "Prod"."ProductName", "HF"."HFLevel", "HF"."HFCode", "HF"."HFName", "HFD"."DistrictName", "HFR"."RegionName";
 
 
-ALTER TABLE "public"."uvwNumberFeedbackSent" OWNER TO "postgres";
+-- ALTER TABLE "public"."uvwNumberFeedbackSent" OWNER TO "postgres";
 
 --
 -- TOC entry 328 (class 1259 OID 21654)
@@ -6438,13 +6418,13 @@ CREATE VIEW "public"."uvwNumberInsureeAcquired" AS
      JOIN "public"."tblDistricts" "D" ON (("D"."DistrictId" = "W"."DistrictId")))
      JOIN "public"."tblOfficer" "O" ON (("PL"."OfficerID" = "O"."OfficerID")))
      JOIN "public"."tblDistricts" "ODist" ON (("O"."LocationId" = "ODist"."DistrictId")))
-     JOIN "public"."tblInsureePolicy" "InsPL" ON ((("InsPL"."InsureeId" = "I"."InsureeID") AND ("InsPL"."PolicyId" = "PL"."PolicyID"))))
+     JOIN "public"."tblInsureePolicy" "InsPL" ON ((("InsPL"."InsureeID" = "I"."InsureeID") AND ("InsPL"."PolicyId" = "PL"."PolicyID"))))
      JOIN "public"."tblRegions" "R" ON (("R"."RegionId" = "D"."Region")))
   WHERE (("PL"."ValidityTo" IS NULL) AND ("I"."ValidityTo" IS NULL) AND ("Prod"."ValidityTo" IS NULL) AND ("F"."ValidityTo" IS NULL) AND ("D"."ValidityTo" IS NULL) AND ("V"."ValidityTo" IS NULL) AND ("W"."ValidityTo" IS NULL) AND ("O"."ValidityTo" IS NULL) AND ("ODist"."ValidityTo" IS NULL) AND ("InsPL"."ValidityTo" IS NULL))
   GROUP BY ("public"."month"("PL"."EnrollDate")), ("public"."datename_q"("PL"."EnrollDate")), ("public"."year"("PL"."EnrollDate")), ("public"."datediff_year"(("I"."DOB")::timestamp with time zone, "now"())), "I"."Gender", "D"."DistrictName", "V"."VillageName", "W"."WardName", "R"."RegionName", "Prod"."ProductCode", "Prod"."ProductName", "ODist"."DistrictName", "O"."Code", "O"."LastName", "O"."OtherNames";
 
 
-ALTER TABLE "public"."uvwNumberInsureeAcquired" OWNER TO "postgres";
+-- ALTER TABLE "public"."uvwNumberInsureeAcquired" OWNER TO "postgres";
 
 --
 -- TOC entry 329 (class 1259 OID 21669)
@@ -6489,7 +6469,7 @@ CREATE VIEW "public"."uvwNumberOfInsuredHouseholds" AS
   GROUP BY "RowData2"."ActiveDate", "RowData2"."Region", "RowData2"."DistrictName", "RowData2"."WardName", "RowData2"."VillageName";
 
 
-ALTER TABLE "public"."uvwNumberOfInsuredHouseholds" OWNER TO "postgres";
+-- ALTER TABLE "public"."uvwNumberOfInsuredHouseholds" OWNER TO "postgres";
 
 --
 -- TOC entry 330 (class 1259 OID 21674)
@@ -6529,7 +6509,7 @@ CREATE VIEW "public"."uvwNumberPolicyRenewed" AS
   GROUP BY ("public"."month"("PL"."EnrollDate")), ("public"."datename_q"("PL"."EnrollDate")), ("public"."year"("PL"."EnrollDate")), ("public"."datediff_year"("I"."DOB", "PL"."EnrollDate")), "I"."Gender", "R"."RegionName", "FD"."DistrictName", "FV"."VillageName", "FW"."WardName", "Prod"."ProductCode", "Prod"."ProductName", "OD"."DistrictName", "O"."Code", "O"."LastName", "O"."OtherNames";
 
 
-ALTER TABLE "public"."uvwNumberPolicyRenewed" OWNER TO "postgres";
+-- ALTER TABLE "public"."uvwNumberPolicyRenewed" OWNER TO "postgres";
 
 --
 -- TOC entry 331 (class 1259 OID 21679)
@@ -6569,7 +6549,7 @@ CREATE VIEW "public"."uvwNumberPolicySold" AS
   GROUP BY ("public"."month"("PL"."EnrollDate")), ("public"."datename_q"("PL"."EnrollDate")), ("public"."year"("PL"."EnrollDate")), ("public"."datediff_year"("I"."DOB", "PL"."EnrollDate")), "I"."Gender", "RD"."RegionName", "FD"."DistrictName", "FV"."VillageName", "FW"."WardName", "Prod"."ProductCode", "Prod"."ProductName", "OD"."DistrictName", "O"."Code", "O"."LastName", "O"."OtherNames";
 
 
-ALTER TABLE "public"."uvwNumberPolicySold" OWNER TO "postgres";
+-- ALTER TABLE "public"."uvwNumberPolicySold" OWNER TO "postgres";
 
 --
 -- TOC entry 332 (class 1259 OID 21684)
@@ -6608,7 +6588,7 @@ CREATE VIEW "public"."uvwOverallAssessment" AS
   WHERE (("F"."ValidityTo" IS NULL) AND ("C"."ValidityTo" IS NULL) AND ("Prod"."ValidityTo" IS NULL) AND ("HF"."ValidityTo" IS NULL) AND ("HFD"."ValidityTo" IS NULL));
 
 
-ALTER TABLE "public"."uvwOverallAssessment" OWNER TO "postgres";
+-- ALTER TABLE "public"."uvwOverallAssessment" OWNER TO "postgres";
 
 --
 -- TOC entry 335 (class 1259 OID 21709)
@@ -6632,7 +6612,7 @@ CREATE VIEW "public"."uvwPopulation" AS
   WHERE (("V"."ValidityTo" IS NULL) AND ("W"."ValidityTo" IS NULL) AND ("D"."ValidityTo" IS NULL) AND ("R"."ValidityTo" IS NULL));
 
 
-ALTER TABLE "public"."uvwPopulation" OWNER TO "postgres";
+-- ALTER TABLE "public"."uvwPopulation" OWNER TO "postgres";
 
 --
 -- TOC entry 333 (class 1259 OID 21694)
@@ -6670,7 +6650,7 @@ CREATE VIEW "public"."uvwPremiumCollection" AS
   GROUP BY "PR"."PayType", "Pay"."PayerType", "Pay"."PayerName", "R"."RegionName", "Prod"."ProductCode", "Prod"."ProductName", "O"."Code", "O"."LastName", "O"."OtherNames", "DO"."DistrictName", ("public"."month"("PR"."PayDate")), ("public"."datename_q"("PR"."PayDate")), ("public"."year"("PR"."PayDate")), "FD"."DistrictName";
 
 
-ALTER TABLE "public"."uvwPremiumCollection" OWNER TO "postgres";
+-- ALTER TABLE "public"."uvwPremiumCollection" OWNER TO "postgres";
 
 --
 -- TOC entry 336 (class 1259 OID 21714)
@@ -6725,7 +6705,7 @@ CREATE VIEW "public"."uvwServiceExpenditures" AS
   GROUP BY ("public"."month"(COALESCE("C"."DateTo", "C"."DateFrom"))), ("public"."quarter"(COALESCE("C"."DateTo", "C"."DateFrom"))), ("public"."year"(COALESCE("C"."DateTo", "C"."DateFrom"))), "R"."RegionName", "PR"."ProductCode", "PR"."ProductName", ("public"."datediff_year"("I"."DOB", COALESCE("C"."DateTo", "C"."DateFrom"))), "I"."Gender", "S"."ServType", "S"."ServCode", "S"."ServName", ("public"."datediff_day"("C"."DateFrom", "C"."DateTo")), "HF"."HFLevel", "HF"."HFCode", "HF"."HFName", "C"."VisitType", "ICD"."ICDCode", "ICD"."ICDName", "DIns"."DistrictName", "W"."WardName", "V"."VillageName", "HFD"."DistrictName", "HFR"."RegionName";
 
 
-ALTER TABLE "public"."uvwServiceExpenditures" OWNER TO "postgres";
+-- ALTER TABLE "public"."uvwServiceExpenditures" OWNER TO "postgres";
 
 --
 -- TOC entry 341 (class 1259 OID 21743)
@@ -6780,7 +6760,7 @@ CREATE VIEW "public"."uvwServiceUtilization" AS
   GROUP BY ("public"."month"(COALESCE("C"."DateTo", "C"."DateFrom"))), ("public"."quarter"(COALESCE("C"."DateTo", "C"."DateFrom"))), ("public"."year"(COALESCE("C"."DateTo", "C"."DateFrom"))), "R"."RegionName", "Prod"."ProductCode", "Prod"."ProductName", ("public"."datediff_year"("I"."DOB", COALESCE("C"."DateTo", "C"."DateFrom"))), "I"."Gender", "S"."ServType", "S"."ServCode", "S"."ServName", ("public"."datediff_day"("C"."DateFrom", "C"."DateTo")), "HF"."HFLevel", "HF"."HFCode", "HF"."HFName", "C"."VisitType", "ICD"."ICDCode", "ICD"."ICDName", "DIns"."DistrictName", "W"."WardName", "V"."VillageName", "HFD"."DistrictName", "HFR"."RegionName";
 
 
-ALTER TABLE "public"."uvwServiceUtilization" OWNER TO "postgres";
+-- ALTER TABLE "public"."uvwServiceUtilization" OWNER TO "postgres";
 
 --
 -- TOC entry 334 (class 1259 OID 21704)
@@ -6826,7 +6806,7 @@ CREATE VIEW "public"."uvwVisit" AS
   GROUP BY ("public"."month"("C"."DateFrom")), ("public"."quarter"("C"."DateFrom")), ("public"."year"("C"."DateFrom")), "Prod"."ProductCode", "Prod"."ProductName", ("public"."datediff_year"("I"."DOB", "C"."DateFrom")), "I"."Gender", "HF"."HFLevel", "HF"."HFCode", "HF"."HFName", "C"."VisitType", "ICD"."ICDCode", "ICD"."ICDName", "HFD"."DistrictName", "HFR"."RegionName";
 
 
-ALTER TABLE "public"."uvwVisit" OWNER TO "postgres";
+-- ALTER TABLE "public"."uvwVisit" OWNER TO "postgres";
 
 
 ALTER TABLE ONLY "public"."tblOfficerVillages" ALTER COLUMN "OfficerVillageId" SET DEFAULT "nextval"('"public"."tblOfficerVillages_OfficerVillageId_seq"'::"regclass");
@@ -8773,7 +8753,7 @@ CREATE INDEX "tblHF_PLServiceID_b08acd41" ON "public"."tblHF" USING "btree" ("PL
 -- Name: tblInsureePolicy_InsureeId_f98ddacc; Type: INDEX; Schema: public; Owner: postgres
 --
 
-CREATE INDEX "tblInsureePolicy_InsureeId_f98ddacc" ON "public"."tblInsureePolicy" USING "btree" ("InsureeId");
+CREATE INDEX "tblInsureePolicy_InsureeId_f98ddacc" ON "public"."tblInsureePolicy" USING "btree" ("InsureeID");
 
 
 --
@@ -8941,15 +8921,16 @@ CREATE INDEX "tblPLItems_LocationId_91a6b728" ON "public"."tblPLItems" USING "bt
 -- Name: tblPLItems_PLItemUUID_6641f700_like; Type: INDEX; Schema: public; Owner: postgres
 --
 
-CREATE INDEX "tblPLItems_PLItemUUID_6641f700_like" ON "public"."tblPLItems" USING "btree" ("PLItemUUID" "varchar_pattern_ops");
+-- TODO
+-- CREATE INDEX "tblPLItems_PLItemUUID_6641f700_like" ON "public"."tblPLItems" USING "btree" ("PLItemUUID" "varchar_pattern_ops");
 
 
 --
 -- TOC entry 3595 (class 1259 OID 20894)
 -- Name: tblPLServicesDetail_PLServiceID_53e7d206; Type: INDEX; Schema: public; Owner: postgres
 --
-
-CREATE INDEX "tblPLServicesDetail_PLServiceID_53e7d206" ON "public"."tblPLServicesDetail" USING "btree" ("PLServiceID");
+-- TODO
+-- CREATE INDEX "tblPLServicesDetail_PLServiceID_53e7d206" ON "public"."tblPLServicesDetail" USING "btree" ("PLServiceID");
 
 
 --
@@ -8973,7 +8954,8 @@ CREATE INDEX "tblPLServices_LocationId_b9340268" ON "public"."tblPLServices" USI
 -- Name: tblPLServices_PLServiceUUID_30c97285_like; Type: INDEX; Schema: public; Owner: postgres
 --
 
-CREATE INDEX "tblPLServices_PLServiceUUID_30c97285_like" ON "public"."tblPLServices" USING "btree" ("PLServiceUUID" "varchar_pattern_ops");
+-- TODO
+-- CREATE INDEX "tblPLServices_PLServiceUUID_30c97285_like" ON "public"."tblPLServices" USING "btree" ("PLServiceUUID" "varchar_pattern_ops");
 
 
 --
@@ -9817,7 +9799,7 @@ ALTER TABLE ONLY "public"."tblHF"
 --
 
 ALTER TABLE ONLY "public"."tblInsureePolicy"
-    ADD CONSTRAINT "tblInsureePolicy_InsureeId_f98ddacc_fk_tblInsuree_InsureeID" FOREIGN KEY ("InsureeId") REFERENCES "public"."tblInsuree"("InsureeID") DEFERRABLE INITIALLY DEFERRED;
+    ADD CONSTRAINT "tblInsureePolicy_InsureeId_f98ddacc_fk_tblInsuree_InsureeID" FOREIGN KEY ("InsureeID") REFERENCES "public"."tblInsuree"("InsureeID") DEFERRABLE INITIALLY DEFERRED;
 
 
 --
@@ -10155,10 +10137,11 @@ ALTER TABLE ONLY "public"."tblUsers"
 
 -- Mutations
 
-ALTER TABLE ONLY "public"."core_UserMutation"
-    ADD CONSTRAINT "FK_core_UserMutation_core_user_id"
-        FOREIGN KEY ("core_user_id") REFERENCES "public"."core_User"("id")
-            DEFERRABLE INITIALLY DEFERRED;
+-- TODO
+-- ALTER TABLE ONLY "public"."core_UserMutation"
+--     ADD CONSTRAINT "FK_core_UserMutation_core_user_id"
+--         FOREIGN KEY ("core_user_id") REFERENCES "public"."core_User"("id")
+--             DEFERRABLE INITIALLY DEFERRED;
 ALTER TABLE ONLY "public"."core_UserMutation"
     ADD CONSTRAINT "FK_core_UserMutation_core_Mutation_Log_id"
         FOREIGN KEY ("mutation_id") REFERENCES "public"."core_Mutation_Log"("id")
@@ -10197,6 +10180,46 @@ ALTER TABLE ONLY "public"."insuree_InsureeMutation"
 -- Dependencies: 6
 -- Name: SCHEMA "public"; Type: ACL; Schema: -; Owner: postgres
 --
+
+SELECT setval('"public"."tblBatchRun_RunID_seq"', (select coalesce(max("RunID"), 1) from "public"."tblBatchRun"), true);
+-- SELECT setval('"public"."tblCapitationPayment_CapitationPaymentID_seq"', (select coalesce(max("CapitationPaymentID"), 1) from "public"."tblCapitationPayment"), true);
+SELECT setval('"public"."tblClaim_ClaimID_seq"', (select coalesce(max("ClaimID"), 1) from "public"."tblClaim"), true);
+SELECT setval('"public"."tblClaimAdmin_ClaimAdminId_seq"', (select coalesce(max("ClaimAdminId"), 1) from "public"."tblClaimAdmin"), true);
+SELECT setval('"public"."tblClaimDedRem_ExpenditureID_seq"', (select coalesce(max("ExpenditureID"), 1) from "public"."tblClaimDedRem"), true);
+SELECT setval('"public"."tblClaimItems_ClaimItemID_seq"', (select coalesce(max("ClaimItemID"), 1) from "public"."tblClaimItems"), true);
+SELECT setval('"public"."tblClaimServices_ClaimServiceID_seq"', (select coalesce(max("ClaimServiceID"), 1) from "public"."tblClaimServices"), true);
+SELECT setval('"public"."tblFamilies_FamilyID_seq"', (select coalesce(max("FamilyID"), 1) from "public"."tblFamilies"), true);
+SELECT setval('"public"."tblFeedback_FeedbackID_seq"', (select coalesce(max("FeedbackID"), 1) from "public"."tblFeedback"), true);
+SELECT setval('"public"."tblHF_HfID_seq"', (select coalesce(max("HfID"), 1) from "public"."tblHF"), true);
+SELECT setval('"public"."tblHFCatchment_HFCatchmentId_seq"', (select coalesce(max("HFCatchmentId"), 1) from "public"."tblHFCatchment"), true);
+SELECT setval('"public"."tblICDCodes_ICDID_seq"', (select coalesce(max("ICDID"), 1) from "public"."tblICDCodes"), true);
+SELECT setval('"public"."tblInsuree_InsureeID_seq"', (select coalesce(max("InsureeID"), 1) from "public"."tblInsuree"), true);
+SELECT setval('"public"."tblInsureePolicy_InsureePolicyID_seq"', (select coalesce(max("InsureePolicyID"), 1) from "public"."tblInsureePolicy"), true);
+SELECT setval('"public"."tblItems_ItemID_seq"', (select coalesce(max("ItemID"), 1) from "public"."tblItems"), true);
+SELECT setval('"public"."tblLocations_LocationId_seq"', (select coalesce(max("LocationId"), 1) from "public"."tblLocations"), true);
+SELECT setval('"public"."tblOfficer_OfficerID_seq"', (select coalesce(max("OfficerID"), 1) from "public"."tblOfficer"), true);
+SELECT setval('"public"."tblOfficerVillages_OfficerVillageId_seq"', (select coalesce(max("OfficerVillageId"), 1) from "public"."tblOfficerVillages"), true);
+SELECT setval('"public"."tblPayer_PayerID_seq"', (select coalesce(max("PayerID"), 1) from "public"."tblPayer"), true);
+SELECT setval('"public"."tblPhotos_PhotoID_seq"', (select coalesce(max("PhotoID"), 1) from "public"."tblPhotos"), true);
+SELECT setval('"public"."tblPLItems_PLItemID_seq"', (select coalesce(max("PLItemID"), 1) from "public"."tblPLItems"), true);
+SELECT setval('"public"."tblPLItemsDetail_PLItemDetailID_seq"', (select coalesce(max("PLItemDetailID"), 1) from "public"."tblPLItemsDetail"), true);
+SELECT setval('"public"."tblPLServices_PLServiceID_seq"', (select coalesce(max("PLServiceID"), 1) from "public"."tblPLServices"), true);
+SELECT setval('"public"."tblPLServicesDetail_PLServiceDetailID_seq"', (select coalesce(max("PLServiceDetailID"), 1) from "public"."tblPLServicesDetail"), true);
+SELECT setval('"public"."tblPolicy_PolicyID_seq"', (select coalesce(max("PolicyID"), 1) from "public"."tblPolicy"), true);
+SELECT setval('"public"."tblPremium_PremiumId_seq"', (select coalesce(max("PremiumId"), 1) from "public"."tblPremium"), true);
+SELECT setval('"public"."tblProduct_ProdID_seq"', (select coalesce(max("ProdID"), 1) from "public"."tblProduct"), true);
+SELECT setval('"public"."tblProductItems_ProdItemID_seq"', (select coalesce(max("ProdItemID"), 1) from "public"."tblProductItems"), true);
+SELECT setval('"public"."tblProductServices_ProdServiceID_seq"', (select coalesce(max("ProdServiceID"), 1) from "public"."tblProductServices"), true);
+SELECT setval('"public"."tblRelDistr_DistrID_seq"', (select coalesce(max("DistrID"), 1) from "public"."tblRelDistr"), true);
+SELECT setval('"public"."tblRelIndex_RelIndexID_seq"', (select coalesce(max("RelIndexID"), 1) from "public"."tblRelIndex"), true);
+SELECT setval('"public"."tblRole_RoleID_seq"', (select coalesce(max("RoleID"), 1) from "public"."tblRole"), true);
+SELECT setval('"public"."tblRoleRight_RoleRightID_seq"', (select coalesce(max("RoleRightID"), 1) from "public"."tblRoleRight"), true);
+SELECT setval('"public"."tblServices_ServiceID_seq"', (select coalesce(max("ServiceID"), 1) from "public"."tblServices"), true);
+SELECT setval('"public"."tblUserRole_UserRoleID_seq"', (select coalesce(max("UserRoleID"), 1) from "public"."tblUserRole"), true);
+SELECT setval('"public"."tblUsers_UserID_seq"', (select coalesce(max("UserID"), 1) from "public"."tblUsers"), true);
+SELECT setval('"public"."tblUsersDistricts_UserDistrictID_seq"', (select coalesce(max("UserDistrictID"), 1) from "public"."tblUsersDistricts"), true);
+SELECT setval('"public"."django_migrations_id_seq"', (select coalesce(max("id"), 1) from "public"."django_migrations"), true);
+
 
 GRANT ALL ON SCHEMA "public" TO PUBLIC;
 

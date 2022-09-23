@@ -19,6 +19,8 @@ def get_settings_from_file():
         historical = settings["Other"].getboolean("historical")
         global demo_fix
         demo_fix = settings["Other"].getboolean("demo_fix")
+        global migration_modules
+        migration_modules = settings["Other"].get("migration_modules", "").split(",")
         if delete_data:
             print("  Tables in the new database will be emptied before migrating data.")
         else:
@@ -40,10 +42,10 @@ def get_settings_from_file():
 # tries to connect to both databases
 def connect():
     print("Setting up connection to the databases:")
-    # Establish a connection to the SQL Serever Database
-    old_connection_string = "Driver={ODBC Driver 17 for SQL Server};Server=" + settings["OldDB"]["host"] + "," +\
-                            settings["OldDB"]["port"] + ";Database=" + settings["OldDB"]["name"] + ";UID=" +\
-                            settings["OldDB"]["user"] + ";PWD=" + settings["OldDB"]["pwd"] + ";"
+    # Establish a connection to the SQL Server Database
+    old_connection_string = f"Driver={{ODBC Driver 17 for SQL Server}};Server={settings['OldDB']['host']}," \
+                            f"{settings['OldDB']['port']};Database={settings['OldDB']['name']};UID=" \
+                            f"{settings['OldDB']['user']};PWD={settings['OldDB']['pwd']};"
     try:
         global old_connection
         old_connection = pyodbc.connect(old_connection_string)
@@ -55,7 +57,7 @@ def connect():
         exit(1)
     print("  Connection to SQL Server database established.")
 
-    # Establish a connection the the PostgreSQL Database
+    # Establish a connection the PostgreSQL Database
     new_db = settings["NewDB"]
     new_connection_string = f'host={new_db["host"]} port={new_db["port"]} dbname={new_db["name"]} ' \
                             f'user={new_db["user"]} password={new_db["pwd"]}'
@@ -211,7 +213,7 @@ def migrate():
             validity_index = -1
             if not historical:
                 validity_index = get_validity_index(rows)
-            # Finally, setup the columns to migrate
+            # Finally, set up the columns to migrate
             old_cols = ""
             new_cols = "("
             for row in rows:
@@ -229,10 +231,13 @@ def migrate():
             # Set up the values for the insert statement and execute
             print("    Moving data to new database.")
             for row in old_cursor:
+                if table == "django_migrations" and row[1] not in migration_modules:
+                    print(f"migration {row[1]}:{row[2]} skipped from transfer")
+
                 # row_str contains all the data in sql format for the insert statement.
                 # We have to adapt the raw data to comply with postgres' syntax.
                 row_str = generate_insertion_string(row)
-                # A boolean is used to check wether this row needs to be migrated (because of historical data settings)
+                # A boolean is used to check whether this row needs to be migrated (because of historical data settings)
                 # The boolean value is generated in the getValidity function
                 if get_validity(validity_index, row):
                     try:
