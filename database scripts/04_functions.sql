@@ -20,9 +20,9 @@ $$ LANGUAGE plpgsql;
 
 CREATE OR REPLACE FUNCTION "public"."udfAvailablePremium"
 (
-	theMonth INT,
-	theYear INT,
-	theMode INT,	--1:Product Base, 2:Officer Mode
+	"theMonth" INT,
+	"theYear" INT,
+	"theMode" INT,	--1:Product Base, 2:Officer Mode
 	"ProdID" INT = 0,
 	"LocationId" INT = 0
 )

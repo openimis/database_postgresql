@@ -8,16 +8,18 @@ CREATE OR REPLACE VIEW "public"."tblDistricts" AS
 	FROM "tblLocations"
 	WHERE "ValidityTo" IS NULL
 	AND "LocationType" = N'D'
+;
 
 CREATE OR REPLACE VIEW "public"."tblRegions" AS
-	SELECT "LocationId" "RegionId", "LocationCode" "RegionCode", "LocationName" "RegionName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserId", "RowId"
+	SELECT "LocationId" "RegionId", "LocationCode" "RegionCode", "LocationName" "RegionName", "ValidityFrom", "ValidityTo",
+	       "LegacyID", "AuditUserId", "RowId"
 	FROM "tblLocations"
 	WHERE "ValidityTo" IS NULL
 	AND "LocationType" = N'R'
 ;
 
 CREATE OR REPLACE VIEW "public"."uvwAmountRejected" AS
-	SELECT SUM("Details"."Rejected")"AmountRejected",MONTH(coalesce("C"."DateTo", "C"."DateFrom"))MonthTime, QUARTER(coalesce("C"."DateTo", "C"."DateFrom"))QuarterTime, YEAR(coalesce("C"."DateTo", "C"."DateFrom"))YearTime
+	SELECT SUM("Details"."Rejected")"amountrejected",MONTH(coalesce("C"."DateTo", "C"."DateFrom"))MonthTime, QUARTER(coalesce("C"."DateTo", "C"."DateFrom"))QuarterTime, YEAR(coalesce("C"."DateTo", "C"."DateFrom"))YearTime
 	,"HF"."HFLevel","HF"."HFCode", "HF"."HFName"
 	,"HFR"."RegionName" "Region", "HFD"."DistrictName", "Prod"."ProductCode", "Prod"."ProductName", "HFD"."DistrictName" "HFDistrict", "HFR"."RegionName" "HFRegion"
 
@@ -188,14 +190,14 @@ CREATE OR REPLACE VIEW "public"."uvwClaimValuated" AS
 ;
 
 CREATE OR REPLACE VIEW "public"."tblVillages" AS
-SELECT "LocationId" "VillageId", "ParentLocationId" "WardId", "LocationCode" "VillageCode", "LocationName" "VillageName","MalePopulation", "FemalePopulation", "OtherPopulation", "Families", "ValidityFrom", "ValidityTo", "LegacyId", "AuditUserId" --, "RowId"
+SELECT "LocationId" "VillageId", "ParentLocationId" "WardId", "LocationCode" "VillageCode", "LocationName" "VillageName","MalePopulation", "FemalePopulation", "OtherPopulation", "Families", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserId" --, "RowId"
 FROM "public"."tblLocations"
 WHERE "ValidityTo" IS NULL
 AND "LocationType" = N'V'
 ;
 
 CREATE OR REPLACE VIEW "public"."tblWards" AS
-SELECT "LocationId" "WardId", "ParentLocationId" "DistrictId", "LocationCode" "WardCode", "LocationName" "WardName", "ValidityFrom", "ValidityTo", "LegacyId", "AuditUserId" --, "RowId"
+SELECT "LocationId" "WardId", "ParentLocationId" "DistrictId", "LocationCode" "WardCode", "LocationName" "WardName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserId" --, "RowId"
 FROM "public"."tblLocations"
 WHERE "ValidityTo" IS NULL
 AND "LocationType" = N'W'
@@ -526,7 +528,7 @@ CREATE OR REPLACE VIEW "public"."uvwNumberInsureeAcquired" AS
 	INNER JOIN "tblDistricts" "D" ON "D"."DistrictId" = "W"."DistrictId"
 	INNER JOIN "tblOfficer" "O" ON "PL"."OfficerID" = "O"."OfficerID"
 	INNER JOIN "tblDistricts" "ODist" ON "O"."LocationId" = "ODist"."DistrictId"
-	INNER JOIN "tblInsureePolicy" "InsPL" ON "InsPL"."InsureeId" = "I"."InsureeID" AND "InsPL"."PolicyId" = "PL"."PolicyID"
+	INNER JOIN "tblInsureePolicy" "InsPL" ON "InsPL"."InsureeID" = "I"."InsureeID" AND "InsPL"."PolicyId" = "PL"."PolicyID"
 	INNER JOIN "tblRegions" "R" ON "R"."RegionId" = "D"."Region"
 	
 	WHERE "PL"."ValidityTo" IS NULL 
@@ -771,7 +773,9 @@ CREATE OR REPLACE VIEW "public"."uvwVisit" AS
 ;
 
 CREATE OR REPLACE VIEW "public"."uvwPopulation" AS
-	SELECT "RegionName" "Region", "DistrictName" "District","WardName" "Ward", "VillageName" "Village", "MalePopulation" "Male", "FemalePopulation" "Female", "OtherPopulation" "others", "Families" "Households", EXTRACT(YEAR from NOW()) "YEAR" 
+	SELECT "RegionName" "Region", "DistrictName" "District","WardName" "Ward", "VillageName" "Village",
+	       "MalePopulation" "Male", "FemalePopulation" "Female", "OtherPopulation" "others", "Families" "Households",
+	       "date_part"('year'::"text", "now"()) AS "YEAR"
 	FROM "tblVillages" "V"
 	INNER JOIN "tblWards" "W" ON "V"."WardId" = "W"."WardId"
 	INNER JOIN "tblDistricts" "D" ON "D"."DistrictId" = "W"."DistrictId"
@@ -897,6 +901,3 @@ CREATE OR REPLACE VIEW "public"."uvwAmountClaimed" AS
 	,"Prod"."ProductCode", "Prod"."ProductName", "HFD"."DistrictName", "HFR"."RegionName"
 ;
 
-CREATE OR REPLACE VIEW "public"."claim_ClaimAttachmentsCountView" AS
-	select "claim_id", count(*) "attachments_count" from "claim_ClaimAttachment" GROUP BY "claim_id"
-;
