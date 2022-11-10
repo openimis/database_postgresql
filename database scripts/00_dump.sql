@@ -2733,7 +2733,7 @@ CREATE TABLE "public"."tblLocations" (
     "Families" integer,
     "AuditUserId" integer,
     "ParentLocationId" integer,
-    "RowId" "text" NOT NULL
+    "RowId" "text" NULL
 );
 
 
