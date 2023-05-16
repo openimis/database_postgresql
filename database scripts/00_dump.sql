@@ -4048,6 +4048,7 @@ CREATE TABLE "public"."tblPremium" (
     "AuditUserID" integer NOT NULL,
     "PayerID" integer,
     "PolicyID" integer NOT NULL,
+    "CreatedDate" date NULL,
     "RowID" "text"
 );
 
