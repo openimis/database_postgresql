@@ -187,24 +187,24 @@ CREATE TABLE "public"."core_User" (
 
 --
 -- TOC entry 214 (class 1259 OID 20299)
--- Name: core_User_groups; Type: TABLE; Schema: public; Owner: postgres
+-- Name: Core_User_groups; Type: TABLE; Schema: public; Owner: postgres
 --
 
-CREATE TABLE "public"."core_User_groups" (
+CREATE TABLE "public"."Core_User_groups" (
     "id" integer NOT NULL,
     "user_id" "uuid" NOT NULL,
     "group_id" integer NOT NULL
 );
 
 
--- ALTER TABLE "public"."core_User_groups" OWNER TO "postgres";
+-- ALTER TABLE "public"."Core_User_groups" OWNER TO "postgres";
 
 --
 -- TOC entry 213 (class 1259 OID 20297)
--- Name: core_User_groups_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: Core_User_groups_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
-CREATE SEQUENCE "public"."core_User_groups_id_seq"
+CREATE SEQUENCE "public"."Core_User_groups_id_seq"
     AS integer
     START WITH 1
     INCREMENT BY 1
@@ -213,15 +213,15 @@ CREATE SEQUENCE "public"."core_User_groups_id_seq"
     CACHE 1;
 
 
--- ALTER TABLE "public"."core_User_groups_id_seq" OWNER TO "postgres";
+-- ALTER TABLE "public"."Core_User_groups_id_seq" OWNER TO "postgres";
 
 --
 -- TOC entry 3994 (class 0 OID 0)
 -- Dependencies: 213
--- Name: core_User_groups_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+-- Name: Core_User_groups_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
-ALTER SEQUENCE "public"."core_User_groups_id_seq" OWNED BY "public"."core_User_groups"."id";
+ALTER SEQUENCE "public"."Core_User_groups_id_seq" OWNED BY "public"."Core_User_groups"."id";
 
 
 --
@@ -397,20 +397,20 @@ ALTER TABLE ONLY "public"."core_TechnicalUser"
 
 --
 -- TOC entry 3402 (class 2606 OID 20304)
--- Name: core_User_groups core_User_groups_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: Core_User_groups Core_User_groups_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY "public"."core_User_groups"
-    ADD CONSTRAINT "core_User_groups_pkey" PRIMARY KEY ("id");
+ALTER TABLE ONLY "public"."Core_User_groups"
+    ADD CONSTRAINT "Core_User_groups_pkey" PRIMARY KEY ("id");
 
 
 --
 -- TOC entry 3405 (class 2606 OID 20410)
--- Name: core_User_groups core_User_groups_user_id_group_id_8ec5911a_uniq; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: Core_User_groups Core_User_groups_user_id_group_id_8ec5911a_uniq; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY "public"."core_User_groups"
-    ADD CONSTRAINT "core_User_groups_user_id_group_id_8ec5911a_uniq" UNIQUE ("user_id", "group_id");
+ALTER TABLE ONLY "public"."Core_User_groups"
+    ADD CONSTRAINT "Core_User_groups_user_id_group_id_8ec5911a_uniq" UNIQUE ("user_id", "group_id");
 
 
 --
@@ -484,18 +484,18 @@ CREATE INDEX "core_TechnicalUser_username_6f41c923_like" ON "public"."core_Techn
 
 --
 -- TOC entry 3400 (class 1259 OID 20412)
--- Name: core_User_groups_group_id_197830ae; Type: INDEX; Schema: public; Owner: postgres
+-- Name: Core_User_groups_group_id_197830ae; Type: INDEX; Schema: public; Owner: postgres
 --
 
-CREATE INDEX "core_User_groups_group_id_197830ae" ON "public"."core_User_groups" USING "btree" ("group_id");
+CREATE INDEX "Core_User_groups_group_id_197830ae" ON "public"."Core_User_groups" USING "btree" ("group_id");
 
 
 --
 -- TOC entry 3403 (class 1259 OID 20411)
--- Name: core_User_groups_user_id_06a128ce; Type: INDEX; Schema: public; Owner: postgres
+-- Name: Core_User_groups_user_id_06a128ce; Type: INDEX; Schema: public; Owner: postgres
 --
 
-CREATE INDEX "core_User_groups_user_id_06a128ce" ON "public"."core_User_groups" USING "btree" ("user_id");
+CREATE INDEX "Core_User_groups_user_id_06a128ce" ON "public"."Core_User_groups" USING "btree" ("user_id");
 
 
 --
@@ -589,11 +589,11 @@ ALTER TABLE ONLY "public"."core_Mutation_Log"
 
 --
 -- TOC entry 3727 (class 2606 OID 20399)
--- Name: core_User_groups core_User_groups_user_id_06a128ce_fk_core_User_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: Core_User_groups Core_User_groups_user_id_06a128ce_fk_core_User_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY "public"."core_User_groups"
-    ADD CONSTRAINT "core_User_groups_user_id_06a128ce_fk_core_User_id" FOREIGN KEY ("user_id") REFERENCES "public"."core_User"("id") DEFERRABLE INITIALLY DEFERRED;
+ALTER TABLE ONLY "public"."Core_User_groups"
+    ADD CONSTRAINT "Core_User_groups_user_id_06a128ce_fk_core_User_id" FOREIGN KEY ("user_id") REFERENCES "public"."core_User"("id") DEFERRABLE INITIALLY DEFERRED;
 
 
 --
@@ -699,10 +699,10 @@ ALTER TABLE ONLY "public"."insuree_InsureeMutation"
 
 --
 -- TOC entry 3329 (class 2604 OID 20302)
--- Name: core_User_groups id; Type: DEFAULT; Schema: public; Owner: postgres
+-- Name: Core_User_groups id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY "public"."core_User_groups" ALTER COLUMN "id" SET DEFAULT "nextval"('"public"."core_User_groups_id_seq"'::"regclass");
+ALTER TABLE ONLY "public"."Core_User_groups" ALTER COLUMN "id" SET DEFAULT "nextval"('"public"."Core_User_groups_id_seq"'::"regclass");
 
 
 --
