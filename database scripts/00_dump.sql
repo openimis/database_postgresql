@@ -2880,7 +2880,7 @@ CREATE TABLE "public"."tblFamilySMS" (
 );
 
 
-ALTER TABLE "public"."tblFamilySMS" OWNER TO "postgres";
+-- ALTER TABLE "public"."tblFamilySMS" OWNER TO "postgres";
 
 --
 -- TOC entry 262 (class 1259 OID 20726)
