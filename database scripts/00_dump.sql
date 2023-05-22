@@ -4075,7 +4075,6 @@ CREATE TABLE "public"."tblPremium" (
     "PolicyID" integer NOT NULL,
     "CreatedDate" date DEFAULT CURRENT_DATE NOT NULL,
     "RowID" "text",
-    "CreatedDate" "date" DEFAULT CURRENT_DATE NOT NULL,
     "Source" character varying(50) NULL,
     "SourceVersion" character varying(15) NULL
 );
