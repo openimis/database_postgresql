@@ -3223,7 +3223,7 @@ CREATE TABLE "public"."tblIMISDefaults" (
     "AppVersionImis" numeric(3,1),
     "APIKey" character varying(100),
     "ActivationOption" smallint DEFAULT 2 NOT NULL,
-    "BypassReviewClaim" boolean NOT NULL);
+    "BypassReviewClaim" boolean DEFAULT 0 NOT NULL);
 
 
 -- ALTER TABLE "public"."tblIMISDefaults" OWNER TO "postgres";
