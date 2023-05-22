@@ -3222,7 +3222,7 @@ CREATE TABLE "public"."tblIMISDefaults" (
     "AppVersionFeedbackRenewal" numeric(3,1),
     "AppVersionImis" numeric(3,1),
     "APIKey" character varying(100),
-    "ActivationOption" smallint NOT NULL,
+    "ActivationOption" smallint DEFAULT 2 NOT NULL,
     "BypassReviewClaim" boolean NOT NULL);
 
 
