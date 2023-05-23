@@ -16,7 +16,7 @@ django_session
 auth_group
 auth_permission
 auth_group_permissions
-core_User_groups
+core_User_groups_tbl
 core_ModuleConfiguration
 core_FieldControl
 tblLanguages
