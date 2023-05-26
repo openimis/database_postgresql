@@ -3844,7 +3844,7 @@ ALTER SEQUENCE "public"."tblPayer_PayerID_seq" OWNED BY "public"."tblPayer"."Pay
 --
 
 CREATE TABLE "public"."tblPayment" (
-    "PaymentID" bigint NOT NULL,
+    "PaymentID" bigserial NOT NULL,
     "PaymentUUID" "uuid" NOT NULL,
     "ExpectedAmount" numeric(18,2),
     "ReceivedAmount" numeric(18,2),
@@ -3883,7 +3883,7 @@ CREATE TABLE "public"."tblPayment" (
 --
 
 CREATE TABLE "public"."tblPaymentDetails" (
-    "PaymentDetailsID" bigint NOT NULL,
+    "PaymentDetailsID" bigserial NOT NULL,
     "PaymentID" bigint NOT NULL,
     "ProductCode" character varying(8),
     "InsuranceNumber" character varying(12),
@@ -3987,7 +3987,7 @@ CREATE TABLE "public"."tblPolicy" (
 --
 
 CREATE TABLE "public"."tblPolicyRenewalDetails" (
-    "RenewalDetailID" integer NOT NULL,
+    "RenewalDetailID" SERIAL NOT NULL,
     "RenewalID" integer NOT NULL,
     "InsureeID" integer NOT NULL,
     "ValidityFrom" timestamp with time zone NOT NULL,
@@ -4005,7 +4005,7 @@ CREATE TABLE "public"."tblPolicyRenewalDetails" (
 --
 
 CREATE TABLE "public"."tblPolicyRenewals" (
-    "RenewalID" integer NOT NULL,
+    "RenewalID" SERIAL NOT NULL,
     "RenewalPromptDate" "date" NOT NULL,
     "RenewalDate" "date" NOT NULL,
     "NewOfficerID" integer,
