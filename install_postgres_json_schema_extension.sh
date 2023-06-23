@@ -6,7 +6,7 @@ apk add --update git
 # Clone the repository
 git clone https://github.com/gavinwahl/postgres-json-schema/
 
-apt install libpq-dev -y
+apk install libpq-dev
 # Move into the directory
 cd postgres-json-schema
 
@@ -14,7 +14,11 @@ cd postgres-json-schema
 make & make install
 
 
-apt install postgresql-client -y
+apk install postgresql-client
 
 /bin/mkdir -p '/usr/local/share/postgresql/extension'
 
+chmod 666 /usr/local/share/postgresql/extension/postgres-json-schema.control
+# Add extension to PostgreSQL
+# Assuming you're operating in the psql shell
+psql -U $POSTGRES_USER -d $POSTGRES_DB -c "CREATE EXTENSION \"postgres-json-schema\";"
