@@ -1,12 +1,11 @@
 #!/bin/bash
-apk add --update apt
 apk add --update make
 apk add --update git
 
 # Clone the repository
 git clone https://github.com/gavinwahl/postgres-json-schema/
 
-apk install libpq-dev
+apk add libpq-dev
 # Move into the directory
 cd postgres-json-schema
 
@@ -14,7 +13,7 @@ cd postgres-json-schema
 make & make install
 
 
-apk install postgresql-client
+apk add postgresql-client
 
 /bin/mkdir -p '/usr/local/share/postgresql/extension'
 
