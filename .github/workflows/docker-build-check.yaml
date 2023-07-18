@@ -1,0 +1,29 @@
+name: Docker Build Check
+
+on:
+  pull_request:
+    branches:
+      - main
+      - develop
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Build Docker image
+        run: docker build .
+
+      - name: Check Docker image build status
+        run: |
+          exit_code=$?
+          if [ $exit_code -ne 0 ]; then
+            echo "Docker image build failed."
+            exit 1
+          else
+            echo "Docker image build successful."
+            exit 0
+          fi
