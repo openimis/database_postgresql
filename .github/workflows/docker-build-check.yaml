@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Build Docker image
-        run: docker build -t .
+        run: docker build .
 
       - name: Check Docker image build status
         run: |
