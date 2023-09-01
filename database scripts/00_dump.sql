@@ -3439,6 +3439,8 @@ CREATE TABLE "public"."tblLanguages" (
     "CountryCode" character varying(10) NULL
 );
 
+INSERT INTO "public"."tblLanguages" ("LanguageCode", "LanguageName", "SortOrder") VALUES (N'en', N'English', NULL);
+
 
 -- ALTER TABLE "public"."tblLanguages" OWNER TO "postgres";
 

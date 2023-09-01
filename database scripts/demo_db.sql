@@ -1,8 +1,7 @@
 
 set search_path to public;
 
--- tblLanguages
-INSERT INTO "tblLanguages" ("LanguageCode", "LanguageName", "SortOrder") VALUES (N'en', N'English', NULL);
+-- tblLanguages (en added in empty db)
 INSERT INTO "tblLanguages" ("LanguageCode", "LanguageName", "SortOrder") VALUES (N'fr', N'Français', NULL);
 
 -- tblGender
