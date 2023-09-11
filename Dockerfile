@@ -1,4 +1,4 @@
-FROM postgres:13-alpine as base
+FROM postgres:13-alpine AS base
 
 # Script to detect whether the database has finished initializing
 COPY ["true_isready.sh", "/usr/local/bin/"]
@@ -10,5 +10,5 @@ COPY ["install_postgres_json_schema_extension.sh", "install_postgres_json_schema
 RUN chmod u+x install_postgres_json_schema_extension.sh
 RUN ./install_postgres_json_schema_extension.sh
 
-FROM base as demo
+FROM base AS demo
 COPY ["database scripts/demo_db.sql", "/docker-entrypoint-initdb.d/"]
