@@ -17,7 +17,11 @@ jobs:
         registry: ghcr.io
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
-    - name: Build the pgsql Docker image
+    - name: Build the pgsql EMPTY Docker image
+      run: |
+         docker build . --target base --tag ghcr.io/openimis/openimis-pgsql:${{ github.event.inputs.tag }}-base
+         docker push ghcr.io/openimis/openimis-pgsql:${{ github.event.inputs.tag }}-base
+    - name: Build the pgsql DEMO Docker image
       run: |
          docker build . --tag ghcr.io/openimis/openimis-pgsql:${{ github.event.inputs.tag }}
          docker push ghcr.io/openimis/openimis-pgsql:${{ github.event.inputs.tag }}
