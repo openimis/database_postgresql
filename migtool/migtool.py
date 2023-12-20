@@ -1,4 +1,5 @@
 import re
+import uuid
 
 import pyodbc           # adapter for SQL Server
 import psycopg2         # adapter for PostgreSQL
@@ -48,6 +49,14 @@ def get_settings_from_file():
         print("\x1b[0;31;48m" + "Error while trying to load settings. " +\
               "Please make sure the settings.ini file exists in your working directory." + "\x1b[0m")
         exit(1)
+
+
+def is_uuid(value):
+    try:
+        uuid.UUID(value, version=4)
+        return True
+    except ValueError:
+        return False
 
 
 # tries to connect to both databases
@@ -134,6 +143,9 @@ def generate_insertion_string(row):
     for x in row:
         # Strings must be enclosed in apostrophes, also escape singe quotes in a string by doubling them
         if isinstance(x, str):
+            # The .NET webapp used to create uppercase UUIDs, so we try to detect it and lowercase it
+            if 32 <= len(x) <= 36 and is_uuid(x):
+                x = x.lower()
             row_list.append("'" + str(x).replace("'", "''") + "'")
         # Dates and datetimes must be enclosed in apostrophes
         elif isinstance(x, datetime.datetime) or isinstance(x, datetime.date):
@@ -225,6 +237,9 @@ def migrate():
                             "\"FeedbackUUID\", \"AuditUserID\") VALUES ('2000 01 01 00:00:00.000000', 0, 0, 0);")
 
             # Set up all the columns we're going to migrate.
+            cursor = old_cursor.execute("SELECT TOP 1 * FROM " + table + ";")
+            old_columns_with_types = {column[0].lower(): column[1] for column in cursor.description}
+
             new_cursor.execute("SELECT COLUMN_NAME, COLUMN_DEFAULT "
                                "FROM information_schema.COLUMNS WHERE TABLE_NAME = '" + table + "';")
             rows = new_cursor.fetchall()
@@ -238,7 +253,7 @@ def migrate():
             old_cols_list = []
             new_cols_list = []
             for row in rows:
-                if row[0] not in EXCLUDED_COLUMNS:
+                if row[0] not in EXCLUDED_COLUMNS and row[0].lower() in old_columns_with_types:
                     col_default = extract_sequence_name(row[1])
                     if col_default:
                         sequence_columns[row[0]] = col_default
