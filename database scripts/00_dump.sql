@@ -8868,7 +8868,7 @@ SELECT setval('"public"."tblUsersDistricts_UserDistrictID_seq"', (select coalesc
 GRANT ALL ON SCHEMA "public" TO PUBLIC;
 
 
-
+set search_path to public;
 -- tblLanguages (en added in empty db)
 INSERT INTO "tblLanguages" ("LanguageCode", "LanguageName", "SortOrder") VALUES (N'fr', N'Français', NULL);
 
