@@ -12,8 +12,6 @@ COPY ["install_postgres_json_schema_extension.sh", "install_postgres_json_schema
 RUN chmod u+x install_postgres_json_schema_extension.sh
 RUN ./install_postgres_json_schema_extension.sh
 
+FROM base AS demo
 
-RUN if ["$INIT_MODE" = "demo"]; then \
-    FROM base AS demo; \
-    COPY ["database scripts/demo_db.sql", "/docker-entrypoint-initdb.d/"]; \
-    fi
+RUN if [ "$INIT_MODE" = "demo" ] ; then COPY ["database scripts/demo_db.sql", "/docker-entrypoint-initdb.d/"] ; else echo "Using empty openIMIS database" ; fi
