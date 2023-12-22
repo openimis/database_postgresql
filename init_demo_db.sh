@@ -1,4 +1,5 @@
 export PGPASSWORD=$DB_PASSWORD
 if [ "$INIT_MODE" = "demo" ]; then
-        psql -U $DB_USER -d $DB_NAME < demo_db.sql
+        cp demo_db.sql /docker-entrypoint-initdb.d/demo_db.sql
+        echo "Waiting for demo data set to load..."
 fi
