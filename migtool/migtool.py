@@ -1,8 +1,24 @@
+import re
+import uuid
+
 import pyodbc           # adapter for SQL Server
 import psycopg2         # adapter for PostgreSQL
 import configparser     # used to read settings from file
 import datetime         # used to properly format dates and datetimes
 import time             # used to calculate time taken
+
+# This script was created with global variables without initializing them here. Ideally, we should store a settings
+# object rather than all of them separately but this works.
+settings = None
+EXCLUDED_COLUMNS = ["RowID"]
+delete_data = False
+historical = False
+demo_fix = False
+migration_modules = []
+old_connection = None
+new_connection = None
+today = datetime.date.today()
+now = datetime.datetime.now()
 
 
 # loads connection configuration and migration settings from a file.
@@ -29,14 +45,18 @@ def get_settings_from_file():
             print("  Histrical data will be migrated to the new database.")
         else:
             print("  No historical data will be migrated.")
-            global today
-            global now
-            today = datetime.date.today()
-            now = datetime.datetime.now()
     except KeyError as e:
         print("\x1b[0;31;48m" + "Error while trying to load settings. " +\
               "Please make sure the settings.ini file exists in your working directory." + "\x1b[0m")
         exit(1)
+
+
+def is_uuid(value):
+    try:
+        uuid.UUID(value, version=4)
+        return True
+    except ValueError:
+        return False
 
 
 # tries to connect to both databases
@@ -50,8 +70,9 @@ def connect():
         global old_connection
         old_connection = pyodbc.connect(old_connection_string)
     except pyodbc.InterfaceError as exc:
-        print("\x1b[0;31;48m" +
-              "ERROR: Could not connect to the SQL Server database. Make sure the server is running and check your settings." +
+        print("\x1b[0;31;48m"
+              "ERROR: Could not connect to the SQL Server database. "
+              "Make sure the server is running and check your settings."
               "\x1b[0m")
         print(exc)
         exit(1)
@@ -61,13 +82,15 @@ def connect():
     new_db = settings["NewDB"]
     new_connection_string = f'host={new_db["host"]} port={new_db["port"]} dbname={new_db["name"]} ' \
                             f'user={new_db["user"]} password={new_db["pwd"]}'
-    new_connection_string = f'postgres://{new_db["user"]}@{new_db["host"]}:{new_db["port"]}/{new_db["name"]}'
+    # new_connection_string = \
+    #      f'postgres://{new_db["user"]}:{new_db["pwd"]}@{new_db["host"]}:{new_db["port"]}/{new_db["name"]}'
     try:
         global new_connection
         new_connection = psycopg2.connect(new_connection_string)
     except psycopg2.OperationalError as exc:
-        print("\x1b[0;31;48m" +
-              "ERROR: Could not connect to the PostgreSQL database. Make sure the server is running and check your settings." +
+        print("\x1b[0;31;48m"
+              "ERROR: Could not connect to the PostgreSQL database. "
+              "Make sure the server is running and check your settings."
               "\x1b[0m")
         print(exc)
         exit(1)
@@ -108,43 +131,38 @@ def get_db_tables():
     print("Finding tables in both databases.\n")
     old_cursor.execute("SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE';")
     new_cursor.execute("SELECT table_name FROM information_schema.tables WHERE table_schema = 'public';")
-    old_tables = list()
-    for x in old_cursor:
-        # Remove special characters at the start and end of each item when adding it to the list.
-        # This way the entries in the old and new list match
-        old_tables.append(str(x)[2:-4])
-    new_tables = list()
-    for x in new_cursor:
-        # Remove special characters at the start and end of each item when adding it to the list.
-        # This way the entries in the old and new list match
-        new_tables.append(str(x)[2:-3])
+    old_tables = [x[0] for x in old_cursor]
+    new_tables = [x[0] for x in new_cursor]
     return old_tables, new_tables
 
 
 # This function puts the data from a SELECT statement into string and formats it correctly so that postgres can work
 # with it.
 def generate_insertion_string(row):
-    row_str = "("
+    row_list = []
     for x in row:
         # Strings must be enclosed in apostrophes, also escape singe quotes in a string by doubling them
         if isinstance(x, str):
-            row_str = row_str + "'" + str(x).replace("'", "''") + "', "
+            # The .NET webapp used to create uppercase UUIDs, so we try to detect it and lowercase it
+            if 32 <= len(x) <= 36 and is_uuid(x):
+                x = x.lower()
+            row_list.append("'" + str(x).replace("'", "''") + "'")
         # Dates and datetimes must be enclosed in apostrophes
         elif isinstance(x, datetime.datetime) or isinstance(x, datetime.date):
-            row_str = row_str + "'" + str(x) + "', "
-        # If x is NoneType then str(x) get transtlated to "None", but sql wants "null"
+            row_list.append("'" + str(x) + "'")
+        # If x is NoneType then str(x) get translated to "None", but sql wants "null"
         elif x is None:
-            row_str = row_str + "null, "
+            row_list.append("null")
         # If x is bytes we need to make them nice (start with \x and append the data converted to hex):
         elif isinstance(x, bytes):
-            row_str = row_str + "'\\x" + str(x.hex()) + "', "
+            row_list.append("'\\x" + str(x.hex()) + "'")
         else:
-            row_str = row_str + str(x) + ", "
-    row_str = row_str[:-2] + ")"
+            row_list.append(str(x))
+    row_str = f"({', '.join(row_list)})"
     return row_str
 
 
-# When not migrating historical data, this function figures out what colums "ValidityTo" is so we can later check for
+# When not migrating historical data, this function figures out what columns "ValidityTo" is so we can later check for
 # each row if it is still valid or already historical
 def get_validity_index(rows):
     vi = -1
@@ -164,6 +182,8 @@ def get_validity_index(rows):
 
 
 def get_validity(vi, row):
+    global today
+    global now
     if historical or ((not historical) and vi == -1):
         return True
     elif (not historical) and vi != -1:
@@ -183,6 +203,17 @@ def get_validity(vi, row):
         # that the data must be migrated anyway (no expiration date = it's still valid).
         else:
             return True
+
+
+def extract_sequence_name(column_default):
+    if not column_default:
+        return None
+    pattern = r"nextval\('([^']*)"
+    match = re.search(pattern, column_default)
+    if match:
+        return match.group(1)
+    else:
+        return None
 
 
 def migrate():
@@ -206,7 +237,11 @@ def migrate():
                             "\"FeedbackUUID\", \"AuditUserID\") VALUES ('2000 01 01 00:00:00.000000', 0, 0, 0);")
 
             # Set up all the columns we're going to migrate.
-            new_cursor.execute("SELECT COLUMN_NAME FROM information_schema.COLUMNS WHERE TABLE_NAME = '" + table + "';")
+            cursor = old_cursor.execute("SELECT TOP 1 * FROM " + table + ";")
+            old_columns_with_types = {column[0].lower(): column[1] for column in cursor.description}
+
+            new_cursor.execute("SELECT COLUMN_NAME, COLUMN_DEFAULT "
+                               "FROM information_schema.COLUMNS WHERE TABLE_NAME = '" + table + "';")
             rows = new_cursor.fetchall()
             # While we have the data ready: find out where dates are stored for historical data stuff. validity_index
             # stores in which column the date (ValidityTo) is stored
@@ -214,18 +249,24 @@ def migrate():
             if not historical:
                 validity_index = get_validity_index(rows)
             # Finally, set up the columns to migrate
-            old_cols = ""
-            new_cols = "("
+            sequence_columns = {}
+            old_cols_list = []
+            new_cols_list = []
             for row in rows:
-                old_cols = old_cols + str(row)[2:-3] + ", "
-                new_cols = new_cols + "\"" + str(row)[2:-3] + "\", "
-            old_cols = old_cols[:-2]
-            new_cols = new_cols[:-2] + ")"
+                if row[0] not in EXCLUDED_COLUMNS and row[0].lower() in old_columns_with_types:
+                    col_default = extract_sequence_name(row[1])
+                    if col_default:
+                        sequence_columns[row[0]] = col_default
+                    old_cols_list.append(row[0])
+                    new_cols_list.append(f'"{row[0]}"')
+            old_cols = ", ".join(old_cols_list)
+            new_cols = "(" + ", ".join(new_cols_list) + ")"
 
             # Get the data from the old db with these column specifications
             print("    Fetching data from old database.")
             old_cursor.execute("SELECT COUNT(*) FROM " + table + ";")
-            print("    Found " + str(old_cursor.fetchone())[1:-3] + " entries.")
+            print(f"    Found {old_cursor.fetchone()[0]} entries.")
+            print(f"    == old_cols: {old_cols} from {table} ==")
             old_cursor.execute("SELECT " + old_cols + " FROM " + table + ";")
 
             # Set up the values for the insert statement and execute
@@ -247,14 +288,19 @@ def migrate():
                         # Not rolling back leads to an InFailedSqlTransaction exception.
                         new_connection.rollback()
                         pass
-
+                    except Exception as e:
+                        print("Failed: INSERT INTO \"" + table + "\" " + new_cols + " VALUES " + row_str + ";")
+                        raise
+            if sequence_columns:
+                print("    Data transferred, updating sequences.")
+                for column, sequence in sequence_columns.items():
+                    new_cursor.execute(f"select setval('{sequence}', max(\"{column}\")) from \"{table}\";")
             print("  Table " + table + " has been migrated.\n")
 
         # Table doesn't exist
         else:
-            print("\x1b[0;31;48m" + "WARNING: Table " + table + \
-                  " only exists in one of the databases (but not the other)! Is this correct?" + "\x1b[0m\n")
-            print("")
+            print(f"\x1b[0;31;48mWARNING: Table {table} only exists in one of the databases "
+                  f"new: {table in new_tables}, old:{table in old_tables})! Is this correct?\x1b[0m\n")
             lonely_tables.append(table)
 
     # Print all tables that have not been migrated due to missing schemas:
