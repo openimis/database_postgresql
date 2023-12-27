@@ -12,9 +12,4 @@ COPY ["install_postgres_json_schema_extension.sh", "install_postgres_json_schema
 RUN chmod u+x install_postgres_json_schema_extension.sh
 RUN ./install_postgres_json_schema_extension.sh
 
-
-RUN if [["${INIT_MODE}" = "demo"]]; then \
-        echo "${INIT_MODE}"; \
-        FROM base AS demo; \
-        COPY ["database scripts/demo_db.sql", "/docker-entrypoint-initdb.d/"]; \
-    fi
+CMD /bin/bash ./init_demo_db.sh
