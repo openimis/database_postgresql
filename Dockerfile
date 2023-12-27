@@ -12,5 +12,6 @@ COPY ["install_postgres_json_schema_extension.sh", "install_postgres_json_schema
 RUN chmod u+x install_postgres_json_schema_extension.sh
 RUN ./install_postgres_json_schema_extension.sh
 
+COPY ["init_demo_db.sh", "init_demo_db.sh"]
 RUN chmod u+x init_demo_db.sh
 RUN ./init_demo_db.sh
