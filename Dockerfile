@@ -14,6 +14,7 @@ RUN ./install_postgres_json_schema_extension.sh
 
 
 RUN if ["${INIT_MODE}" = "demo"]; then \
+    echo "Creating Demo Data....." \
     FROM base AS demo; \
     COPY ["database scripts/demo_db.sql", "/docker-entrypoint-initdb.d/"]; \
     fi
