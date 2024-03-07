@@ -9,17 +9,17 @@
 
 core_TechnicalUser
 core_User
-django_admin_log
-django_content_type
-django_migrations
-django_session
-auth_group
-auth_permission
-auth_group_permissions
-core_User_groups_tbl
+#django_admin_log
+#django_content_type
+#django_migrations
+#django_session
+#auth_group
+#auth_permission
+#auth_group_permissions
+#core_User_groups_tbl
 core_ModuleConfiguration
 core_FieldControl
-tblLanguages
+#tblLanguages
 tblUsers
 core_Mutation_Log
 tblOfficer
@@ -72,7 +72,7 @@ claim_ClaimMutation
 tblClaimItems
 tblClaimDedRem
 claim_ClaimAttachment
-health_check_db_testmodel
+#health_check_db_testmodel
 # the following tables have not yet been modeled in Django
 tblCeilingInterpretation
 tblControlNumber
