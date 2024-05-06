@@ -1,6 +1,92 @@
 
 set search_path to public;
 
+-- tblLanguages
+INSERT INTO "tblLanguages" ("LanguageCode", "LanguageName", "SortOrder") VALUES (N'en', N'English', NULL);
+INSERT INTO "tblLanguages" ("LanguageCode", "LanguageName", "SortOrder") VALUES (N'fr', N'Français', NULL);
+
+-- tblGender
+INSERT INTO "tblGender" ("Code", "Gender", "AltLanguage", "SortOrder") VALUES (N'F', N'Female', NULL, 2);
+INSERT INTO "tblGender" ("Code", "Gender", "AltLanguage", "SortOrder") VALUES (N'M', N'Male', NULL, 1);
+INSERT INTO "tblGender" ("Code", "Gender", "AltLanguage", "SortOrder") VALUES (N'O', N'Other', NULL, 3);
+
+-- tblLegalForms
+INSERT INTO "tblLegalForms" ("LegalFormCode", "LegalForms", "SortOrder", "AltLanguage") VALUES (N'C', N'Charity', NULL, N'Charité');
+INSERT INTO "tblLegalForms" ("LegalFormCode", "LegalForms", "SortOrder", "AltLanguage") VALUES (N'D', N'District organization', NULL, N'Organisation du district');
+INSERT INTO "tblLegalForms" ("LegalFormCode", "LegalForms", "SortOrder", "AltLanguage") VALUES (N'G', N'Government', NULL, N'Gouvernement');
+INSERT INTO "tblLegalForms" ("LegalFormCode", "LegalForms", "SortOrder", "AltLanguage") VALUES (N'P', N'Private organization', NULL, N'Organisation privée');
+
+-- tblFamilyTypes
+INSERT INTO "tblFamilyTypes" ("FamilyTypeCode", "FamilyType", "SortOrder", "AltLanguage") VALUES (N'C', N'Council', NULL, N'Conseil');
+INSERT INTO "tblFamilyTypes" ("FamilyTypeCode", "FamilyType", "SortOrder", "AltLanguage") VALUES (N'G', N'Organization', NULL, N'Organisation');
+INSERT INTO "tblFamilyTypes" ("FamilyTypeCode", "FamilyType", "SortOrder", "AltLanguage") VALUES (N'H', N'Household', NULL, N'Ménage');
+INSERT INTO "tblFamilyTypes" ("FamilyTypeCode", "FamilyType", "SortOrder", "AltLanguage") VALUES (N'O', N'Other', NULL, N'Autre');
+INSERT INTO "tblFamilyTypes" ("FamilyTypeCode", "FamilyType", "SortOrder", "AltLanguage") VALUES (N'P', N'Priests', NULL, N'Prètres');
+INSERT INTO "tblFamilyTypes" ("FamilyTypeCode", "FamilyType", "SortOrder", "AltLanguage") VALUES (N'S', N'Students', NULL, N'Etudiants');
+INSERT INTO "tblFamilyTypes" ("FamilyTypeCode", "FamilyType", "SortOrder", "AltLanguage") VALUES (N'T', N'Teachers', NULL, N'Enseignant');
+
+-- tblProfessions
+INSERT INTO "tblProfessions" ("ProfessionId", "Profession", "SortOrder", "AltLanguage") VALUES (1, N'Housewife', NULL, N'Femme au foyer');
+INSERT INTO "tblProfessions" ("ProfessionId", "Profession", "SortOrder", "AltLanguage") VALUES (2, N'Employee', NULL, N'Employé');
+INSERT INTO "tblProfessions" ("ProfessionId", "Profession", "SortOrder", "AltLanguage") VALUES (3, N'Self Employee', NULL, N'Indépendant');
+INSERT INTO "tblProfessions" ("ProfessionId", "Profession", "SortOrder", "AltLanguage") VALUES (4, N'Others', NULL, N'Autres');
+
+-- tblRelations
+INSERT INTO "tblRelations" ("RelationId", "Relation", "SortOrder", "AltLanguage") VALUES (1, N'Brother/Sister', NULL, N'Frère/soeur');
+INSERT INTO "tblRelations" ("RelationId", "Relation", "SortOrder", "AltLanguage") VALUES (2, N'Father/Mother', NULL, N'Père/Mère');
+INSERT INTO "tblRelations" ("RelationId", "Relation", "SortOrder", "AltLanguage") VALUES (3, N'Uncle/Aunt', NULL, N'Oncle/tante');
+INSERT INTO "tblRelations" ("RelationId", "Relation", "SortOrder", "AltLanguage") VALUES (4, N'Son/Daughter', NULL, N'Fils/fille');
+INSERT INTO "tblRelations" ("RelationId", "Relation", "SortOrder", "AltLanguage") VALUES (5, N'Grand parents', NULL, N'Grands/parents');
+INSERT INTO "tblRelations" ("RelationId", "Relation", "SortOrder", "AltLanguage") VALUES (6, N'Employee', NULL, N'Employé');
+INSERT INTO "tblRelations" ("RelationId", "Relation", "SortOrder", "AltLanguage") VALUES (7, N'Others', NULL, N'Autres');
+INSERT INTO "tblRelations" ("RelationId", "Relation", "SortOrder", "AltLanguage") VALUES (8, N'Spouse', NULL, N'Époux');
+
+-- tblConfirmationTypes
+INSERT INTO "tblConfirmationTypes" ("ConfirmationTypeCode", "ConfirmationType", "SortOrder", "AltLanguage") VALUES (N'A', N'Local council', NULL, N'Conseil local');
+INSERT INTO "tblConfirmationTypes" ("ConfirmationTypeCode", "ConfirmationType", "SortOrder", "AltLanguage") VALUES (N'B', N'Municipality', NULL, N'Municipalité');
+INSERT INTO "tblConfirmationTypes" ("ConfirmationTypeCode", "ConfirmationType", "SortOrder", "AltLanguage") VALUES (N'C', N'State', NULL, N'Etat');
+INSERT INTO "tblConfirmationTypes" ("ConfirmationTypeCode", "ConfirmationType", "SortOrder", "AltLanguage") VALUES (N'D', N'Other', NULL, N'Autre');
+
+-- tblControls
+INSERT INTO "tblControls" ("FieldName", "Adjustibility", "Usage") VALUES (N'BeneficiaryCard', N'O', N'Family, Insuree');
+INSERT INTO "tblControls" ("FieldName", "Adjustibility", "Usage") VALUES (N'ClaimAdministrator', N'M', N'FindClaim, Claim, ClaimReview, ClaimFeedback');
+INSERT INTO "tblControls" ("FieldName", "Adjustibility", "Usage") VALUES (N'Confirmation', N'O', N'Family, Insuree, OverviewFamily, ChangeFamily');
+INSERT INTO "tblControls" ("FieldName", "Adjustibility", "Usage") VALUES (N'ConfirmationNo', N'O', N'Family, Insuree, FindFamily, OverviewFamily, ChangeFamily');
+INSERT INTO "tblControls" ("FieldName", "Adjustibility", "Usage") VALUES (N'ContributionCategory', N'O', N'Premium, FindPremium');
+INSERT INTO "tblControls" ("FieldName", "Adjustibility", "Usage") VALUES (N'CurrentAddress', N'O', N'Family, Insuree');
+INSERT INTO "tblControls" ("FieldName", "Adjustibility", "Usage") VALUES (N'CurrentDistrict', N'O', N'Family, Insuree');
+INSERT INTO "tblControls" ("FieldName", "Adjustibility", "Usage") VALUES (N'CurrentMunicipality', N'O', N'Family, Insuree');
+INSERT INTO "tblControls" ("FieldName", "Adjustibility", "Usage") VALUES (N'CurrentVillage', N'O', N'Family, Insuree');
+INSERT INTO "tblControls" ("FieldName", "Adjustibility", "Usage") VALUES (N'Education', N'O', N'Family, Insuree');
+INSERT INTO "tblControls" ("FieldName", "Adjustibility", "Usage") VALUES (N'FamilyType', N'O', N'Family, ChangeFamily');
+INSERT INTO "tblControls" ("FieldName", "Adjustibility", "Usage") VALUES (N'FSP', N'O', N'Family, Insuree');
+INSERT INTO "tblControls" ("FieldName", "Adjustibility", "Usage") VALUES (N'FSPCategory', N'O', N'Family, Insuree');
+INSERT INTO "tblControls" ("FieldName", "Adjustibility", "Usage") VALUES (N'FSPDistrict', N'O', N'Family, Insuree');
+INSERT INTO "tblControls" ("FieldName", "Adjustibility", "Usage") VALUES (N'GuaranteeNo', N'O', N'Claim, ClaimReview');
+INSERT INTO "tblControls" ("FieldName", "Adjustibility", "Usage") VALUES (N'IdentificationNumber', N'O', N'Family, Insuree');
+INSERT INTO "tblControls" ("FieldName", "Adjustibility", "Usage") VALUES (N'IdentificationType', N'O', N'Family, Insuree');
+INSERT INTO "tblControls" ("FieldName", "Adjustibility", "Usage") VALUES (N'InsureeEmail', N'O', N'Family, Insuree, FindFamily');
+INSERT INTO "tblControls" ("FieldName", "Adjustibility", "Usage") VALUES (N'MaritalStatus', N'O', N'Family, Insuree');
+INSERT INTO "tblControls" ("FieldName", "Adjustibility", "Usage") VALUES (N'PermanentAddress', N'O', N'Family, Insuree, ChangeFamily');
+INSERT INTO "tblControls" ("FieldName", "Adjustibility", "Usage") VALUES (N'Poverty', N'O', N'Family, Insuree, Policy, Premium, FindFamily, ChangeFamily');
+INSERT INTO "tblControls" ("FieldName", "Adjustibility", "Usage") VALUES (N'Profession', N'O', N'Family, Insuree');
+INSERT INTO "tblControls" ("FieldName", "Adjustibility", "Usage") VALUES (N'Relationship', N'O', N'Insuree');
+
+-- tblEducations
+INSERT INTO "tblEducations" ("EducationId", "Education", "SortOrder", "AltLanguage") VALUES (1, N'Nursery', NULL, N'Garderie');
+INSERT INTO "tblEducations" ("EducationId", "Education", "SortOrder", "AltLanguage") VALUES (2, N'Primary school', NULL, N'École primaire');
+INSERT INTO "tblEducations" ("EducationId", "Education", "SortOrder", "AltLanguage") VALUES (3, N'Secondary school', NULL, N'École secondaire');
+INSERT INTO "tblEducations" ("EducationId", "Education", "SortOrder", "AltLanguage") VALUES (4, N'University', NULL, N'Université');
+INSERT INTO "tblEducations" ("EducationId", "Education", "SortOrder", "AltLanguage") VALUES (5, N'Postgraduate studies', NULL, N'Études supérieures');
+INSERT INTO "tblEducations" ("EducationId", "Education", "SortOrder", "AltLanguage") VALUES (6, N'PHD', NULL, N'Doctorat');
+INSERT INTO "tblEducations" ("EducationId", "Education", "SortOrder", "AltLanguage") VALUES (7, N'Other', NULL, N'Autre');
+
+
+-- tblIMISDefaults
+INSERT INTO "tblIMISDefaults" ("DefaultID", "PolicyRenewalInterval", "FTPHost", "FTPUser", "FTPPassword", "FTPPort", "FTPEnrollmentFolder", "AssociatedPhotoFolder", "FTPClaimFolder", "FTPFeedbackFolder", "FTPPolicyRenewalFolder", "FTPPhoneExtractFolder", "FTPOffLineExtractFolder", "AppVersionBackEnd", "AppVersionEnquire", "AppVersionEnroll", "AppVersionRenewal", "AppVersionFeedback", "AppVersionClaim", "OffLineHF", "WinRarFolder", "DatabaseBackupFolder", "OfflineCHF", "SMSLink", "SMSIP", "SMSUserName", "SMSPassword", "SMSSource", "SMSDlr", "SMSType", "AppVersionFeedbackRenewal", "AppVersionImis") VALUES (1, 14, N'', N'', N'', 50100, N'/Images/Submitted', N'/Images/Updated', N'', N'', N'', N'', N'', CAST(1.2 AS Decimal(3, 1)), CAST(0.0 AS Decimal(3, 1)), CAST(0.0 AS Decimal(3, 1)), CAST(0.0 AS Decimal(3, 1)), CAST(0.0 AS Decimal(3, 1)), CAST(0.0 AS Decimal(3, 1)), 0, N'C:\Program Files (x86)\WinRAR\', N'C:\Program Files\Microsoft SQL Server\MSSQL12.SQLEXPRESS\MSSQL\Backup', 0, N'', N'', N'', N'', N'', 1, 1, CAST(2.5 AS Decimal(3, 1)), CAST(0.0 AS Decimal(3, 1)));
+INSERT INTO "tblIMISDefaultsPhone" ("RuleName", "RuleValue") VALUES (N'AllowInsureeWithoutPhoto', false);
+INSERT INTO "tblIMISDefaultsPhone" ("RuleName", "RuleValue") VALUES (N'AllowFamilyWithoutPolicy', false);
+INSERT INTO "tblIMISDefaultsPhone" ("RuleName", "RuleValue") VALUES (N'AllowPolicyWithoutPremium', false);
 
 
 -- tblFeedbackPrompt
@@ -8,578 +94,640 @@ INSERT INTO "tblFeedbackPrompt" ("FeedbackPromptID", "FeedbackPromptDate", "Clai
 
 
 -- tblICDCodes
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (2, N'A000 Cholera due to Vibrio cholerae 01, biovar cholerae', N'Cholera due to Vibrio cholerae 01, biovar cholerae', CAST(N'2018-03-19T06:59:00.533' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (3, N'A001 Cholera due to Vibrio cholerae 01, biovar eltor', N'Cholera due to Vibrio cholerae 01, biovar eltor', CAST(N'2018-03-19T07:02:37.943' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (4, N'A009 Cholera, unspecified', N'Cholera, unspecified', CAST(N'2018-03-19T07:02:37.970' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (5, N'A0100 Typhoid fever, unspecified', N'Typhoid fever, unspecified', CAST(N'2018-03-19T07:02:37.977' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (6, N'A0101 Typhoid meningitis', N'Typhoid meningitis', CAST(N'2018-03-19T07:02:37.983' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (7, N'A0102 Typhoid fever with heart involvement', N'Typhoid fever with heart involvement', CAST(N'2018-03-19T07:02:37.990' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (8, N'A0103 Typhoid pneumonia', N'Typhoid pneumonia', CAST(N'2018-03-19T07:02:37.993' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (9, N'A0104 Typhoid arthritis', N'Typhoid arthritis', CAST(N'2018-03-19T07:02:38.000' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (10, N'A0105 Typhoid osteomyelitis', N'Typhoid osteomyelitis', CAST(N'2018-03-19T07:02:38.007' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (11, N'A0109 Typhoid fever with other complications', N'Typhoid fever with other complications', CAST(N'2018-03-19T07:02:38.027' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (12, N'A011 Paratyphoid fever A', N'Paratyphoid fever A', CAST(N'2018-03-19T07:02:38.030' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (13, N'A012 Paratyphoid fever B', N'Paratyphoid fever B', CAST(N'2018-03-19T07:02:38.037' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (14, N'A013 Paratyphoid fever C', N'Paratyphoid fever C', CAST(N'2018-03-19T07:02:38.040' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (15, N'A014 Paratyphoid fever, unspecified', N'Paratyphoid fever, unspecified', CAST(N'2018-03-19T07:02:38.047' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (16, N'A020 Salmonella enteritis', N'Salmonella enteritis', CAST(N'2018-03-19T07:02:38.053' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (17, N'A021 Salmonella sepsis', N'Salmonella sepsis', CAST(N'2018-03-19T07:02:38.060' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (18, N'A0220 Localized salmonella infection, unspecified', N'Localized salmonella infection, unspecified', CAST(N'2018-03-19T07:02:38.070' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (19, N'A0221 Salmonella meningitis', N'Salmonella meningitis', CAST(N'2018-03-19T07:02:38.077' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (20, N'A0222 Salmonella pneumonia', N'Salmonella pneumonia', CAST(N'2018-03-19T07:02:38.080' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (21, N'A0223 Salmonella arthritis', N'Salmonella arthritis', CAST(N'2018-03-19T07:02:38.087' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (22, N'A0224 Salmonella osteomyelitis', N'Salmonella osteomyelitis', CAST(N'2018-03-19T07:02:38.100' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (23, N'A0225 Salmonella pyelonephritis', N'Salmonella pyelonephritis', CAST(N'2018-03-19T07:02:38.120' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (24, N'A0229 Salmonella with other localized infection', N'Salmonella with other localized infection', CAST(N'2018-03-19T07:02:38.127' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (25, N'A028 Other specified salmonella infections', N'Other specified salmonella infections', CAST(N'2018-03-19T07:02:38.130' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (26, N'A029 Salmonella infection, unspecified', N'Salmonella infection, unspecified', CAST(N'2018-03-19T07:02:38.137' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (27, N'A030 Shigellosis due to Shigella dysenteriae', N'Shigellosis due to Shigella dysenteriae', CAST(N'2018-03-19T07:02:38.143' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (28, N'A031 Shigellosis due to Shigella flexneri', N'Shigellosis due to Shigella flexneri', CAST(N'2018-03-19T07:02:38.150' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (29, N'A032 Shigellosis due to Shigella boydii', N'Shigellosis due to Shigella boydii', CAST(N'2018-03-19T07:02:38.153' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (30, N'A033 Shigellosis due to Shigella sonnei', N'Shigellosis due to Shigella sonnei', CAST(N'2018-03-19T07:02:38.160' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (31, N'A038 Other shigellosis', N'Other shigellosis', CAST(N'2018-03-19T07:02:38.167' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (32, N'A039 Shigellosis, unspecified', N'Shigellosis, unspecified', CAST(N'2018-03-19T07:02:38.170' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (33, N'A040 Enteropathogenic Escherichia coli infection', N'Enteropathogenic Escherichia coli infection', CAST(N'2018-03-19T07:02:38.177' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (34, N'A041 Enterotoxigenic Escherichia coli infection', N'Enterotoxigenic Escherichia coli infection', CAST(N'2018-03-19T07:02:38.190' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (35, N'A042 Enteroinvasive Escherichia coli infection', N'Enteroinvasive Escherichia coli infection', CAST(N'2018-03-19T07:02:38.197' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (36, N'A043 Enterohemorrhagic Escherichia coli infection', N'Enterohemorrhagic Escherichia coli infection', CAST(N'2018-03-19T07:02:38.200' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (37, N'A044 Other intestinal Escherichia coli infections', N'Other intestinal Escherichia coli infections', CAST(N'2018-03-19T07:02:38.207' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (38, N'A045 Campylobacter enteritis', N'Campylobacter enteritis', CAST(N'2018-03-19T07:02:38.230' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (39, N'A046 Enteritis due to Yersinia enterocolitica', N'Enteritis due to Yersinia enterocolitica', CAST(N'2018-03-19T07:02:38.237' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (40, N'A047 Enterocolitis due to Clostridium difficile', N'Enterocolitis due to Clostridium difficile', CAST(N'2018-03-19T07:02:38.240' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (41, N'A0471 Enterocolitis due to Clostridium difficile, recurrent', N'Enterocolitis due to Clostridium difficile, recurrent', CAST(N'2018-03-19T07:02:38.247' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (42, N'A0472 Enterocolitis d/t Clostridium difficile, not spcf as recur', N'Enterocolitis d/t Clostridium difficile, not spcf as recur', CAST(N'2018-03-19T07:02:38.253' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (43, N'A048 Other specified bacterial intestinal infections', N'Other specified bacterial intestinal infections', CAST(N'2018-03-19T07:02:38.260' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (44, N'A049 Bacterial intestinal infection, unspecified', N'Bacterial intestinal infection, unspecified', CAST(N'2018-03-19T07:02:38.263' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (45, N'A050 Foodborne staphylococcal intoxication', N'Foodborne staphylococcal intoxication', CAST(N'2018-03-19T07:02:38.270' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (46, N'A051 Botulism food poisoning', N'Botulism food poisoning', CAST(N'2018-03-19T07:02:38.277' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (47, N'A052 Foodborne Clostridium perfringens intoxication', N'Foodborne Clostridium perfringens intoxication', CAST(N'2018-03-19T07:02:38.280' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (48, N'A053 Foodborne Vibrio parahaemolyticus intoxication', N'Foodborne Vibrio parahaemolyticus intoxication', CAST(N'2018-03-19T07:02:38.287' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (49, N'A054 Foodborne Bacillus cereus intoxication', N'Foodborne Bacillus cereus intoxication', CAST(N'2018-03-19T07:02:38.323' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (50, N'A055 Foodborne Vibrio vulnificus intoxication', N'Foodborne Vibrio vulnificus intoxication', CAST(N'2018-03-19T07:02:38.327' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (51, N'A058 Other specified bacterial foodborne intoxications', N'Other specified bacterial foodborne intoxications', CAST(N'2018-03-19T07:02:38.333' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (52, N'A059 Bacterial foodborne intoxication, unspecified', N'Bacterial foodborne intoxication, unspecified', CAST(N'2018-03-19T07:02:38.347' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (53, N'A060 Acute amebic dysentery', N'Acute amebic dysentery', CAST(N'2018-03-19T07:02:38.373' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (54, N'A061 Chronic intestinal amebiasis', N'Chronic intestinal amebiasis', CAST(N'2018-03-19T07:02:38.380' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (55, N'A062 Amebic nondysenteric colitis', N'Amebic nondysenteric colitis', CAST(N'2018-03-19T07:02:38.400' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (56, N'A063 Ameboma of intestine', N'Ameboma of intestine', CAST(N'2018-03-19T07:02:38.420' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (57, N'A064 Amebic liver abscess', N'Amebic liver abscess', CAST(N'2018-03-19T07:02:38.427' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (58, N'A065 Amebic lung abscess', N'Amebic lung abscess', CAST(N'2018-03-19T07:02:38.430' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (59, N'A066 Amebic brain abscess', N'Amebic brain abscess', CAST(N'2018-03-19T07:02:38.437' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (60, N'A067 Cutaneous amebiasis', N'Cutaneous amebiasis', CAST(N'2018-03-19T07:02:38.450' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (61, N'A0681 Amebic cystitis', N'Amebic cystitis', CAST(N'2018-03-19T07:02:38.453' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (62, N'A0682 Other amebic genitourinary infections', N'Other amebic genitourinary infections', CAST(N'2018-03-19T07:02:38.460' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (63, N'A0689 Other amebic infections', N'Other amebic infections', CAST(N'2018-03-19T07:02:38.470' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (64, N'A069 Amebiasis, unspecified', N'Amebiasis, unspecified', CAST(N'2018-03-19T07:02:38.477' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (65, N'A070 Balantidiasis', N'Balantidiasis', CAST(N'2018-03-19T07:02:38.490' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (66, N'A071 Giardiasis [lambliasis]', N'Giardiasis [lambliasis]', CAST(N'2018-03-19T07:02:38.540' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (67, N'A072 Cryptosporidiosis', N'Cryptosporidiosis', CAST(N'2018-03-19T07:02:38.577' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (68, N'A073 Isosporiasis', N'Isosporiasis', CAST(N'2018-03-19T07:02:38.580' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (69, N'A074 Cyclosporiasis', N'Cyclosporiasis', CAST(N'2018-03-19T07:02:38.587' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (70, N'A078 Other specified protozoal intestinal diseases', N'Other specified protozoal intestinal diseases', CAST(N'2018-03-19T07:02:38.620' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (71, N'A079 Protozoal intestinal disease, unspecified', N'Protozoal intestinal disease, unspecified', CAST(N'2018-03-19T07:02:38.627' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (72, N'A080 Rotaviral enteritis', N'Rotaviral enteritis', CAST(N'2018-03-19T07:02:38.630' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (73, N'A0811 Acute gastroenteropathy due to Norwalk agent', N'Acute gastroenteropathy due to Norwalk agent', CAST(N'2018-03-19T07:02:38.640' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (74, N'A0819 Acute gastroenteropathy due to other small round viruses', N'Acute gastroenteropathy due to other small round viruses', CAST(N'2018-03-19T07:02:38.643' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (75, N'A082 Adenoviral enteritis', N'Adenoviral enteritis', CAST(N'2018-03-19T07:02:38.650' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (76, N'A0831 Calicivirus enteritis', N'Calicivirus enteritis', CAST(N'2018-03-19T07:02:38.653' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (77, N'A0832 Astrovirus enteritis', N'Astrovirus enteritis', CAST(N'2018-03-19T07:02:38.660' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (78, N'A0839 Other viral enteritis', N'Other viral enteritis', CAST(N'2018-03-19T07:02:38.667' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (79, N'A084 Viral intestinal infection, unspecified', N'Viral intestinal infection, unspecified', CAST(N'2018-03-19T07:02:38.670' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (80, N'A088 Other specified intestinal infections', N'Other specified intestinal infections', CAST(N'2018-03-19T07:02:38.683' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (81, N'A09 Infectious gastroenteritis and colitis, unspecified', N'Infectious gastroenteritis and colitis, unspecified', CAST(N'2018-03-19T07:02:38.690' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (82, N'A150 Tuberculosis of lung', N'Tuberculosis of lung', CAST(N'2018-03-19T07:02:38.707' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (83, N'A154 Tuberculosis of intrathoracic lymph nodes', N'Tuberculosis of intrathoracic lymph nodes', CAST(N'2018-03-19T07:02:38.743' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (84, N'A155 Tuberculosis of larynx, trachea and bronchus', N'Tuberculosis of larynx, trachea and bronchus', CAST(N'2018-03-19T07:02:38.780' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (85, N'A156 Tuberculous pleurisy', N'Tuberculous pleurisy', CAST(N'2018-03-19T07:02:38.793' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (86, N'A157 Primary respiratory tuberculosis', N'Primary respiratory tuberculosis', CAST(N'2018-03-19T07:02:38.797' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (87, N'A158 Other respiratory tuberculosis', N'Other respiratory tuberculosis', CAST(N'2018-03-19T07:02:38.810' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (88, N'A159 Respiratory tuberculosis unspecified', N'Respiratory tuberculosis unspecified', CAST(N'2018-03-19T07:02:38.820' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (89, N'A170 Tuberculous meningitis', N'Tuberculous meningitis', CAST(N'2018-03-19T07:02:38.827' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (90, N'A171 Meningeal tuberculoma', N'Meningeal tuberculoma', CAST(N'2018-03-19T07:02:38.830' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (91, N'A1781 Tuberculoma of brain and spinal cord', N'Tuberculoma of brain and spinal cord', CAST(N'2018-03-19T07:02:38.837' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (92, N'A1782 Tuberculous meningoencephalitis', N'Tuberculous meningoencephalitis', CAST(N'2018-03-19T07:02:38.843' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (93, N'A1783 Tuberculous neuritis', N'Tuberculous neuritis', CAST(N'2018-03-19T07:02:38.850' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (94, N'A1789 Other tuberculosis of nervous system', N'Other tuberculosis of nervous system', CAST(N'2018-03-19T07:02:38.853' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (95, N'A179 Tuberculosis of nervous system, unspecified', N'Tuberculosis of nervous system, unspecified', CAST(N'2018-03-19T07:02:38.860' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (96, N'A1801 Tuberculosis of spine', N'Tuberculosis of spine', CAST(N'2018-03-19T07:02:38.867' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (97, N'A1802 Tuberculous arthritis of other joints', N'Tuberculous arthritis of other joints', CAST(N'2018-03-19T07:02:38.873' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (98, N'A1803 Tuberculosis of other bones', N'Tuberculosis of other bones', CAST(N'2018-03-19T07:02:38.877' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (99, N'A1809 Other musculoskeletal tuberculosis', N'Other musculoskeletal tuberculosis', CAST(N'2018-03-19T07:02:38.883' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (100, N'A1810 Tuberculosis of genitourinary system, unspecified', N'Tuberculosis of genitourinary system, unspecified', CAST(N'2018-03-19T07:02:38.890' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (101, N'A1811 Tuberculosis of kidney and ureter', N'Tuberculosis of kidney and ureter', CAST(N'2018-03-19T07:02:38.897' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (102, N'A1812 Tuberculosis of bladder', N'Tuberculosis of bladder', CAST(N'2018-03-19T07:02:38.900' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (103, N'A1813 Tuberculosis of other urinary organs', N'Tuberculosis of other urinary organs', CAST(N'2018-03-19T07:02:38.907' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (104, N'A1814 Tuberculosis of prostate', N'Tuberculosis of prostate', CAST(N'2018-03-19T07:02:38.913' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (105, N'A1815 Tuberculosis of other male genital organs', N'Tuberculosis of other male genital organs', CAST(N'2018-03-19T07:02:38.917' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (106, N'A1816 Tuberculosis of cervix', N'Tuberculosis of cervix', CAST(N'2018-03-19T07:02:38.923' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (107, N'A1817 Tuberculous female pelvic inflammatory disease', N'Tuberculous female pelvic inflammatory disease', CAST(N'2018-03-19T07:02:38.930' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (108, N'A1818 Tuberculosis of other female genital organs', N'Tuberculosis of other female genital organs', CAST(N'2018-03-19T07:02:38.933' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (109, N'A182 Tuberculous peripheral lymphadenopathy', N'Tuberculous peripheral lymphadenopathy', CAST(N'2018-03-19T07:02:38.940' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (110, N'A1831 Tuberculous peritonitis', N'Tuberculous peritonitis', CAST(N'2018-03-19T07:02:38.947' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (111, N'A1832 Tuberculous enteritis', N'Tuberculous enteritis', CAST(N'2018-03-19T07:02:38.950' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (112, N'A1839 Retroperitoneal tuberculosis', N'Retroperitoneal tuberculosis', CAST(N'2018-03-19T07:02:38.960' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (113, N'A184 Tuberculosis of skin and subcutaneous tissue', N'Tuberculosis of skin and subcutaneous tissue', CAST(N'2018-03-19T07:02:38.967' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (114, N'A1850 Tuberculosis of eye, unspecified', N'Tuberculosis of eye, unspecified', CAST(N'2018-03-19T07:02:38.973' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (115, N'A1851 Tuberculous episcleritis', N'Tuberculous episcleritis', CAST(N'2018-03-19T07:02:38.980' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (116, N'A1852 Tuberculous keratitis', N'Tuberculous keratitis', CAST(N'2018-03-19T07:02:38.983' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (117, N'A1853 Tuberculous chorioretinitis', N'Tuberculous chorioretinitis', CAST(N'2018-03-19T07:02:38.990' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (118, N'A1854 Tuberculous iridocyclitis', N'Tuberculous iridocyclitis', CAST(N'2018-03-19T07:02:38.997' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (119, N'A1859 Other tuberculosis of eye', N'Other tuberculosis of eye', CAST(N'2018-03-19T07:02:39.007' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (120, N'A186 Tuberculosis of (inner) (middle) ear', N'Tuberculosis of (inner) (middle) ear', CAST(N'2018-03-19T07:02:39.020' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (121, N'A187 Tuberculosis of adrenal glands', N'Tuberculosis of adrenal glands', CAST(N'2018-03-19T07:02:39.023' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (122, N'A1881 Tuberculosis of thyroid gland', N'Tuberculosis of thyroid gland', CAST(N'2018-03-19T07:02:39.030' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (123, N'A1882 Tuberculosis of other endocrine glands', N'Tuberculosis of other endocrine glands', CAST(N'2018-03-19T07:02:39.037' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (124, N'A1883 Tuberculosis of digestive tract organs, NEC', N'Tuberculosis of digestive tract organs, NEC', CAST(N'2018-03-19T07:02:39.047' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (125, N'A1884 Tuberculosis of heart', N'Tuberculosis of heart', CAST(N'2018-03-19T07:02:39.053' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (126, N'A1885 Tuberculosis of spleen', N'Tuberculosis of spleen', CAST(N'2018-03-19T07:02:39.060' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (127, N'A1889 Tuberculosis of other sites', N'Tuberculosis of other sites', CAST(N'2018-03-19T07:02:39.063' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (128, N'A190 Acute miliary tuberculosis of a single specified site', N'Acute miliary tuberculosis of a single specified site', CAST(N'2018-03-19T07:02:39.077' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (129, N'A191 Acute miliary tuberculosis of multiple sites', N'Acute miliary tuberculosis of multiple sites', CAST(N'2018-03-19T07:02:39.087' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (130, N'A192 Acute miliary tuberculosis, unspecified', N'Acute miliary tuberculosis, unspecified', CAST(N'2018-03-19T07:02:39.090' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (131, N'A198 Other miliary tuberculosis', N'Other miliary tuberculosis', CAST(N'2018-03-19T07:02:39.097' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (132, N'A199 Miliary tuberculosis, unspecified', N'Miliary tuberculosis, unspecified', CAST(N'2018-03-19T07:02:39.103' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (133, N'A200 Bubonic plague', N'Bubonic plague', CAST(N'2018-03-19T07:02:39.153' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (134, N'A201 Cellulocutaneous plague', N'Cellulocutaneous plague', CAST(N'2018-03-19T07:02:39.160' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (135, N'A202 Pneumonic plague', N'Pneumonic plague', CAST(N'2018-03-19T07:02:39.167' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (136, N'A203 Plague meningitis', N'Plague meningitis', CAST(N'2018-03-19T07:02:39.170' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (137, N'A207 Septicemic plague', N'Septicemic plague', CAST(N'2018-03-19T07:02:39.177' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (138, N'A208 Other forms of plague', N'Other forms of plague', CAST(N'2018-03-19T07:02:39.183' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (139, N'A209 Plague, unspecified', N'Plague, unspecified', CAST(N'2018-03-19T07:02:39.190' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (140, N'A210 Ulceroglandular tularemia', N'Ulceroglandular tularemia', CAST(N'2018-03-19T07:02:39.197' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (141, N'A211 Oculoglandular tularemia', N'Oculoglandular tularemia', CAST(N'2018-03-19T07:02:39.200' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (142, N'A212 Pulmonary tularemia', N'Pulmonary tularemia', CAST(N'2018-03-19T07:02:39.207' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (143, N'A213 Gastrointestinal tularemia', N'Gastrointestinal tularemia', CAST(N'2018-03-19T07:02:39.213' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (144, N'A217 Generalized tularemia', N'Generalized tularemia', CAST(N'2018-03-19T07:02:39.230' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (145, N'A218 Other forms of tularemia', N'Other forms of tularemia', CAST(N'2018-03-19T07:02:39.237' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (146, N'A219 Tularemia, unspecified', N'Tularemia, unspecified', CAST(N'2018-03-19T07:02:39.243' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (147, N'A220 Cutaneous anthrax', N'Cutaneous anthrax', CAST(N'2018-03-19T07:02:39.247' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (148, N'A221 Pulmonary anthrax', N'Pulmonary anthrax', CAST(N'2018-03-19T07:02:39.253' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (149, N'A222 Gastrointestinal anthrax', N'Gastrointestinal anthrax', CAST(N'2018-03-19T07:02:39.260' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (150, N'A227 Anthrax sepsis', N'Anthrax sepsis', CAST(N'2018-03-19T07:02:39.263' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (151, N'A228 Other forms of anthrax', N'Other forms of anthrax', CAST(N'2018-03-19T07:02:39.270' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (152, N'A229 Anthrax, unspecified', N'Anthrax, unspecified', CAST(N'2018-03-19T07:02:39.277' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (153, N'A230 Brucellosis due to Brucella melitensis', N'Brucellosis due to Brucella melitensis', CAST(N'2018-03-19T07:02:39.283' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (154, N'A231 Brucellosis due to Brucella abortus', N'Brucellosis due to Brucella abortus', CAST(N'2018-03-19T07:02:39.287' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (155, N'A232 Brucellosis due to Brucella suis', N'Brucellosis due to Brucella suis', CAST(N'2018-03-19T07:02:39.293' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (156, N'A233 Brucellosis due to Brucella canis', N'Brucellosis due to Brucella canis', CAST(N'2018-03-19T07:02:39.303' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (157, N'A238 Other brucellosis', N'Other brucellosis', CAST(N'2018-03-19T07:02:39.340' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (158, N'A239 Brucellosis, unspecified', N'Brucellosis, unspecified', CAST(N'2018-03-19T07:02:39.347' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (159, N'A240 Glanders', N'Glanders', CAST(N'2018-03-19T07:02:39.353' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (160, N'A241 Acute and fulminating melioidosis', N'Acute and fulminating melioidosis', CAST(N'2018-03-19T07:02:39.363' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (161, N'A242 Subacute and chronic melioidosis', N'Subacute and chronic melioidosis', CAST(N'2018-03-19T07:02:39.370' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (162, N'A243 Other melioidosis', N'Other melioidosis', CAST(N'2018-03-19T07:02:39.373' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (163, N'A249 Melioidosis, unspecified', N'Melioidosis, unspecified', CAST(N'2018-03-19T07:02:39.380' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (164, N'A250 Spirillosis', N'Spirillosis', CAST(N'2018-03-19T07:02:39.387' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (165, N'A251 Streptobacillosis', N'Streptobacillosis', CAST(N'2018-03-19T07:02:39.390' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (166, N'A259 Rat-bite fever, unspecified', N'Rat-bite fever, unspecified', CAST(N'2018-03-19T07:02:39.397' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (167, N'A260 Cutaneous erysipeloid', N'Cutaneous erysipeloid', CAST(N'2018-03-19T07:02:39.437' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (168, N'A267 Erysipelothrix sepsis', N'Erysipelothrix sepsis', CAST(N'2018-03-19T07:02:39.443' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (169, N'A268 Other forms of erysipeloid', N'Other forms of erysipeloid', CAST(N'2018-03-19T07:02:39.457' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (170, N'A269 Erysipeloid, unspecified', N'Erysipeloid, unspecified', CAST(N'2018-03-19T07:02:39.460' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (171, N'A270 Leptospirosis icterohemorrhagica', N'Leptospirosis icterohemorrhagica', CAST(N'2018-03-19T07:02:39.467' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (172, N'A2781 Aseptic meningitis in leptospirosis', N'Aseptic meningitis in leptospirosis', CAST(N'2018-03-19T07:02:39.490' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (173, N'A2789 Other forms of leptospirosis', N'Other forms of leptospirosis', CAST(N'2018-03-19T07:02:39.497' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (174, N'A279 Leptospirosis, unspecified', N'Leptospirosis, unspecified', CAST(N'2018-03-19T07:02:39.500' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (175, N'A280 Pasteurellosis', N'Pasteurellosis', CAST(N'2018-03-19T07:02:39.507' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (176, N'A281 Cat-scratch disease', N'Cat-scratch disease', CAST(N'2018-03-19T07:02:39.520' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (177, N'A282 Extraintestinal yersiniosis', N'Extraintestinal yersiniosis', CAST(N'2018-03-19T07:02:39.530' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (178, N'A288 Oth zoonotic bacterial diseases, not elsewhere classified', N'Oth zoonotic bacterial diseases, not elsewhere classified', CAST(N'2018-03-19T07:02:39.537' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (179, N'A289 Zoonotic bacterial disease, unspecified', N'Zoonotic bacterial disease, unspecified', CAST(N'2018-03-19T07:02:39.550' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (180, N'A300 Indeterminate leprosy', N'Indeterminate leprosy', CAST(N'2018-03-19T07:02:39.560' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (181, N'A301 Tuberculoid leprosy', N'Tuberculoid leprosy', CAST(N'2018-03-19T07:02:39.567' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (182, N'A302 Borderline tuberculoid leprosy', N'Borderline tuberculoid leprosy', CAST(N'2018-03-19T07:02:39.570' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (183, N'A303 Borderline leprosy', N'Borderline leprosy', CAST(N'2018-03-19T07:02:39.580' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (184, N'A304 Borderline lepromatous leprosy', N'Borderline lepromatous leprosy', CAST(N'2018-03-19T07:02:39.600' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (185, N'A305 Lepromatous leprosy', N'Lepromatous leprosy', CAST(N'2018-03-19T07:02:39.607' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (186, N'A308 Other forms of leprosy', N'Other forms of leprosy', CAST(N'2018-03-19T07:02:39.613' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (187, N'A309 Leprosy, unspecified', N'Leprosy, unspecified', CAST(N'2018-03-19T07:02:39.617' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (188, N'A310 Pulmonary mycobacterial infection', N'Pulmonary mycobacterial infection', CAST(N'2018-03-19T07:02:39.633' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (189, N'A311 Cutaneous mycobacterial infection', N'Cutaneous mycobacterial infection', CAST(N'2018-03-19T07:02:39.643' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (190, N'A312 Dissem mycobacterium avium-intracellulare complex (DMAC)', N'Dissem mycobacterium avium-intracellulare complex (DMAC)', CAST(N'2018-03-19T07:02:39.647' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (191, N'A318 Other mycobacterial infections', N'Other mycobacterial infections', CAST(N'2018-03-19T07:02:39.653' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (192, N'A319 Mycobacterial infection, unspecified', N'Mycobacterial infection, unspecified', CAST(N'2018-03-19T07:02:39.657' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (193, N'A320 Cutaneous listeriosis', N'Cutaneous listeriosis', CAST(N'2018-03-19T07:02:39.663' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (194, N'A3211 Listerial meningitis', N'Listerial meningitis', CAST(N'2018-03-19T07:02:39.677' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (195, N'A3212 Listerial meningoencephalitis', N'Listerial meningoencephalitis', CAST(N'2018-03-19T07:02:39.680' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (196, N'A327 Listerial sepsis', N'Listerial sepsis', CAST(N'2018-03-19T07:02:39.687' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (197, N'A3281 Oculoglandular listeriosis', N'Oculoglandular listeriosis', CAST(N'2018-03-19T07:02:39.693' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (198, N'A3282 Listerial endocarditis', N'Listerial endocarditis', CAST(N'2018-03-19T07:02:39.697' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (199, N'A3289 Other forms of listeriosis', N'Other forms of listeriosis', CAST(N'2018-03-19T07:02:39.703' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (200, N'A329 Listeriosis, unspecified', N'Listeriosis, unspecified', CAST(N'2018-03-19T07:02:39.710' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (201, N'A33 Tetanus neonatorum', N'Tetanus neonatorum', CAST(N'2018-03-19T07:02:39.747' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (202, N'A34 Obstetrical tetanus', N'Obstetrical tetanus', CAST(N'2018-03-19T07:02:39.750' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (203, N'A35 Other tetanus', N'Other tetanus', CAST(N'2018-03-19T07:02:39.757' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (204, N'A360 Pharyngeal diphtheria', N'Pharyngeal diphtheria', CAST(N'2018-03-19T07:02:39.760' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (205, N'A361 Nasopharyngeal diphtheria', N'Nasopharyngeal diphtheria', CAST(N'2018-03-19T07:02:39.767' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (206, N'A362 Laryngeal diphtheria', N'Laryngeal diphtheria', CAST(N'2018-03-19T07:02:39.773' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (207, N'A363 Cutaneous diphtheria', N'Cutaneous diphtheria', CAST(N'2018-03-19T07:02:39.780' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (208, N'A3681 Diphtheritic cardiomyopathy', N'Diphtheritic cardiomyopathy', CAST(N'2018-03-19T07:02:39.783' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (209, N'A3682 Diphtheritic radiculomyelitis', N'Diphtheritic radiculomyelitis', CAST(N'2018-03-19T07:02:39.790' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (210, N'A3683 Diphtheritic polyneuritis', N'Diphtheritic polyneuritis', CAST(N'2018-03-19T07:02:39.797' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (211, N'A3684 Diphtheritic tubulo-interstitial nephropathy', N'Diphtheritic tubulo-interstitial nephropathy', CAST(N'2018-03-19T07:02:39.800' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (212, N'A3685 Diphtheritic cystitis', N'Diphtheritic cystitis', CAST(N'2018-03-19T07:02:39.807' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (213, N'A3686 Diphtheritic conjunctivitis', N'Diphtheritic conjunctivitis', CAST(N'2018-03-19T07:02:39.817' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (214, N'A3689 Other diphtheritic complications', N'Other diphtheritic complications', CAST(N'2018-03-19T07:02:39.823' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (215, N'A369 Diphtheria, unspecified', N'Diphtheria, unspecified', CAST(N'2018-03-19T07:02:39.830' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (216, N'A3700 Whooping cough due to Bordetella pertussis without pneumonia', N'Whooping cough due to Bordetella pertussis without pneumonia', CAST(N'2018-03-19T07:02:39.833' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (217, N'A3701 Whooping cough due to Bordetella pertussis with pneumonia', N'Whooping cough due to Bordetella pertussis with pneumonia', CAST(N'2018-03-19T07:02:39.840' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (218, N'A3710 Whooping cough due to Bordetella parapertussis w/o pneumonia', N'Whooping cough due to Bordetella parapertussis w/o pneumonia', CAST(N'2018-03-19T07:02:39.847' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (219, N'A3711 Whooping cough due to Bordetella parapertussis w pneumonia', N'Whooping cough due to Bordetella parapertussis w pneumonia', CAST(N'2018-03-19T07:02:39.850' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (220, N'A3780 Whooping cough due to other Bordetella species w/o pneumonia', N'Whooping cough due to other Bordetella species w/o pneumonia', CAST(N'2018-03-19T07:02:39.857' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (221, N'A3781 Whooping cough due to oth Bordetella species with pneumonia', N'Whooping cough due to oth Bordetella species with pneumonia', CAST(N'2018-03-19T07:02:39.863' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (222, N'A3790 Whooping cough, unspecified species without pneumonia', N'Whooping cough, unspecified species without pneumonia', CAST(N'2018-03-19T07:02:39.870' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (223, N'A3791 Whooping cough, unspecified species with pneumonia', N'Whooping cough, unspecified species with pneumonia', CAST(N'2018-03-19T07:02:39.873' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (224, N'A380 Scarlet fever with otitis media', N'Scarlet fever with otitis media', CAST(N'2018-03-19T07:02:39.880' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (225, N'A381 Scarlet fever with myocarditis', N'Scarlet fever with myocarditis', CAST(N'2018-03-19T07:02:39.887' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (226, N'A388 Scarlet fever with other complications', N'Scarlet fever with other complications', CAST(N'2018-03-19T07:02:39.903' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (227, N'A389 Scarlet fever, uncomplicated', N'Scarlet fever, uncomplicated', CAST(N'2018-03-19T07:02:39.910' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (228, N'A390 Meningococcal meningitis', N'Meningococcal meningitis', CAST(N'2018-03-19T07:02:39.917' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (229, N'A391 Waterhouse-Friderichsen syndrome', N'Waterhouse-Friderichsen syndrome', CAST(N'2018-03-19T07:02:39.920' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (230, N'A392 Acute meningococcemia', N'Acute meningococcemia', CAST(N'2018-03-19T07:02:39.927' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (231, N'A393 Chronic meningococcemia', N'Chronic meningococcemia', CAST(N'2018-03-19T07:02:39.933' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (232, N'A394 Meningococcemia, unspecified', N'Meningococcemia, unspecified', CAST(N'2018-03-19T07:02:39.940' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (233, N'A3950 Meningococcal carditis, unspecified', N'Meningococcal carditis, unspecified', CAST(N'2018-03-19T07:02:39.950' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (234, N'A3951 Meningococcal endocarditis', N'Meningococcal endocarditis', CAST(N'2018-03-19T07:02:39.957' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (235, N'A3952 Meningococcal myocarditis', N'Meningococcal myocarditis', CAST(N'2018-03-19T07:02:39.963' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (236, N'A3953 Meningococcal pericarditis', N'Meningococcal pericarditis', CAST(N'2018-03-19T07:02:39.970' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (237, N'A3981 Meningococcal encephalitis', N'Meningococcal encephalitis', CAST(N'2018-03-19T07:02:39.973' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (238, N'A3982 Meningococcal retrobulbar neuritis', N'Meningococcal retrobulbar neuritis', CAST(N'2018-03-19T07:02:39.980' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (239, N'A3983 Meningococcal arthritis', N'Meningococcal arthritis', CAST(N'2018-03-19T07:02:39.987' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (240, N'A3984 Postmeningococcal arthritis', N'Postmeningococcal arthritis', CAST(N'2018-03-19T07:02:39.990' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (241, N'A3989 Other meningococcal infections', N'Other meningococcal infections', CAST(N'2018-03-19T07:02:39.997' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (242, N'A399 Meningococcal infection, unspecified', N'Meningococcal infection, unspecified', CAST(N'2018-03-19T07:02:40.003' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (243, N'A400 Sepsis due to streptococcus, group A', N'Sepsis due to streptococcus, group A', CAST(N'2018-03-19T07:02:40.010' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (244, N'A401 Sepsis due to streptococcus, group B', N'Sepsis due to streptococcus, group B', CAST(N'2018-03-19T07:02:40.013' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (245, N'A403 Sepsis due to Streptococcus pneumoniae', N'Sepsis due to Streptococcus pneumoniae', CAST(N'2018-03-19T07:02:40.020' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (246, N'A408 Other streptococcal sepsis', N'Other streptococcal sepsis', CAST(N'2018-03-19T07:02:40.027' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (247, N'A409 Streptococcal sepsis, unspecified', N'Streptococcal sepsis, unspecified', CAST(N'2018-03-19T07:02:40.030' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (248, N'A4101 Sepsis due to Methicillin susceptible Staphylococcus aureus', N'Sepsis due to Methicillin susceptible Staphylococcus aureus', CAST(N'2018-03-19T07:02:40.037' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (249, N'A4102 Sepsis due to Methicillin resistant Staphylococcus aureus', N'Sepsis due to Methicillin resistant Staphylococcus aureus', CAST(N'2018-03-19T07:02:40.050' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (250, N'A411 Sepsis due to other specified staphylococcus', N'Sepsis due to other specified staphylococcus', CAST(N'2018-03-19T07:02:40.053' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (251, N'A412 Sepsis due to unspecified staphylococcus', N'Sepsis due to unspecified staphylococcus', CAST(N'2018-03-19T07:02:40.060' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (252, N'A413 Sepsis due to Hemophilus influenzae', N'Sepsis due to Hemophilus influenzae', CAST(N'2018-03-19T07:02:40.070' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (253, N'A414 Sepsis due to anaerobes', N'Sepsis due to anaerobes', CAST(N'2018-03-19T07:02:40.077' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (254, N'A4150 Gram-negative sepsis, unspecified', N'Gram-negative sepsis, unspecified', CAST(N'2018-03-19T07:02:40.083' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (255, N'A4151 Sepsis due to Escherichia coli [E. coli]', N'Sepsis due to Escherichia coli [E. coli]', CAST(N'2018-03-19T07:02:40.090' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (256, N'A4152 Sepsis due to Pseudomonas', N'Sepsis due to Pseudomonas', CAST(N'2018-03-19T07:02:40.093' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (257, N'A4153 Sepsis due to Serratia', N'Sepsis due to Serratia', CAST(N'2018-03-19T07:02:40.107' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (258, N'A4159 Other Gram-negative sepsis', N'Other Gram-negative sepsis', CAST(N'2018-03-19T07:02:40.140' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (259, N'A4181 Sepsis due to Enterococcus', N'Sepsis due to Enterococcus', CAST(N'2018-03-19T07:02:40.147' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (260, N'A4189 Other specified sepsis', N'Other specified sepsis', CAST(N'2018-03-19T07:02:40.157' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (261, N'A419 Sepsis, unspecified organism', N'Sepsis, unspecified organism', CAST(N'2018-03-19T07:02:40.163' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (262, N'A420 Pulmonary actinomycosis', N'Pulmonary actinomycosis', CAST(N'2018-03-19T07:02:40.170' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (263, N'A421 Abdominal actinomycosis', N'Abdominal actinomycosis', CAST(N'2018-03-19T07:02:40.173' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (264, N'A422 Cervicofacial actinomycosis', N'Cervicofacial actinomycosis', CAST(N'2018-03-19T07:02:40.180' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (265, N'A427 Actinomycotic sepsis', N'Actinomycotic sepsis', CAST(N'2018-03-19T07:02:40.187' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (266, N'A4281 Actinomycotic meningitis', N'Actinomycotic meningitis', CAST(N'2018-03-19T07:02:40.193' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (267, N'A4282 Actinomycotic encephalitis', N'Actinomycotic encephalitis', CAST(N'2018-03-19T07:02:40.200' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (268, N'A4289 Other forms of actinomycosis', N'Other forms of actinomycosis', CAST(N'2018-03-19T07:02:40.233' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (269, N'A429 Actinomycosis, unspecified', N'Actinomycosis, unspecified', CAST(N'2018-03-19T07:02:40.240' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (270, N'A430 Pulmonary nocardiosis', N'Pulmonary nocardiosis', CAST(N'2018-03-19T07:02:40.243' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (271, N'A431 Cutaneous nocardiosis', N'Cutaneous nocardiosis', CAST(N'2018-03-19T07:02:40.250' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (272, N'A438 Other forms of nocardiosis', N'Other forms of nocardiosis', CAST(N'2018-03-19T07:02:40.257' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (273, N'A439 Nocardiosis, unspecified', N'Nocardiosis, unspecified', CAST(N'2018-03-19T07:02:40.260' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (274, N'A440 Systemic bartonellosis', N'Systemic bartonellosis', CAST(N'2018-03-19T07:02:40.267' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (275, N'A441 Cutaneous and mucocutaneous bartonellosis', N'Cutaneous and mucocutaneous bartonellosis', CAST(N'2018-03-19T07:02:40.273' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (276, N'A448 Other forms of bartonellosis', N'Other forms of bartonellosis', CAST(N'2018-03-19T07:02:40.280' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (277, N'A449 Bartonellosis, unspecified', N'Bartonellosis, unspecified', CAST(N'2018-03-19T07:02:40.283' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (278, N'A46 Erysipelas', N'Erysipelas', CAST(N'2018-03-19T07:02:40.290' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (279, N'A480 Gas gangrene', N'Gas gangrene', CAST(N'2018-03-19T07:02:40.297' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (280, N'A481 Legionnaires'' disease', N'Legionnaires'' disease', CAST(N'2018-03-19T07:02:40.300' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (281, N'A482 Nonpneumonic Legionnaires'' disease [Pontiac fever]', N'Nonpneumonic Legionnaires'' disease [Pontiac fever]', CAST(N'2018-03-19T07:02:40.307' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (282, N'A483 Toxic shock syndrome', N'Toxic shock syndrome', CAST(N'2018-03-19T07:02:40.343' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (283, N'A484 Brazilian purpuric fever', N'Brazilian purpuric fever', CAST(N'2018-03-19T07:02:40.353' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (284, N'A4851 Infant botulism', N'Infant botulism', CAST(N'2018-03-19T07:02:40.363' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (285, N'A4852 Wound botulism', N'Wound botulism', CAST(N'2018-03-19T07:02:40.370' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (286, N'A488 Other specified bacterial diseases', N'Other specified bacterial diseases', CAST(N'2018-03-19T07:02:40.377' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (287, N'A4901 Methicillin suscep staph infection, unsp site', N'Methicillin suscep staph infection, unsp site', CAST(N'2018-03-19T07:02:40.387' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (288, N'A4902 Methicillin resis staph infection, unsp site', N'Methicillin resis staph infection, unsp site', CAST(N'2018-03-19T07:02:40.390' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (289, N'A491 Streptococcal infection, unspecified site', N'Streptococcal infection, unspecified site', CAST(N'2018-03-19T07:02:40.400' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (290, N'A492 Hemophilus influenzae infection, unspecified site', N'Hemophilus influenzae infection, unspecified site', CAST(N'2018-03-19T07:02:40.410' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (291, N'A493 Mycoplasma infection, unspecified site', N'Mycoplasma infection, unspecified site', CAST(N'2018-03-19T07:02:40.447' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (292, N'A498 Other bacterial infections of unspecified site', N'Other bacterial infections of unspecified site', CAST(N'2018-03-19T07:02:40.453' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (293, N'A499 Bacterial infection, unspecified', N'Bacterial infection, unspecified', CAST(N'2018-03-19T07:02:40.460' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (294, N'A5001 Early congenital syphilitic oculopathy', N'Early congenital syphilitic oculopathy', CAST(N'2018-03-19T07:02:40.467' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (295, N'A5002 Early congenital syphilitic osteochondropathy', N'Early congenital syphilitic osteochondropathy', CAST(N'2018-03-19T07:02:40.470' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (296, N'A5003 Early congenital syphilitic pharyngitis', N'Early congenital syphilitic pharyngitis', CAST(N'2018-03-19T07:02:40.477' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (297, N'A5004 Early congenital syphilitic pneumonia', N'Early congenital syphilitic pneumonia', CAST(N'2018-03-19T07:02:40.483' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (298, N'A5005 Early congenital syphilitic rhinitis', N'Early congenital syphilitic rhinitis', CAST(N'2018-03-19T07:02:40.490' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (299, N'A5006 Early cutaneous congenital syphilis', N'Early cutaneous congenital syphilis', CAST(N'2018-03-19T07:02:40.493' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (300, N'A5007 Early mucocutaneous congenital syphilis', N'Early mucocutaneous congenital syphilis', CAST(N'2018-03-19T07:02:40.500' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (301, N'A5008 Early visceral congenital syphilis', N'Early visceral congenital syphilis', CAST(N'2018-03-19T07:02:40.507' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (302, N'A5009 Other early congenital syphilis, symptomatic', N'Other early congenital syphilis, symptomatic', CAST(N'2018-03-19T07:02:40.510' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (303, N'A501 Early congenital syphilis, latent', N'Early congenital syphilis, latent', CAST(N'2018-03-19T07:02:40.533' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (304, N'A502 Early congenital syphilis, unspecified', N'Early congenital syphilis, unspecified', CAST(N'2018-03-19T07:02:40.540' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (305, N'A5030 Late congenital syphilitic oculopathy, unspecified', N'Late congenital syphilitic oculopathy, unspecified', CAST(N'2018-03-19T07:02:40.547' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (306, N'A5031 Late congenital syphilitic interstitial keratitis', N'Late congenital syphilitic interstitial keratitis', CAST(N'2018-03-19T07:02:40.550' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (307, N'A5032 Late congenital syphilitic chorioretinitis', N'Late congenital syphilitic chorioretinitis', CAST(N'2018-03-19T07:02:40.557' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (308, N'A5039 Other late congenital syphilitic oculopathy', N'Other late congenital syphilitic oculopathy', CAST(N'2018-03-19T07:02:40.563' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (309, N'A5040 Late congenital neurosyphilis, unspecified', N'Late congenital neurosyphilis, unspecified', CAST(N'2018-03-19T07:02:40.570' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (310, N'A5041 Late congenital syphilitic meningitis', N'Late congenital syphilitic meningitis', CAST(N'2018-03-19T07:02:40.573' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (311, N'A5042 Late congenital syphilitic encephalitis', N'Late congenital syphilitic encephalitis', CAST(N'2018-03-19T07:02:40.580' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (312, N'A5043 Late congenital syphilitic polyneuropathy', N'Late congenital syphilitic polyneuropathy', CAST(N'2018-03-19T07:02:40.587' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (313, N'A5044 Late congenital syphilitic optic nerve atrophy', N'Late congenital syphilitic optic nerve atrophy', CAST(N'2018-03-19T07:02:40.590' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (314, N'A5045 Juvenile general paresis', N'Juvenile general paresis', CAST(N'2018-03-19T07:02:40.597' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (315, N'A5049 Other late congenital neurosyphilis', N'Other late congenital neurosyphilis', CAST(N'2018-03-19T07:02:40.603' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (316, N'A5051 Clutton''s joints', N'Clutton''s joints', CAST(N'2018-03-19T07:02:40.610' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (317, N'A5052 Hutchinson''s teeth', N'Hutchinson''s teeth', CAST(N'2018-03-19T07:02:40.613' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (318, N'A5053 Hutchinson''s triad', N'Hutchinson''s triad', CAST(N'2018-03-19T07:02:40.620' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (319, N'A5054 Late congenital cardiovascular syphilis', N'Late congenital cardiovascular syphilis', CAST(N'2018-03-19T07:02:40.660' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (320, N'A5055 Late congenital syphilitic arthropathy', N'Late congenital syphilitic arthropathy', CAST(N'2018-03-19T07:02:40.667' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (321, N'A5056 Late congenital syphilitic osteochondropathy', N'Late congenital syphilitic osteochondropathy', CAST(N'2018-03-19T07:02:40.670' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (322, N'A5057 Syphilitic saddle nose', N'Syphilitic saddle nose', CAST(N'2018-03-19T07:02:40.683' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (323, N'A5059 Other late congenital syphilis, symptomatic', N'Other late congenital syphilis, symptomatic', CAST(N'2018-03-19T07:02:40.693' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (324, N'A506 Late congenital syphilis, latent', N'Late congenital syphilis, latent', CAST(N'2018-03-19T07:02:40.700' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (325, N'A507 Late congenital syphilis, unspecified', N'Late congenital syphilis, unspecified', CAST(N'2018-03-19T07:02:40.840' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (326, N'A509 Congenital syphilis, unspecified', N'Congenital syphilis, unspecified', CAST(N'2018-03-19T07:02:40.847' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (327, N'A510 Primary genital syphilis', N'Primary genital syphilis', CAST(N'2018-03-19T07:02:40.853' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (328, N'A511 Primary anal syphilis', N'Primary anal syphilis', CAST(N'2018-03-19T07:02:40.860' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (329, N'A512 Primary syphilis of other sites', N'Primary syphilis of other sites', CAST(N'2018-03-19T07:02:40.863' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (330, N'A5131 Condyloma latum', N'Condyloma latum', CAST(N'2018-03-19T07:02:40.870' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (331, N'A5132 Syphilitic alopecia', N'Syphilitic alopecia', CAST(N'2018-03-19T07:02:40.877' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (332, N'A5139 Other secondary syphilis of skin', N'Other secondary syphilis of skin', CAST(N'2018-03-19T07:02:40.880' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (333, N'A5141 Secondary syphilitic meningitis', N'Secondary syphilitic meningitis', CAST(N'2018-03-19T07:02:40.887' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (334, N'A5142 Secondary syphilitic female pelvic disease', N'Secondary syphilitic female pelvic disease', CAST(N'2018-03-19T07:02:40.897' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (335, N'A5143 Secondary syphilitic oculopathy', N'Secondary syphilitic oculopathy', CAST(N'2018-03-19T07:02:40.900' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (336, N'A5144 Secondary syphilitic nephritis', N'Secondary syphilitic nephritis', CAST(N'2018-03-19T07:02:40.907' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (337, N'A5145 Secondary syphilitic hepatitis', N'Secondary syphilitic hepatitis', CAST(N'2018-03-19T07:02:40.923' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (338, N'A5146 Secondary syphilitic osteopathy', N'Secondary syphilitic osteopathy', CAST(N'2018-03-19T07:02:40.930' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (339, N'A5149 Other secondary syphilitic conditions', N'Other secondary syphilitic conditions', CAST(N'2018-03-19T07:02:40.937' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (340, N'A515 Early syphilis, latent', N'Early syphilis, latent', CAST(N'2018-03-19T07:02:40.943' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (341, N'A519 Early syphilis, unspecified', N'Early syphilis, unspecified', CAST(N'2018-03-19T07:02:40.950' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (342, N'A5200 Cardiovascular syphilis, unspecified', N'Cardiovascular syphilis, unspecified', CAST(N'2018-03-19T07:02:40.990' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (343, N'A5201 Syphilitic aneurysm of aorta', N'Syphilitic aneurysm of aorta', CAST(N'2018-03-19T07:02:40.997' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (344, N'A5202 Syphilitic aortitis', N'Syphilitic aortitis', CAST(N'2018-03-19T07:02:41.037' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (345, N'A5203 Syphilitic endocarditis', N'Syphilitic endocarditis', CAST(N'2018-03-19T07:02:41.043' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (346, N'A5204 Syphilitic cerebral arteritis', N'Syphilitic cerebral arteritis', CAST(N'2018-03-19T07:02:41.060' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (347, N'A5205 Other cerebrovascular syphilis', N'Other cerebrovascular syphilis', CAST(N'2018-03-19T07:02:41.070' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (348, N'A5206 Other syphilitic heart involvement', N'Other syphilitic heart involvement', CAST(N'2018-03-19T07:02:41.083' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (349, N'A5209 Other cardiovascular syphilis', N'Other cardiovascular syphilis', CAST(N'2018-03-19T07:02:41.097' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (350, N'A5210 Symptomatic neurosyphilis, unspecified', N'Symptomatic neurosyphilis, unspecified', CAST(N'2018-03-19T07:02:41.107' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (351, N'A5211 Tabes dorsalis', N'Tabes dorsalis', CAST(N'2018-03-19T07:02:41.113' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (352, N'A5212 Other cerebrospinal syphilis', N'Other cerebrospinal syphilis', CAST(N'2018-03-19T07:02:41.130' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (353, N'A5213 Late syphilitic meningitis', N'Late syphilitic meningitis', CAST(N'2018-03-19T07:02:41.137' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (354, N'A5214 Late syphilitic encephalitis', N'Late syphilitic encephalitis', CAST(N'2018-03-19T07:02:41.140' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (355, N'A5215 Late syphilitic neuropathy', N'Late syphilitic neuropathy', CAST(N'2018-03-19T07:02:41.147' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (356, N'A5216 Charcot''s arthropathy (tabetic)', N'Charcot''s arthropathy (tabetic)', CAST(N'2018-03-19T07:02:41.153' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (357, N'A5217 General paresis', N'General paresis', CAST(N'2018-03-19T07:02:41.160' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (358, N'A5219 Other symptomatic neurosyphilis', N'Other symptomatic neurosyphilis', CAST(N'2018-03-19T07:02:41.163' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (359, N'A522 Asymptomatic neurosyphilis', N'Asymptomatic neurosyphilis', CAST(N'2018-03-19T07:02:41.170' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (360, N'A523 Neurosyphilis, unspecified', N'Neurosyphilis, unspecified', CAST(N'2018-03-19T07:02:41.177' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (361, N'A5271 Late syphilitic oculopathy', N'Late syphilitic oculopathy', CAST(N'2018-03-19T07:02:41.180' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (362, N'A5272 Syphilis of lung and bronchus', N'Syphilis of lung and bronchus', CAST(N'2018-03-19T07:02:41.187' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (363, N'A5273 Symptomatic late syphilis of other respiratory organs', N'Symptomatic late syphilis of other respiratory organs', CAST(N'2018-03-19T07:02:41.193' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (364, N'A5274 Syphilis of liver and other viscera', N'Syphilis of liver and other viscera', CAST(N'2018-03-19T07:02:41.200' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (365, N'A5275 Syphilis of kidney and ureter', N'Syphilis of kidney and ureter', CAST(N'2018-03-19T07:02:41.203' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (366, N'A5276 Other genitourinary symptomatic late syphilis', N'Other genitourinary symptomatic late syphilis', CAST(N'2018-03-19T07:02:41.223' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (367, N'A5277 Syphilis of bone and joint', N'Syphilis of bone and joint', CAST(N'2018-03-19T07:02:41.230' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (368, N'A5278 Syphilis of other musculoskeletal tissue', N'Syphilis of other musculoskeletal tissue', CAST(N'2018-03-19T07:02:41.243' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (369, N'A5279 Other symptomatic late syphilis', N'Other symptomatic late syphilis', CAST(N'2018-03-19T07:02:41.260' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (370, N'A528 Late syphilis, latent', N'Late syphilis, latent', CAST(N'2018-03-19T07:02:41.273' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (371, N'A529 Late syphilis, unspecified', N'Late syphilis, unspecified', CAST(N'2018-03-19T07:02:41.277' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (372, N'A530 Latent syphilis, unspecified as early or late', N'Latent syphilis, unspecified as early or late', CAST(N'2018-03-19T07:02:41.290' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (373, N'A539 Syphilis, unspecified', N'Syphilis, unspecified', CAST(N'2018-03-19T07:02:41.300' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (374, N'A5400 Gonococcal infection of lower genitourinary tract, unsp', N'Gonococcal infection of lower genitourinary tract, unsp', CAST(N'2018-03-19T07:02:41.307' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (375, N'A5401 Gonococcal cystitis and urethritis, unspecified', N'Gonococcal cystitis and urethritis, unspecified', CAST(N'2018-03-19T07:02:41.323' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (376, N'A5402 Gonococcal vulvovaginitis, unspecified', N'Gonococcal vulvovaginitis, unspecified', CAST(N'2018-03-19T07:02:41.333' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (377, N'A5403 Gonococcal cervicitis, unspecified', N'Gonococcal cervicitis, unspecified', CAST(N'2018-03-19T07:02:41.347' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (378, N'A5409 Other gonococcal infection of lower genitourinary tract', N'Other gonococcal infection of lower genitourinary tract', CAST(N'2018-03-19T07:02:41.377' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (379, N'A541 Gonocl infct of lower GU tract w periureth and acc glnd abcs', N'Gonocl infct of lower GU tract w periureth and acc glnd abcs', CAST(N'2018-03-19T07:02:41.393' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (380, N'A5421 Gonococcal infection of kidney and ureter', N'Gonococcal infection of kidney and ureter', CAST(N'2018-03-19T07:02:41.403' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (381, N'A5422 Gonococcal prostatitis', N'Gonococcal prostatitis', CAST(N'2018-03-19T07:02:41.410' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (382, N'A5423 Gonococcal infection of other male genital organs', N'Gonococcal infection of other male genital organs', CAST(N'2018-03-19T07:02:41.423' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (383, N'A5424 Gonococcal female pelvic inflammatory disease', N'Gonococcal female pelvic inflammatory disease', CAST(N'2018-03-19T07:02:41.433' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (384, N'A5429 Other gonococcal genitourinary infections', N'Other gonococcal genitourinary infections', CAST(N'2018-03-19T07:02:41.447' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (385, N'A5430 Gonococcal infection of eye, unspecified', N'Gonococcal infection of eye, unspecified', CAST(N'2018-03-19T07:02:41.457' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (386, N'A5431 Gonococcal conjunctivitis', N'Gonococcal conjunctivitis', CAST(N'2018-03-19T07:02:41.463' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (387, N'A5432 Gonococcal iridocyclitis', N'Gonococcal iridocyclitis', CAST(N'2018-03-19T07:02:41.470' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (388, N'A5433 Gonococcal keratitis', N'Gonococcal keratitis', CAST(N'2018-03-19T07:02:41.473' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (389, N'A5439 Other gonococcal eye infection', N'Other gonococcal eye infection', CAST(N'2018-03-19T07:02:41.480' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (390, N'A5440 Gonococcal infection of musculoskeletal system, unspecified', N'Gonococcal infection of musculoskeletal system, unspecified', CAST(N'2018-03-19T07:02:41.490' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (391, N'A5441 Gonococcal spondylopathy', N'Gonococcal spondylopathy', CAST(N'2018-03-19T07:02:41.497' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (392, N'A5442 Gonococcal arthritis', N'Gonococcal arthritis', CAST(N'2018-03-19T07:02:41.503' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (393, N'A5443 Gonococcal osteomyelitis', N'Gonococcal osteomyelitis', CAST(N'2018-03-19T07:02:41.523' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (394, N'A5449 Gonococcal infection of other musculoskeletal tissue', N'Gonococcal infection of other musculoskeletal tissue', CAST(N'2018-03-19T07:02:41.530' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (395, N'A545 Gonococcal pharyngitis', N'Gonococcal pharyngitis', CAST(N'2018-03-19T07:02:41.540' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (396, N'A546 Gonococcal infection of anus and rectum', N'Gonococcal infection of anus and rectum', CAST(N'2018-03-19T07:02:41.553' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (397, N'A5481 Gonococcal meningitis', N'Gonococcal meningitis', CAST(N'2018-03-19T07:02:41.560' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (398, N'A5482 Gonococcal brain abscess', N'Gonococcal brain abscess', CAST(N'2018-03-19T07:02:41.567' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (399, N'A5483 Gonococcal heart infection', N'Gonococcal heart infection', CAST(N'2018-03-19T07:02:41.570' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (400, N'A5484 Gonococcal pneumonia', N'Gonococcal pneumonia', CAST(N'2018-03-19T07:02:41.577' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (401, N'A5485 Gonococcal peritonitis', N'Gonococcal peritonitis', CAST(N'2018-03-19T07:02:41.590' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (402, N'A5486 Gonococcal sepsis', N'Gonococcal sepsis', CAST(N'2018-03-19T07:02:41.610' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (403, N'A5489 Other gonococcal infections', N'Other gonococcal infections', CAST(N'2018-03-19T07:02:41.617' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (404, N'A549 Gonococcal infection, unspecified', N'Gonococcal infection, unspecified', CAST(N'2018-03-19T07:02:41.623' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (405, N'A55 Chlamydial lymphogranuloma (venereum)', N'Chlamydial lymphogranuloma (venereum)', CAST(N'2018-03-19T07:02:41.647' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (406, N'A5600 Chlamydial infection of lower genitourinary tract, unsp', N'Chlamydial infection of lower genitourinary tract, unsp', CAST(N'2018-03-19T07:02:41.657' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (407, N'A5601 Chlamydial cystitis and urethritis', N'Chlamydial cystitis and urethritis', CAST(N'2018-03-19T07:02:41.663' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (408, N'A5602 Chlamydial vulvovaginitis', N'Chlamydial vulvovaginitis', CAST(N'2018-03-19T07:02:41.670' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (409, N'A5609 Other chlamydial infection of lower genitourinary tract', N'Other chlamydial infection of lower genitourinary tract', CAST(N'2018-03-19T07:02:41.680' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (410, N'A5611 Chlamydial female pelvic inflammatory disease', N'Chlamydial female pelvic inflammatory disease', CAST(N'2018-03-19T07:02:41.693' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (411, N'A5619 Other chlamydial genitourinary infection', N'Other chlamydial genitourinary infection', CAST(N'2018-03-19T07:02:41.703' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (412, N'A562 Chlamydial infection of genitourinary tract, unspecified', N'Chlamydial infection of genitourinary tract, unspecified', CAST(N'2018-03-19T07:02:41.727' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (413, N'A563 Chlamydial infection of anus and rectum', N'Chlamydial infection of anus and rectum', CAST(N'2018-03-19T07:02:41.733' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (414, N'A564 Chlamydial infection of pharynx', N'Chlamydial infection of pharynx', CAST(N'2018-03-19T07:02:41.737' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (415, N'A568 Sexually transmitted chlamydial infection of other sites', N'Sexually transmitted chlamydial infection of other sites', CAST(N'2018-03-19T07:02:41.743' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (416, N'A57 Chancroid', N'Chancroid', CAST(N'2018-03-19T07:02:41.750' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (417, N'A58 Granuloma inguinale', N'Granuloma inguinale', CAST(N'2018-03-19T07:02:41.757' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (418, N'A5900 Urogenital trichomoniasis, unspecified', N'Urogenital trichomoniasis, unspecified', CAST(N'2018-03-19T07:02:41.760' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (419, N'A5901 Trichomonal vulvovaginitis', N'Trichomonal vulvovaginitis', CAST(N'2018-03-19T07:02:41.773' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (420, N'A5902 Trichomonal prostatitis', N'Trichomonal prostatitis', CAST(N'2018-03-19T07:02:41.783' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (421, N'A5903 Trichomonal cystitis and urethritis', N'Trichomonal cystitis and urethritis', CAST(N'2018-03-19T07:02:41.797' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (422, N'A5909 Other urogenital trichomoniasis', N'Other urogenital trichomoniasis', CAST(N'2018-03-19T07:02:41.823' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (423, N'A598 Trichomoniasis of other sites', N'Trichomoniasis of other sites', CAST(N'2018-03-19T07:02:41.830' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (424, N'A599 Trichomoniasis, unspecified', N'Trichomoniasis, unspecified', CAST(N'2018-03-19T07:02:41.837' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (425, N'A6000 Herpesviral infection of urogenital system, unspecified', N'Herpesviral infection of urogenital system, unspecified', CAST(N'2018-03-19T07:02:41.847' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (426, N'A6001 Herpesviral infection of penis', N'Herpesviral infection of penis', CAST(N'2018-03-19T07:02:41.853' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (427, N'A6002 Herpesviral infection of other male genital organs', N'Herpesviral infection of other male genital organs', CAST(N'2018-03-19T07:02:41.863' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (428, N'A6003 Herpesviral cervicitis', N'Herpesviral cervicitis', CAST(N'2018-03-19T07:02:41.877' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (429, N'A6004 Herpesviral vulvovaginitis', N'Herpesviral vulvovaginitis', CAST(N'2018-03-19T07:02:41.887' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (430, N'A6009 Herpesviral infection of other urogenital tract', N'Herpesviral infection of other urogenital tract', CAST(N'2018-03-19T07:02:41.893' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (431, N'A601 Herpesviral infection of perianal skin and rectum', N'Herpesviral infection of perianal skin and rectum', CAST(N'2018-03-19T07:02:41.900' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (432, N'A609 Anogenital herpesviral infection, unspecified', N'Anogenital herpesviral infection, unspecified', CAST(N'2018-03-19T07:02:41.903' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (433, N'A630 Anogenital (venereal) warts', N'Anogenital (venereal) warts', CAST(N'2018-03-19T07:02:41.910' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (434, N'A638 Other specified predominantly sexually transmitted diseases', N'Other specified predominantly sexually transmitted diseases', CAST(N'2018-03-19T07:02:41.947' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (435, N'A64 Unspecified sexually transmitted disease', N'Unspecified sexually transmitted disease', CAST(N'2018-03-19T07:02:41.950' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (436, N'A65 Nonvenereal syphilis', N'Nonvenereal syphilis', CAST(N'2018-03-19T07:02:41.957' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (437, N'A660 Initial lesions of yaws', N'Initial lesions of yaws', CAST(N'2018-03-19T07:02:41.960' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (438, N'A661 Multiple papillomata and wet crab yaws', N'Multiple papillomata and wet crab yaws', CAST(N'2018-03-19T07:02:41.967' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (439, N'A662 Other early skin lesions of yaws', N'Other early skin lesions of yaws', CAST(N'2018-03-19T07:02:41.973' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (440, N'A663 Hyperkeratosis of yaws', N'Hyperkeratosis of yaws', CAST(N'2018-03-19T07:02:41.980' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (441, N'A664 Gummata and ulcers of yaws', N'Gummata and ulcers of yaws', CAST(N'2018-03-19T07:02:41.983' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (442, N'A665 Gangosa', N'Gangosa', CAST(N'2018-03-19T07:02:41.990' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (443, N'A666 Bone and joint lesions of yaws', N'Bone and joint lesions of yaws', CAST(N'2018-03-19T07:02:41.997' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (444, N'A667 Other manifestations of yaws', N'Other manifestations of yaws', CAST(N'2018-03-19T07:02:42.000' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (445, N'A668 Latent yaws', N'Latent yaws', CAST(N'2018-03-19T07:02:42.007' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (446, N'A669 Yaws, unspecified', N'Yaws, unspecified', CAST(N'2018-03-19T07:02:42.040' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (447, N'A670 Primary lesions of pinta', N'Primary lesions of pinta', CAST(N'2018-03-19T07:02:42.040' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (448, N'A671 Intermediate lesions of pinta', N'Intermediate lesions of pinta', CAST(N'2018-03-19T07:02:42.047' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (449, N'A672 Late lesions of pinta', N'Late lesions of pinta', CAST(N'2018-03-19T07:02:42.053' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (450, N'A673 Mixed lesions of pinta', N'Mixed lesions of pinta', CAST(N'2018-03-19T07:02:42.060' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (451, N'A679 Pinta, unspecified', N'Pinta, unspecified', CAST(N'2018-03-19T07:02:42.063' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (452, N'A680 Louse-borne relapsing fever', N'Louse-borne relapsing fever', CAST(N'2018-03-19T07:02:42.080' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (453, N'A681 Tick-borne relapsing fever', N'Tick-borne relapsing fever', CAST(N'2018-03-19T07:02:42.093' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (454, N'A689 Relapsing fever, unspecified', N'Relapsing fever, unspecified', CAST(N'2018-03-19T07:02:42.100' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (455, N'A690 Necrotizing ulcerative stomatitis', N'Necrotizing ulcerative stomatitis', CAST(N'2018-03-19T07:02:42.103' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (456, N'A691 Other Vincent''s infections', N'Other Vincent''s infections', CAST(N'2018-03-19T07:02:42.110' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (457, N'A6920 Lyme disease, unspecified', N'Lyme disease, unspecified', CAST(N'2018-03-19T07:02:42.117' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (458, N'A6921 Meningitis due to Lyme disease', N'Meningitis due to Lyme disease', CAST(N'2018-03-19T07:02:42.150' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (459, N'A6922 Other neurologic disorders in Lyme disease', N'Other neurologic disorders in Lyme disease', CAST(N'2018-03-19T07:02:42.157' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (460, N'A6923 Arthritis due to Lyme disease', N'Arthritis due to Lyme disease', CAST(N'2018-03-19T07:02:42.160' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (461, N'A6929 Other conditions associated with Lyme disease', N'Other conditions associated with Lyme disease', CAST(N'2018-03-19T07:02:42.167' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (462, N'A698 Other specified spirochetal infections', N'Other specified spirochetal infections', CAST(N'2018-03-19T07:02:42.173' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (463, N'A699 Spirochetal infection, unspecified', N'Spirochetal infection, unspecified', CAST(N'2018-03-19T07:02:42.183' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (464, N'A70 Chlamydia psittaci infections', N'Chlamydia psittaci infections', CAST(N'2018-03-19T07:02:42.190' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (465, N'A710 Initial stage of trachoma', N'Initial stage of trachoma', CAST(N'2018-03-19T07:02:42.193' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (466, N'A711 Active stage of trachoma', N'Active stage of trachoma', CAST(N'2018-03-19T07:02:42.203' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (467, N'A719 Trachoma, unspecified', N'Trachoma, unspecified', CAST(N'2018-03-19T07:02:42.243' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (468, N'A740 Chlamydial conjunctivitis', N'Chlamydial conjunctivitis', CAST(N'2018-03-19T07:02:42.363' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (469, N'A7481 Chlamydial peritonitis', N'Chlamydial peritonitis', CAST(N'2018-03-19T07:02:42.370' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (470, N'A7489 Other chlamydial diseases', N'Other chlamydial diseases', CAST(N'2018-03-19T07:02:42.383' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (471, N'A749 Chlamydial infection, unspecified', N'Chlamydial infection, unspecified', CAST(N'2018-03-19T07:02:42.390' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (472, N'A750 Epidemic louse-borne typhus fever d/t Rickettsia prowazekii', N'Epidemic louse-borne typhus fever d/t Rickettsia prowazekii', CAST(N'2018-03-19T07:02:42.393' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (473, N'A751 Recrudescent typhus [Brill''s disease]', N'Recrudescent typhus [Brill''s disease]', CAST(N'2018-03-19T07:02:42.400' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (474, N'A752 Typhus fever due to Rickettsia typhi', N'Typhus fever due to Rickettsia typhi', CAST(N'2018-03-19T07:02:42.420' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (475, N'A753 Typhus fever due to Rickettsia tsutsugamushi', N'Typhus fever due to Rickettsia tsutsugamushi', CAST(N'2018-03-19T07:02:42.430' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (476, N'A759 Typhus fever, unspecified', N'Typhus fever, unspecified', CAST(N'2018-03-19T07:02:42.433' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (477, N'A770 Spotted fever due to Rickettsia rickettsii', N'Spotted fever due to Rickettsia rickettsii', CAST(N'2018-03-19T07:02:42.440' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (478, N'A771 Spotted fever due to Rickettsia conorii', N'Spotted fever due to Rickettsia conorii', CAST(N'2018-03-19T07:02:42.447' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (479, N'A772 Spotted fever due to Rickettsia siberica', N'Spotted fever due to Rickettsia siberica', CAST(N'2018-03-19T07:02:42.457' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (480, N'A773 Spotted fever due to Rickettsia australis', N'Spotted fever due to Rickettsia australis', CAST(N'2018-03-19T07:02:42.463' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (481, N'A7740 Ehrlichiosis, unspecified', N'Ehrlichiosis, unspecified', CAST(N'2018-03-19T07:02:42.470' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (482, N'A7741 Ehrlichiosis chafeensis [E. chafeensis]', N'Ehrlichiosis chafeensis [E. chafeensis]', CAST(N'2018-03-19T07:02:42.473' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (483, N'A7749 Other ehrlichiosis', N'Other ehrlichiosis', CAST(N'2018-03-19T07:02:42.480' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (484, N'A778 Other spotted fevers', N'Other spotted fevers', CAST(N'2018-03-19T07:02:42.487' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (485, N'A779 Spotted fever, unspecified', N'Spotted fever, unspecified', CAST(N'2018-03-19T07:02:42.493' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (486, N'A78 Q fever', N'Q fever', CAST(N'2018-03-19T07:02:42.497' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (487, N'A790 Trench fever', N'Trench fever', CAST(N'2018-03-19T07:02:42.503' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (488, N'A791 Rickettsialpox due to Rickettsia akari', N'Rickettsialpox due to Rickettsia akari', CAST(N'2018-03-19T07:02:42.510' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (489, N'A7981 Rickettsiosis due to Ehrlichia sennetsu', N'Rickettsiosis due to Ehrlichia sennetsu', CAST(N'2018-03-19T07:02:42.547' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (490, N'A7989 Other specified rickettsioses', N'Other specified rickettsioses', CAST(N'2018-03-19T07:02:42.550' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (491, N'A799 Rickettsiosis, unspecified', N'Rickettsiosis, unspecified', CAST(N'2018-03-19T07:02:42.557' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (492, N'A800 Acute paralytic poliomyelitis, vaccine-associated', N'Acute paralytic poliomyelitis, vaccine-associated', CAST(N'2018-03-19T07:02:42.560' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (493, N'A801 Acute paralytic poliomyelitis, wild virus, imported', N'Acute paralytic poliomyelitis, wild virus, imported', CAST(N'2018-03-19T07:02:42.567' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (494, N'A802 Acute paralytic poliomyelitis, wild virus, indigenous', N'Acute paralytic poliomyelitis, wild virus, indigenous', CAST(N'2018-03-19T07:02:42.573' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (495, N'A8030 Acute paralytic poliomyelitis, unspecified', N'Acute paralytic poliomyelitis, unspecified', CAST(N'2018-03-19T07:02:42.577' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (496, N'A8039 Other acute paralytic poliomyelitis', N'Other acute paralytic poliomyelitis', CAST(N'2018-03-19T07:02:42.583' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (497, N'A804 Acute nonparalytic poliomyelitis', N'Acute nonparalytic poliomyelitis', CAST(N'2018-03-19T07:02:42.590' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (498, N'A809 Acute poliomyelitis, unspecified', N'Acute poliomyelitis, unspecified', CAST(N'2018-03-19T07:02:42.597' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (499, N'A8100 Creutzfeldt-Jakob disease, unspecified', N'Creutzfeldt-Jakob disease, unspecified', CAST(N'2018-03-19T07:02:42.600' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (500, N'A8101 Variant Creutzfeldt-Jakob disease', N'Variant Creutzfeldt-Jakob disease', CAST(N'2018-03-19T07:02:42.620' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (501, N'A8109 Other Creutzfeldt-Jakob disease', N'Other Creutzfeldt-Jakob disease', CAST(N'2018-03-19T07:02:42.633' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (502, N'A811 Subacute sclerosing panencephalitis', N'Subacute sclerosing panencephalitis', CAST(N'2018-03-19T07:02:42.640' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (503, N'A812 Progressive multifocal leukoencephalopathy', N'Progressive multifocal leukoencephalopathy', CAST(N'2018-03-19T07:02:42.653' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (504, N'A8181 Kuru', N'Kuru', CAST(N'2018-03-19T07:02:42.663' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (505, N'A8182 Gerstmann-Straussler-Scheinker syndrome', N'Gerstmann-Straussler-Scheinker syndrome', CAST(N'2018-03-19T07:02:42.673' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (506, N'A8183 Fatal familial insomnia', N'Fatal familial insomnia', CAST(N'2018-03-19T07:02:42.680' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (507, N'A8189 Other atypical virus infections of central nervous system', N'Other atypical virus infections of central nervous system', CAST(N'2018-03-19T07:02:42.687' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (508, N'A819 Atypical virus infection of central nervous system, unsp', N'Atypical virus infection of central nervous system, unsp', CAST(N'2018-03-19T07:02:42.693' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (509, N'A820 Sylvatic rabies', N'Sylvatic rabies', CAST(N'2018-03-19T07:02:42.703' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (510, N'A821 Urban rabies', N'Urban rabies', CAST(N'2018-03-19T07:02:42.717' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (511, N'A829 Rabies, unspecified', N'Rabies, unspecified', CAST(N'2018-03-19T07:02:42.750' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (512, N'A830 Japanese encephalitis', N'Japanese encephalitis', CAST(N'2018-03-19T07:02:42.753' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (513, N'A831 Western equine encephalitis', N'Western equine encephalitis', CAST(N'2018-03-19T07:02:42.760' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (514, N'A832 Eastern equine encephalitis', N'Eastern equine encephalitis', CAST(N'2018-03-19T07:02:42.767' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (515, N'A833 St Louis encephalitis', N'St Louis encephalitis', CAST(N'2018-03-19T07:02:42.770' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (516, N'A834 Australian encephalitis', N'Australian encephalitis', CAST(N'2018-03-19T07:02:42.797' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (517, N'A835 California encephalitis', N'California encephalitis', CAST(N'2018-03-19T07:02:42.800' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (518, N'A836 Rocio virus disease', N'Rocio virus disease', CAST(N'2018-03-19T07:02:42.843' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (519, N'A838 Other mosquito-borne viral encephalitis', N'Other mosquito-borne viral encephalitis', CAST(N'2018-03-19T07:02:42.850' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (520, N'A839 Mosquito-borne viral encephalitis, unspecified', N'Mosquito-borne viral encephalitis, unspecified', CAST(N'2018-03-19T07:02:42.853' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (521, N'A840 Far Eastern tick-borne encephalitis', N'Far Eastern tick-borne encephalitis', CAST(N'2018-03-19T07:02:42.860' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (522, N'A841 Central European tick-borne encephalitis', N'Central European tick-borne encephalitis', CAST(N'2018-03-19T07:02:42.867' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (523, N'A848 Other tick-borne viral encephalitis', N'Other tick-borne viral encephalitis', CAST(N'2018-03-19T07:02:42.873' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (524, N'A849 Tick-borne viral encephalitis, unspecified', N'Tick-borne viral encephalitis, unspecified', CAST(N'2018-03-19T07:02:42.883' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (525, N'A850 Enteroviral encephalitis', N'Enteroviral encephalitis', CAST(N'2018-03-19T07:02:42.893' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (526, N'A851 Adenoviral encephalitis', N'Adenoviral encephalitis', CAST(N'2018-03-19T07:02:42.940' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (527, N'A852 Arthropod-borne viral encephalitis, unspecified', N'Arthropod-borne viral encephalitis, unspecified', CAST(N'2018-03-19T07:02:42.937' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (528, N'A858 Other specified viral encephalitis', N'Other specified viral encephalitis', CAST(N'2018-03-19T07:02:42.947' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (529, N'A86 Unspecified viral encephalitis', N'Unspecified viral encephalitis', CAST(N'2018-03-19T07:02:42.953' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (530, N'A870 Enteroviral meningitis', N'Enteroviral meningitis', CAST(N'2018-03-19T07:02:42.960' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (531, N'A871 Adenoviral meningitis', N'Adenoviral meningitis', CAST(N'2018-03-19T07:02:42.963' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (532, N'A872 Lymphocytic choriomeningitis', N'Lymphocytic choriomeningitis', CAST(N'2018-03-19T07:02:42.970' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (533, N'A878 Other viral meningitis', N'Other viral meningitis', CAST(N'2018-03-19T07:02:42.977' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (534, N'A879 Viral meningitis, unspecified', N'Viral meningitis, unspecified', CAST(N'2018-03-19T07:02:42.980' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (535, N'A880 Enteroviral exanthematous fever [Boston exanthem]', N'Enteroviral exanthematous fever [Boston exanthem]', CAST(N'2018-03-19T07:02:42.987' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (536, N'A881 Epidemic vertigo', N'Epidemic vertigo', CAST(N'2018-03-19T07:02:42.993' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (537, N'A888 Other specified viral infections of central nervous system', N'Other specified viral infections of central nervous system', CAST(N'2018-03-19T07:02:43.000' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (538, N'A89 Unspecified viral infection of central nervous system', N'Unspecified viral infection of central nervous system', CAST(N'2018-03-19T07:02:43.017' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (539, N'A90 Dengue fever [classical dengue]', N'Dengue fever [classical dengue]', CAST(N'2018-03-19T07:02:43.020' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (540, N'A91 Dengue hemorrhagic fever', N'Dengue hemorrhagic fever', CAST(N'2018-03-19T07:02:43.027' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (541, N'A920 Chikungunya virus disease', N'Chikungunya virus disease', CAST(N'2018-03-19T07:02:43.033' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (542, N'A921 O''nyong-nyong fever', N'O''nyong-nyong fever', CAST(N'2018-03-19T07:02:43.040' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (543, N'A922 Venezuelan equine fever', N'Venezuelan equine fever', CAST(N'2018-03-19T07:02:43.043' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (544, N'A9230 West Nile virus infection, unspecified', N'West Nile virus infection, unspecified', CAST(N'2018-03-19T07:02:43.050' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (545, N'A9231 West Nile virus infection with encephalitis', N'West Nile virus infection with encephalitis', CAST(N'2018-03-19T07:02:43.057' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (546, N'A9232 West Nile virus infection with oth neurologic manifestation', N'West Nile virus infection with oth neurologic manifestation', CAST(N'2018-03-19T07:02:43.067' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (547, N'A9239 West Nile virus infection with other complications', N'West Nile virus infection with other complications', CAST(N'2018-03-19T07:02:43.073' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (548, N'A924 Rift Valley fever', N'Rift Valley fever', CAST(N'2018-03-19T07:02:43.080' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (549, N'A925 Zika virus disease', N'Zika virus disease', CAST(N'2018-03-19T07:02:43.083' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (550, N'A928 Other specified mosquito-borne viral fevers', N'Other specified mosquito-borne viral fevers', CAST(N'2018-03-19T07:02:43.130' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (551, N'A929 Mosquito-borne viral fever, unspecified', N'Mosquito-borne viral fever, unspecified', CAST(N'2018-03-19T07:02:43.133' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (552, N'A930 Oropouche virus disease', N'Oropouche virus disease', CAST(N'2018-03-19T07:02:43.140' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (553, N'A931 Sandfly fever', N'Sandfly fever', CAST(N'2018-03-19T07:02:43.147' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (554, N'A932 Colorado tick fever', N'Colorado tick fever', CAST(N'2018-03-19T07:02:43.150' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (555, N'A938 Other specified arthropod-borne viral fevers', N'Other specified arthropod-borne viral fevers', CAST(N'2018-03-19T07:02:43.157' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (556, N'A94 Unspecified arthropod-borne viral fever', N'Unspecified arthropod-borne viral fever', CAST(N'2018-03-19T07:02:43.167' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (557, N'A950 Sylvatic yellow fever', N'Sylvatic yellow fever', CAST(N'2018-03-19T07:02:43.170' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (558, N'A951 Urban yellow fever', N'Urban yellow fever', CAST(N'2018-03-19T07:02:43.177' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (559, N'A959 Yellow fever, unspecified', N'Yellow fever, unspecified', CAST(N'2018-03-19T07:02:43.193' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (560, N'A960 Junin hemorrhagic fever', N'Junin hemorrhagic fever', CAST(N'2018-03-19T07:02:43.203' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (561, N'A961 Machupo hemorrhagic fever', N'Machupo hemorrhagic fever', CAST(N'2018-03-19T07:02:43.210' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (562, N'A962 Lassa fever', N'Lassa fever', CAST(N'2018-03-19T07:02:43.213' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (563, N'A968 Other arenaviral hemorrhagic fevers', N'Other arenaviral hemorrhagic fevers', CAST(N'2018-03-19T07:02:43.227' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (564, N'A969 Arenaviral hemorrhagic fever, unspecified', N'Arenaviral hemorrhagic fever, unspecified', CAST(N'2018-03-19T07:02:43.247' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (565, N'A980 Crimean-Congo hemorrhagic fever', N'Crimean-Congo hemorrhagic fever', CAST(N'2018-03-19T07:02:43.250' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (566, N'A981 Omsk hemorrhagic fever', N'Omsk hemorrhagic fever', CAST(N'2018-03-19T07:02:43.257' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (567, N'A982 Kyasanur Forest disease', N'Kyasanur Forest disease', CAST(N'2018-03-19T07:02:43.273' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (568, N'A983 Marburg virus disease', N'Marburg virus disease', CAST(N'2018-03-19T07:02:43.290' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (569, N'A984 Ebola virus disease', N'Ebola virus disease', CAST(N'2018-03-19T07:02:43.303' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (570, N'A985 Hemorrhagic fever with renal syndrome', N'Hemorrhagic fever with renal syndrome', CAST(N'2018-03-19T07:02:43.330' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (571, N'A988 Other specified viral hemorrhagic fevers', N'Other specified viral hemorrhagic fevers', CAST(N'2018-03-19T07:02:43.343' AS timestamptz), NULL, NULL, 1);
-INSERT INTO "tblICDCodes" ("ICDID", "ICDCode", "ICDName", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (572, N'A99 Unspecified viral hemorrhagic fever', N'Unspecified viral hemorrhagic fever', CAST(N'2018-03-19T07:02:43.360' AS timestamptz), NULL, NULL, 1);
-
+INSERT INTO "tblICDCodes" ("ValidityFrom","ValidityTo","LegacyID","ICDCode","ICDName","AuditUserID","RowID") VALUES
+	 ('2018-03-19 08:02:38.63+01',NULL,NULL,'A080','Rotaviral enteritis',1,NULL),
+	 ('2018-03-19 08:02:40.61+01',NULL,NULL,'A5051','Clutton''s joints',1,NULL),
+	 ('2018-03-19 08:02:41.16+01',NULL,NULL,'A5217','General paresis',1,NULL),
+	 ('2018-03-19 07:59:00.533+01',NULL,NULL,'A000','Cholera due to Vibrio cholerae 01, biovar cholerae',1,NULL),
+	 ('2018-03-19 08:02:37.943+01',NULL,NULL,'A001','Cholera due to Vibrio cholerae 01, biovar eltor',1,NULL),
+	 ('2018-03-19 08:02:37.97+01',NULL,NULL,'A009','Cholera, unspecified',1,NULL),
+	 ('2018-03-19 08:02:37.977+01',NULL,NULL,'A0100','Typhoid fever, unspecified',1,NULL),
+	 ('2018-03-19 08:02:37.983+01',NULL,NULL,'A0101','Typhoid meningitis',1,NULL),
+	 ('2018-03-19 08:02:37.99+01',NULL,NULL,'A0102','Typhoid fever with heart involvement',1,NULL),
+	 ('2018-03-19 08:02:37.993+01',NULL,NULL,'A0103','Typhoid pneumonia',1,NULL);
+INSERT INTO "tblICDCodes" ("ValidityFrom","ValidityTo","LegacyID","ICDCode","ICDName","AuditUserID","RowID") VALUES
+	 ('2018-03-19 08:02:38+01',NULL,NULL,'A0104','Typhoid arthritis',1,NULL),
+	 ('2018-03-19 08:02:38.007+01',NULL,NULL,'A0105','Typhoid osteomyelitis',1,NULL),
+	 ('2018-03-19 08:02:38.027+01',NULL,NULL,'A0109','Typhoid fever with other complications',1,NULL),
+	 ('2018-03-19 08:02:38.03+01',NULL,NULL,'A011','Paratyphoid fever A',1,NULL),
+	 ('2018-03-19 08:02:38.037+01',NULL,NULL,'A012','Paratyphoid fever B',1,NULL),
+	 ('2018-03-19 08:02:38.04+01',NULL,NULL,'A013','Paratyphoid fever C',1,NULL),
+	 ('2018-03-19 08:02:38.047+01',NULL,NULL,'A014','Paratyphoid fever, unspecified',1,NULL),
+	 ('2018-03-19 08:02:38.053+01',NULL,NULL,'A020','Salmonella enteritis',1,NULL),
+	 ('2018-03-19 08:02:38.06+01',NULL,NULL,'A021','Salmonella sepsis',1,NULL),
+	 ('2018-03-19 08:02:38.07+01',NULL,NULL,'A0220','Localized salmonella infection, unspecified',1,NULL);
+INSERT INTO "tblICDCodes" ("ValidityFrom","ValidityTo","LegacyID","ICDCode","ICDName","AuditUserID","RowID") VALUES
+	 ('2018-03-19 08:02:38.077+01',NULL,NULL,'A0221','Salmonella meningitis',1,NULL),
+	 ('2018-03-19 08:02:38.08+01',NULL,NULL,'A0222','Salmonella pneumonia',1,NULL),
+	 ('2018-03-19 08:02:38.087+01',NULL,NULL,'A0223','Salmonella arthritis',1,NULL),
+	 ('2018-03-19 08:02:38.1+01',NULL,NULL,'A0224','Salmonella osteomyelitis',1,NULL),
+	 ('2018-03-19 08:02:38.12+01',NULL,NULL,'A0225','Salmonella pyelonephritis',1,NULL),
+	 ('2018-03-19 08:02:38.127+01',NULL,NULL,'A0229','Salmonella with other localized infection',1,NULL),
+	 ('2018-03-19 08:02:38.13+01',NULL,NULL,'A028','Other specified salmonella infections',1,NULL),
+	 ('2018-03-19 08:02:38.137+01',NULL,NULL,'A029','Salmonella infection, unspecified',1,NULL),
+	 ('2018-03-19 08:02:38.143+01',NULL,NULL,'A030','Shigellosis due to Shigella dysenteriae',1,NULL),
+	 ('2018-03-19 08:02:38.15+01',NULL,NULL,'A031','Shigellosis due to Shigella flexneri',1,NULL);
+INSERT INTO "tblICDCodes" ("ValidityFrom","ValidityTo","LegacyID","ICDCode","ICDName","AuditUserID","RowID") VALUES
+	 ('2018-03-19 08:02:38.153+01',NULL,NULL,'A032','Shigellosis due to Shigella boydii',1,NULL),
+	 ('2018-03-19 08:02:38.16+01',NULL,NULL,'A033','Shigellosis due to Shigella sonnei',1,NULL),
+	 ('2018-03-19 08:02:38.167+01',NULL,NULL,'A038','Other shigellosis',1,NULL),
+	 ('2018-03-19 08:02:38.17+01',NULL,NULL,'A039','Shigellosis, unspecified',1,NULL),
+	 ('2018-03-19 08:02:38.177+01',NULL,NULL,'A040','Enteropathogenic Escherichia coli infection',1,NULL),
+	 ('2018-03-19 08:02:38.19+01',NULL,NULL,'A041','Enterotoxigenic Escherichia coli infection',1,NULL),
+	 ('2018-03-19 08:02:38.197+01',NULL,NULL,'A042','Enteroinvasive Escherichia coli infection',1,NULL),
+	 ('2018-03-19 08:02:38.2+01',NULL,NULL,'A043','Enterohemorrhagic Escherichia coli infection',1,NULL),
+	 ('2018-03-19 08:02:38.207+01',NULL,NULL,'A044','Other intestinal Escherichia coli infections',1,NULL),
+	 ('2018-03-19 08:02:38.23+01',NULL,NULL,'A045','Campylobacter enteritis',1,NULL);
+INSERT INTO "tblICDCodes" ("ValidityFrom","ValidityTo","LegacyID","ICDCode","ICDName","AuditUserID","RowID") VALUES
+	 ('2018-03-19 08:02:38.237+01',NULL,NULL,'A046','Enteritis due to Yersinia enterocolitica',1,NULL),
+	 ('2018-03-19 08:02:38.24+01',NULL,NULL,'A047','Enterocolitis due to Clostridium difficile',1,NULL),
+	 ('2018-03-19 08:02:38.247+01',NULL,NULL,'A0471','Enterocolitis due to Clostridium difficile, recurrent',1,NULL),
+	 ('2018-03-19 08:02:38.253+01',NULL,NULL,'A0472','Enterocolitis d/t Clostridium difficile, not spcf as recur',1,NULL),
+	 ('2018-03-19 08:02:38.26+01',NULL,NULL,'A048','Other specified bacterial intestinal infections',1,NULL),
+	 ('2018-03-19 08:02:38.263+01',NULL,NULL,'A049','Bacterial intestinal infection, unspecified',1,NULL),
+	 ('2018-03-19 08:02:38.27+01',NULL,NULL,'A050','Foodborne staphylococcal intoxication',1,NULL),
+	 ('2018-03-19 08:02:38.277+01',NULL,NULL,'A051','Botulism food poisoning',1,NULL),
+	 ('2018-03-19 08:02:38.28+01',NULL,NULL,'A052','Foodborne Clostridium perfringens intoxication',1,NULL),
+	 ('2018-03-19 08:02:38.287+01',NULL,NULL,'A053','Foodborne Vibrio parahaemolyticus intoxication',1,NULL);
+INSERT INTO "tblICDCodes" ("ValidityFrom","ValidityTo","LegacyID","ICDCode","ICDName","AuditUserID","RowID") VALUES
+	 ('2018-03-19 08:02:38.323+01',NULL,NULL,'A054','Foodborne Bacillus cereus intoxication',1,NULL),
+	 ('2018-03-19 08:02:38.327+01',NULL,NULL,'A055','Foodborne Vibrio vulnificus intoxication',1,NULL),
+	 ('2018-03-19 08:02:38.333+01',NULL,NULL,'A058','Other specified bacterial foodborne intoxications',1,NULL),
+	 ('2018-03-19 08:02:38.347+01',NULL,NULL,'A059','Bacterial foodborne intoxication, unspecified',1,NULL),
+	 ('2018-03-19 08:02:38.373+01',NULL,NULL,'A060','Acute amebic dysentery',1,NULL),
+	 ('2018-03-19 08:02:38.38+01',NULL,NULL,'A061','Chronic intestinal amebiasis',1,NULL),
+	 ('2018-03-19 08:02:38.4+01',NULL,NULL,'A062','Amebic nondysenteric colitis',1,NULL),
+	 ('2018-03-19 08:02:38.42+01',NULL,NULL,'A063','Ameboma of intestine',1,NULL),
+	 ('2018-03-19 08:02:38.427+01',NULL,NULL,'A064','Amebic liver abscess',1,NULL),
+	 ('2018-03-19 08:02:38.43+01',NULL,NULL,'A065','Amebic lung abscess',1,NULL);
+INSERT INTO "tblICDCodes" ("ValidityFrom","ValidityTo","LegacyID","ICDCode","ICDName","AuditUserID","RowID") VALUES
+	 ('2018-03-19 08:02:38.437+01',NULL,NULL,'A066','Amebic brain abscess',1,NULL),
+	 ('2018-03-19 08:02:38.45+01',NULL,NULL,'A067','Cutaneous amebiasis',1,NULL),
+	 ('2018-03-19 08:02:38.453+01',NULL,NULL,'A0681','Amebic cystitis',1,NULL),
+	 ('2018-03-19 08:02:38.46+01',NULL,NULL,'A0682','Other amebic genitourinary infections',1,NULL),
+	 ('2018-03-19 08:02:38.47+01',NULL,NULL,'A0689','Other amebic infections',1,NULL),
+	 ('2018-03-19 08:02:38.477+01',NULL,NULL,'A069','Amebiasis, unspecified',1,NULL),
+	 ('2018-03-19 08:02:38.49+01',NULL,NULL,'A070','Balantidiasis',1,NULL),
+	 ('2018-03-19 08:02:38.54+01',NULL,NULL,'A071','Giardiasis [lambliasis]',1,NULL),
+	 ('2018-03-19 08:02:38.577+01',NULL,NULL,'A072','Cryptosporidiosis',1,NULL),
+	 ('2018-03-19 08:02:38.58+01',NULL,NULL,'A073','Isosporiasis',1,NULL);
+INSERT INTO "tblICDCodes" ("ValidityFrom","ValidityTo","LegacyID","ICDCode","ICDName","AuditUserID","RowID") VALUES
+	 ('2018-03-19 08:02:38.587+01',NULL,NULL,'A074','Cyclosporiasis',1,NULL),
+	 ('2018-03-19 08:02:38.62+01',NULL,NULL,'A078','Other specified protozoal intestinal diseases',1,NULL),
+	 ('2018-03-19 08:02:38.627+01',NULL,NULL,'A079','Protozoal intestinal disease, unspecified',1,NULL),
+	 ('2018-03-19 08:02:38.64+01',NULL,NULL,'A0811','Acute gastroenteropathy due to Norwalk agent',1,NULL),
+	 ('2018-03-19 08:02:38.643+01',NULL,NULL,'A0819','Acute gastroenteropathy due to other small round viruses',1,NULL),
+	 ('2018-03-19 08:02:38.65+01',NULL,NULL,'A082','Adenoviral enteritis',1,NULL),
+	 ('2018-03-19 08:02:38.653+01',NULL,NULL,'A0831','Calicivirus enteritis',1,NULL),
+	 ('2018-03-19 08:02:38.66+01',NULL,NULL,'A0832','Astrovirus enteritis',1,NULL),
+	 ('2018-03-19 08:02:38.667+01',NULL,NULL,'A0839','Other viral enteritis',1,NULL),
+	 ('2018-03-19 08:02:43.177+01',NULL,NULL,'A951','Urban yellow fever',1,NULL);
+INSERT INTO "tblICDCodes" ("ValidityFrom","ValidityTo","LegacyID","ICDCode","ICDName","AuditUserID","RowID") VALUES
+	 ('2018-03-19 08:02:38.67+01',NULL,NULL,'A084','Viral intestinal infection, unspecified',1,NULL),
+	 ('2018-03-19 08:02:38.683+01',NULL,NULL,'A088','Other specified intestinal infections',1,NULL),
+	 ('2018-03-19 08:02:38.69+01',NULL,NULL,'A09','Infectious gastroenteritis and colitis, unspecified',1,NULL),
+	 ('2018-03-19 08:02:38.707+01',NULL,NULL,'A150','Tuberculosis of lung',1,NULL),
+	 ('2018-03-19 08:02:38.743+01',NULL,NULL,'A154','Tuberculosis of intrathoracic lymph nodes',1,NULL),
+	 ('2018-03-19 08:02:38.78+01',NULL,NULL,'A155','Tuberculosis of larynx, trachea and bronchus',1,NULL),
+	 ('2018-03-19 08:02:38.793+01',NULL,NULL,'A156','Tuberculous pleurisy',1,NULL),
+	 ('2018-03-19 08:02:38.797+01',NULL,NULL,'A157','Primary respiratory tuberculosis',1,NULL),
+	 ('2018-03-19 08:02:38.81+01',NULL,NULL,'A158','Other respiratory tuberculosis',1,NULL),
+	 ('2018-03-19 08:02:38.82+01',NULL,NULL,'A159','Respiratory tuberculosis unspecified',1,NULL);
+INSERT INTO "tblICDCodes" ("ValidityFrom","ValidityTo","LegacyID","ICDCode","ICDName","AuditUserID","RowID") VALUES
+	 ('2018-03-19 08:02:38.827+01',NULL,NULL,'A170','Tuberculous meningitis',1,NULL),
+	 ('2018-03-19 08:02:38.83+01',NULL,NULL,'A171','Meningeal tuberculoma',1,NULL),
+	 ('2018-03-19 08:02:38.837+01',NULL,NULL,'A1781','Tuberculoma of brain and spinal cord',1,NULL),
+	 ('2018-03-19 08:02:38.843+01',NULL,NULL,'A1782','Tuberculous meningoencephalitis',1,NULL),
+	 ('2018-03-19 08:02:38.85+01',NULL,NULL,'A1783','Tuberculous neuritis',1,NULL),
+	 ('2018-03-19 08:02:38.853+01',NULL,NULL,'A1789','Other tuberculosis of nervous system',1,NULL),
+	 ('2018-03-19 08:02:38.86+01',NULL,NULL,'A179','Tuberculosis of nervous system, unspecified',1,NULL),
+	 ('2018-03-19 08:02:38.867+01',NULL,NULL,'A1801','Tuberculosis of spine',1,NULL),
+	 ('2018-03-19 08:02:38.873+01',NULL,NULL,'A1802','Tuberculous arthritis of other joints',1,NULL),
+	 ('2018-03-19 08:02:38.877+01',NULL,NULL,'A1803','Tuberculosis of other bones',1,NULL);
+INSERT INTO "tblICDCodes" ("ValidityFrom","ValidityTo","LegacyID","ICDCode","ICDName","AuditUserID","RowID") VALUES
+	 ('2018-03-19 08:02:38.883+01',NULL,NULL,'A1809','Other musculoskeletal tuberculosis',1,NULL),
+	 ('2018-03-19 08:02:38.89+01',NULL,NULL,'A1810','Tuberculosis of genitourinary system, unspecified',1,NULL),
+	 ('2018-03-19 08:02:38.897+01',NULL,NULL,'A1811','Tuberculosis of kidney and ureter',1,NULL),
+	 ('2018-03-19 08:02:38.9+01',NULL,NULL,'A1812','Tuberculosis of bladder',1,NULL),
+	 ('2018-03-19 08:02:38.907+01',NULL,NULL,'A1813','Tuberculosis of other urinary organs',1,NULL),
+	 ('2018-03-19 08:02:38.913+01',NULL,NULL,'A1814','Tuberculosis of prostate',1,NULL),
+	 ('2018-03-19 08:02:38.917+01',NULL,NULL,'A1815','Tuberculosis of other male genital organs',1,NULL),
+	 ('2018-03-19 08:02:38.923+01',NULL,NULL,'A1816','Tuberculosis of cervix',1,NULL),
+	 ('2018-03-19 08:02:38.93+01',NULL,NULL,'A1817','Tuberculous female pelvic inflammatory disease',1,NULL),
+	 ('2018-03-19 08:02:38.933+01',NULL,NULL,'A1818','Tuberculosis of other female genital organs',1,NULL);
+INSERT INTO "tblICDCodes" ("ValidityFrom","ValidityTo","LegacyID","ICDCode","ICDName","AuditUserID","RowID") VALUES
+	 ('2018-03-19 08:02:38.94+01',NULL,NULL,'A182','Tuberculous peripheral lymphadenopathy',1,NULL),
+	 ('2018-03-19 08:02:38.947+01',NULL,NULL,'A1831','Tuberculous peritonitis',1,NULL),
+	 ('2018-03-19 08:02:38.95+01',NULL,NULL,'A1832','Tuberculous enteritis',1,NULL),
+	 ('2018-03-19 08:02:38.96+01',NULL,NULL,'A1839','Retroperitoneal tuberculosis',1,NULL),
+	 ('2018-03-19 08:02:38.967+01',NULL,NULL,'A184','Tuberculosis of skin and subcutaneous tissue',1,NULL),
+	 ('2018-03-19 08:02:38.973+01',NULL,NULL,'A1850','Tuberculosis of eye, unspecified',1,NULL),
+	 ('2018-03-19 08:02:38.98+01',NULL,NULL,'A1851','Tuberculous episcleritis',1,NULL),
+	 ('2018-03-19 08:02:38.983+01',NULL,NULL,'A1852','Tuberculous keratitis',1,NULL),
+	 ('2018-03-19 08:02:38.99+01',NULL,NULL,'A1853','Tuberculous chorioretinitis',1,NULL),
+	 ('2018-03-19 08:02:38.997+01',NULL,NULL,'A1854','Tuberculous iridocyclitis',1,NULL);
+INSERT INTO "tblICDCodes" ("ValidityFrom","ValidityTo","LegacyID","ICDCode","ICDName","AuditUserID","RowID") VALUES
+	 ('2018-03-19 08:02:39.007+01',NULL,NULL,'A1859','Other tuberculosis of eye',1,NULL),
+	 ('2018-03-19 08:02:39.02+01',NULL,NULL,'A186','Tuberculosis of (inner) (middle) ear',1,NULL),
+	 ('2018-03-19 08:02:39.023+01',NULL,NULL,'A187','Tuberculosis of adrenal glands',1,NULL),
+	 ('2018-03-19 08:02:39.03+01',NULL,NULL,'A1881','Tuberculosis of thyroid gland',1,NULL),
+	 ('2018-03-19 08:02:39.037+01',NULL,NULL,'A1882','Tuberculosis of other endocrine glands',1,NULL),
+	 ('2018-03-19 08:02:39.047+01',NULL,NULL,'A1883','Tuberculosis of digestive tract organs, NEC',1,NULL),
+	 ('2018-03-19 08:02:39.053+01',NULL,NULL,'A1884','Tuberculosis of heart',1,NULL),
+	 ('2018-03-19 08:02:39.06+01',NULL,NULL,'A1885','Tuberculosis of spleen',1,NULL),
+	 ('2018-03-19 08:02:39.063+01',NULL,NULL,'A1889','Tuberculosis of other sites',1,NULL),
+	 ('2018-03-19 08:02:39.077+01',NULL,NULL,'A190','Acute miliary tuberculosis of a single specified site',1,NULL);
+INSERT INTO "tblICDCodes" ("ValidityFrom","ValidityTo","LegacyID","ICDCode","ICDName","AuditUserID","RowID") VALUES
+	 ('2018-03-19 08:02:39.087+01',NULL,NULL,'A191','Acute miliary tuberculosis of multiple sites',1,NULL),
+	 ('2018-03-19 08:02:39.09+01',NULL,NULL,'A192','Acute miliary tuberculosis, unspecified',1,NULL),
+	 ('2018-03-19 08:02:39.097+01',NULL,NULL,'A198','Other miliary tuberculosis',1,NULL),
+	 ('2018-03-19 08:02:39.103+01',NULL,NULL,'A199','Miliary tuberculosis, unspecified',1,NULL),
+	 ('2018-03-19 08:02:39.153+01',NULL,NULL,'A200','Bubonic plague',1,NULL),
+	 ('2018-03-19 08:02:39.16+01',NULL,NULL,'A201','Cellulocutaneous plague',1,NULL),
+	 ('2018-03-19 08:02:39.167+01',NULL,NULL,'A202','Pneumonic plague',1,NULL),
+	 ('2018-03-19 08:02:39.17+01',NULL,NULL,'A203','Plague meningitis',1,NULL),
+	 ('2018-03-19 08:02:39.177+01',NULL,NULL,'A207','Septicemic plague',1,NULL),
+	 ('2018-03-19 08:02:39.183+01',NULL,NULL,'A208','Other forms of plague',1,NULL);
+INSERT INTO "tblICDCodes" ("ValidityFrom","ValidityTo","LegacyID","ICDCode","ICDName","AuditUserID","RowID") VALUES
+	 ('2018-03-19 08:02:39.19+01',NULL,NULL,'A209','Plague, unspecified',1,NULL),
+	 ('2018-03-19 08:02:39.197+01',NULL,NULL,'A210','Ulceroglandular tularemia',1,NULL),
+	 ('2018-03-19 08:02:39.2+01',NULL,NULL,'A211','Oculoglandular tularemia',1,NULL),
+	 ('2018-03-19 08:02:39.207+01',NULL,NULL,'A212','Pulmonary tularemia',1,NULL),
+	 ('2018-03-19 08:02:39.213+01',NULL,NULL,'A213','Gastrointestinal tularemia',1,NULL),
+	 ('2018-03-19 08:02:39.23+01',NULL,NULL,'A217','Generalized tularemia',1,NULL),
+	 ('2018-03-19 08:02:39.237+01',NULL,NULL,'A218','Other forms of tularemia',1,NULL),
+	 ('2018-03-19 08:02:39.243+01',NULL,NULL,'A219','Tularemia, unspecified',1,NULL),
+	 ('2018-03-19 08:02:39.247+01',NULL,NULL,'A220','Cutaneous anthrax',1,NULL),
+	 ('2018-03-19 08:02:39.253+01',NULL,NULL,'A221','Pulmonary anthrax',1,NULL);
+INSERT INTO "tblICDCodes" ("ValidityFrom","ValidityTo","LegacyID","ICDCode","ICDName","AuditUserID","RowID") VALUES
+	 ('2018-03-19 08:02:39.26+01',NULL,NULL,'A222','Gastrointestinal anthrax',1,NULL),
+	 ('2018-03-19 08:02:39.263+01',NULL,NULL,'A227','Anthrax sepsis',1,NULL),
+	 ('2018-03-19 08:02:39.27+01',NULL,NULL,'A228','Other forms of anthrax',1,NULL),
+	 ('2018-03-19 08:02:39.277+01',NULL,NULL,'A229','Anthrax, unspecified',1,NULL),
+	 ('2018-03-19 08:02:39.283+01',NULL,NULL,'A230','Brucellosis due to Brucella melitensis',1,NULL),
+	 ('2018-03-19 08:02:39.287+01',NULL,NULL,'A231','Brucellosis due to Brucella abortus',1,NULL),
+	 ('2018-03-19 08:02:39.293+01',NULL,NULL,'A232','Brucellosis due to Brucella suis',1,NULL),
+	 ('2018-03-19 08:02:39.303+01',NULL,NULL,'A233','Brucellosis due to Brucella canis',1,NULL),
+	 ('2018-03-19 08:02:39.34+01',NULL,NULL,'A238','Other brucellosis',1,NULL),
+	 ('2018-03-19 08:02:39.347+01',NULL,NULL,'A239','Brucellosis, unspecified',1,NULL);
+INSERT INTO "tblICDCodes" ("ValidityFrom","ValidityTo","LegacyID","ICDCode","ICDName","AuditUserID","RowID") VALUES
+	 ('2018-03-19 08:02:39.353+01',NULL,NULL,'A240','Glanders',1,NULL),
+	 ('2018-03-19 08:02:39.363+01',NULL,NULL,'A241','Acute and fulminating melioidosis',1,NULL),
+	 ('2018-03-19 08:02:39.37+01',NULL,NULL,'A242','Subacute and chronic melioidosis',1,NULL),
+	 ('2018-03-19 08:02:39.373+01',NULL,NULL,'A243','Other melioidosis',1,NULL),
+	 ('2018-03-19 08:02:39.38+01',NULL,NULL,'A249','Melioidosis, unspecified',1,NULL),
+	 ('2018-03-19 08:02:39.387+01',NULL,NULL,'A250','Spirillosis',1,NULL),
+	 ('2018-03-19 08:02:39.39+01',NULL,NULL,'A251','Streptobacillosis',1,NULL),
+	 ('2018-03-19 08:02:39.397+01',NULL,NULL,'A259','Rat-bite fever, unspecified',1,NULL),
+	 ('2018-03-19 08:02:39.437+01',NULL,NULL,'A260','Cutaneous erysipeloid',1,NULL),
+	 ('2018-03-19 08:02:39.443+01',NULL,NULL,'A267','Erysipelothrix sepsis',1,NULL);
+INSERT INTO "tblICDCodes" ("ValidityFrom","ValidityTo","LegacyID","ICDCode","ICDName","AuditUserID","RowID") VALUES
+	 ('2018-03-19 08:02:39.457+01',NULL,NULL,'A268','Other forms of erysipeloid',1,NULL),
+	 ('2018-03-19 08:02:39.46+01',NULL,NULL,'A269','Erysipeloid, unspecified',1,NULL),
+	 ('2018-03-19 08:02:39.467+01',NULL,NULL,'A270','Leptospirosis icterohemorrhagica',1,NULL),
+	 ('2018-03-19 08:02:39.49+01',NULL,NULL,'A2781','Aseptic meningitis in leptospirosis',1,NULL),
+	 ('2018-03-19 08:02:39.497+01',NULL,NULL,'A2789','Other forms of leptospirosis',1,NULL),
+	 ('2018-03-19 08:02:39.5+01',NULL,NULL,'A279','Leptospirosis, unspecified',1,NULL),
+	 ('2018-03-19 08:02:39.507+01',NULL,NULL,'A280','Pasteurellosis',1,NULL),
+	 ('2018-03-19 08:02:39.52+01',NULL,NULL,'A281','Cat-scratch disease',1,NULL),
+	 ('2018-03-19 08:02:39.53+01',NULL,NULL,'A282','Extraintestinal yersiniosis',1,NULL),
+	 ('2018-03-19 08:02:39.537+01',NULL,NULL,'A288','Oth zoonotic bacterial diseases, not elsewhere classified',1,NULL);
+INSERT INTO "tblICDCodes" ("ValidityFrom","ValidityTo","LegacyID","ICDCode","ICDName","AuditUserID","RowID") VALUES
+	 ('2018-03-19 08:02:39.55+01',NULL,NULL,'A289','Zoonotic bacterial disease, unspecified',1,NULL),
+	 ('2018-03-19 08:02:39.56+01',NULL,NULL,'A300','Indeterminate leprosy',1,NULL),
+	 ('2018-03-19 08:02:39.567+01',NULL,NULL,'A301','Tuberculoid leprosy',1,NULL),
+	 ('2018-03-19 08:02:39.57+01',NULL,NULL,'A302','Borderline tuberculoid leprosy',1,NULL),
+	 ('2018-03-19 08:02:39.58+01',NULL,NULL,'A303','Borderline leprosy',1,NULL),
+	 ('2018-03-19 08:02:39.6+01',NULL,NULL,'A304','Borderline lepromatous leprosy',1,NULL),
+	 ('2018-03-19 08:02:39.607+01',NULL,NULL,'A305','Lepromatous leprosy',1,NULL),
+	 ('2018-03-19 08:02:39.613+01',NULL,NULL,'A308','Other forms of leprosy',1,NULL),
+	 ('2018-03-19 08:02:39.617+01',NULL,NULL,'A309','Leprosy, unspecified',1,NULL),
+	 ('2018-03-19 08:02:39.633+01',NULL,NULL,'A310','Pulmonary mycobacterial infection',1,NULL);
+INSERT INTO "tblICDCodes" ("ValidityFrom","ValidityTo","LegacyID","ICDCode","ICDName","AuditUserID","RowID") VALUES
+	 ('2018-03-19 08:02:39.643+01',NULL,NULL,'A311','Cutaneous mycobacterial infection',1,NULL),
+	 ('2018-03-19 08:02:39.647+01',NULL,NULL,'A312','Dissem mycobacterium avium-intracellulare complex (DMAC)',1,NULL),
+	 ('2018-03-19 08:02:39.653+01',NULL,NULL,'A318','Other mycobacterial infections',1,NULL),
+	 ('2018-03-19 08:02:39.657+01',NULL,NULL,'A319','Mycobacterial infection, unspecified',1,NULL),
+	 ('2018-03-19 08:02:39.663+01',NULL,NULL,'A320','Cutaneous listeriosis',1,NULL),
+	 ('2018-03-19 08:02:39.677+01',NULL,NULL,'A3211','Listerial meningitis',1,NULL),
+	 ('2018-03-19 08:02:39.68+01',NULL,NULL,'A3212','Listerial meningoencephalitis',1,NULL),
+	 ('2018-03-19 08:02:39.687+01',NULL,NULL,'A327','Listerial sepsis',1,NULL),
+	 ('2018-03-19 08:02:39.693+01',NULL,NULL,'A3281','Oculoglandular listeriosis',1,NULL),
+	 ('2018-03-19 08:02:39.697+01',NULL,NULL,'A3282','Listerial endocarditis',1,NULL);
+INSERT INTO "tblICDCodes" ("ValidityFrom","ValidityTo","LegacyID","ICDCode","ICDName","AuditUserID","RowID") VALUES
+	 ('2018-03-19 08:02:39.703+01',NULL,NULL,'A3289','Other forms of listeriosis',1,NULL),
+	 ('2018-03-19 08:02:39.71+01',NULL,NULL,'A329','Listeriosis, unspecified',1,NULL),
+	 ('2018-03-19 08:02:39.747+01',NULL,NULL,'A33','Tetanus neonatorum',1,NULL),
+	 ('2018-03-19 08:02:39.75+01',NULL,NULL,'A34','Obstetrical tetanus',1,NULL),
+	 ('2018-03-19 08:02:39.757+01',NULL,NULL,'A35','Other tetanus',1,NULL),
+	 ('2018-03-19 08:02:39.76+01',NULL,NULL,'A360','Pharyngeal diphtheria',1,NULL),
+	 ('2018-03-19 08:02:39.767+01',NULL,NULL,'A361','Nasopharyngeal diphtheria',1,NULL),
+	 ('2018-03-19 08:02:39.773+01',NULL,NULL,'A362','Laryngeal diphtheria',1,NULL),
+	 ('2018-03-19 08:02:39.78+01',NULL,NULL,'A363','Cutaneous diphtheria',1,NULL),
+	 ('2018-03-19 08:02:39.783+01',NULL,NULL,'A3681','Diphtheritic cardiomyopathy',1,NULL);
+INSERT INTO "tblICDCodes" ("ValidityFrom","ValidityTo","LegacyID","ICDCode","ICDName","AuditUserID","RowID") VALUES
+	 ('2018-03-19 08:02:39.79+01',NULL,NULL,'A3682','Diphtheritic radiculomyelitis',1,NULL),
+	 ('2018-03-19 08:02:39.797+01',NULL,NULL,'A3683','Diphtheritic polyneuritis',1,NULL),
+	 ('2018-03-19 08:02:39.8+01',NULL,NULL,'A3684','Diphtheritic tubulo-interstitial nephropathy',1,NULL),
+	 ('2018-03-19 08:02:39.807+01',NULL,NULL,'A3685','Diphtheritic cystitis',1,NULL),
+	 ('2018-03-19 08:02:39.817+01',NULL,NULL,'A3686','Diphtheritic conjunctivitis',1,NULL),
+	 ('2018-03-19 08:02:39.823+01',NULL,NULL,'A3689','Other diphtheritic complications',1,NULL),
+	 ('2018-03-19 08:02:39.83+01',NULL,NULL,'A369','Diphtheria, unspecified',1,NULL),
+	 ('2018-03-19 08:02:39.833+01',NULL,NULL,'A3700','Whooping cough due to Bordetella pertussis without pneumonia',1,NULL),
+	 ('2018-03-19 08:02:39.84+01',NULL,NULL,'A3701','Whooping cough due to Bordetella pertussis with pneumonia',1,NULL),
+	 ('2018-03-19 08:02:39.847+01',NULL,NULL,'A3710','Whooping cough due to Bordetella parapertussis w/o pneumonia',1,NULL);
+INSERT INTO "tblICDCodes" ("ValidityFrom","ValidityTo","LegacyID","ICDCode","ICDName","AuditUserID","RowID") VALUES
+	 ('2018-03-19 08:02:39.85+01',NULL,NULL,'A3711','Whooping cough due to Bordetella parapertussis w pneumonia',1,NULL),
+	 ('2018-03-19 08:02:39.857+01',NULL,NULL,'A3780','Whooping cough due to other Bordetella species w/o pneumonia',1,NULL),
+	 ('2018-03-19 08:02:39.863+01',NULL,NULL,'A3781','Whooping cough due to oth Bordetella species with pneumonia',1,NULL),
+	 ('2018-03-19 08:02:39.87+01',NULL,NULL,'A3790','Whooping cough, unspecified species without pneumonia',1,NULL),
+	 ('2018-03-19 08:02:39.873+01',NULL,NULL,'A3791','Whooping cough, unspecified species with pneumonia',1,NULL),
+	 ('2018-03-19 08:02:39.88+01',NULL,NULL,'A380','Scarlet fever with otitis media',1,NULL),
+	 ('2018-03-19 08:02:39.887+01',NULL,NULL,'A381','Scarlet fever with myocarditis',1,NULL),
+	 ('2018-03-19 08:02:39.903+01',NULL,NULL,'A388','Scarlet fever with other complications',1,NULL),
+	 ('2018-03-19 08:02:39.91+01',NULL,NULL,'A389','Scarlet fever, uncomplicated',1,NULL),
+	 ('2018-03-19 08:02:39.917+01',NULL,NULL,'A390','Meningococcal meningitis',1,NULL);
+INSERT INTO "tblICDCodes" ("ValidityFrom","ValidityTo","LegacyID","ICDCode","ICDName","AuditUserID","RowID") VALUES
+	 ('2018-03-19 08:02:39.92+01',NULL,NULL,'A391','Waterhouse-Friderichsen syndrome',1,NULL),
+	 ('2018-03-19 08:02:39.927+01',NULL,NULL,'A392','Acute meningococcemia',1,NULL),
+	 ('2018-03-19 08:02:39.933+01',NULL,NULL,'A393','Chronic meningococcemia',1,NULL),
+	 ('2018-03-19 08:02:39.94+01',NULL,NULL,'A394','Meningococcemia, unspecified',1,NULL),
+	 ('2018-03-19 08:02:39.95+01',NULL,NULL,'A3950','Meningococcal carditis, unspecified',1,NULL),
+	 ('2018-03-19 08:02:39.957+01',NULL,NULL,'A3951','Meningococcal endocarditis',1,NULL),
+	 ('2018-03-19 08:02:39.963+01',NULL,NULL,'A3952','Meningococcal myocarditis',1,NULL),
+	 ('2018-03-19 08:02:39.97+01',NULL,NULL,'A3953','Meningococcal pericarditis',1,NULL),
+	 ('2018-03-19 08:02:39.973+01',NULL,NULL,'A3981','Meningococcal encephalitis',1,NULL),
+	 ('2018-03-19 08:02:39.98+01',NULL,NULL,'A3982','Meningococcal retrobulbar neuritis',1,NULL);
+INSERT INTO "tblICDCodes" ("ValidityFrom","ValidityTo","LegacyID","ICDCode","ICDName","AuditUserID","RowID") VALUES
+	 ('2018-03-19 08:02:39.987+01',NULL,NULL,'A3983','Meningococcal arthritis',1,NULL),
+	 ('2018-03-19 08:02:39.99+01',NULL,NULL,'A3984','Postmeningococcal arthritis',1,NULL),
+	 ('2018-03-19 08:02:39.997+01',NULL,NULL,'A3989','Other meningococcal infections',1,NULL),
+	 ('2018-03-19 08:02:40.003+01',NULL,NULL,'A399','Meningococcal infection, unspecified',1,NULL),
+	 ('2018-03-19 08:02:40.01+01',NULL,NULL,'A400','Sepsis due to streptococcus, group A',1,NULL),
+	 ('2018-03-19 08:02:40.013+01',NULL,NULL,'A401','Sepsis due to streptococcus, group B',1,NULL),
+	 ('2018-03-19 08:02:40.02+01',NULL,NULL,'A403','Sepsis due to Streptococcus pneumoniae',1,NULL),
+	 ('2018-03-19 08:02:40.027+01',NULL,NULL,'A408','Other streptococcal sepsis',1,NULL),
+	 ('2018-03-19 08:02:40.03+01',NULL,NULL,'A409','Streptococcal sepsis, unspecified',1,NULL),
+	 ('2018-03-19 08:02:40.037+01',NULL,NULL,'A4101','Sepsis due to Methicillin susceptible Staphylococcus aureus',1,NULL);
+INSERT INTO "tblICDCodes" ("ValidityFrom","ValidityTo","LegacyID","ICDCode","ICDName","AuditUserID","RowID") VALUES
+	 ('2018-03-19 08:02:40.05+01',NULL,NULL,'A4102','Sepsis due to Methicillin resistant Staphylococcus aureus',1,NULL),
+	 ('2018-03-19 08:02:40.053+01',NULL,NULL,'A411','Sepsis due to other specified staphylococcus',1,NULL),
+	 ('2018-03-19 08:02:40.06+01',NULL,NULL,'A412','Sepsis due to unspecified staphylococcus',1,NULL),
+	 ('2018-03-19 08:02:40.07+01',NULL,NULL,'A413','Sepsis due to Hemophilus influenzae',1,NULL),
+	 ('2018-03-19 08:02:40.077+01',NULL,NULL,'A414','Sepsis due to anaerobes',1,NULL),
+	 ('2018-03-19 08:02:40.083+01',NULL,NULL,'A4150','Gram-negative sepsis, unspecified',1,NULL),
+	 ('2018-03-19 08:02:40.09+01',NULL,NULL,'A4151','Sepsis due to Escherichia coli [E. coli]',1,NULL),
+	 ('2018-03-19 08:02:40.093+01',NULL,NULL,'A4152','Sepsis due to Pseudomonas',1,NULL),
+	 ('2018-03-19 08:02:40.107+01',NULL,NULL,'A4153','Sepsis due to Serratia',1,NULL),
+	 ('2018-03-19 08:02:40.14+01',NULL,NULL,'A4159','Other Gram-negative sepsis',1,NULL);
+INSERT INTO "tblICDCodes" ("ValidityFrom","ValidityTo","LegacyID","ICDCode","ICDName","AuditUserID","RowID") VALUES
+	 ('2018-03-19 08:02:40.147+01',NULL,NULL,'A4181','Sepsis due to Enterococcus',1,NULL),
+	 ('2018-03-19 08:02:40.157+01',NULL,NULL,'A4189','Other specified sepsis',1,NULL),
+	 ('2018-03-19 08:02:40.163+01',NULL,NULL,'A419','Sepsis, unspecified organism',1,NULL),
+	 ('2018-03-19 08:02:40.17+01',NULL,NULL,'A420','Pulmonary actinomycosis',1,NULL),
+	 ('2018-03-19 08:02:40.173+01',NULL,NULL,'A421','Abdominal actinomycosis',1,NULL),
+	 ('2018-03-19 08:02:40.18+01',NULL,NULL,'A422','Cervicofacial actinomycosis',1,NULL),
+	 ('2018-03-19 08:02:40.187+01',NULL,NULL,'A427','Actinomycotic sepsis',1,NULL),
+	 ('2018-03-19 08:02:40.193+01',NULL,NULL,'A4281','Actinomycotic meningitis',1,NULL),
+	 ('2018-03-19 08:02:40.2+01',NULL,NULL,'A4282','Actinomycotic encephalitis',1,NULL),
+	 ('2018-03-19 08:02:40.233+01',NULL,NULL,'A4289','Other forms of actinomycosis',1,NULL);
+INSERT INTO "tblICDCodes" ("ValidityFrom","ValidityTo","LegacyID","ICDCode","ICDName","AuditUserID","RowID") VALUES
+	 ('2018-03-19 08:02:40.24+01',NULL,NULL,'A429','Actinomycosis, unspecified',1,NULL),
+	 ('2018-03-19 08:02:40.243+01',NULL,NULL,'A430','Pulmonary nocardiosis',1,NULL),
+	 ('2018-03-19 08:02:40.25+01',NULL,NULL,'A431','Cutaneous nocardiosis',1,NULL),
+	 ('2018-03-19 08:02:40.257+01',NULL,NULL,'A438','Other forms of nocardiosis',1,NULL),
+	 ('2018-03-19 08:02:40.26+01',NULL,NULL,'A439','Nocardiosis, unspecified',1,NULL),
+	 ('2018-03-19 08:02:40.267+01',NULL,NULL,'A440','Systemic bartonellosis',1,NULL),
+	 ('2018-03-19 08:02:40.273+01',NULL,NULL,'A441','Cutaneous and mucocutaneous bartonellosis',1,NULL),
+	 ('2018-03-19 08:02:40.28+01',NULL,NULL,'A448','Other forms of bartonellosis',1,NULL),
+	 ('2018-03-19 08:02:40.283+01',NULL,NULL,'A449','Bartonellosis, unspecified',1,NULL),
+	 ('2018-03-19 08:02:40.29+01',NULL,NULL,'A46','Erysipelas',1,NULL);
+INSERT INTO "tblICDCodes" ("ValidityFrom","ValidityTo","LegacyID","ICDCode","ICDName","AuditUserID","RowID") VALUES
+	 ('2018-03-19 08:02:40.297+01',NULL,NULL,'A480','Gas gangrene',1,NULL),
+	 ('2018-03-19 08:02:40.3+01',NULL,NULL,'A481','Legionnaires'' disease',1,NULL),
+	 ('2018-03-19 08:02:40.307+01',NULL,NULL,'A482','Nonpneumonic Legionnaires'' disease [Pontiac fever]',1,NULL),
+	 ('2018-03-19 08:02:40.343+01',NULL,NULL,'A483','Toxic shock syndrome',1,NULL),
+	 ('2018-03-19 08:02:40.353+01',NULL,NULL,'A484','Brazilian purpuric fever',1,NULL),
+	 ('2018-03-19 08:02:40.363+01',NULL,NULL,'A4851','Infant botulism',1,NULL),
+	 ('2018-03-19 08:02:40.37+01',NULL,NULL,'A4852','Wound botulism',1,NULL),
+	 ('2018-03-19 08:02:40.377+01',NULL,NULL,'A488','Other specified bacterial diseases',1,NULL),
+	 ('2018-03-19 08:02:43.17+01',NULL,NULL,'A950','Sylvatic yellow fever',1,NULL),
+	 ('2018-03-19 08:02:40.387+01',NULL,NULL,'A4901','Methicillin suscep staph infection, unsp site',1,NULL);
+INSERT INTO "tblICDCodes" ("ValidityFrom","ValidityTo","LegacyID","ICDCode","ICDName","AuditUserID","RowID") VALUES
+	 ('2018-03-19 08:02:40.39+01',NULL,NULL,'A4902','Methicillin resis staph infection, unsp site',1,NULL),
+	 ('2018-03-19 08:02:40.4+01',NULL,NULL,'A491','Streptococcal infection, unspecified site',1,NULL),
+	 ('2018-03-19 08:02:40.41+01',NULL,NULL,'A492','Hemophilus influenzae infection, unspecified site',1,NULL),
+	 ('2018-03-19 08:02:40.447+01',NULL,NULL,'A493','Mycoplasma infection, unspecified site',1,NULL),
+	 ('2018-03-19 08:02:40.453+01',NULL,NULL,'A498','Other bacterial infections of unspecified site',1,NULL),
+	 ('2018-03-19 08:02:40.46+01',NULL,NULL,'A499','Bacterial infection, unspecified',1,NULL),
+	 ('2018-03-19 08:02:40.467+01',NULL,NULL,'A5001','Early congenital syphilitic oculopathy',1,NULL),
+	 ('2018-03-19 08:02:40.47+01',NULL,NULL,'A5002','Early congenital syphilitic osteochondropathy',1,NULL),
+	 ('2018-03-19 08:02:40.477+01',NULL,NULL,'A5003','Early congenital syphilitic pharyngitis',1,NULL),
+	 ('2018-03-19 08:02:40.483+01',NULL,NULL,'A5004','Early congenital syphilitic pneumonia',1,NULL);
+INSERT INTO "tblICDCodes" ("ValidityFrom","ValidityTo","LegacyID","ICDCode","ICDName","AuditUserID","RowID") VALUES
+	 ('2018-03-19 08:02:40.49+01',NULL,NULL,'A5005','Early congenital syphilitic rhinitis',1,NULL),
+	 ('2018-03-19 08:02:40.493+01',NULL,NULL,'A5006','Early cutaneous congenital syphilis',1,NULL),
+	 ('2018-03-19 08:02:40.5+01',NULL,NULL,'A5007','Early mucocutaneous congenital syphilis',1,NULL),
+	 ('2018-03-19 08:02:40.507+01',NULL,NULL,'A5008','Early visceral congenital syphilis',1,NULL),
+	 ('2018-03-19 08:02:40.51+01',NULL,NULL,'A5009','Other early congenital syphilis, symptomatic',1,NULL),
+	 ('2018-03-19 08:02:40.533+01',NULL,NULL,'A501','Early congenital syphilis, latent',1,NULL),
+	 ('2018-03-19 08:02:40.54+01',NULL,NULL,'A502','Early congenital syphilis, unspecified',1,NULL),
+	 ('2018-03-19 08:02:40.547+01',NULL,NULL,'A5030','Late congenital syphilitic oculopathy, unspecified',1,NULL),
+	 ('2018-03-19 08:02:40.55+01',NULL,NULL,'A5031','Late congenital syphilitic interstitial keratitis',1,NULL),
+	 ('2018-03-19 08:02:40.557+01',NULL,NULL,'A5032','Late congenital syphilitic chorioretinitis',1,NULL);
+INSERT INTO "tblICDCodes" ("ValidityFrom","ValidityTo","LegacyID","ICDCode","ICDName","AuditUserID","RowID") VALUES
+	 ('2018-03-19 08:02:40.563+01',NULL,NULL,'A5039','Other late congenital syphilitic oculopathy',1,NULL),
+	 ('2018-03-19 08:02:40.57+01',NULL,NULL,'A5040','Late congenital neurosyphilis, unspecified',1,NULL),
+	 ('2018-03-19 08:02:40.573+01',NULL,NULL,'A5041','Late congenital syphilitic meningitis',1,NULL),
+	 ('2018-03-19 08:02:40.58+01',NULL,NULL,'A5042','Late congenital syphilitic encephalitis',1,NULL),
+	 ('2018-03-19 08:02:40.587+01',NULL,NULL,'A5043','Late congenital syphilitic polyneuropathy',1,NULL),
+	 ('2018-03-19 08:02:40.59+01',NULL,NULL,'A5044','Late congenital syphilitic optic nerve atrophy',1,NULL),
+	 ('2018-03-19 08:02:40.597+01',NULL,NULL,'A5045','Juvenile general paresis',1,NULL),
+	 ('2018-03-19 08:02:40.603+01',NULL,NULL,'A5049','Other late congenital neurosyphilis',1,NULL),
+	 ('2018-03-19 08:02:40.613+01',NULL,NULL,'A5052','Hutchinson''s teeth',1,NULL),
+	 ('2018-03-19 08:02:40.62+01',NULL,NULL,'A5053','Hutchinson''s triad',1,NULL);
+INSERT INTO "tblICDCodes" ("ValidityFrom","ValidityTo","LegacyID","ICDCode","ICDName","AuditUserID","RowID") VALUES
+	 ('2018-03-19 08:02:40.66+01',NULL,NULL,'A5054','Late congenital cardiovascular syphilis',1,NULL),
+	 ('2018-03-19 08:02:40.667+01',NULL,NULL,'A5055','Late congenital syphilitic arthropathy',1,NULL),
+	 ('2018-03-19 08:02:40.67+01',NULL,NULL,'A5056','Late congenital syphilitic osteochondropathy',1,NULL),
+	 ('2018-03-19 08:02:40.683+01',NULL,NULL,'A5057','Syphilitic saddle nose',1,NULL),
+	 ('2018-03-19 08:02:40.693+01',NULL,NULL,'A5059','Other late congenital syphilis, symptomatic',1,NULL),
+	 ('2018-03-19 08:02:40.7+01',NULL,NULL,'A506','Late congenital syphilis, latent',1,NULL),
+	 ('2018-03-19 08:02:40.84+01',NULL,NULL,'A507','Late congenital syphilis, unspecified',1,NULL),
+	 ('2018-03-19 08:02:40.847+01',NULL,NULL,'A509','Congenital syphilis, unspecified',1,NULL),
+	 ('2018-03-19 08:02:40.853+01',NULL,NULL,'A510','Primary genital syphilis',1,NULL),
+	 ('2018-03-19 08:02:40.86+01',NULL,NULL,'A511','Primary anal syphilis',1,NULL);
+INSERT INTO "tblICDCodes" ("ValidityFrom","ValidityTo","LegacyID","ICDCode","ICDName","AuditUserID","RowID") VALUES
+	 ('2018-03-19 08:02:40.863+01',NULL,NULL,'A512','Primary syphilis of other sites',1,NULL),
+	 ('2018-03-19 08:02:40.87+01',NULL,NULL,'A5131','Condyloma latum',1,NULL),
+	 ('2018-03-19 08:02:40.877+01',NULL,NULL,'A5132','Syphilitic alopecia',1,NULL),
+	 ('2018-03-19 08:02:40.88+01',NULL,NULL,'A5139','Other secondary syphilis of skin',1,NULL),
+	 ('2018-03-19 08:02:40.887+01',NULL,NULL,'A5141','Secondary syphilitic meningitis',1,NULL),
+	 ('2018-03-19 08:02:40.897+01',NULL,NULL,'A5142','Secondary syphilitic female pelvic disease',1,NULL),
+	 ('2018-03-19 08:02:40.9+01',NULL,NULL,'A5143','Secondary syphilitic oculopathy',1,NULL),
+	 ('2018-03-19 08:02:40.907+01',NULL,NULL,'A5144','Secondary syphilitic nephritis',1,NULL),
+	 ('2018-03-19 08:02:40.923+01',NULL,NULL,'A5145','Secondary syphilitic hepatitis',1,NULL),
+	 ('2018-03-19 08:02:40.93+01',NULL,NULL,'A5146','Secondary syphilitic osteopathy',1,NULL);
+INSERT INTO "tblICDCodes" ("ValidityFrom","ValidityTo","LegacyID","ICDCode","ICDName","AuditUserID","RowID") VALUES
+	 ('2018-03-19 08:02:40.937+01',NULL,NULL,'A5149','Other secondary syphilitic conditions',1,NULL),
+	 ('2018-03-19 08:02:40.943+01',NULL,NULL,'A515','Early syphilis, latent',1,NULL),
+	 ('2018-03-19 08:02:40.95+01',NULL,NULL,'A519','Early syphilis, unspecified',1,NULL),
+	 ('2018-03-19 08:02:40.99+01',NULL,NULL,'A5200','Cardiovascular syphilis, unspecified',1,NULL),
+	 ('2018-03-19 08:02:40.997+01',NULL,NULL,'A5201','Syphilitic aneurysm of aorta',1,NULL),
+	 ('2018-03-19 08:02:41.037+01',NULL,NULL,'A5202','Syphilitic aortitis',1,NULL),
+	 ('2018-03-19 08:02:41.043+01',NULL,NULL,'A5203','Syphilitic endocarditis',1,NULL),
+	 ('2018-03-19 08:02:41.06+01',NULL,NULL,'A5204','Syphilitic cerebral arteritis',1,NULL),
+	 ('2018-03-19 08:02:41.07+01',NULL,NULL,'A5205','Other cerebrovascular syphilis',1,NULL),
+	 ('2018-03-19 08:02:41.083+01',NULL,NULL,'A5206','Other syphilitic heart involvement',1,NULL);
+INSERT INTO "tblICDCodes" ("ValidityFrom","ValidityTo","LegacyID","ICDCode","ICDName","AuditUserID","RowID") VALUES
+	 ('2018-03-19 08:02:41.097+01',NULL,NULL,'A5209','Other cardiovascular syphilis',1,NULL),
+	 ('2018-03-19 08:02:41.107+01',NULL,NULL,'A5210','Symptomatic neurosyphilis, unspecified',1,NULL),
+	 ('2018-03-19 08:02:41.113+01',NULL,NULL,'A5211','Tabes dorsalis',1,NULL),
+	 ('2018-03-19 08:02:41.13+01',NULL,NULL,'A5212','Other cerebrospinal syphilis',1,NULL),
+	 ('2018-03-19 08:02:41.137+01',NULL,NULL,'A5213','Late syphilitic meningitis',1,NULL),
+	 ('2018-03-19 08:02:41.14+01',NULL,NULL,'A5214','Late syphilitic encephalitis',1,NULL),
+	 ('2018-03-19 08:02:41.147+01',NULL,NULL,'A5215','Late syphilitic neuropathy',1,NULL),
+	 ('2018-03-19 08:02:41.153+01',NULL,NULL,'A5216','Charcot''s arthropathy (tabetic)',1,NULL),
+	 ('2018-03-19 08:02:41.163+01',NULL,NULL,'A5219','Other symptomatic neurosyphilis',1,NULL),
+	 ('2018-03-19 08:02:41.17+01',NULL,NULL,'A522','Asymptomatic neurosyphilis',1,NULL);
+INSERT INTO "tblICDCodes" ("ValidityFrom","ValidityTo","LegacyID","ICDCode","ICDName","AuditUserID","RowID") VALUES
+	 ('2018-03-19 08:02:41.177+01',NULL,NULL,'A523','Neurosyphilis, unspecified',1,NULL),
+	 ('2018-03-19 08:02:41.18+01',NULL,NULL,'A5271','Late syphilitic oculopathy',1,NULL),
+	 ('2018-03-19 08:02:41.187+01',NULL,NULL,'A5272','Syphilis of lung and bronchus',1,NULL),
+	 ('2018-03-19 08:02:41.193+01',NULL,NULL,'A5273','Symptomatic late syphilis of other respiratory organs',1,NULL),
+	 ('2018-03-19 08:02:41.2+01',NULL,NULL,'A5274','Syphilis of liver and other viscera',1,NULL),
+	 ('2018-03-19 08:02:41.203+01',NULL,NULL,'A5275','Syphilis of kidney and ureter',1,NULL),
+	 ('2018-03-19 08:02:41.223+01',NULL,NULL,'A5276','Other genitourinary symptomatic late syphilis',1,NULL),
+	 ('2018-03-19 08:02:41.23+01',NULL,NULL,'A5277','Syphilis of bone and joint',1,NULL),
+	 ('2018-03-19 08:02:41.243+01',NULL,NULL,'A5278','Syphilis of other musculoskeletal tissue',1,NULL),
+	 ('2018-03-19 08:02:41.26+01',NULL,NULL,'A5279','Other symptomatic late syphilis',1,NULL);
+INSERT INTO "tblICDCodes" ("ValidityFrom","ValidityTo","LegacyID","ICDCode","ICDName","AuditUserID","RowID") VALUES
+	 ('2018-03-19 08:02:41.273+01',NULL,NULL,'A528','Late syphilis, latent',1,NULL),
+	 ('2018-03-19 08:02:41.277+01',NULL,NULL,'A529','Late syphilis, unspecified',1,NULL),
+	 ('2018-03-19 08:02:41.29+01',NULL,NULL,'A530','Latent syphilis, unspecified as early or late',1,NULL),
+	 ('2018-03-19 08:02:41.3+01',NULL,NULL,'A539','Syphilis, unspecified',1,NULL),
+	 ('2018-03-19 08:02:41.307+01',NULL,NULL,'A5400','Gonococcal infection of lower genitourinary tract, unsp',1,NULL),
+	 ('2018-03-19 08:02:41.323+01',NULL,NULL,'A5401','Gonococcal cystitis and urethritis, unspecified',1,NULL),
+	 ('2018-03-19 08:02:41.333+01',NULL,NULL,'A5402','Gonococcal vulvovaginitis, unspecified',1,NULL),
+	 ('2018-03-19 08:02:41.347+01',NULL,NULL,'A5403','Gonococcal cervicitis, unspecified',1,NULL),
+	 ('2018-03-19 08:02:41.377+01',NULL,NULL,'A5409','Other gonococcal infection of lower genitourinary tract',1,NULL),
+	 ('2018-03-19 08:02:41.393+01',NULL,NULL,'A541','Gonocl infct of lower GU tract w periureth and acc glnd abcs',1,NULL);
+INSERT INTO "tblICDCodes" ("ValidityFrom","ValidityTo","LegacyID","ICDCode","ICDName","AuditUserID","RowID") VALUES
+	 ('2018-03-19 08:02:41.403+01',NULL,NULL,'A5421','Gonococcal infection of kidney and ureter',1,NULL),
+	 ('2018-03-19 08:02:41.41+01',NULL,NULL,'A5422','Gonococcal prostatitis',1,NULL),
+	 ('2018-03-19 08:02:41.423+01',NULL,NULL,'A5423','Gonococcal infection of other male genital organs',1,NULL),
+	 ('2018-03-19 08:02:41.433+01',NULL,NULL,'A5424','Gonococcal female pelvic inflammatory disease',1,NULL),
+	 ('2018-03-19 08:02:41.447+01',NULL,NULL,'A5429','Other gonococcal genitourinary infections',1,NULL),
+	 ('2018-03-19 08:02:41.457+01',NULL,NULL,'A5430','Gonococcal infection of eye, unspecified',1,NULL),
+	 ('2018-03-19 08:02:41.463+01',NULL,NULL,'A5431','Gonococcal conjunctivitis',1,NULL),
+	 ('2018-03-19 08:02:41.47+01',NULL,NULL,'A5432','Gonococcal iridocyclitis',1,NULL),
+	 ('2018-03-19 08:02:41.473+01',NULL,NULL,'A5433','Gonococcal keratitis',1,NULL),
+	 ('2018-03-19 08:02:41.48+01',NULL,NULL,'A5439','Other gonococcal eye infection',1,NULL);
+INSERT INTO "tblICDCodes" ("ValidityFrom","ValidityTo","LegacyID","ICDCode","ICDName","AuditUserID","RowID") VALUES
+	 ('2018-03-19 08:02:41.49+01',NULL,NULL,'A5440','Gonococcal infection of musculoskeletal system, unspecified',1,NULL),
+	 ('2018-03-19 08:02:41.497+01',NULL,NULL,'A5441','Gonococcal spondylopathy',1,NULL),
+	 ('2018-03-19 08:02:41.503+01',NULL,NULL,'A5442','Gonococcal arthritis',1,NULL),
+	 ('2018-03-19 08:02:41.523+01',NULL,NULL,'A5443','Gonococcal osteomyelitis',1,NULL),
+	 ('2018-03-19 08:02:41.53+01',NULL,NULL,'A5449','Gonococcal infection of other musculoskeletal tissue',1,NULL),
+	 ('2018-03-19 08:02:41.54+01',NULL,NULL,'A545','Gonococcal pharyngitis',1,NULL),
+	 ('2018-03-19 08:02:41.553+01',NULL,NULL,'A546','Gonococcal infection of anus and rectum',1,NULL),
+	 ('2018-03-19 08:02:41.56+01',NULL,NULL,'A5481','Gonococcal meningitis',1,NULL),
+	 ('2018-03-19 08:02:41.567+01',NULL,NULL,'A5482','Gonococcal brain abscess',1,NULL),
+	 ('2018-03-19 08:02:41.57+01',NULL,NULL,'A5483','Gonococcal heart infection',1,NULL);
+INSERT INTO "tblICDCodes" ("ValidityFrom","ValidityTo","LegacyID","ICDCode","ICDName","AuditUserID","RowID") VALUES
+	 ('2018-03-19 08:02:41.577+01',NULL,NULL,'A5484','Gonococcal pneumonia',1,NULL),
+	 ('2018-03-19 08:02:41.59+01',NULL,NULL,'A5485','Gonococcal peritonitis',1,NULL),
+	 ('2018-03-19 08:02:41.61+01',NULL,NULL,'A5486','Gonococcal sepsis',1,NULL),
+	 ('2018-03-19 08:02:41.617+01',NULL,NULL,'A5489','Other gonococcal infections',1,NULL),
+	 ('2018-03-19 08:02:41.623+01',NULL,NULL,'A549','Gonococcal infection, unspecified',1,NULL),
+	 ('2018-03-19 08:02:41.647+01',NULL,NULL,'A55','Chlamydial lymphogranuloma (venereum)',1,NULL),
+	 ('2018-03-19 08:02:41.657+01',NULL,NULL,'A5600','Chlamydial infection of lower genitourinary tract, unsp',1,NULL),
+	 ('2018-03-19 08:02:41.663+01',NULL,NULL,'A5601','Chlamydial cystitis and urethritis',1,NULL),
+	 ('2018-03-19 08:02:41.67+01',NULL,NULL,'A5602','Chlamydial vulvovaginitis',1,NULL),
+	 ('2018-03-19 08:02:41.68+01',NULL,NULL,'A5609','Other chlamydial infection of lower genitourinary tract',1,NULL);
+INSERT INTO "tblICDCodes" ("ValidityFrom","ValidityTo","LegacyID","ICDCode","ICDName","AuditUserID","RowID") VALUES
+	 ('2018-03-19 08:02:41.693+01',NULL,NULL,'A5611','Chlamydial female pelvic inflammatory disease',1,NULL),
+	 ('2018-03-19 08:02:41.703+01',NULL,NULL,'A5619','Other chlamydial genitourinary infection',1,NULL),
+	 ('2018-03-19 08:02:41.727+01',NULL,NULL,'A562','Chlamydial infection of genitourinary tract, unspecified',1,NULL),
+	 ('2018-03-19 08:02:41.733+01',NULL,NULL,'A563','Chlamydial infection of anus and rectum',1,NULL),
+	 ('2018-03-19 08:02:41.737+01',NULL,NULL,'A564','Chlamydial infection of pharynx',1,NULL),
+	 ('2018-03-19 08:02:41.743+01',NULL,NULL,'A568','Sexually transmitted chlamydial infection of other sites',1,NULL),
+	 ('2018-03-19 08:02:41.75+01',NULL,NULL,'A57','Chancroid',1,NULL),
+	 ('2018-03-19 08:02:41.757+01',NULL,NULL,'A58','Granuloma inguinale',1,NULL),
+	 ('2018-03-19 08:02:41.76+01',NULL,NULL,'A5900','Urogenital trichomoniasis, unspecified',1,NULL),
+	 ('2018-03-19 08:02:41.773+01',NULL,NULL,'A5901','Trichomonal vulvovaginitis',1,NULL);
+INSERT INTO "tblICDCodes" ("ValidityFrom","ValidityTo","LegacyID","ICDCode","ICDName","AuditUserID","RowID") VALUES
+	 ('2018-03-19 08:02:41.783+01',NULL,NULL,'A5902','Trichomonal prostatitis',1,NULL),
+	 ('2018-03-19 08:02:41.797+01',NULL,NULL,'A5903','Trichomonal cystitis and urethritis',1,NULL),
+	 ('2018-03-19 08:02:41.823+01',NULL,NULL,'A5909','Other urogenital trichomoniasis',1,NULL),
+	 ('2018-03-19 08:02:41.83+01',NULL,NULL,'A598','Trichomoniasis of other sites',1,NULL),
+	 ('2018-03-19 08:02:41.837+01',NULL,NULL,'A599','Trichomoniasis, unspecified',1,NULL),
+	 ('2018-03-19 08:02:41.847+01',NULL,NULL,'A6000','Herpesviral infection of urogenital system, unspecified',1,NULL),
+	 ('2018-03-19 08:02:41.853+01',NULL,NULL,'A6001','Herpesviral infection of penis',1,NULL),
+	 ('2018-03-19 08:02:41.863+01',NULL,NULL,'A6002','Herpesviral infection of other male genital organs',1,NULL),
+	 ('2018-03-19 08:02:41.877+01',NULL,NULL,'A6003','Herpesviral cervicitis',1,NULL),
+	 ('2018-03-19 08:02:41.887+01',NULL,NULL,'A6004','Herpesviral vulvovaginitis',1,NULL);
+INSERT INTO "tblICDCodes" ("ValidityFrom","ValidityTo","LegacyID","ICDCode","ICDName","AuditUserID","RowID") VALUES
+	 ('2018-03-19 08:02:41.893+01',NULL,NULL,'A6009','Herpesviral infection of other urogenital tract',1,NULL),
+	 ('2018-03-19 08:02:41.9+01',NULL,NULL,'A601','Herpesviral infection of perianal skin and rectum',1,NULL),
+	 ('2018-03-19 08:02:41.903+01',NULL,NULL,'A609','Anogenital herpesviral infection, unspecified',1,NULL),
+	 ('2018-03-19 08:02:41.91+01',NULL,NULL,'A630','Anogenital (venereal) warts',1,NULL),
+	 ('2018-03-19 08:02:41.947+01',NULL,NULL,'A638','Other specified predominantly sexually transmitted diseases',1,NULL),
+	 ('2018-03-19 08:02:41.95+01',NULL,NULL,'A64','Unspecified sexually transmitted disease',1,NULL),
+	 ('2018-03-19 08:02:41.957+01',NULL,NULL,'A65','Nonvenereal syphilis',1,NULL),
+	 ('2018-03-19 08:02:41.96+01',NULL,NULL,'A660','Initial lesions of yaws',1,NULL),
+	 ('2018-03-19 08:02:41.967+01',NULL,NULL,'A661','Multiple papillomata and wet crab yaws',1,NULL),
+	 ('2018-03-19 08:02:41.973+01',NULL,NULL,'A662','Other early skin lesions of yaws',1,NULL);
+INSERT INTO "tblICDCodes" ("ValidityFrom","ValidityTo","LegacyID","ICDCode","ICDName","AuditUserID","RowID") VALUES
+	 ('2018-03-19 08:02:41.98+01',NULL,NULL,'A663','Hyperkeratosis of yaws',1,NULL),
+	 ('2018-03-19 08:02:41.983+01',NULL,NULL,'A664','Gummata and ulcers of yaws',1,NULL),
+	 ('2018-03-19 08:02:41.99+01',NULL,NULL,'A665','Gangosa',1,NULL),
+	 ('2018-03-19 08:02:41.997+01',NULL,NULL,'A666','Bone and joint lesions of yaws',1,NULL),
+	 ('2018-03-19 08:02:42+01',NULL,NULL,'A667','Other manifestations of yaws',1,NULL),
+	 ('2018-03-19 08:02:42.007+01',NULL,NULL,'A668','Latent yaws',1,NULL),
+	 ('2018-03-19 08:02:42.04+01',NULL,NULL,'A669','Yaws, unspecified',1,NULL),
+	 ('2018-03-19 08:02:42.04+01',NULL,NULL,'A670','Primary lesions of pinta',1,NULL),
+	 ('2018-03-19 08:02:42.047+01',NULL,NULL,'A671','Intermediate lesions of pinta',1,NULL),
+	 ('2018-03-19 08:02:42.053+01',NULL,NULL,'A672','Late lesions of pinta',1,NULL);
+INSERT INTO "tblICDCodes" ("ValidityFrom","ValidityTo","LegacyID","ICDCode","ICDName","AuditUserID","RowID") VALUES
+	 ('2018-03-19 08:02:42.06+01',NULL,NULL,'A673','Mixed lesions of pinta',1,NULL),
+	 ('2018-03-19 08:02:42.063+01',NULL,NULL,'A679','Pinta, unspecified',1,NULL),
+	 ('2018-03-19 08:02:42.08+01',NULL,NULL,'A680','Louse-borne relapsing fever',1,NULL),
+	 ('2018-03-19 08:02:42.093+01',NULL,NULL,'A681','Tick-borne relapsing fever',1,NULL),
+	 ('2018-03-19 08:02:42.1+01',NULL,NULL,'A689','Relapsing fever, unspecified',1,NULL),
+	 ('2018-03-19 08:02:42.103+01',NULL,NULL,'A690','Necrotizing ulcerative stomatitis',1,NULL),
+	 ('2018-03-19 08:02:42.11+01',NULL,NULL,'A691','Other Vincent''s infections',1,NULL),
+	 ('2018-03-19 08:02:42.117+01',NULL,NULL,'A6920','Lyme disease, unspecified',1,NULL),
+	 ('2018-03-19 08:02:42.15+01',NULL,NULL,'A6921','Meningitis due to Lyme disease',1,NULL),
+	 ('2018-03-19 08:02:42.157+01',NULL,NULL,'A6922','Other neurologic disorders in Lyme disease',1,NULL);
+INSERT INTO "tblICDCodes" ("ValidityFrom","ValidityTo","LegacyID","ICDCode","ICDName","AuditUserID","RowID") VALUES
+	 ('2018-03-19 08:02:42.16+01',NULL,NULL,'A6923','Arthritis due to Lyme disease',1,NULL),
+	 ('2018-03-19 08:02:42.167+01',NULL,NULL,'A6929','Other conditions associated with Lyme disease',1,NULL),
+	 ('2018-03-19 08:02:42.173+01',NULL,NULL,'A698','Other specified spirochetal infections',1,NULL),
+	 ('2018-03-19 08:02:42.183+01',NULL,NULL,'A699','Spirochetal infection, unspecified',1,NULL),
+	 ('2018-03-19 08:02:42.19+01',NULL,NULL,'A70','Chlamydia psittaci infections',1,NULL),
+	 ('2018-03-19 08:02:42.193+01',NULL,NULL,'A710','Initial stage of trachoma',1,NULL),
+	 ('2018-03-19 08:02:42.203+01',NULL,NULL,'A711','Active stage of trachoma',1,NULL),
+	 ('2018-03-19 08:02:42.243+01',NULL,NULL,'A719','Trachoma, unspecified',1,NULL),
+	 ('2018-03-19 08:02:42.363+01',NULL,NULL,'A740','Chlamydial conjunctivitis',1,NULL),
+	 ('2018-03-19 08:02:42.37+01',NULL,NULL,'A7481','Chlamydial peritonitis',1,NULL);
+INSERT INTO "tblICDCodes" ("ValidityFrom","ValidityTo","LegacyID","ICDCode","ICDName","AuditUserID","RowID") VALUES
+	 ('2018-03-19 08:02:42.383+01',NULL,NULL,'A7489','Other chlamydial diseases',1,NULL),
+	 ('2018-03-19 08:02:42.39+01',NULL,NULL,'A749','Chlamydial infection, unspecified',1,NULL),
+	 ('2018-03-19 08:02:42.393+01',NULL,NULL,'A750','Epidemic louse-borne typhus fever d/t Rickettsia prowazekii',1,NULL),
+	 ('2018-03-19 08:02:42.4+01',NULL,NULL,'A751','Recrudescent typhus [Brill''s disease]',1,NULL),
+	 ('2018-03-19 08:02:42.42+01',NULL,NULL,'A752','Typhus fever due to Rickettsia typhi',1,NULL),
+	 ('2018-03-19 08:02:42.43+01',NULL,NULL,'A753','Typhus fever due to Rickettsia tsutsugamushi',1,NULL),
+	 ('2018-03-19 08:02:42.433+01',NULL,NULL,'A759','Typhus fever, unspecified',1,NULL),
+	 ('2018-03-19 08:02:42.44+01',NULL,NULL,'A770','Spotted fever due to Rickettsia rickettsii',1,NULL),
+	 ('2018-03-19 08:02:42.447+01',NULL,NULL,'A771','Spotted fever due to Rickettsia conorii',1,NULL),
+	 ('2018-03-19 08:02:42.457+01',NULL,NULL,'A772','Spotted fever due to Rickettsia siberica',1,NULL);
+INSERT INTO "tblICDCodes" ("ValidityFrom","ValidityTo","LegacyID","ICDCode","ICDName","AuditUserID","RowID") VALUES
+	 ('2018-03-19 08:02:42.463+01',NULL,NULL,'A773','Spotted fever due to Rickettsia australis',1,NULL),
+	 ('2018-03-19 08:02:42.47+01',NULL,NULL,'A7740','Ehrlichiosis, unspecified',1,NULL),
+	 ('2018-03-19 08:02:42.473+01',NULL,NULL,'A7741','Ehrlichiosis chafeensis [E. chafeensis]',1,NULL),
+	 ('2018-03-19 08:02:42.48+01',NULL,NULL,'A7749','Other ehrlichiosis',1,NULL),
+	 ('2018-03-19 08:02:42.487+01',NULL,NULL,'A778','Other spotted fevers',1,NULL),
+	 ('2018-03-19 08:02:42.493+01',NULL,NULL,'A779','Spotted fever, unspecified',1,NULL),
+	 ('2018-03-19 08:02:42.497+01',NULL,NULL,'A78','Q fever',1,NULL),
+	 ('2018-03-19 08:02:42.503+01',NULL,NULL,'A790','Trench fever',1,NULL),
+	 ('2018-03-19 08:02:42.51+01',NULL,NULL,'A791','Rickettsialpox due to Rickettsia akari',1,NULL),
+	 ('2018-03-19 08:02:42.547+01',NULL,NULL,'A7981','Rickettsiosis due to Ehrlichia sennetsu',1,NULL);
+INSERT INTO "tblICDCodes" ("ValidityFrom","ValidityTo","LegacyID","ICDCode","ICDName","AuditUserID","RowID") VALUES
+	 ('2018-03-19 08:02:42.55+01',NULL,NULL,'A7989','Other specified rickettsioses',1,NULL),
+	 ('2018-03-19 08:02:42.557+01',NULL,NULL,'A799','Rickettsiosis, unspecified',1,NULL),
+	 ('2018-03-19 08:02:42.56+01',NULL,NULL,'A800','Acute paralytic poliomyelitis, vaccine-associated',1,NULL),
+	 ('2018-03-19 08:02:42.567+01',NULL,NULL,'A801','Acute paralytic poliomyelitis, wild virus, imported',1,NULL),
+	 ('2018-03-19 08:02:42.573+01',NULL,NULL,'A802','Acute paralytic poliomyelitis, wild virus, indigenous',1,NULL),
+	 ('2018-03-19 08:02:42.577+01',NULL,NULL,'A8030','Acute paralytic poliomyelitis, unspecified',1,NULL),
+	 ('2018-03-19 08:02:42.583+01',NULL,NULL,'A8039','Other acute paralytic poliomyelitis',1,NULL),
+	 ('2018-03-19 08:02:42.59+01',NULL,NULL,'A804','Acute nonparalytic poliomyelitis',1,NULL),
+	 ('2018-03-19 08:02:42.597+01',NULL,NULL,'A809','Acute poliomyelitis, unspecified',1,NULL),
+	 ('2018-03-19 08:02:42.6+01',NULL,NULL,'A8100','Creutzfeldt-Jakob disease, unspecified',1,NULL);
+INSERT INTO "tblICDCodes" ("ValidityFrom","ValidityTo","LegacyID","ICDCode","ICDName","AuditUserID","RowID") VALUES
+	 ('2018-03-19 08:02:42.62+01',NULL,NULL,'A8101','Variant Creutzfeldt-Jakob disease',1,NULL),
+	 ('2018-03-19 08:02:42.633+01',NULL,NULL,'A8109','Other Creutzfeldt-Jakob disease',1,NULL),
+	 ('2018-03-19 08:02:42.64+01',NULL,NULL,'A811','Subacute sclerosing panencephalitis',1,NULL),
+	 ('2018-03-19 08:02:42.653+01',NULL,NULL,'A812','Progressive multifocal leukoencephalopathy',1,NULL),
+	 ('2018-03-19 08:02:42.663+01',NULL,NULL,'A8181','Kuru',1,NULL),
+	 ('2018-03-19 08:02:42.673+01',NULL,NULL,'A8182','Gerstmann-Straussler-Scheinker syndrome',1,NULL),
+	 ('2018-03-19 08:02:42.68+01',NULL,NULL,'A8183','Fatal familial insomnia',1,NULL),
+	 ('2018-03-19 08:02:42.687+01',NULL,NULL,'A8189','Other atypical virus infections of central nervous system',1,NULL),
+	 ('2018-03-19 08:02:42.693+01',NULL,NULL,'A819','Atypical virus infection of central nervous system, unsp',1,NULL),
+	 ('2018-03-19 08:02:42.703+01',NULL,NULL,'A820','Sylvatic rabies',1,NULL);
+INSERT INTO "tblICDCodes" ("ValidityFrom","ValidityTo","LegacyID","ICDCode","ICDName","AuditUserID","RowID") VALUES
+	 ('2018-03-19 08:02:42.717+01',NULL,NULL,'A821','Urban rabies',1,NULL),
+	 ('2018-03-19 08:02:42.75+01',NULL,NULL,'A829','Rabies, unspecified',1,NULL),
+	 ('2018-03-19 08:02:42.753+01',NULL,NULL,'A830','Japanese encephalitis',1,NULL),
+	 ('2018-03-19 08:02:42.76+01',NULL,NULL,'A831','Western equine encephalitis',1,NULL),
+	 ('2018-03-19 08:02:42.767+01',NULL,NULL,'A832','Eastern equine encephalitis',1,NULL),
+	 ('2018-03-19 08:02:42.77+01',NULL,NULL,'A833','St Louis encephalitis',1,NULL),
+	 ('2018-03-19 08:02:42.797+01',NULL,NULL,'A834','Australian encephalitis',1,NULL),
+	 ('2018-03-19 08:02:42.8+01',NULL,NULL,'A835','California encephalitis',1,NULL),
+	 ('2018-03-19 08:02:42.843+01',NULL,NULL,'A836','Rocio virus disease',1,NULL),
+	 ('2018-03-19 08:02:42.85+01',NULL,NULL,'A838','Other mosquito-borne viral encephalitis',1,NULL);
+INSERT INTO "tblICDCodes" ("ValidityFrom","ValidityTo","LegacyID","ICDCode","ICDName","AuditUserID","RowID") VALUES
+	 ('2018-03-19 08:02:42.853+01',NULL,NULL,'A839','Mosquito-borne viral encephalitis, unspecified',1,NULL),
+	 ('2018-03-19 08:02:42.86+01',NULL,NULL,'A840','Far Eastern tick-borne encephalitis',1,NULL),
+	 ('2018-03-19 08:02:42.867+01',NULL,NULL,'A841','Central European tick-borne encephalitis',1,NULL),
+	 ('2018-03-19 08:02:42.873+01',NULL,NULL,'A848','Other tick-borne viral encephalitis',1,NULL),
+	 ('2018-03-19 08:02:42.883+01',NULL,NULL,'A849','Tick-borne viral encephalitis, unspecified',1,NULL),
+	 ('2018-03-19 08:02:42.893+01',NULL,NULL,'A850','Enteroviral encephalitis',1,NULL),
+	 ('2018-03-19 08:02:42.94+01',NULL,NULL,'A851','Adenoviral encephalitis',1,NULL),
+	 ('2018-03-19 08:02:42.937+01',NULL,NULL,'A852','Arthropod-borne viral encephalitis, unspecified',1,NULL),
+	 ('2018-03-19 08:02:42.947+01',NULL,NULL,'A858','Other specified viral encephalitis',1,NULL),
+	 ('2018-03-19 08:02:42.953+01',NULL,NULL,'A86','Unspecified viral encephalitis',1,NULL);
+INSERT INTO "tblICDCodes" ("ValidityFrom","ValidityTo","LegacyID","ICDCode","ICDName","AuditUserID","RowID") VALUES
+	 ('2018-03-19 08:02:42.96+01',NULL,NULL,'A870','Enteroviral meningitis',1,NULL),
+	 ('2018-03-19 08:02:42.963+01',NULL,NULL,'A871','Adenoviral meningitis',1,NULL),
+	 ('2018-03-19 08:02:42.97+01',NULL,NULL,'A872','Lymphocytic choriomeningitis',1,NULL),
+	 ('2018-03-19 08:02:42.977+01',NULL,NULL,'A878','Other viral meningitis',1,NULL),
+	 ('2018-03-19 08:02:42.98+01',NULL,NULL,'A879','Viral meningitis, unspecified',1,NULL),
+	 ('2018-03-19 08:02:42.987+01',NULL,NULL,'A880','Enteroviral exanthematous fever [Boston exanthem]',1,NULL),
+	 ('2018-03-19 08:02:42.993+01',NULL,NULL,'A881','Epidemic vertigo',1,NULL),
+	 ('2018-03-19 08:02:43+01',NULL,NULL,'A888','Other specified viral infections of central nervous system',1,NULL),
+	 ('2018-03-19 08:02:43.017+01',NULL,NULL,'A89','Unspecified viral infection of central nervous system',1,NULL),
+	 ('2018-03-19 08:02:43.02+01',NULL,NULL,'A90','Dengue fever [classical dengue]',1,NULL);
+INSERT INTO "tblICDCodes" ("ValidityFrom","ValidityTo","LegacyID","ICDCode","ICDName","AuditUserID","RowID") VALUES
+	 ('2018-03-19 08:02:43.027+01',NULL,NULL,'A91','Dengue hemorrhagic fever',1,NULL),
+	 ('2018-03-19 08:02:43.033+01',NULL,NULL,'A920','Chikungunya virus disease',1,NULL),
+	 ('2018-03-19 08:02:43.04+01',NULL,NULL,'A921','O''nyong-nyong fever',1,NULL),
+	 ('2018-03-19 08:02:43.043+01',NULL,NULL,'A922','Venezuelan equine fever',1,NULL),
+	 ('2018-03-19 08:02:43.05+01',NULL,NULL,'A9230','West Nile virus infection, unspecified',1,NULL),
+	 ('2018-03-19 08:02:43.057+01',NULL,NULL,'A9231','West Nile virus infection with encephalitis',1,NULL),
+	 ('2018-03-19 08:02:43.067+01',NULL,NULL,'A9232','West Nile virus infection with oth neurologic manifestation',1,NULL),
+	 ('2018-03-19 08:02:43.073+01',NULL,NULL,'A9239','West Nile virus infection with other complications',1,NULL),
+	 ('2018-03-19 08:02:43.08+01',NULL,NULL,'A924','Rift Valley fever',1,NULL),
+	 ('2018-03-19 08:02:43.083+01',NULL,NULL,'A925','Zika virus disease',1,NULL);
+INSERT INTO "tblICDCodes" ("ValidityFrom","ValidityTo","LegacyID","ICDCode","ICDName","AuditUserID","RowID") VALUES
+	 ('2018-03-19 08:02:43.13+01',NULL,NULL,'A928','Other specified mosquito-borne viral fevers',1,NULL),
+	 ('2018-03-19 08:02:43.133+01',NULL,NULL,'A929','Mosquito-borne viral fever, unspecified',1,NULL),
+	 ('2018-03-19 08:02:43.14+01',NULL,NULL,'A930','Oropouche virus disease',1,NULL),
+	 ('2018-03-19 08:02:43.147+01',NULL,NULL,'A931','Sandfly fever',1,NULL),
+	 ('2018-03-19 08:02:43.15+01',NULL,NULL,'A932','Colorado tick fever',1,NULL),
+	 ('2018-03-19 08:02:43.157+01',NULL,NULL,'A938','Other specified arthropod-borne viral fevers',1,NULL),
+	 ('2018-03-19 08:02:43.167+01',NULL,NULL,'A94','Unspecified arthropod-borne viral fever',1,NULL),
+	 ('2018-03-19 08:02:43.193+01',NULL,NULL,'A959','Yellow fever, unspecified',1,NULL),
+	 ('2018-03-19 08:02:43.203+01',NULL,NULL,'A960','Junin hemorrhagic fever',1,NULL),
+	 ('2018-03-19 08:02:43.21+01',NULL,NULL,'A961','Machupo hemorrhagic fever',1,NULL);
+INSERT INTO "tblICDCodes" ("ValidityFrom","ValidityTo","LegacyID","ICDCode","ICDName","AuditUserID","RowID") VALUES
+	 ('2018-03-19 08:02:43.213+01',NULL,NULL,'A962','Lassa fever',1,NULL),
+	 ('2018-03-19 08:02:43.227+01',NULL,NULL,'A968','Other arenaviral hemorrhagic fevers',1,NULL),
+	 ('2018-03-19 08:02:43.247+01',NULL,NULL,'A969','Arenaviral hemorrhagic fever, unspecified',1,NULL),
+	 ('2018-03-19 08:02:43.25+01',NULL,NULL,'A980','Crimean-Congo hemorrhagic fever',1,NULL),
+	 ('2018-03-19 08:02:43.257+01',NULL,NULL,'A981','Omsk hemorrhagic fever',1,NULL),
+	 ('2018-03-19 08:02:43.273+01',NULL,NULL,'A982','Kyasanur Forest disease',1,NULL),
+	 ('2018-03-19 08:02:43.29+01',NULL,NULL,'A983','Marburg virus disease',1,NULL),
+	 ('2018-03-19 08:02:43.303+01',NULL,NULL,'A984','Ebola virus disease',1,NULL),
+	 ('2018-03-19 08:02:43.33+01',NULL,NULL,'A985','Hemorrhagic fever with renal syndrome',1,NULL),
+	 ('2018-03-19 08:02:43.343+01',NULL,NULL,'A988','Other specified viral hemorrhagic fevers',1,NULL);
+INSERT INTO "tblICDCodes" ("ValidityFrom","ValidityTo","LegacyID","ICDCode","ICDName","AuditUserID","RowID") VALUES
+	 ('2018-03-19 08:02:43.36+01',NULL,NULL,'A99','Unspecified viral hemorrhagic fever',1,NULL);
+-- tblIdentificationTypes
+INSERT INTO "tblIdentificationTypes" ("IdentificationCode", "IdentificationTypes", "AltLanguage", "SortOrder") VALUES (N'D', N'Driver''s License', N'Permis de conduire', NULL);
+INSERT INTO "tblIdentificationTypes" ("IdentificationCode", "IdentificationTypes", "AltLanguage", "SortOrder") VALUES (N'N', N'National ID', N'Carte d''identité', NULL);
+INSERT INTO "tblIdentificationTypes" ("IdentificationCode", "IdentificationTypes", "AltLanguage", "SortOrder") VALUES (N'P', N'Passport', N'Passeport', NULL);
+INSERT INTO "tblIdentificationTypes" ("IdentificationCode", "IdentificationTypes", "AltLanguage", "SortOrder") VALUES (N'V', N'Voter Card', N'Carte d''électeur', NULL);
 
 
 -- tblItems
@@ -967,6 +1115,10 @@ INSERT INTO "tblPLServices" ("PLServiceID", "PLServName", "DatePL", "LocationId"
 INSERT INTO "tblPLServices" ("PLServiceID", "PLServName", "DatePL", "LocationId", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID", "PLServiceUUID") VALUES (23, N'Ultha Govt. Hospital List', CAST(N'2018-03-20' AS Date), 1, CAST(N'2016-01-01T00:00:00.000' AS timestamptz), CAST(N'2016-12-31T00:00:00.000' AS timestamptz), 7, 2, N'18df22c1-501a-45b5-a125-7d1283ce86d4'::uuid);
 
 
+
+-- tblLocations
+INSERT INTO "tblLocations" ("RowId", "LocationId", "LocationCode", "LocationName", "ParentLocationId", "LocationType", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserId", "MalePopulation", "FemalePopulation", "OtherPopulation", "Families", "LocationUUID") VALUES ('1', 1, N'R1', N'Ultha', NULL, N'R', CAST(N'2017-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 2, NULL, NULL, NULL, NULL, N'75250515-40d7-4c77-bafe-a2c65ffc5a72');
+INSERT INTO "tblLocations" ("RowId", "LocationId", "LocationCode", "LocationName", "ParentLocationId", "LocationType", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserId", "MalePopulation", "FemalePopulation", "OtherPopulation", "Families", "LocationUUID") VALUES ('17', 17, N'R1D1', N'Rapta', 1, N'D', CAST(N'2017-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 2, NULL, NULL, NULL, NULL, N'5345ef14-12ab-4e98-a07c-1e08d7105df4');
 INSERT INTO "tblLocations" ("RowId", "LocationId", "LocationCode", "LocationName", "ParentLocationId", "LocationType", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserId", "MalePopulation", "FemalePopulation", "OtherPopulation", "Families", "LocationUUID") VALUES ('18', 18, N'R2', N'Tahida', NULL, N'R', CAST(N'2017-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 2, NULL, NULL, NULL, NULL, N'68753566-9d2e-4cec-936e-4c6bf1968c0d');
 INSERT INTO "tblLocations" ("RowId", "LocationId", "LocationCode", "LocationName", "ParentLocationId", "LocationType", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserId", "MalePopulation", "FemalePopulation", "OtherPopulation", "Families", "LocationUUID") VALUES ('19', 19, N'R2D1', N'Rajo', 18, N'D', CAST(N'2017-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 2, NULL, NULL, NULL, NULL, N'2ee8ea9c-aef7-400b-9b36-f391f956f73e');
 INSERT INTO "tblLocations" ("RowId", "LocationId", "LocationCode", "LocationName", "ParentLocationId", "LocationType", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserId", "MalePopulation", "FemalePopulation", "OtherPopulation", "Families", "LocationUUID") VALUES ('20', 20, N'R2D2', N'Vida', 18, N'D', CAST(N'2017-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 2, NULL, NULL, NULL, NULL, N'176d0c41-13dc-4faf-9c1e-95109f086059');
@@ -983,6 +1135,8 @@ INSERT INTO "tblLocations" ("RowId", "LocationId", "LocationCode", "LocationName
 INSERT INTO "tblLocations" ("RowId", "LocationId", "LocationCode", "LocationName", "ParentLocationId", "LocationType", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserId", "MalePopulation", "FemalePopulation", "OtherPopulation", "Families", "LocationUUID") VALUES ('31', 31, N'R0001', N'Region', NULL, N'R', CAST(N'2016-01-01T00:00:00.000' AS timestamptz), CAST(N'2016-12-31T00:00:00.000' AS timestamptz), 1, 1, NULL, NULL, NULL, NULL, N'a9d08182-a1e2-46a9-b480-708218a0bf19');
 INSERT INTO "tblLocations" ("RowId", "LocationId", "LocationCode", "LocationName", "ParentLocationId", "LocationType", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserId", "MalePopulation", "FemalePopulation", "OtherPopulation", "Families", "LocationUUID") VALUES ('32', 32, N'R2D01', N'Rajo', 18, N'D', CAST(N'2016-01-01T00:00:00.000' AS timestamptz), CAST(N'2016-12-31T00:00:00.000' AS timestamptz), 19, 2, NULL, NULL, NULL, NULL, N'09bcce9a-6ea7-46c4-ace9-e178ba5de174');
 INSERT INTO "tblLocations" ("RowId", "LocationId", "LocationCode", "LocationName", "ParentLocationId", "LocationType", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserId", "MalePopulation", "FemalePopulation", "OtherPopulation", "Families", "LocationUUID") VALUES ('33', 33, N'R2D02', N'Vida', 18, N'D', CAST(N'2016-01-01T00:00:00.000' AS timestamptz), CAST(N'2016-12-31T00:00:00.000' AS timestamptz), 20, 2, NULL, NULL, NULL, NULL, N'3f356885-d659-4959-8bc5-61c66e886de7');
+INSERT INTO "tblLocations" ("RowId", "LocationId", "LocationCode", "LocationName", "ParentLocationId", "LocationType", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserId", "MalePopulation", "FemalePopulation", "OtherPopulation", "Families", "LocationUUID") VALUES ('34', 34, N'R1D1M1', N'Achi', 17, N'W', CAST(N'2017-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 2, NULL, NULL, NULL, NULL, N'e50da11b-3e50-483c-846b-0991c13c0935');
+INSERT INTO "tblLocations" ("RowId", "LocationId", "LocationCode", "LocationName", "ParentLocationId", "LocationType", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserId", "MalePopulation", "FemalePopulation", "OtherPopulation", "Families", "LocationUUID") VALUES ('35', 35, N'R1D1M1V1', N'Rachla', 34, N'V', CAST(N'2017-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 2, NULL, NULL, NULL, NULL, N'8ed4eb0d-61ae-4022-8b4c-3076a619f957');
 INSERT INTO "tblLocations" ("RowId", "LocationId", "LocationCode", "LocationName", "ParentLocationId", "LocationType", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserId", "MalePopulation", "FemalePopulation", "OtherPopulation", "Families", "LocationUUID") VALUES ('36', 36, N'R1D1', N'Rapta', 1, N'D', CAST(N'2016-01-01T00:00:00.000' AS timestamptz), CAST(N'2016-12-31T00:00:00.000' AS timestamptz), 17, 2, NULL, NULL, NULL, NULL, N'35043da3-1e04-46f9-a67e-00b9973b588f');
 INSERT INTO "tblLocations" ("RowId", "LocationId", "LocationCode", "LocationName", "ParentLocationId", "LocationType", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserId", "MalePopulation", "FemalePopulation", "OtherPopulation", "Families", "LocationUUID") VALUES ('37', 37, N'R1', N'Ultha', NULL, N'R', CAST(N'2016-01-01T00:00:00.000' AS timestamptz), CAST(N'2016-12-31T00:00:00.000' AS timestamptz), 1, 2, NULL, NULL, NULL, NULL, N'40c4010d-8c9d-4be3-8653-e647b21b19a9');
 INSERT INTO "tblLocations" ("RowId", "LocationId", "LocationCode", "LocationName", "ParentLocationId", "LocationType", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserId", "MalePopulation", "FemalePopulation", "OtherPopulation", "Families", "LocationUUID") VALUES ('38', 38, N'R2', N'Tahida', NULL, N'R', CAST(N'2016-01-01T00:00:00.000' AS timestamptz), CAST(N'2016-12-31T00:00:00.000' AS timestamptz), 18, 2, NULL, NULL, NULL, NULL, N'3f160b77-c701-4c4f-bf88-3486350a9e1b');
@@ -1016,6 +1170,11 @@ INSERT INTO "tblLocations" ("RowId", "LocationId", "LocationCode", "LocationName
 INSERT INTO "tblLocations" ("RowId", "LocationId", "LocationCode", "LocationName", "ParentLocationId", "LocationType", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserId", "MalePopulation", "FemalePopulation", "OtherPopulation", "Families", "LocationUUID") VALUES ('66', 66, N'R1D1M5V1', N'Rolo', 49, N'V', CAST(N'2017-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 2, NULL, NULL, NULL, NULL, N'e4a522fc-fa81-4954-9f11-1fee3853dbc0');
 INSERT INTO "tblLocations" ("RowId", "LocationId", "LocationCode", "LocationName", "ParentLocationId", "LocationType", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserId", "MalePopulation", "FemalePopulation", "OtherPopulation", "Families", "LocationUUID") VALUES ('67', 67, N'R1D3M1', N'Uminal', 56, N'W', CAST(N'2017-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 2, NULL, NULL, NULL, NULL, N'7e89aae5-3627-49e9-aa94-bf387c510939');
 INSERT INTO "tblLocations" ("RowId", "LocationId", "LocationCode", "LocationName", "ParentLocationId", "LocationType", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserId", "MalePopulation", "FemalePopulation", "OtherPopulation", "Families", "LocationUUID") VALUES ('68', 68, N'R1D3M1V1', N'Uminalum', 67, N'V', CAST(N'2017-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 2, NULL, NULL, NULL, NULL, N'f30342eb-94bf-4155-92d2-77eaf6559cd6');
+
+-- tblHFSublevel
+INSERT INTO "tblHFSublevel" ("HFSublevel", "HFSublevelDesc", "SortOrder", "AltLanguage") VALUES (N'I', N'Integrated', NULL, NULL);
+INSERT INTO "tblHFSublevel" ("HFSublevel", "HFSublevelDesc", "SortOrder", "AltLanguage") VALUES (N'N', N'No Sublevel', NULL, NULL);
+INSERT INTO "tblHFSublevel" ("HFSublevel", "HFSublevelDesc", "SortOrder", "AltLanguage") VALUES (N'R', N'Reference', NULL, NULL);
 
 COMMIT;
 
@@ -1740,6 +1899,7 @@ INSERT INTO "tblExtracts" ("ExtractID", "ExtractDirection", "ExtractType", "Extr
 INSERT INTO "tblExtracts" ("ExtractID", "ExtractDirection", "ExtractType", "ExtractSequence", "ExtractDate", "ExtractFileName", "ExtractFolder", "LocationId", "HFID", "AppVersionBackend", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID", "RowID", "ExtractUUID") VALUES (7, 0, 1, 3, CAST(N'2019-01-28T08:36:39.410' AS timestamptz), N'ImisData.db3', N'', 17, 0, CAST(1.2 AS Decimal(3, 1)), CAST(N'2019-01-28T08:36:39.410' AS timestamptz), NULL, NULL, 1, 0, N'7ed9f259-c742-41e7-af22-b5d2bc2d4cf5'::uuid);
 
 -- tblUsers
+INSERT INTO "tblUsers" ("UserID", "LanguageID", "LastName", "OtherNames", "Phone", "LoginName", "RoleID", "HFID", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID", "password", "DummyPwd", "EmailId", "StoredPassword", "PrivateKey", "PasswordValidity", "IsAssociated", "UserUUID") VALUES (1, N'en', N'Admin', N'Admin', N'', N'Admin', 1023, NULL, CAST(N'2018-03-19T08:54:48.923' AS timestamptz), NULL, NULL, 2, 'x001699E55A06FA79F4CA0D06EF15096C02000000DF691E2CE66AA7ABDF65B3E6210C1C04CAAE1A3B1FEE5E266B5FAF4F7D4E95109C92E3205F0145CC'::bytea, NULL, N'test@testing.com', N'59E66831C680C19E8736751D5480A7C3291BD8775DF47C19C4D0361FBC1C3438', N'C1C224B03CD9BC7B6A86D77F5DACE40191766C485CD55DC48CAF9AC873335D6F', NULL, NULL, N'281953c0-1c1a-4cf8-b93c-8e8b33c617c2');
 INSERT INTO "tblUsers" ("UserID", "LanguageID", "LastName", "OtherNames", "Phone", "LoginName", "RoleID", "HFID", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID", "password", "DummyPwd", "EmailId", "StoredPassword", "PrivateKey", "PasswordValidity", "IsAssociated", "UserUUID") VALUES (2, N'en', N'Srivastava', N'Siddharth', N'', N'siddharth', 1023, 0, CAST(N'2019-05-10T05:13:34.897' AS timestamptz), CAST(N'2019-05-10T05:13:34.897' AS timestamptz), NULL, 1, 'x001699E55A06FA79F4CA0D06EF15096C020000002C9B22886522612FD8687D520E820178EC956FE690415250829FC35042E4C253EDB00622B818C321578B877F24B6BED5'::bytea, NULL, N'siddharth.srivastava@swisstph.ch', N'568BD443C04F9B2BB7EB8089213B868E2865623F140BC25A77239169B24C7C1B', N'7BF4FB3F97CD903A9AF16BA419A1A3947FFA293371E2BCB1B868EE6E4BAF3AEC', NULL, NULL, N'326b5d5c-5630-4b10-bda3-b7334034ad61');
 INSERT INTO "tblUsers" ("UserID", "LanguageID", "LastName", "OtherNames", "Phone", "LoginName", "RoleID", "HFID", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID", "password", "DummyPwd", "EmailId", "StoredPassword", "PrivateKey", "PasswordValidity", "IsAssociated", "UserUUID") VALUES (3, N'en', N'Admin', N'Admin', N'', N'Admin', 1023, 0, CAST(N'2017-12-16T14:26:37.710' AS timestamptz), CAST(N'2018-03-19T08:54:48.907' AS timestamptz), 1, 0, 'x001699E55A06FA79F4CA0D06EF15096C01000000AABB2D46EA963BEEBEC2B6A7C0195BEAD56D875BF16D75F92DD047EAE987E4CC'::bytea, NULL, NULL, NULL, NULL, NULL, NULL, N'5bcc1389-a47b-464c-a32a-7a60d9fd1cad');
 INSERT INTO "tblUsers" ("UserID", "LanguageID", "LastName", "OtherNames", "Phone", "LoginName", "RoleID", "HFID", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID", "password", "DummyPwd", "EmailId", "StoredPassword", "PrivateKey", "PasswordValidity", "IsAssociated", "UserUUID") VALUES (4, N'en', N'sri', N'sid', N'', N'sidsri', 1, 0, CAST(N'2019-05-10T05:13:38.223' AS timestamptz), CAST(N'2019-05-10T05:13:38.223' AS timestamptz), NULL, 1, 'x001699E55A06FA79F4CA0D06EF15096C02000000D7925623C394F680CF9A1BD06ED155960019C8567100E8A869147E30E6353296FACCD73063C0D08B'::bytea, NULL, N'siddharth.srivastava@swisstph.ch', N'6BA12D6E86F3B6FFBEBECD7E25D156B04B474F707B25B09A822F688B99426F5B', N'D9193C4A617CEE0AAEA870AAEC59FBE9B90A59A16319142CC55FF6FE2A0D6C57', NULL, NULL, N'e3d5ed51-fdf6-4755-a6a2-9d8012abac51');
@@ -1789,6 +1949,7 @@ INSERT INTO "tblUsers" ("UserID", "LanguageID", "LastName", "OtherNames", "Phone
 
 
 -- tblUsersDistricts
+INSERT INTO "tblUsersDistricts" ("UserDistrictID", "UserID", "LocationId", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (1, 1, 1, CAST(N'2017-12-16T14:26:37.713' AS timestamptz), NULL, NULL, 1);
 INSERT INTO "tblUsersDistricts" ("UserDistrictID", "UserID", "LocationId", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (2, 1, 19, CAST(N'2018-03-16T00:37:11.187' AS timestamptz), NULL, NULL, 1);
 INSERT INTO "tblUsersDistricts" ("UserDistrictID", "UserID", "LocationId", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (3, 1, 20, CAST(N'2018-03-16T00:38:13.930' AS timestamptz), NULL, NULL, 1);
 INSERT INTO "tblUsersDistricts" ("UserDistrictID", "UserID", "LocationId", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (4, 2, 17, CAST(N'2018-03-16T01:02:47.793' AS timestamptz), NULL, NULL, 1);
@@ -3155,6 +3316,14 @@ INSERT INTO "tblPLServicesDetail" ("PLServiceDetailID", "PLServiceID", "ServiceI
 INSERT INTO "tblPLServicesDetail" ("PLServiceDetailID", "PLServiceID", "ServiceID", "PriceOverule", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (187, 17, 65, NULL, CAST(N'2018-03-20T00:32:36.050' AS timestamptz), NULL, NULL, 2);
 INSERT INTO "tblPLServicesDetail" ("PLServiceDetailID", "PLServiceID", "ServiceID", "PriceOverule", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (188, 17, 67, NULL, CAST(N'2018-03-20T00:32:36.103' AS timestamptz), NULL, NULL, 2);
 
+
+-- tblPayerType
+INSERT INTO "tblPayerType" ("Code", "PayerType", "AltLanguage", "SortOrder") VALUES (N'C', N'Co-operative', NULL, NULL);
+INSERT INTO "tblPayerType" ("Code", "PayerType", "AltLanguage", "SortOrder") VALUES (N'D', N'Donor', NULL, NULL);
+INSERT INTO "tblPayerType" ("Code", "PayerType", "AltLanguage", "SortOrder") VALUES (N'G', N'Government', NULL, NULL);
+INSERT INTO "tblPayerType" ("Code", "PayerType", "AltLanguage", "SortOrder") VALUES (N'L', N'Local Authority', NULL, NULL);
+INSERT INTO "tblPayerType" ("Code", "PayerType", "AltLanguage", "SortOrder") VALUES (N'O', N'Other', NULL, NULL);
+INSERT INTO "tblPayerType" ("Code", "PayerType", "AltLanguage", "SortOrder") VALUES (N'P', N'Private Organization', NULL, NULL);
 
 -- tblPayer
 INSERT INTO "tblPayer" ("PayerID", "PayerType", "PayerName", "PayerAddress", "LocationId", "Phone", "Fax", "eMail", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID", "PayerUUID") VALUES (1, N'C', N'Coffee Farmers Association', N'HR Manager\nCoffee Farmers Association\nHolobo 29\nP.B. Box 128\nJambero, Ultha\n', 17, N'+2552127867576', N'', N'', CAST(N'2017-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 2, N'23602095-e132-4d4d-ac77-a64508323273');
@@ -4782,10 +4951,222 @@ INSERT INTO "tblRelDistr" ("DistrID", "DistrType", "DistrCareType", "ProdID", "P
 INSERT INTO "tblRelDistr" ("DistrID", "DistrType", "DistrCareType", "ProdID", "Period", "DistrPerc", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (203, 12, N'I', 11, 12, CAST(0.00 AS Decimal(18, 2)), CAST(N'2018-03-27T05:56:56.650' AS timestamptz), NULL, NULL, 2);
 INSERT INTO "tblRelDistr" ("DistrID", "DistrType", "DistrCareType", "ProdID", "Period", "DistrPerc", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (204, 12, N'O', 11, 12, CAST(0.00 AS Decimal(18, 2)), CAST(N'2018-03-27T05:56:56.663' AS timestamptz), NULL, NULL, 2);
 
+-- tblRole
+INSERT INTO "tblRole" ("RoleID", "RoleName", "AltLanguage", "IsSystem", "IsBlocked", "ValidityFrom", "ValidityTo", "AuditUserID", "LegacyID", "RoleUUID") VALUES (1, N'Enrolment Officer', NULL, 1, 0::boolean, CAST(N'2019-05-10T05:08:23.167' AS timestamptz), NULL, NULL, NULL, N'fe17fee9-a501-48c2-966e-091b765f3718');
+INSERT INTO "tblRole" ("RoleID", "RoleName", "AltLanguage", "IsSystem", "IsBlocked", "ValidityFrom", "ValidityTo", "AuditUserID", "LegacyID", "RoleUUID") VALUES (2, N'Manager', NULL, 2, 0::boolean, CAST(N'2019-05-10T05:08:23.173' AS timestamptz), NULL, NULL, NULL, N'10824c66-f7dc-4eb7-a4c9-481f514e35ac');
+INSERT INTO "tblRole" ("RoleID", "RoleName", "AltLanguage", "IsSystem", "IsBlocked", "ValidityFrom", "ValidityTo", "AuditUserID", "LegacyID", "RoleUUID") VALUES (3, N'Accountant', NULL, 4, 0::boolean, CAST(N'2019-05-10T05:08:23.180' AS timestamptz), NULL, NULL, NULL, N'496d7cdc-16d2-4d36-ae35-313a5795158b');
+INSERT INTO "tblRole" ("RoleID", "RoleName", "AltLanguage", "IsSystem", "IsBlocked", "ValidityFrom", "ValidityTo", "AuditUserID", "LegacyID", "RoleUUID") VALUES (4, N'Clerk', NULL, 8, 0::boolean, CAST(N'2019-05-10T05:08:23.180' AS timestamptz), NULL, NULL, NULL, N'caa6fe3c-b59d-4b2f-b9e6-9df6ef35f7de');
+INSERT INTO "tblRole" ("RoleID", "RoleName", "AltLanguage", "IsSystem", "IsBlocked", "ValidityFrom", "ValidityTo", "AuditUserID", "LegacyID", "RoleUUID") VALUES (5, N'Medical Officer', NULL, 16, 0::boolean, CAST(N'2019-05-10T05:08:23.183' AS timestamptz), NULL, NULL, NULL, N'47b0f22f-29f6-41f7-b17e-469aae76e7d3');
+INSERT INTO "tblRole" ("RoleID", "RoleName", "AltLanguage", "IsSystem", "IsBlocked", "ValidityFrom", "ValidityTo", "AuditUserID", "LegacyID", "RoleUUID") VALUES (6, N'Scheme Administrator', NULL, 32, 0::boolean, CAST(N'2019-05-10T05:08:23.187' AS timestamptz), NULL, NULL, NULL, N'335a2380-211b-44dc-bb69-7ad6c4de7dce');
+INSERT INTO "tblRole" ("RoleID", "RoleName", "AltLanguage", "IsSystem", "IsBlocked", "ValidityFrom", "ValidityTo", "AuditUserID", "LegacyID", "RoleUUID") VALUES (7, N'IMIS Administrator', NULL, 64, 0::boolean, CAST(N'2019-05-10T05:08:23.190' AS timestamptz), NULL, NULL, NULL, N'e794c4ab-3554-4f14-98c4-a5c72d6c3e9a');
+INSERT INTO "tblRole" ("RoleID", "RoleName", "AltLanguage", "IsSystem", "IsBlocked", "ValidityFrom", "ValidityTo", "AuditUserID", "LegacyID", "RoleUUID") VALUES (8, N'Receptionist', NULL, 128, 0::boolean, CAST(N'2019-05-10T05:08:23.193' AS timestamptz), NULL, NULL, NULL, N'f9725efc-a649-4af9-962b-003d24d4e863');
+INSERT INTO "tblRole" ("RoleID", "RoleName", "AltLanguage", "IsSystem", "IsBlocked", "ValidityFrom", "ValidityTo", "AuditUserID", "LegacyID", "RoleUUID") VALUES (9, N'Claim Administrator', NULL, 256, 0::boolean, CAST(N'2019-05-10T05:08:23.200' AS timestamptz), NULL, NULL, NULL, N'20f7fc37-c0c3-427c-8241-04af84fcf876');
+INSERT INTO "tblRole" ("RoleID", "RoleName", "AltLanguage", "IsSystem", "IsBlocked", "ValidityFrom", "ValidityTo", "AuditUserID", "LegacyID", "RoleUUID") VALUES (10, N'Claim Contributor', NULL, 512, 0::boolean, CAST(N'2019-05-10T05:08:23.200' AS timestamptz), NULL, NULL, NULL, N'577f654d-4ace-49fe-9abd-0e6d1ca2c95f');
+INSERT INTO "tblRole" ("RoleID", "RoleName", "AltLanguage", "IsSystem", "IsBlocked", "ValidityFrom", "ValidityTo", "AuditUserID", "LegacyID", "RoleUUID") VALUES (11, N'HF Administrator', NULL, 524288, 0::boolean, CAST(N'2019-05-10T05:08:23.207' AS timestamptz), NULL, NULL, NULL, N'b5a31366-35a1-466d-b814-213ca76adf30');
+INSERT INTO "tblRole" ("RoleID", "RoleName", "AltLanguage", "IsSystem", "IsBlocked", "ValidityFrom", "ValidityTo", "AuditUserID", "LegacyID", "RoleUUID") VALUES (12, N'Offline Administrator', NULL, 1048576, 0::boolean, CAST(N'2019-05-10T05:08:23.210' AS timestamptz), NULL, NULL, NULL, N'009436c3-6066-4c34-a96f-cee3b4aa7329');
+
+-- tblRoleRight
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (1, 1, 101001, CAST(N'2019-05-10T05:08:23.460' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (2, 1, 101002, CAST(N'2019-05-10T05:08:23.460' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (3, 1, 101003, CAST(N'2019-05-10T05:08:23.460' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (4, 1, 101004, CAST(N'2019-05-10T05:08:23.460' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (5, 1, 101101, CAST(N'2019-05-10T05:08:23.460' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (6, 1, 101102, CAST(N'2019-05-10T05:08:23.460' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (7, 1, 101103, CAST(N'2019-05-10T05:08:23.460' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (8, 1, 101104, CAST(N'2019-05-10T05:08:23.460' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (9, 1, 101105, CAST(N'2019-05-10T05:08:23.460' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (10, 1, 101201, CAST(N'2019-05-10T05:08:23.460' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (11, 1, 101202, CAST(N'2019-05-10T05:08:23.460' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (12, 1, 101203, CAST(N'2019-05-10T05:08:23.460' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (13, 1, 101204, CAST(N'2019-05-10T05:08:23.460' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (14, 1, 101205, CAST(N'2019-05-10T05:08:23.460' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (15, 1, 101301, CAST(N'2019-05-10T05:08:23.460' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (16, 1, 101302, CAST(N'2019-05-10T05:08:23.460' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (17, 1, 101303, CAST(N'2019-05-10T05:08:23.460' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (18, 1, 101304, CAST(N'2019-05-10T05:08:23.460' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (19, 1, 111001, CAST(N'2019-05-10T05:08:23.460' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (20, 1, 111009, CAST(N'2019-05-10T05:08:23.460' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (21, 6, 101105, CAST(N'2019-05-10T05:08:23.550' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (22, 6, 121001, CAST(N'2019-05-10T05:08:23.550' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (23, 6, 121002, CAST(N'2019-05-10T05:08:23.550' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (24, 6, 121003, CAST(N'2019-05-10T05:08:23.550' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (25, 6, 121004, CAST(N'2019-05-10T05:08:23.550' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (26, 6, 121005, CAST(N'2019-05-10T05:08:23.550' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (27, 6, 121101, CAST(N'2019-05-10T05:08:23.550' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (28, 6, 121102, CAST(N'2019-05-10T05:08:23.550' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (29, 6, 121103, CAST(N'2019-05-10T05:08:23.550' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (30, 6, 121104, CAST(N'2019-05-10T05:08:23.550' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (31, 6, 121201, CAST(N'2019-05-10T05:08:23.550' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (32, 6, 121202, CAST(N'2019-05-10T05:08:23.550' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (33, 6, 121203, CAST(N'2019-05-10T05:08:23.550' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (34, 6, 121204, CAST(N'2019-05-10T05:08:23.550' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (35, 6, 121205, CAST(N'2019-05-10T05:08:23.550' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (36, 6, 121301, CAST(N'2019-05-10T05:08:23.550' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (37, 6, 121302, CAST(N'2019-05-10T05:08:23.550' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (38, 6, 121303, CAST(N'2019-05-10T05:08:23.550' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (39, 6, 121304, CAST(N'2019-05-10T05:08:23.550' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (40, 6, 121305, CAST(N'2019-05-10T05:08:23.550' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (41, 6, 121401, CAST(N'2019-05-10T05:08:23.550' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (42, 6, 121402, CAST(N'2019-05-10T05:08:23.550' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (43, 6, 121403, CAST(N'2019-05-10T05:08:23.550' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (44, 6, 121404, CAST(N'2019-05-10T05:08:23.550' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (45, 6, 122101, CAST(N'2019-05-10T05:08:23.550' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (46, 6, 122102, CAST(N'2019-05-10T05:08:23.550' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (47, 6, 122103, CAST(N'2019-05-10T05:08:23.550' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (48, 6, 122104, CAST(N'2019-05-10T05:08:23.550' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (49, 6, 121501, CAST(N'2019-05-10T05:08:23.550' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (50, 6, 121502, CAST(N'2019-05-10T05:08:23.550' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (51, 6, 121503, CAST(N'2019-05-10T05:08:23.550' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (52, 6, 121504, CAST(N'2019-05-10T05:08:23.550' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (53, 6, 121601, CAST(N'2019-05-10T05:08:23.550' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (54, 6, 121602, CAST(N'2019-05-10T05:08:23.550' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (55, 6, 121603, CAST(N'2019-05-10T05:08:23.550' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (56, 6, 121604, CAST(N'2019-05-10T05:08:23.550' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (57, 6, 121801, CAST(N'2019-05-10T05:08:23.550' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (58, 6, 121802, CAST(N'2019-05-10T05:08:23.550' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (59, 6, 121803, CAST(N'2019-05-10T05:08:23.550' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (60, 6, 121804, CAST(N'2019-05-10T05:08:23.550' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (61, 6, 131001, CAST(N'2019-05-10T05:08:23.550' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (62, 6, 131002, CAST(N'2019-05-10T05:08:23.550' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (63, 6, 131003, CAST(N'2019-05-10T05:08:23.550' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (64, 6, 131004, CAST(N'2019-05-10T05:08:23.550' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (65, 6, 131101, CAST(N'2019-05-10T05:08:23.550' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (66, 6, 131102, CAST(N'2019-05-10T05:08:23.550' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (67, 6, 131103, CAST(N'2019-05-10T05:08:23.550' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (68, 6, 131104, CAST(N'2019-05-10T05:08:23.550' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (69, 6, 131105, CAST(N'2019-05-10T05:08:23.550' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (70, 6, 131106, CAST(N'2019-05-10T05:08:23.550' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (71, 6, 131209, CAST(N'2019-05-10T05:08:23.550' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (72, 7, 101105, CAST(N'2019-05-10T05:08:23.683' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (73, 7, 121701, CAST(N'2019-05-10T05:08:23.683' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (74, 7, 121702, CAST(N'2019-05-10T05:08:23.683' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (75, 7, 121703, CAST(N'2019-05-10T05:08:23.683' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (76, 7, 121704, CAST(N'2019-05-10T05:08:23.683' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (77, 7, 121901, CAST(N'2019-05-10T05:08:23.683' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (78, 7, 121902, CAST(N'2019-05-10T05:08:23.683' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (79, 7, 121903, CAST(N'2019-05-10T05:08:23.683' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (80, 7, 121904, CAST(N'2019-05-10T05:08:23.683' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (81, 7, 121905, CAST(N'2019-05-10T05:08:23.683' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (82, 7, 131005, CAST(N'2019-05-10T05:08:23.683' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (83, 7, 131006, CAST(N'2019-05-10T05:08:23.683' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (84, 7, 131207, CAST(N'2019-05-10T05:08:23.683' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (85, 7, 131301, CAST(N'2019-05-10T05:08:23.683' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (86, 7, 131302, CAST(N'2019-05-10T05:08:23.683' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (87, 7, 131303, CAST(N'2019-05-10T05:08:23.683' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (88, 7, 131304, CAST(N'2019-05-10T05:08:23.683' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (89, 7, 122000, CAST(N'2019-05-10T05:08:23.683' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (90, 7, 122001, CAST(N'2019-05-10T05:08:23.683' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (91, 7, 122002, CAST(N'2019-05-10T05:08:23.683' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (92, 7, 122003, CAST(N'2019-05-10T05:08:23.683' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (93, 7, 122004, CAST(N'2019-05-10T05:08:23.683' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (94, 7, 122005, CAST(N'2019-05-10T05:08:23.683' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (95, 3, 101001, CAST(N'2019-05-10T05:08:23.767' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (96, 3, 101101, CAST(N'2019-05-10T05:08:23.767' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (97, 3, 101105, CAST(N'2019-05-10T05:08:23.767' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (98, 3, 101201, CAST(N'2019-05-10T05:08:23.767' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (99, 3, 101301, CAST(N'2019-05-10T05:08:23.767' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (100, 3, 101401, CAST(N'2019-05-10T05:08:23.767' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (101, 3, 101402, CAST(N'2019-05-10T05:08:23.767' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (102, 3, 101403, CAST(N'2019-05-10T05:08:23.767' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (103, 3, 101404, CAST(N'2019-05-10T05:08:23.767' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (104, 3, 111101, CAST(N'2019-05-10T05:08:23.767' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (105, 3, 111102, CAST(N'2019-05-10T05:08:23.767' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (106, 3, 111103, CAST(N'2019-05-10T05:08:23.767' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (107, 3, 131204, CAST(N'2019-05-10T05:08:23.767' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (108, 3, 131205, CAST(N'2019-05-10T05:08:23.767' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (109, 3, 131206, CAST(N'2019-05-10T05:08:23.767' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (110, 3, 131210, CAST(N'2019-05-10T05:08:23.767' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (111, 3, 131211, CAST(N'2019-05-10T05:08:23.767' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (112, 3, 131212, CAST(N'2019-05-10T05:08:23.767' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (113, 3, 131213, CAST(N'2019-05-10T05:08:23.767' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (114, 3, 131214, CAST(N'2019-05-10T05:08:23.767' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (115, 3, 131215, CAST(N'2019-05-10T05:08:23.767' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (116, 3, 131216, CAST(N'2019-05-10T05:08:23.767' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (117, 3, 131217, CAST(N'2019-05-10T05:08:23.767' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (118, 3, 131218, CAST(N'2019-05-10T05:08:23.767' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (119, 3, 131219, CAST(N'2019-05-10T05:08:23.767' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (120, 3, 131220, CAST(N'2019-05-10T05:08:23.767' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (121, 3, 131221, CAST(N'2019-05-10T05:08:23.767' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (122, 3, 131222, CAST(N'2019-05-10T05:08:23.767' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (123, 3, 131401, CAST(N'2019-05-10T05:08:23.767' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (124, 9, 111001, CAST(N'2019-05-10T05:08:23.853' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (125, 9, 111002, CAST(N'2019-05-10T05:08:23.853' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (126, 9, 111004, CAST(N'2019-05-10T05:08:23.853' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (127, 9, 111005, CAST(N'2019-05-10T05:08:23.853' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (128, 9, 111006, CAST(N'2019-05-10T05:08:23.853' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (129, 9, 111007, CAST(N'2019-05-10T05:08:23.853' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (130, 4, 101001, CAST(N'2019-05-10T05:08:23.903' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (131, 4, 101002, CAST(N'2019-05-10T05:08:23.903' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (132, 4, 101003, CAST(N'2019-05-10T05:08:23.903' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (133, 4, 101004, CAST(N'2019-05-10T05:08:23.903' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (134, 4, 101101, CAST(N'2019-05-10T05:08:23.903' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (135, 4, 101102, CAST(N'2019-05-10T05:08:23.903' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (136, 4, 101103, CAST(N'2019-05-10T05:08:23.903' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (137, 4, 101104, CAST(N'2019-05-10T05:08:23.903' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (138, 4, 101105, CAST(N'2019-05-10T05:08:23.903' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (139, 4, 101201, CAST(N'2019-05-10T05:08:23.903' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (140, 4, 101202, CAST(N'2019-05-10T05:08:23.903' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (141, 4, 101203, CAST(N'2019-05-10T05:08:23.903' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (142, 4, 101204, CAST(N'2019-05-10T05:08:23.903' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (143, 4, 101205, CAST(N'2019-05-10T05:08:23.903' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (144, 4, 101301, CAST(N'2019-05-10T05:08:23.903' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (145, 4, 101302, CAST(N'2019-05-10T05:08:23.903' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (146, 4, 101303, CAST(N'2019-05-10T05:08:23.903' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (147, 4, 101304, CAST(N'2019-05-10T05:08:23.903' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (148, 2, 131201, CAST(N'2019-05-10T05:08:23.950' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (149, 2, 131202, CAST(N'2019-05-10T05:08:23.950' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (150, 2, 131203, CAST(N'2019-05-10T05:08:23.950' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (151, 2, 131208, CAST(N'2019-05-10T05:08:23.950' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (152, 2, 101105, CAST(N'2019-05-10T05:08:23.950' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (153, 5, 111001, CAST(N'2019-05-10T05:08:23.980' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (154, 5, 111008, CAST(N'2019-05-10T05:08:23.980' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (155, 5, 111009, CAST(N'2019-05-10T05:08:23.980' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (156, 5, 111010, CAST(N'2019-05-10T05:08:23.980' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (157, 5, 111011, CAST(N'2019-05-10T05:08:23.980' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (158, 5, 131223, CAST(N'2019-05-10T05:08:23.980' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (159, 8, 101001, CAST(N'2019-05-10T05:08:24.010' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (160, 8, 101101, CAST(N'2019-05-10T05:08:24.010' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (161, 8, 101105, CAST(N'2019-05-10T05:08:24.010' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (162, 8, 101201, CAST(N'2019-05-10T05:08:24.010' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (163, 10, 111001, CAST(N'2019-05-10T05:08:24.037' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (164, 10, 111002, CAST(N'2019-05-10T05:08:24.037' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (165, 10, 111005, CAST(N'2019-05-10T05:08:24.037' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (166, 12, 121701, CAST(N'2019-05-10T05:08:24.083' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (167, 12, 121702, CAST(N'2019-05-10T05:08:24.083' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (168, 12, 121703, CAST(N'2019-05-10T05:08:24.083' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (169, 12, 121704, CAST(N'2019-05-10T05:08:24.087' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (170, 12, 131101, CAST(N'2019-05-10T05:08:24.087' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (171, 12, 131103, CAST(N'2019-05-10T05:08:24.087' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (172, 12, 131301, CAST(N'2019-05-10T05:08:24.087' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (173, 12, 131302, CAST(N'2019-05-10T05:08:24.087' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (174, 12, 131303, CAST(N'2019-05-10T05:08:24.090' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (175, 12, 131304, CAST(N'2019-05-10T05:08:24.090' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (176, 11, 121701, CAST(N'2019-05-10T05:08:24.167' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (177, 11, 121702, CAST(N'2019-05-10T05:08:24.167' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (178, 11, 121703, CAST(N'2019-05-10T05:08:24.170' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (179, 11, 121704, CAST(N'2019-05-10T05:08:24.170' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (180, 11, 131101, CAST(N'2019-05-10T05:08:24.170' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (181, 11, 131103, CAST(N'2019-05-10T05:08:24.170' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (182, 11, 131301, CAST(N'2019-05-10T05:08:24.170' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (183, 11, 131302, CAST(N'2019-05-10T05:08:24.173' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (184, 11, 131303, CAST(N'2019-05-10T05:08:24.173' AS timestamptz), NULL, NULL, NULL);
+INSERT INTO "tblRoleRight" ("RoleRightID", "RoleID", "RightID", "ValidityFrom", "ValidityTo", "AuditUserId", "LegacyID") VALUES (185, 11, 131304, CAST(N'2019-05-10T05:08:24.177' AS timestamptz), NULL, NULL, NULL);
+
 
 -- tblSubmittedPhotos
 INSERT INTO "tblSubmittedPhotos" ("PhotoId", "ImageName", "CHFID", "OfficerCode", "PhotoDate", "RegisterDate") VALUES (191, N'190000012_E00001_20180327_0.0_0.0.jpg', N'190000012', N'E00001', CAST(N'2018-03-27' AS Date), CAST(N'2019-08-29T06:52:01.937' AS timestamptz));
 
+-- tblUserRole
+INSERT INTO "tblUserRole" ("UserRoleID", "UserID", "RoleID", "ValidityFrom", "ValidityTo", "AudituserID", "LegacyID") VALUES (1, 1, 1, CAST(N'2019-05-10T05:08:23.313' AS timestamptz), NULL, 3, NULL);
+INSERT INTO "tblUserRole" ("UserRoleID", "UserID", "RoleID", "ValidityFrom", "ValidityTo", "AudituserID", "LegacyID") VALUES (2, 1, 2, CAST(N'2019-05-10T05:08:23.320' AS timestamptz), NULL, 3, NULL);
+INSERT INTO "tblUserRole" ("UserRoleID", "UserID", "RoleID", "ValidityFrom", "ValidityTo", "AudituserID", "LegacyID") VALUES (3, 1, 3, CAST(N'2019-05-10T05:08:23.327' AS timestamptz), NULL, 3, NULL);
+INSERT INTO "tblUserRole" ("UserRoleID", "UserID", "RoleID", "ValidityFrom", "ValidityTo", "AudituserID", "LegacyID") VALUES (4, 1, 4, CAST(N'2019-05-10T05:08:23.330' AS timestamptz), NULL, 3, NULL);
+INSERT INTO "tblUserRole" ("UserRoleID", "UserID", "RoleID", "ValidityFrom", "ValidityTo", "AudituserID", "LegacyID") VALUES (5, 1, 5, CAST(N'2019-05-10T05:08:23.333' AS timestamptz), NULL, 3, NULL);
+INSERT INTO "tblUserRole" ("UserRoleID", "UserID", "RoleID", "ValidityFrom", "ValidityTo", "AudituserID", "LegacyID") VALUES (6, 1, 6, CAST(N'2019-05-10T05:08:23.337' AS timestamptz), NULL, 3, NULL);
+INSERT INTO "tblUserRole" ("UserRoleID", "UserID", "RoleID", "ValidityFrom", "ValidityTo", "AudituserID", "LegacyID") VALUES (7, 1, 7, CAST(N'2019-05-10T05:08:23.340' AS timestamptz), NULL, 3, NULL);
+INSERT INTO "tblUserRole" ("UserRoleID", "UserID", "RoleID", "ValidityFrom", "ValidityTo", "AudituserID", "LegacyID") VALUES (8, 1, 8, CAST(N'2019-05-10T05:08:23.343' AS timestamptz), NULL, 3, NULL);
+INSERT INTO "tblUserRole" ("UserRoleID", "UserID", "RoleID", "ValidityFrom", "ValidityTo", "AudituserID", "LegacyID") VALUES (9, 1, 9, CAST(N'2019-05-10T05:08:23.347' AS timestamptz), NULL, 3, NULL);
+INSERT INTO "tblUserRole" ("UserRoleID", "UserID", "RoleID", "ValidityFrom", "ValidityTo", "AudituserID", "LegacyID") VALUES (10, 1, 10, CAST(N'2019-05-10T05:08:23.350' AS timestamptz), NULL, 3, NULL);
 INSERT INTO "tblUserRole" ("UserRoleID", "UserID", "RoleID", "ValidityFrom", "ValidityTo", "AudituserID", "LegacyID") VALUES (11, 2, 1, CAST(N'2019-05-10T05:08:23.350' AS timestamptz), NULL, 3, NULL);
 INSERT INTO "tblUserRole" ("UserRoleID", "UserID", "RoleID", "ValidityFrom", "ValidityTo", "AudituserID", "LegacyID") VALUES (12, 2, 2, CAST(N'2019-05-10T05:08:23.353' AS timestamptz), NULL, 3, NULL);
 INSERT INTO "tblUserRole" ("UserRoleID", "UserID", "RoleID", "ValidityFrom", "ValidityTo", "AudituserID", "LegacyID") VALUES (13, 2, 3, CAST(N'2019-05-10T05:08:23.353' AS timestamptz), NULL, 3, NULL);
