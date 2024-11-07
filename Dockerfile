@@ -8,8 +8,6 @@ FROM scratch AS pg_jsonschema
 COPY --from=downloader Dockerfile.pg_jsonschema .
 
 FROM pg_jsonschema AS base
-FROM github.com/supabase/pg_jsonschema/blob/master/dockerfiles/db/Dockerfile AS base
-
 # Script to detect whether the database has finished initializing
 COPY ["true_isready.sh", "/usr/local/bin/"]
 COPY ["database scripts/00_dump.sql", "database scripts/0[2345]_*.sql", "database scripts/json_schema_extension.sql", "/docker-entrypoint-initdb.d/"]
