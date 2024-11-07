@@ -1,4 +1,4 @@
-FROM postgres:13-alpine AS base
+FROM https://github.com/supabase/pg_jsonschema/blob/master/dockerfiles/db/Dockerfile AS base
 
 # Script to detect whether the database has finished initializing
 COPY ["true_isready.sh", "/usr/local/bin/"]
