@@ -1,4 +1,13 @@
 # syntax=docker/dockerfile:1.4
+
+FROM alpine:3.19 AS downloader
+RUN apk add --no-cache curl
+RUN curl -o Dockerfile.pg_jsonschema https://raw.githubusercontent.com/supabase/pg_jsonschema/master/dockerfiles/db/Dockerfile
+
+FROM scratch AS pg_jsonschema
+COPY --from=downloader Dockerfile.pg_jsonschema .
+
+FROM pg_jsonschema AS base
 FROM github.com/supabase/pg_jsonschema/blob/master/dockerfiles/db/Dockerfile AS base
 
 # Script to detect whether the database has finished initializing
