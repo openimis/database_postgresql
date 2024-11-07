@@ -1,3 +1,4 @@
+# syntax=docker/dockerfile:1.4
 FROM github.com/supabase/pg_jsonschema/blob/master/dockerfiles/db/Dockerfile AS base
 
 # Script to detect whether the database has finished initializing
