@@ -1,5 +1,9 @@
 #https://github.com/supabase/pg_jsonschema/blob/master/dockerfiles/db/Dockerfile
-FROM postgres:16 as base
+FROM alpine:3.19 AS downloader
+RUN apk add --no-cache git
+RUN git clone https://github.com/supabase/pg_jsonschema.git --depth 1
+
+FROM postgres:16
 RUN apt-get update
 
 ENV build_deps ca-certificates \
@@ -15,10 +19,10 @@ ENV build_deps ca-certificates \
 RUN apt-get install -y --no-install-recommends $build_deps pkg-config cmake
 
 WORKDIR /home/supa
-
+COPY --from=downloader /pg_jsonschema ./
 ENV HOME=/home/supa \
   PATH=/home/supa/.cargo/bin:$PATH
-RUN chown postgres:postgres /home/supa
+RUN chown postgres:postgres /home/supa -R
 USER postgres
 
 RUN \
@@ -42,16 +46,3 @@ RUN chown -R postgres:postgres /usr/share/postgresql/16/extension
 RUN chown -R postgres:postgres /usr/lib/postgresql/16/lib
 
 USER postgres
-
-# Script to detect whether the database has finished initializing
-COPY ["true_isready.sh", "/usr/local/bin/"]
-COPY ["database scripts/00_dump.sql", "database scripts/0[2345]_*.sql", "database scripts/json_schema_extension.sql", "/docker-entrypoint-initdb.d/"]
-
-# Install https://github.com/gavinwahl/postgres-json-schema/
-# extension that allows validation of jsonb fields against jsonschema 
-COPY ["install_postgres_json_schema_extension.sh", "install_postgres_json_schema_extension.sh"]
-RUN chmod u+x install_postgres_json_schema_extension.sh
-RUN ./install_postgres_json_schema_extension.sh
-
-FROM base AS demo
-COPY ["database scripts/demo_db.sql", "/docker-entrypoint-initdb.d/"]
