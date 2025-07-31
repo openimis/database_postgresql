@@ -179,7 +179,10 @@ CREATE TABLE "public"."core_User" (
     "i_user_id" integer,
     "t_user_id" "uuid",
     claim_admin_id integer,
-    officer_id integer
+    officer_id integer,
+    "LegacyID" "uuid",
+    "ValidityFrom" timestamp with time zone NOT NULL,
+    "ValidityTo" timestamp with time zone
 );
 
 
@@ -268,7 +271,7 @@ ALTER SEQUENCE "public"."core_User_user_permissions_id_seq" OWNED BY "public"."c
 create table "public"."core_UserMutation"
 (
     id          uuid primary key,
-    core_user_id   integer not null,
+    core_user_id   "uuid" not null,
     mutation_id uuid not null
 );
 

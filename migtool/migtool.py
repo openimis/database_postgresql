@@ -257,7 +257,11 @@ def migrate():
                     col_default = extract_sequence_name(row[1])
                     if col_default:
                         sequence_columns[row[0]] = col_default
-                    old_cols_list.append(row[0])
+                    # Wrap column names in brackets if they contain spaces or hyphens,
+                    col_name = row[0]
+                    if ' ' in col_name or '-' in col_name:
+                        col_name = f"[{col_name}]"
+                    old_cols_list.append(col_name)
                     new_cols_list.append(f'"{row[0]}"')
             old_cols = ", ".join(old_cols_list)
             new_cols = "(" + ", ".join(new_cols_list) + ")"
