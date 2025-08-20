@@ -6738,6 +6738,7 @@ VALUES ('da704387-1b8d-479a-8ff3-4f7bab6c68b4', 10816, 'AA_Y_13_', 'Ketena 05', 
 COMMIT;
 
 -- tblHF
+-- Total facilities (one per Woreda): 134
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",

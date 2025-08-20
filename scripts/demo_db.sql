@@ -6836,6 +6836,7 @@ INSERT INTO "tblHFSublevel" ("HFSublevel", "HFSublevelDesc", "SortOrder", "AltLa
 COMMIT;
 
 -- tblHF
+-- Total facilities (one per Woreda): 134
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
