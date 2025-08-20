@@ -1074,36 +1074,605 @@ INSERT INTO "tblLocations" ("RowId", "LocationId", "LocationCode", "LocationName
 COMMIT;
 
 -- tblHF
-INSERT INTO "tblHF" ("HfID", "HFCode", "HFName", "LegalForm", "HFLevel", "HFSublevel", "HFAddress", "LocationId", "Phone", "Fax", "eMail", "HFCareType", "PLServiceID", "PLItemID", "AccCode", "OffLine", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID", "HfUUID") VALUES (1, N'JMHOS001', N'Jambero District Hospital', N'G', N'H', NULL, N'Lantern Road 21\nP.O.Box 3425', 55, N'', N'', N'', N'B', 7, 8, N'DL0002', 0::boolean, CAST(N'2017-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 2, N'026e088a-fbd5-474e-8d42-069958a34127');
-INSERT INTO "tblHF" ("HfID", "HFCode", "HFName", "LegalForm", "HFLevel", "HFSublevel", "HFAddress", "LocationId", "Phone", "Fax", "eMail", "HFCareType", "PLServiceID", "PLItemID", "AccCode", "OffLine", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID", "HfUUID") VALUES (2, N'RAHOS001', N'Rapta District Hospital', N'G', N'H', NULL, N'Danchi Road 234\nP.O.Box 2715', 17, N'', N'', N'', N'B', 7, 8, N'', 0::boolean, CAST(N'2017-01-01T00:00:00.000' AS timestamptz), NULL, 2, 2, N'd8a25f21-f36a-4d4d-9e58-1db8ffbe7036');
-INSERT INTO "tblHF" ("HfID", "HFCode", "HFName", "LegalForm", "HFLevel", "HFSublevel", "HFAddress", "LocationId", "Phone", "Fax", "eMail", "HFCareType", "PLServiceID", "PLItemID", "AccCode", "OffLine", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID", "HfUUID") VALUES (3, N'RAHO001', N'Rapta District Hospital', N'G', N'H', NULL, N'Danchi Road 234\nP.O.Box 2715', 17, N'', N'', N'', N'B', 7, 8, N'', 0::boolean, CAST(N'2016-01-01T00:00:00.000' AS timestamptz), CAST(N'2016-12-31T00:00:00.000' AS timestamptz), 2, 2, N'221cad8d-2a7d-46d5-8369-734d405b519f');
-INSERT INTO "tblHF" ("HfID", "HFCode", "HFName", "LegalForm", "HFLevel", "HFSublevel", "HFAddress", "LocationId", "Phone", "Fax", "eMail", "HFCareType", "PLServiceID", "PLItemID", "AccCode", "OffLine", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID", "HfUUID") VALUES (4, N'UPHOS001', N'Uptol District Hospital', N'G', N'H', NULL, N'Abijan road 2512\nP.O.Box 9564', 56, N'', N'', N'', N'B', 7, 8, N'', 0::boolean, CAST(N'2017-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 2, N'e5131cc5-bcd6-460c-b6bb-54da3f2506f2');
-INSERT INTO "tblHF" ("HfID", "HFCode", "HFName", "LegalForm", "HFLevel", "HFSublevel", "HFAddress", "LocationId", "Phone", "Fax", "eMail", "HFCareType", "PLServiceID", "PLItemID", "AccCode", "OffLine", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID", "HfUUID") VALUES (5, N'ROHOS001', N'Rajo District Hospital', N'G', N'H', NULL, N'Calogri road 176\nP.O.Box 7453', 19, N'', N'', N'', N'B', 17, 6, N'', 0::boolean, CAST(N'2017-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 2, N'1ebc4a36-d143-45eb-ab93-d7e973d8f14b');
-INSERT INTO "tblHF" ("HfID", "HFCode", "HFName", "LegalForm", "HFLevel", "HFSublevel", "HFAddress", "LocationId", "Phone", "Fax", "eMail", "HFCareType", "PLServiceID", "PLItemID", "AccCode", "OffLine", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID", "HfUUID") VALUES (6, N'VIHOS001', N'Vida District Hospital', N'G', N'H', NULL, N'Eolard road 78\nP.O.Box 3785', 20, N'', N'', N'', N'B', 17, 6, N'', 0::boolean, CAST(N'2017-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 2, N'05c0d312-7cf2-4e21-8004-a78eec008f5a');
-INSERT INTO "tblHF" ("HfID", "HFCode", "HFName", "LegalForm", "HFLevel", "HFSublevel", "HFAddress", "LocationId", "Phone", "Fax", "eMail", "HFCareType", "PLServiceID", "PLItemID", "AccCode", "OffLine", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID", "HfUUID") VALUES (7, N'JMHC001', N'Jamini Health Centre', N'G', N'C', NULL, N'Reduci road 42', 55, N'', N'', N'', N'O', 6, 5, N'', 0::boolean, CAST(N'2017-01-01T00:00:00.000' AS timestamptz), NULL, 7, 2, N'7e0d15b9-aa6f-4e2e-9b69-0332f2d78a07');
-INSERT INTO "tblHF" ("HfID", "HFCode", "HFName", "LegalForm", "HFLevel", "HFSublevel", "HFAddress", "LocationId", "Phone", "Fax", "eMail", "HFCareType", "PLServiceID", "PLItemID", "AccCode", "OffLine", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID", "HfUUID") VALUES (8, N'RAHC001', N'Zuja Health Centre', N'G', N'C', NULL, N'Tubi road 26', 17, N'', N'', N'', N'O', 6, 5, N'', 0::boolean, CAST(N'2017-01-01T00:00:00.000' AS timestamptz), NULL, 8, 2, N'8403fe10-dc83-41a0-90a2-9fab63928275');
-INSERT INTO "tblHF" ("HfID", "HFCode", "HFName", "LegalForm", "HFLevel", "HFSublevel", "HFAddress", "LocationId", "Phone", "Fax", "eMail", "HFCareType", "PLServiceID", "PLItemID", "AccCode", "OffLine", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID", "HfUUID") VALUES (9, N'UPHC001', N'Tzah Health Centre', N'G', N'C', NULL, N'Gufui road 84', 56, N'', N'', N'', N'O', 6, 5, N'', 0::boolean, CAST(N'2017-01-01T00:00:00.000' AS timestamptz), NULL, 9, 2, N'fb83cef0-d793-4574-a5e7-9481d7c4777a');
-INSERT INTO "tblHF" ("HfID", "HFCode", "HFName", "LegalForm", "HFLevel", "HFSublevel", "HFAddress", "LocationId", "Phone", "Fax", "eMail", "HFCareType", "PLServiceID", "PLItemID", "AccCode", "OffLine", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID", "HfUUID") VALUES (10, N'ROHC001', N'Fulhui Health Centre', N'G', N'C', NULL, N'Layout road 867', 19, N'', N'', N'', N'O', 16, 9, N'', 0::boolean, CAST(N'2017-01-01T00:00:00.000' AS timestamptz), NULL, 10, 2, N'0e095e81-9d5d-4b39-9ac7-91d22509bf06');
-INSERT INTO "tblHF" ("HfID", "HFCode", "HFName", "LegalForm", "HFLevel", "HFSublevel", "HFAddress", "LocationId", "Phone", "Fax", "eMail", "HFCareType", "PLServiceID", "PLItemID", "AccCode", "OffLine", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID", "HfUUID") VALUES (11, N'VIHC001', N'Juilöa Health Centre', N'G', N'C', NULL, N'Guazn Health Centre', 20, N'', N'', N'', N'O', 16, 9, N'', 0::boolean, CAST(N'2017-01-01T00:00:00.000' AS timestamptz), NULL, 11, 2, N'bc1da96c-ad55-4978-9dca-59335adc7469');
-INSERT INTO "tblHF" ("HfID", "HFCode", "HFName", "LegalForm", "HFLevel", "HFSublevel", "HFAddress", "LocationId", "Phone", "Fax", "eMail", "HFCareType", "PLServiceID", "PLItemID", "AccCode", "OffLine", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID", "HfUUID") VALUES (12, N'JMDP001', N'Huda Dispensary', N'G', N'D', NULL, N'Jolywel road 675', 55, N'', N'', N'', N'O', 5, 1, N'', 0::boolean, CAST(N'2017-01-01T00:00:00.000' AS timestamptz), NULL, 12, 2, N'079e777b-b12b-4763-a646-3773e906f9d7');
-INSERT INTO "tblHF" ("HfID", "HFCode", "HFName", "LegalForm", "HFLevel", "HFSublevel", "HFAddress", "LocationId", "Phone", "Fax", "eMail", "HFCareType", "PLServiceID", "PLItemID", "AccCode", "OffLine", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID", "HfUUID") VALUES (13, N'RADS002', N'Kitua Dispensary', N'G', N'D', NULL, N'Lado road 756', 17, N'', N'', N'', N'O', 5, 1, N'', 0::boolean, CAST(N'2017-01-01T00:00:00.000' AS timestamptz), NULL, 13, 2, N'f988cfd9-eba2-446e-8e6d-bfcbf8e53b9a');
-INSERT INTO "tblHF" ("HfID", "HFCode", "HFName", "LegalForm", "HFLevel", "HFSublevel", "HFAddress", "LocationId", "Phone", "Fax", "eMail", "HFCareType", "PLServiceID", "PLItemID", "AccCode", "OffLine", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID", "HfUUID") VALUES (14, N'RADS001', N'Kitua Dispensary', N'G', N'C', NULL, N'Lado road 756', 17, N'', N'', N'', N'O', NULL, NULL, N'', 0::boolean, CAST(N'2016-01-01T00:00:00.000' AS timestamptz), CAST(N'2016-12-31T00:00:00.000' AS timestamptz), 13, 2, N'b04d9279-b88f-48a8-bde0-90447b4f8341');
-INSERT INTO "tblHF" ("HfID", "HFCode", "HFName", "LegalForm", "HFLevel", "HFSublevel", "HFAddress", "LocationId", "Phone", "Fax", "eMail", "HFCareType", "PLServiceID", "PLItemID", "AccCode", "OffLine", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID", "HfUUID") VALUES (15, N'JMDP001', N'Huda dispensary', N'G', N'D', NULL, N'Jolywel road 675', 55, N'', N'', N'', N'O', NULL, NULL, N'', 0::boolean, CAST(N'2016-01-01T00:00:00.000' AS timestamptz), CAST(N'2016-12-31T00:00:00.000' AS timestamptz), 12, 2, N'42af9132-1caf-4980-a88e-02463662c3c0');
-INSERT INTO "tblHF" ("HfID", "HFCode", "HFName", "LegalForm", "HFLevel", "HFSublevel", "HFAddress", "LocationId", "Phone", "Fax", "eMail", "HFCareType", "PLServiceID", "PLItemID", "AccCode", "OffLine", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID", "HfUUID") VALUES (16, N'UPDS001', N'Loai Dispensary', N'G', N'D', NULL, N'Zuta road 862', 56, N'', N'', N'', N'O', 5, 1, N'', 0::boolean, CAST(N'2017-01-01T00:00:00.000' AS timestamptz), NULL, 16, 2, N'1d43dfbf-c160-4373-b774-bee598c83262');
-INSERT INTO "tblHF" ("HfID", "HFCode", "HFName", "LegalForm", "HFLevel", "HFSublevel", "HFAddress", "LocationId", "Phone", "Fax", "eMail", "HFCareType", "PLServiceID", "PLItemID", "AccCode", "OffLine", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID", "HfUUID") VALUES (17, N'RADS001', N'Yuahn Dispensary', N'G', N'D', NULL, N'Gunda road 723', 19, N'', N'', N'', N'O', 14, 2, N'', 0::boolean, CAST(N'2017-01-01T00:00:00.000' AS timestamptz), NULL, 17, 2, N'8782079c-aa5b-43c3-97ab-b8b8a3fa5df2');
-INSERT INTO "tblHF" ("HfID", "HFCode", "HFName", "LegalForm", "HFLevel", "HFSublevel", "HFAddress", "LocationId", "Phone", "Fax", "eMail", "HFCareType", "PLServiceID", "PLItemID", "AccCode", "OffLine", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID", "HfUUID") VALUES (18, N'VIDS001', N'Viru Dispensary', N'G', N'D', NULL, N'Uitly road 1', 20, N'', N'', N'', N'O', 14, 2, N'', 0::boolean, CAST(N'2017-01-01T00:00:00.000' AS timestamptz), NULL, 18, 2, N'5c08e764-04ed-42a0-bbea-fe0ea4c08a3f');
-INSERT INTO "tblHF" ("HfID", "HFCode", "HFName", "LegalForm", "HFLevel", "HFSublevel", "HFAddress", "LocationId", "Phone", "Fax", "eMail", "HFCareType", "PLServiceID", "PLItemID", "AccCode", "OffLine", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID", "HfUUID") VALUES (19, N'RADS001', N'Kitua Dispensary', N'G', N'D', NULL, N'Lado road 756', 17, N'', N'', N'', N'O', NULL, NULL, N'', 0::boolean, CAST(N'2016-01-01T00:00:00.000' AS timestamptz), CAST(N'2016-12-31T00:00:00.000' AS timestamptz), 13, 2, N'0f3f2132-4a14-47e7-882a-4e97078782da');
-INSERT INTO "tblHF" ("HfID", "HFCode", "HFName", "LegalForm", "HFLevel", "HFSublevel", "HFAddress", "LocationId", "Phone", "Fax", "eMail", "HFCareType", "PLServiceID", "PLItemID", "AccCode", "OffLine", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID", "HfUUID") VALUES (20, N'VIDS001', N'Viru Dispensary', N'G', N'D', NULL, N'Uitly road 1', 20, N'', N'', N'', N'O', NULL, NULL, N'', 0::boolean, CAST(N'2016-01-01T00:00:00.000' AS timestamptz), CAST(N'2016-12-31T00:00:00.000' AS timestamptz), 18, 2, N'f13ef73e-d6e6-445b-8930-552403503986');
-INSERT INTO "tblHF" ("HfID", "HFCode", "HFName", "LegalForm", "HFLevel", "HFSublevel", "HFAddress", "LocationId", "Phone", "Fax", "eMail", "HFCareType", "PLServiceID", "PLItemID", "AccCode", "OffLine", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID", "HfUUID") VALUES (21, N'VIHC001', N'Juilöa Health Centre', N'G', N'C', NULL, N'Guazn Health Centre', 20, N'', N'', N'', N'O', NULL, NULL, N'', 0::boolean, CAST(N'2016-01-01T00:00:00.000' AS timestamptz), CAST(N'2016-12-31T00:00:00.000' AS timestamptz), 11, 2, N'8ab9bc91-4a56-40fd-9262-3720700bfc1c');
-INSERT INTO "tblHF" ("HfID", "HFCode", "HFName", "LegalForm", "HFLevel", "HFSublevel", "HFAddress", "LocationId", "Phone", "Fax", "eMail", "HFCareType", "PLServiceID", "PLItemID", "AccCode", "OffLine", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID", "HfUUID") VALUES (22, N'UPHC001', N'Tzah Health Centre', N'G', N'C', NULL, N'Gufui road 84', 56, N'', N'', N'', N'O', NULL, NULL, N'', 0::boolean, CAST(N'2016-01-01T00:00:00.000' AS timestamptz), CAST(N'2016-12-31T00:00:00.000' AS timestamptz), 9, 2, N'8c4e661f-8090-40c6-8885-30966ee152c6');
-INSERT INTO "tblHF" ("HfID", "HFCode", "HFName", "LegalForm", "HFLevel", "HFSublevel", "HFAddress", "LocationId", "Phone", "Fax", "eMail", "HFCareType", "PLServiceID", "PLItemID", "AccCode", "OffLine", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID", "HfUUID") VALUES (23, N'UPDS001', N'Loai Dispensary', N'G', N'D', NULL, N'Zuta road 862', 56, N'', N'', N'', N'O', NULL, NULL, N'', 0::boolean, CAST(N'2016-01-01T00:00:00.000' AS timestamptz), CAST(N'2016-12-31T00:00:00.000' AS timestamptz), 16, 2, N'44bde314-a991-4f3e-abc3-90be82f46dc3');
-INSERT INTO "tblHF" ("HfID", "HFCode", "HFName", "LegalForm", "HFLevel", "HFSublevel", "HFAddress", "LocationId", "Phone", "Fax", "eMail", "HFCareType", "PLServiceID", "PLItemID", "AccCode", "OffLine", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID", "HfUUID") VALUES (24, N'ROHC001', N'Fulhui Health Centre', N'G', N'C', NULL, N'Layout road 867', 19, N'', N'', N'', N'O', NULL, NULL, N'', 0::boolean, CAST(N'2016-01-01T00:00:00.000' AS timestamptz), CAST(N'2016-12-31T00:00:00.000' AS timestamptz), 10, 2, N'7bded7a7-da68-4bea-9670-e499281f9b8b');
-INSERT INTO "tblHF" ("HfID", "HFCode", "HFName", "LegalForm", "HFLevel", "HFSublevel", "HFAddress", "LocationId", "Phone", "Fax", "eMail", "HFCareType", "PLServiceID", "PLItemID", "AccCode", "OffLine", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID", "HfUUID") VALUES (25, N'RAHC001', N'Zuja Health Centre', N'G', N'C', NULL, N'Tubi road 26', 17, N'', N'', N'', N'O', NULL, NULL, N'', 0::boolean, CAST(N'2016-01-01T00:00:00.000' AS timestamptz), CAST(N'2016-12-31T00:00:00.000' AS timestamptz), 8, 2, N'239a2e7a-a917-4ccf-83c3-cf30b2d409ad');
-INSERT INTO "tblHF" ("HfID", "HFCode", "HFName", "LegalForm", "HFLevel", "HFSublevel", "HFAddress", "LocationId", "Phone", "Fax", "eMail", "HFCareType", "PLServiceID", "PLItemID", "AccCode", "OffLine", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID", "HfUUID") VALUES (26, N'RADS002', N'Kitua Dispensary', N'G', N'D', NULL, N'Lado road 756', 17, N'', N'', N'', N'O', NULL, NULL, N'', 0::boolean, CAST(N'2016-01-01T00:00:00.000' AS timestamptz), CAST(N'2016-12-31T00:00:00.000' AS timestamptz), 13, 2, N'd288d860-2c20-4609-a36f-d25dd92c2fef');
-INSERT INTO "tblHF" ("HfID", "HFCode", "HFName", "LegalForm", "HFLevel", "HFSublevel", "HFAddress", "LocationId", "Phone", "Fax", "eMail", "HFCareType", "PLServiceID", "PLItemID", "AccCode", "OffLine", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID", "HfUUID") VALUES (27, N'RADS001', N'Yuahn Dispensary', N'G', N'D', NULL, N'Gunda road 723', 19, N'', N'', N'', N'O', NULL, NULL, N'', 0::boolean, CAST(N'2016-01-01T00:00:00.000' AS timestamptz), CAST(N'2016-12-31T00:00:00.000' AS timestamptz), 17, 2, N'c5f64695-ef67-44b0-aa47-9392e799bd67');
-INSERT INTO "tblHF" ("HfID", "HFCode", "HFName", "LegalForm", "HFLevel", "HFSublevel", "HFAddress", "LocationId", "Phone", "Fax", "eMail", "HFCareType", "PLServiceID", "PLItemID", "AccCode", "OffLine", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID", "HfUUID") VALUES (28, N'JMDP001', N'Huda Dispensary', N'G', N'D', NULL, N'Jolywel road 675', 55, N'', N'', N'', N'O', NULL, NULL, N'', 0::boolean, CAST(N'2016-01-01T00:00:00.000' AS timestamptz), CAST(N'2016-12-31T00:00:00.000' AS timestamptz), 12, 2, N'9f931acf-cc80-4d56-a17e-c54afc0c2e80');
-INSERT INTO "tblHF" ("HfID", "HFCode", "HFName", "LegalForm", "HFLevel", "HFSublevel", "HFAddress", "LocationId", "Phone", "Fax", "eMail", "HFCareType", "PLServiceID", "PLItemID", "AccCode", "OffLine", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID", "HfUUID") VALUES (29, N'JMHC001', N'Jamini Health Centre', N'G', N'C', NULL, N'Reduci road 42', 55, N'', N'', N'', N'O', 5, 1, N'', 0::boolean, CAST(N'2016-01-01T00:00:00.000' AS timestamptz), CAST(N'2016-12-31T00:00:00.000' AS timestamptz), 7, 2, N'a7526c02-3444-43f5-b151-b7b12cafc9e0');
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3008, '6d3986a4-e6f6-4e5c-97c1-30b401ca47cf', 'ARW01HC', 'Arada Woreda 1 Health Center', '', '2', 'Arada Sub-City, Woreda 1, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 89, NULL, NULL, NULL, NULL, 'AC');
 
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3009, 'a8be841f-6187-465b-a9c0-351ff520b6e0', 'ARW02HC', 'Arada Woreda 2 Health Center', '', '2', 'Arada Sub-City, Woreda 2, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 90, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3010, '979d4c2a-1d46-4f7f-8ae1-c07917040177', 'ARW03HC', 'Arada Woreda 3 Health Center', '', '2', 'Arada Sub-City, Woreda 3, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 91, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3011, '277bb8cf-78d8-49eb-94e9-50e8e1b8c931', 'ARW04HC', 'Arada Woreda 4 Health Center', '', '2', 'Arada Sub-City, Woreda 4, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 92, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3012, '51a70307-2c04-49b4-a7f5-6e0cea2bc00a', 'ARW05HC', 'Arada Woreda 5 Health Center', '', '2', 'Arada Sub-City, Woreda 5, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 93, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3013, '657d9d5d-cfd1-4897-a9b2-6139b87d333f', 'ARW06HC', 'Arada Woreda 6 Health Center', '', '2', 'Arada Sub-City, Woreda 6, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 94, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3014, '07dd980a-7079-4564-9cb0-20395d4ecb8c', 'ARW07HC', 'Arada Woreda 7 Health Center', '', '2', 'Arada Sub-City, Woreda 7, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 95, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3015, '687120c1-63d7-4118-b593-cc000f33558c', 'ARW08HC', 'Arada Woreda 8 Health Center', '', '2', 'Arada Sub-City, Woreda 8, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 96, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3016, '97f824e3-e4bc-4c99-a971-5f4d1ae0248f', 'ARW09HC', 'Arada Woreda 9 Health Center', '', '2', 'Arada Sub-City, Woreda 9, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 97, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3017, '8e1c773a-27f2-4189-8341-da41b3681efe', 'ARW10HC', 'Arada Woreda 10 Health Center', '', '2', 'Arada Sub-City, Woreda 10, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 98, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3018, '433d7e2d-d876-453a-9b25-f78b975d77bf', 'KOW01HC', 'Kolfe Keraniyo Woreda 1 Health Center', '', '2', 'Kolfe Keraniyo Sub-City, Woreda 1, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 100, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3019, '2c968638-7d17-4134-8932-31b0cef02211', 'KOW02HC', 'Kolfe Keraniyo Woreda 2 Health Center', '', '2', 'Kolfe Keraniyo Sub-City, Woreda 2, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 105, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3020, '3b3ec0e3-cf90-464f-a6df-e769fab8177d', 'KOW03HC', 'Kolfe Keraniyo Woreda 3 Health Center', '', '2', 'Kolfe Keraniyo Sub-City, Woreda 3, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 110, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3021, '208c6437-be07-4096-9d16-f7dabe1c7678', 'KOW04HC', 'Kolfe Keraniyo Woreda 4 Health Center', '', '2', 'Kolfe Keraniyo Sub-City, Woreda 4, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 115, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3022, '2f29b4d4-9e4e-4108-9d2a-b063d28a8f2d', 'KOW05HC', 'Kolfe Keraniyo Woreda 5 Health Center', '', '2', 'Kolfe Keraniyo Sub-City, Woreda 5, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 120, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3023, '6d449c60-293b-4f16-8fb1-c33d4d684677', 'KOW06HC', 'Kolfe Keraniyo Woreda 6 Health Center', '', '2', 'Kolfe Keraniyo Sub-City, Woreda 6, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 125, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3024, '7f148cab-b9db-436b-b407-af9da2ae7d72', 'KOW07HC', 'Kolfe Keraniyo Woreda 7 Health Center', '', '2', 'Kolfe Keraniyo Sub-City, Woreda 7, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 130, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3025, '6280972f-37de-4193-ae7f-7b69801676ad', 'KOW08HC', 'Kolfe Keraniyo Woreda 8 Health Center', '', '2', 'Kolfe Keraniyo Sub-City, Woreda 8, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 135, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3026, '5dc541fd-3131-4680-bbe4-261f16396186', 'KOW09HC', 'Kolfe Keraniyo Woreda 9 Health Center', '', '2', 'Kolfe Keraniyo Sub-City, Woreda 9, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 140, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3027, '3c60e031-5d0f-43b2-b862-125bc6a38b16', 'KOW10HC', 'Kolfe Keraniyo Woreda 10 Health Center', '', '2', 'Kolfe Keraniyo Sub-City, Woreda 10, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 145, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3028, 'b303cab3-ea1f-4718-9b8b-fd5ea8230b98', 'KOW11HC', 'Kolfe Keraniyo Woreda 11 Health Center', '', '2', 'Kolfe Keraniyo Sub-City, Woreda 11, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 150, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3029, '9096228d-195f-4f4e-acb3-f63550a17686', 'KOW12HC', 'Kolfe Keraniyo Woreda 12 Health Center', '', '2', 'Kolfe Keraniyo Sub-City, Woreda 12, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 155, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3030, '6d3fd592-eb9f-4c79-9ada-7b26ad515387', 'KOW13HC', 'Kolfe Keraniyo Woreda 13 Health Center', '', '2', 'Kolfe Keraniyo Sub-City, Woreda 13, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 160, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3031, '307b438b-97ea-4148-8cf2-ef698cb223e4', 'KOW14HC', 'Kolfe Keraniyo Woreda 14 Health Center', '', '2', 'Kolfe Keraniyo Sub-City, Woreda 14, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 165, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3032, '5ab156c1-7406-4bd9-8240-3b80f560fea7', 'KOW15HC', 'Kolfe Keraniyo Woreda 15 Health Center', '', '2', 'Kolfe Keraniyo Sub-City, Woreda 15, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 170, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3033, '13f5df68-e978-4013-9ed4-27423389222c', 'BOW01HC', 'Bole Woreda 1 Health Center', '', '2', 'Bole Sub-City, Woreda 1, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 175, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3034, 'a636b096-aff8-4885-985d-f208e25e7cc4', 'BOW02HC', 'Bole Woreda 2 Health Center', '', '2', 'Bole Sub-City, Woreda 2, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 180, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3035, 'c03e1444-37d9-4d14-8d3e-aad1e2bc6724', 'BOW03HC', 'Bole Woreda 3 Health Center', '', '2', 'Bole Sub-City, Woreda 3, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 185, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3036, '3d4a8898-d87e-4581-95d8-bb1c763c47f1', 'BOW04HC', 'Bole Woreda 4 Health Center', '', '2', 'Bole Sub-City, Woreda 4, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 190, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3037, 'ffd6bf79-4686-41eb-9680-a573cc758326', 'BOW05HC', 'Bole Woreda 5 Health Center', '', '2', 'Bole Sub-City, Woreda 5, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 195, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3038, '403ca7a3-ac60-42fb-ae7e-4117f0ba25ce', 'BOW06HC', 'Bole Woreda 6 Health Center', '', '2', 'Bole Sub-City, Woreda 6, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 200, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3039, 'f8b52261-9e62-4f7b-b53e-384da22223d5', 'BOW07HC', 'Bole Woreda 7 Health Center', '', '2', 'Bole Sub-City, Woreda 7, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 205, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3040, 'f0684dc7-0873-4f31-8c1a-1bf4f9820a38', 'BOW08HC', 'Bole Woreda 8 Health Center', '', '2', 'Bole Sub-City, Woreda 8, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 210, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3041, '380299a6-d1ee-4b1c-8718-968ce5f402d6', 'BOW09HC', 'Bole Woreda 9 Health Center', '', '2', 'Bole Sub-City, Woreda 9, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 215, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3042, '947afc3c-2185-4b48-b57b-aaba57aa9daf', 'BOW10HC', 'Bole Woreda 10 Health Center', '', '2', 'Bole Sub-City, Woreda 10, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 220, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3043, 'fb4ba32e-75e9-417c-9e21-c697f0e1844e', 'LIW01HC', 'Lideta Woreda 1 Health Center', '', '2', 'Lideta Sub-City, Woreda 1, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 225, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3044, '2611b395-78ab-4ec7-b7dc-573f4ab6c2fa', 'LIW02HC', 'Lideta Woreda 2 Health Center', '', '2', 'Lideta Sub-City, Woreda 2, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 230, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3045, '579ca285-3ca6-49f3-b070-130180c8fd69', 'LIW03HC', 'Lideta Woreda 3 Health Center', '', '2', 'Lideta Sub-City, Woreda 3, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 235, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3046, 'c83a9af8-977a-419d-8365-163c1abff94c', 'LIW04HC', 'Lideta Woreda 4 Health Center', '', '2', 'Lideta Sub-City, Woreda 4, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 240, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3047, '93ca487a-666c-4c11-83db-ae6c73f5c2a1', 'LIW05HC', 'Lideta Woreda 5 Health Center', '', '2', 'Lideta Sub-City, Woreda 5, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 245, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3048, '1a940541-c5c6-4595-9bde-05a518e4f7b8', 'LIW06HC', 'Lideta Woreda 6 Health Center', '', '2', 'Lideta Sub-City, Woreda 6, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 250, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3049, 'd1a26b86-027e-4eec-b05a-1281b6004048', 'LIW07HC', 'Lideta Woreda 7 Health Center', '', '2', 'Lideta Sub-City, Woreda 7, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 255, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3050, 'b621e377-e6e4-4fba-8e5e-dcc2576b2446', 'LIW08HC', 'Lideta Woreda 8 Health Center', '', '2', 'Lideta Sub-City, Woreda 8, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 260, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3051, '3331cd00-e08f-45fb-8c20-473b3cdf4c93', 'LIW09HC', 'Lideta Woreda 9 Health Center', '', '2', 'Lideta Sub-City, Woreda 9, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 265, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3052, '670bc321-ee08-4c79-aa65-a1b9837cc210', 'LIW10HC', 'Lideta Woreda 10 Health Center', '', '2', 'Lideta Sub-City, Woreda 10, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 270, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3053, '1c70dda8-64a6-4ff5-b66a-1b6452fc66af', 'NSW01HC', 'Nifas Silk Lafto Woreda 1 Health Center', '', '2', 'Nifas Silk Lafto Sub-City, Woreda 1, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 315, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3054, '7ca20af7-2628-43f8-9b86-b66c0aa84eef', 'NSW02HC', 'Nifas Silk Lafto Woreda 2 Health Center', '', '2', 'Nifas Silk Lafto Sub-City, Woreda 2, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 320, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3055, '2a125aa8-ad25-4b31-92a4-3e8c938fb93b', 'NSW03HC', 'Nifas Silk Lafto Woreda 3 Health Center', '', '2', 'Nifas Silk Lafto Sub-City, Woreda 3, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 325, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3056, '6eae05c2-6f85-4652-902e-443fbf63e1f3', 'NSW04HC', 'Nifas Silk Lafto Woreda 4 Health Center', '', '2', 'Nifas Silk Lafto Sub-City, Woreda 4, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 330, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3057, 'f3942127-c570-49f9-ad5b-223507b46d59', 'NSW05HC', 'Nifas Silk Lafto Woreda 5 Health Center', '', '2', 'Nifas Silk Lafto Sub-City, Woreda 5, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 335, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3058, '63cebd26-3774-4299-a6f9-e5edc4aa824d', 'NSW06HC', 'Nifas Silk Lafto Woreda 6 Health Center', '', '2', 'Nifas Silk Lafto Sub-City, Woreda 6, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 340, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3059, '783c2d48-07f0-4536-98a0-99605a15f2c3', 'NSW07HC', 'Nifas Silk Lafto Woreda 7 Health Center', '', '2', 'Nifas Silk Lafto Sub-City, Woreda 7, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 345, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3060, 'b8fc17af-336d-4a5e-93d8-d61a14049213', 'NSW08HC', 'Nifas Silk Lafto Woreda 8 Health Center', '', '2', 'Nifas Silk Lafto Sub-City, Woreda 8, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 350, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3061, '40bf1f1b-5672-474b-8b59-2cc01ad93aba', 'NSW09HC', 'Nifas Silk Lafto Woreda 9 Health Center', '', '2', 'Nifas Silk Lafto Sub-City, Woreda 9, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 355, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3062, 'f2091196-bb75-40e1-babc-c12c761dac6e', 'NSW10HC', 'Nifas Silk Lafto Woreda 10 Health Center', '', '2', 'Nifas Silk Lafto Sub-City, Woreda 10, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 360, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3063, 'bfd9a3e7-9c97-4a81-8e5d-a6f01d80af13', 'LEW01HC', 'Lemi Kura Woreda 1 Health Center', '', '2', 'Lemi Kura Sub-City, Woreda 1, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 365, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3064, 'e3e5a503-ef8b-4a2b-a507-0391660446c1', 'LEW02HC', 'Lemi Kura Woreda 2 Health Center', '', '2', 'Lemi Kura Sub-City, Woreda 2, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 370, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3065, '45aa80e5-980d-4110-81f8-878c904a8843', 'LEW03HC', 'Lemi Kura Woreda 3 Health Center', '', '2', 'Lemi Kura Sub-City, Woreda 3, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 375, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3066, '7df9a249-217c-4c82-af33-40a6f49bd401', 'LEW04HC', 'Lemi Kura Woreda 4 Health Center', '', '2', 'Lemi Kura Sub-City, Woreda 4, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 380, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3067, '0163f675-8568-4952-94f4-0d87e9990fa8', 'LEW05HC', 'Lemi Kura Woreda 5 Health Center', '', '2', 'Lemi Kura Sub-City, Woreda 5, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 385, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3068, 'ba46465b-972a-45df-b887-e37716151d85', 'LEW06HC', 'Lemi Kura Woreda 6 Health Center', '', '2', 'Lemi Kura Sub-City, Woreda 6, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 390, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3069, '7dc2eeaf-f753-484b-badd-5baf7c97fec9', 'LEW07HC', 'Lemi Kura Woreda 7 Health Center', '', '2', 'Lemi Kura Sub-City, Woreda 7, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 395, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3070, 'bc0f0b04-efef-4b51-be55-d814155b67e4', 'LEW08HC', 'Lemi Kura Woreda 8 Health Center', '', '2', 'Lemi Kura Sub-City, Woreda 8, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 400, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3071, '2ed29441-b708-4197-8b6c-affa0df16412', 'LEW09HC', 'Lemi Kura Woreda 9 Health Center', '', '2', 'Lemi Kura Sub-City, Woreda 9, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 405, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3072, '7229efac-fccf-4ebc-b8ac-05297f53b940', 'LEW10HC', 'Lemi Kura Woreda 10 Health Center', '', '2', 'Lemi Kura Sub-City, Woreda 10, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 410, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3073, '492b5b6d-90d7-41a5-b638-425374a9fded', 'LEW11HC', 'Lemi Kura Woreda 11 Health Center', '', '2', 'Lemi Kura Sub-City, Woreda 11, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 415, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3074, '6e1df00f-3b49-40df-b14d-cecfc9f9ddf5', 'LEW12HC', 'Lemi Kura Woreda 12 Health Center', '', '2', 'Lemi Kura Sub-City, Woreda 12, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 420, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3075, '0db0a0f2-97a2-430d-85da-897e9f156418', 'LEW13HC', 'Lemi Kura Woreda 13 Health Center', '', '2', 'Lemi Kura Sub-City, Woreda 13, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 425, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3076, 'e493c724-0051-4472-a4ed-81d712c5acff', 'LEW14HC', 'Lemi Kura Woreda 14 Health Center', '', '2', 'Lemi Kura Sub-City, Woreda 14, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 430, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3077, 'ba2499b2-4680-4fae-a40a-ed1abbbc4473', 'GUW01HC', 'Gulele Woreda 1 Health Center', '', '2', 'Gulele Sub-City, Woreda 1, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 435, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3078, '1049b400-22e0-4a2e-8f98-2aaf2c76e02b', 'GUW02HC', 'Gulele Woreda 2 Health Center', '', '2', 'Gulele Sub-City, Woreda 2, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 440, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3079, 'c80e146d-e0cb-4d7d-ba73-398b30f7ff5f', 'GUW03HC', 'Gulele Woreda 3 Health Center', '', '2', 'Gulele Sub-City, Woreda 3, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 445, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3080, 'c7a39570-5e58-4ee0-a967-efe8cceaeaeb', 'GUW04HC', 'Gulele Woreda 4 Health Center', '', '2', 'Gulele Sub-City, Woreda 4, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 450, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3081, '599c348e-aadd-46b6-9244-7e6ec22b17dd', 'GUW05HC', 'Gulele Woreda 5 Health Center', '', '2', 'Gulele Sub-City, Woreda 5, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 455, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3082, 'd0c9a971-1dd4-4236-91c0-0458cffd34ce', 'GUW06HC', 'Gulele Woreda 6 Health Center', '', '2', 'Gulele Sub-City, Woreda 6, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 460, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3083, 'f34076cb-49c7-4a99-b596-ed0b2a8499d9', 'GUW07HC', 'Gulele Woreda 7 Health Center', '', '2', 'Gulele Sub-City, Woreda 7, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 465, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3084, '0531bd09-9458-4783-940d-5fb45fd2f6a4', 'GUW08HC', 'Gulele Woreda 8 Health Center', '', '2', 'Gulele Sub-City, Woreda 8, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 470, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3085, '08a0bc55-c3ba-4e42-a3ed-18655ffac9f6', 'GUW09HC', 'Gulele Woreda 9 Health Center', '', '2', 'Gulele Sub-City, Woreda 9, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 475, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3086, '36a3bb6e-3263-4aa0-af24-53f365df0f2b', 'GUW10HC', 'Gulele Woreda 10 Health Center', '', '2', 'Gulele Sub-City, Woreda 10, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 480, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3087, '0f384394-584b-4dd9-a05d-159d42e3416e', 'AKW01HC', 'Addis Ketema Woreda 1 Health Center', '', '2', 'Addis Ketema Sub-City, Woreda 1, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 485, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3088, 'f1ab33ef-81b6-4873-b8b4-4dde27485a40', 'AKW02HC', 'Addis Ketema Woreda 2 Health Center', '', '2', 'Addis Ketema Sub-City, Woreda 2, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 490, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3089, '19bbf0f0-81ef-46d7-a911-e1ddf4671048', 'AKW03HC', 'Addis Ketema Woreda 3 Health Center', '', '2', 'Addis Ketema Sub-City, Woreda 3, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 495, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3090, 'd2a6e29c-d823-4187-9884-a5bdcec72d19', 'AKW04HC', 'Addis Ketema Woreda 4 Health Center', '', '2', 'Addis Ketema Sub-City, Woreda 4, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 500, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3091, 'ee498e59-8f65-455e-8a36-f07b52c794ea', 'AKW05HC', 'Addis Ketema Woreda 5 Health Center', '', '2', 'Addis Ketema Sub-City, Woreda 5, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 505, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3092, 'db69e124-ecee-4ac4-af56-87ffd452e315', 'AKW06HC', 'Addis Ketema Woreda 6 Health Center', '', '2', 'Addis Ketema Sub-City, Woreda 6, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 510, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3093, '015ad146-730c-400a-b8fa-1956fb7dbaeb', 'AKW07HC', 'Addis Ketema Woreda 7 Health Center', '', '2', 'Addis Ketema Sub-City, Woreda 7, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 515, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3094, 'b0d53366-9a04-4e43-ae0f-85d29db40be7', 'AKW08HC', 'Addis Ketema Woreda 8 Health Center', '', '2', 'Addis Ketema Sub-City, Woreda 8, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 520, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3095, 'f8a17605-29a7-4daf-9cae-58d50d10e67c', 'AKW09HC', 'Addis Ketema Woreda 9 Health Center', '', '2', 'Addis Ketema Sub-City, Woreda 9, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 525, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3096, '08a68d20-f14b-40c2-8dc2-ca0493a73ce3', 'AKW10HC', 'Addis Ketema Woreda 10 Health Center', '', '2', 'Addis Ketema Sub-City, Woreda 10, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 530, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3097, '62170025-575b-42d2-b36d-f44a9040ea4b', 'KIW01HC', 'Kirkos Woreda 1 Health Center', '', '2', 'Kirkos Sub-City, Woreda 1, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 535, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3098, '692d4623-2fb3-4371-b65c-26b9ad9c35bc', 'KIW02HC', 'Kirkos Woreda 2 Health Center', '', '2', 'Kirkos Sub-City, Woreda 2, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 540, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3099, 'e1fb797f-7dad-45d8-a708-90a48531eb07', 'KIW03HC', 'Kirkos Woreda 3 Health Center', '', '2', 'Kirkos Sub-City, Woreda 3, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 545, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3100, '9f2a4859-35f9-46fc-b2b4-321b330521b2', 'KIW04HC', 'Kirkos Woreda 4 Health Center', '', '2', 'Kirkos Sub-City, Woreda 4, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 550, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3101, 'e4a7c28b-3f7c-43c8-b339-42ba08723031', 'KIW05HC', 'Kirkos Woreda 5 Health Center', '', '2', 'Kirkos Sub-City, Woreda 5, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 555, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3102, 'b44b76fc-2f1e-4e85-903d-fd6beca424ec', 'KIW06HC', 'Kirkos Woreda 6 Health Center', '', '2', 'Kirkos Sub-City, Woreda 6, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 560, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3103, 'bc3f94be-1ce0-4274-a6de-110a639d5c1e', 'KIW07HC', 'Kirkos Woreda 7 Health Center', '', '2', 'Kirkos Sub-City, Woreda 7, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 565, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3104, '4c0cea49-9693-4920-a988-289a9d177977', 'KIW08HC', 'Kirkos Woreda 8 Health Center', '', '2', 'Kirkos Sub-City, Woreda 8, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 570, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3105, '2fe3a350-f5b5-4f6f-947b-d29e61bba160', 'KIW09HC', 'Kirkos Woreda 9 Health Center', '', '2', 'Kirkos Sub-City, Woreda 9, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 575, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3106, '65870f8c-8560-4206-bc27-aa05d2c92d99', 'KIW10HC', 'Kirkos Woreda 10 Health Center', '', '2', 'Kirkos Sub-City, Woreda 10, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 580, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3107, '82efb0fe-562f-4c68-9de4-c5abc6924b0f', 'ALW01HC', 'Akaki Kality Woreda 1 Health Center', '', '2', 'Akaki Kality Sub-City, Woreda 1, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 585, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3108, '9da4a188-5489-4753-b3a3-434c3bbf313d', 'ALW02HC', 'Akaki Kality Woreda 2 Health Center', '', '2', 'Akaki Kality Sub-City, Woreda 2, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 590, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3109, '266e2d02-2dce-4cc9-a7cd-d389a38874a9', 'ALW03HC', 'Akaki Kality Woreda 3 Health Center', '', '2', 'Akaki Kality Sub-City, Woreda 3, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 595, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3110, '7f834c53-666a-499f-a6b0-752b72545094', 'ALW04HC', 'Akaki Kality Woreda 4 Health Center', '', '2', 'Akaki Kality Sub-City, Woreda 4, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 600, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3111, '41095eb5-f7f8-4327-b090-692981cf5ae3', 'ALW05HC', 'Akaki Kality Woreda 5 Health Center', '', '2', 'Akaki Kality Sub-City, Woreda 5, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 605, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3112, '536f6ed9-b5be-473f-be45-c204def45347', 'ALW06HC', 'Akaki Kality Woreda 6 Health Center', '', '2', 'Akaki Kality Sub-City, Woreda 6, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 610, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3113, '2baef73f-d8d2-43ec-aae3-434fd046a748', 'ALW07HC', 'Akaki Kality Woreda 7 Health Center', '', '2', 'Akaki Kality Sub-City, Woreda 7, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 615, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3114, '8b53238e-9f27-4f15-ab63-421968d468f0', 'ALW08HC', 'Akaki Kality Woreda 8 Health Center', '', '2', 'Akaki Kality Sub-City, Woreda 8, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 620, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3115, '951084bf-edea-4252-a410-7e5ea289207f', 'ALW09HC', 'Akaki Kality Woreda 9 Health Center', '', '2', 'Akaki Kality Sub-City, Woreda 9, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 625, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3116, 'b26ed7d6-0547-4e99-8246-fe4e16cd9767', 'ALW10HC', 'Akaki Kality Woreda 10 Health Center', '', '2', 'Akaki Kality Sub-City, Woreda 10, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 630, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3117, '05c8c5f7-171b-449d-9492-3ebab4b6bbf9', 'YEW01HC', 'Yeka Woreda 1 Health Center', '', '2', 'Yeka Sub-City, Woreda 1, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 635, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3118, '3c194ada-60bb-4583-a9ab-c1b76d321541', 'YEW02HC', 'Yeka Woreda 2 Health Center', '', '2', 'Yeka Sub-City, Woreda 2, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 640, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3119, 'f802629e-4982-445f-ad73-5c8d3f8eecbd', 'YEW03HC', 'Yeka Woreda 3 Health Center', '', '2', 'Yeka Sub-City, Woreda 3, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 645, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3120, 'db5359e7-8408-4f2e-b71a-1019c0694524', 'YEW04HC', 'Yeka Woreda 4 Health Center', '', '2', 'Yeka Sub-City, Woreda 4, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 650, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3121, '843d96d6-d8c0-4fb9-8e0a-1c71487c9d60', 'YEW05HC', 'Yeka Woreda 5 Health Center', '', '2', 'Yeka Sub-City, Woreda 5, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 655, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3122, '916e83b1-c918-41b8-9ed5-75af9e223be8', 'YEW06HC', 'Yeka Woreda 6 Health Center', '', '2', 'Yeka Sub-City, Woreda 6, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 660, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3123, '1115aa0d-7c56-4d6d-82d8-a96a28240ef5', 'YEW07HC', 'Yeka Woreda 7 Health Center', '', '2', 'Yeka Sub-City, Woreda 7, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 665, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3124, '8ec80a6c-6d03-4934-9a80-ec295948827f', 'YEW08HC', 'Yeka Woreda 8 Health Center', '', '2', 'Yeka Sub-City, Woreda 8, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 670, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3125, '30c33298-dccb-4d2f-9311-1ca8032ecfe5', 'YEW09HC', 'Yeka Woreda 9 Health Center', '', '2', 'Yeka Sub-City, Woreda 9, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 675, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3126, '98283fad-29a1-4c50-a4a6-3ad7891f38ab', 'YEW10HC', 'Yeka Woreda 10 Health Center', '', '2', 'Yeka Sub-City, Woreda 10, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 680, NULL, NULL, NULL, NULL, 'AC');
+
+INSERT INTO "tblHF"
+("ValidityFrom", "ValidityTo", "LegacyID", "HfID", "HfUUID", "HFCode", "HFName", "AccCode", "HFLevel", "HFAddress", "Phone", "Fax", "eMail", "HFCareType", "OffLine", "AuditUserID", "PLItemID", "LegalForm", "LocationId", "PLServiceID", "RowID", "JsonExt", "ContractEndDate", "status")
+VALUES
+(NOW(), NULL, NULL, 3127, 'eeb78db4-4f7a-4d35-8caf-e722414bee34', 'YEW11HC', 'Yeka Woreda 11 Health Center', '', '2', 'Yeka Sub-City, Woreda 11, Addis Ababa', '', '', '', '0', FALSE, 1, NULL, 'G', 685, NULL, NULL, NULL, NULL, 'AC');
 
 -- tblBatchRun
 INSERT INTO "tblBatchRun" ("RunID", "LocationId", "RunDate", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID", "RunYear", "RunMonth") VALUES (1, NULL, CAST(N'2019-01-24T00:46:41.027' AS timestamptz), CAST(N'2019-01-24T00:46:41.027' AS timestamptz), NULL, NULL, 1, 2018, 1);
