@@ -1071,6 +1071,7 @@ INSERT INTO "tblLocations" ("RowId", "LocationId", "LocationCode", "LocationName
 INSERT INTO "tblLocations" ("RowId", "LocationId", "LocationCode", "LocationName", "ParentLocationId", "LocationType", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserId", "MalePopulation", "FemalePopulation", "OtherPopulation", "Families", "LocationUUID") VALUES ('67', 67, N'R1D3M1', N'Uminal', 56, N'W', CAST(N'2017-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 2, NULL, NULL, NULL, NULL, N'7e89aae5-3627-49e9-aa94-bf387c510939');
 INSERT INTO "tblLocations" ("RowId", "LocationId", "LocationCode", "LocationName", "ParentLocationId", "LocationType", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserId", "MalePopulation", "FemalePopulation", "OtherPopulation", "Families", "LocationUUID") VALUES ('68', 68, N'R1D3M1V1', N'Uminalum', 67, N'V', CAST(N'2017-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 2, NULL, NULL, NULL, NULL, N'f30342eb-94bf-4155-92d2-77eaf6559cd6');
 
+
 COMMIT;
 
 -- tblHF
