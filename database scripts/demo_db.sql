@@ -6741,310 +6741,310 @@ COMMIT;
 -- Total facilities (one per Woreda): 134
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,1,'fdfac5a4-6bbd-4c38-a738-b59aeeed36a1',N'AAAKHC01',N'Abissiniya health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',2,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,1,'043c7cfa-2b51-4057-8092-77947ee8f494',N'AAAKHC01',N'Abissiniya health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',2,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,2,'52e33fe3-9d0d-4d43-87ab-240d8c701974',N'AAAKHC02',N'Abebe bikila health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',2,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,2,'e8d6e3a3-ad7e-4156-a9c8-e65f9dba2bc8',N'AAAKHC02',N'Abebe bikila health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',2,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,3,'d968b598-c42e-440d-9f4a-9c37c272f457',N'AAAKHC03',N'Addis ketema health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',2,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,3,'e55e6ad2-88bc-4223-a3bc-3bd8bc90583e',N'AAAKHC03',N'Addis ketema health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',2,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,4,'98687d3c-068b-452d-a92d-ee61fc03d4f4',N'AAAKHC04',N'Addis reay health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',2,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,4,'b0ad9b31-324d-4e4b-bd1e-46ad7e0f7adf',N'AAAKHC04',N'Addis reay health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',2,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,5,'cdc1a7ae-2b58-4c14-bd80-89c893e4cd85',N'AAAKHC05',N'Ginibot20 health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',2,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,5,'707f4b8d-d77b-4085-9394-636b6e230556',N'AAAKHC05',N'Ginibot20 health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',2,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,6,'21167a75-56c9-4da6-9653-dd008e46c987',N'AAAKHC06',N'Felegemelese health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',2,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,6,'50e955e8-426d-418a-afa2-9901b76343d7',N'AAAKHC06',N'Felegemelese health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',2,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,7,'ce3d0693-0091-4323-8bf9-c302d7d05f2b',N'AAAKHC07',N'Kolfe health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',2,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,7,'95d42e66-e26c-497d-ac90-6c11bd007a5d',N'AAAKHC07',N'Kolfe health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',2,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,8,'c97c7372-c6e5-4d6a-8009-f0d9693ec1f7',N'AAAKHC08',N'Kuas meda health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',2,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,8,'042436e8-8787-4d4c-acfc-cf9bfac13dcb',N'AAAKHC08',N'Kuas meda health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',2,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,9,'f9be71a3-f871-480c-b6f1-c722db13f0ae',N'AAAKHC09',N'Lommimeda health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',2,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,9,'8a7fe1cb-dc9a-484b-b4d6-812add1c987c',N'AAAKHC09',N'Lommimeda health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',2,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,10,'70cca04c-96bf-4f26-a964-1082381fd275',N'AAAKHC10',N'Millinium health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',2,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,10,'0412b1cd-f109-41be-a01d-43667634b5b5',N'AAAKHC10',N'Millinium health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',2,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,11,'b39c1e74-aea2-469e-8fe7-0b078ec97ccd',N'AAAKHC11',N'Mikililnd health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',2,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,11,'12cc815c-20e8-4980-8e47-ab86974ae3f3',N'AAAKHC11',N'Mikililnd health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',2,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,12,'5d00cead-94e7-49ee-8c7b-ef5a13ff71ac',N'AAAKHC12',N'Philipos health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',2,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,12,'1da8e388-d582-4386-93c0-ef85c8c60aac',N'AAAKHC12',N'Philipos health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',2,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,13,'a151325f-bc08-4879-801c-05ec756d34e7',N'AAAKHC13',N'Woreda3 health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',2,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,13,'8c095fc4-6c9f-481e-a61e-4e7da02d5bac',N'AAAKHC13',N'Woreda3 health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',2,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,14,'9a0b695f-8cfe-4f60-bd8e-9bf877f49320',N'AAAKHC14',N'Woreda 10 health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',2,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,14,'a29c0977-9a49-4054-bc70-40c3d77066c7',N'AAAKHC14',N'Woreda 10 health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',2,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,15,'38e83657-31be-46f1-a6a8-5fbd055011e6',N'AAAKHC01',N'Akaki health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',87,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,15,'1f6ac581-35a1-4304-85b9-62b72ee8cef8',N'AAAKKHC01',N'Akaki health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',87,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,16,'ab0e83ef-51c3-4a2a-88a2-cc47671277c0',N'AAAKHC02',N'Gelan gura',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',87,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,16,'52a4001a-06ba-4f2d-98e4-a4f07ff21fa7',N'AAAKKHC02',N'Gelan gura',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',87,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,17,'18c6b820-a621-4f0d-b5be-2cc6788e135f',N'AAAKHC03',N'Gelan health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',87,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,17,'42862f0c-5ea8-4682-a6d3-db10513aa4a3',N'AAAKKHC03',N'Gelan health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',87,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,18,'aa846f19-c077-4085-b5be-9cd4f58cf62e',N'AAAKHC04',N'Kality health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',87,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,18,'62e3b49e-f310-413f-a830-3cd07f30dc15',N'AAAKKHC04',N'Kality health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',87,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,19,'3fcc81ce-ac63-4c25-96d6-7c05bdd50f99',N'AAAKHC05',N'Saris health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',87,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,19,'05713bf0-0dbe-49f7-97ea-565233fee433',N'AAAKKHC05',N'Saris health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',87,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,20,'21f34fcb-2d4a-4e0a-862b-b31c34d91315',N'AAAKHC06',N'Selam fire health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',87,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,20,'7ff00f12-642f-440d-82b8-ff9c3fbbd4aa',N'AAAKKHC06',N'Selam fire health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',87,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,21,'308fedb1-9b8d-48bf-83cd-3d3a745779ae',N'AAAKHC07',N'Serit health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',87,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,21,'d949a295-e5ca-4eac-945c-476a03edeb3f',N'AAAKKHC07',N'Serit health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',87,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,22,'02066b22-606d-418e-b293-e3e8bfb3b805',N'AAAKHC08',N'Gelan Gura health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',87,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,22,'d2e79591-13a1-4b88-b150-75f327b0e267',N'AAAKKHC08',N'Gelan Gura health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',87,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,23,'ea59594f-4da0-49c1-a818-27deb2bc6eb4',N'AAAHC01',N'Abware health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',166,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,23,'b151b55d-11e9-431a-a522-f5c0c05b03a1',N'AAARHC01',N'Abware health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',166,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,24,'50e46634-e225-4bad-a1b4-a78025160713',N'AAAHC02',N'Afinchober health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',166,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,24,'dd308318-5b15-43ee-8c13-e0568b996646',N'AAARHC02',N'Afinchober health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',166,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,25,'34e01f66-1de2-4401-844a-07bc944eacfb',N'AAAHC03',N'Arada health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',166,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,25,'a53c2cc2-8eaf-432c-8749-77fa364a858f',N'AAARHC03',N'Arada health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',166,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,26,'d6f8c25c-3328-4282-92e5-4328c5d244c7',N'AAAHC04',N'Basha wolde health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',166,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,26,'7b54195d-94d8-4632-a410-61c30017369b',N'AAARHC04',N'Basha wolde health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',166,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,27,'38c29a84-61f9-4b3f-96d6-cd9785de46c6',N'AAAHC05',N'Beata health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',166,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,27,'0d1ff62b-8aae-4490-a449-e20f20029ca6',N'AAARHC05',N'Beata health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',166,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,28,'fb96d490-ac63-4596-b786-d9ce11dd7844',N'AAAHC06',N'Churchil health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',166,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,28,'6058ff41-668c-46cc-aebc-a4fbfe7110e7',N'AAARHC06',N'Churchil health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',166,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,29,'60530410-6036-4800-8599-3bc94f51ac40',N'AAAHC07',N'Janmeda health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',166,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,29,'b60a9e41-79af-490c-8fc5-3dd5eddcba65',N'AAARHC07',N'Janmeda health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',166,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,30,'39ccddf4-919d-470a-b018-41d1d18a1758',N'AAAHC08',N'Kebena health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',166,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,30,'0c0da0dd-e2cc-42ed-a94b-73578c280aa7',N'AAARHC08',N'Kebena health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',166,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,31,'a56c527f-b814-4124-bd24-fc976dbbc97e',N'AAAHC09',N'Ras emiru health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',166,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,31,'7548cb08-4f1d-421a-9f3c-7bd3e22f1c29',N'AAARHC09',N'Ras emiru health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',166,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,32,'c72a6a2d-537d-4f66-b190-e690b630812f',N'AAAHC10',N'Semegn kebede health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',166,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,32,'0d54a2fa-237b-46fc-bce8-4a3a731528de',N'AAARHC10',N'Semegn kebede health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',166,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,33,'b20d7865-466d-491f-8f51-50d010ab4385',N'AABHC01',N'Semen health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',227,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,33,'9c4c8680-6e3c-4d5f-a715-18ad6412b44e',N'AABLHC01',N'Semen health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',227,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,34,'dfeb4432-5f24-46a2-b2a3-b50593bf74ae',N'AABHC02',N'Bole 17_20 health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',227,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,34,'7d9f9074-5c1d-4728-bb28-2c8d8d6d0556',N'AABLHC02',N'Bole 17_20 health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',227,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,35,'ac451d5f-dbb8-41f7-a625-72c0f1eef3e1',N'AABHC03',N'Bole 17 health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',227,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,35,'661d97b5-9c50-456a-8ac7-fb0826ed21db',N'AABLHC03',N'Bole 17 health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',227,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,36,'6bb46aba-2d3a-484d-97a0-39652df3cdb1',N'AABHC04',N'Bulbula health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',227,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,36,'84bed0b1-fdcd-420f-8a22-1486fb905945',N'AABLHC04',N'Bulbula health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',227,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,37,'530a8924-341e-4c76-afd9-eae19f0fe719',N'AABHC05',N'Dilfire health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',227,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,37,'1f7ae0fb-b3d7-4301-8b39-346b62c61e85',N'AABLHC05',N'Dilfire health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',227,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,38,'cfa25a87-4cb2-4870-afc9-93221185a47c',N'AABHC06',N'Gergi health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',227,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,38,'555d1be9-efec-4cea-bb33-89ed8daf2eb6',N'AABLHC06',N'Gergi health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',227,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,39,'563efc06-a17c-4b9d-b1f1-bda83ebb7164',N'AAGHC01',N'Addis hiwot health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',312,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,39,'b14da1ba-35be-429f-aa73-9e8d5b7818f6',N'AAGLHC01',N'Addis hiwot health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',312,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,40,'44644c86-480d-48c8-a389-d3326562999c',N'AAGHC02',N'Addisu gbya health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',312,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,40,'2c60bbdc-45fa-431e-87af-0523bf77e96b',N'AAGLHC02',N'Addisu gbya health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',312,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,41,'9e55ed98-2c68-4e4a-8914-10be4ddce81f',N'AAGHC03',N'Entoto fana health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',312,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,41,'54146ff0-d5b5-4b22-8c22-bb067f26b1d6',N'AAGLHC03',N'Entoto fana health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',312,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,42,'a611a72d-2bf1-4c20-a97d-b16624d914b7',N'AAGHC04',N'Guto meda health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',312,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,42,'f49dc837-ade2-49ba-89a5-dfbec8282304',N'AAGLHC04',N'Guto meda health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',312,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,43,'e4617dc9-5353-4a24-ad55-db1de048e017',N'AAGHC05',N'Hidase health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',312,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,43,'a412656b-260f-48fa-a4ae-aa33fb458491',N'AAGLHC05',N'Hidase health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',312,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,44,'ef4bf308-d914-40c6-9f09-16f597c0ff6d',N'AAGHC06',N'Maychew health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',312,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,44,'abadc30c-e79c-4232-ab02-d8ed0526cda6',N'AAGLHC06',N'Maychew health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',312,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,45,'9878ac91-a8f7-431b-aa3a-4e8d4defd951',N'AAGHC07',N'Selam health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',312,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,45,'4bb6f8be-1174-4923-9539-3d2fe0c63d10',N'AAGLHC07',N'Selam health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',312,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,46,'ba622ebd-a924-453e-9710-dff47d7551d3',N'AAGHC08',N'Shegole health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',312,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,46,'2628aa4f-9b20-4aaa-8da2-e22304072348',N'AAGLHC08',N'Shegole health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',312,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,47,'2f1234bb-94c6-4a22-bff2-2393418b1de6',N'AAGHC09',N'Shromeda health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',312,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,47,'3d372bf1-b540-44ce-bc34-b78bcccf9587',N'AAGLHC09',N'Shromeda health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',312,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,48,'7fb4ac5d-ba95-469c-b035-5c1c55bf1029',N'AAGHC10',N'Tibeb bekchne health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',312,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,48,'fa722354-ddce-4ea4-ac13-31600784f4ed',N'AAGLHC10',N'Tibeb bekchne health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',312,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,49,'2f940c8f-6582-463c-b0aa-c143f0634996',N'AAKHC01',N'Efoyita health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',373,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,49,'fd1e3d90-0f34-49a2-a94d-0b6bc57d3f8a',N'AAKRHC01',N'Efoyita health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',373,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,50,'5a31bd68-2361-447f-972a-b46fed65961e',N'AAKHC02',N'Felege hiwot health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',373,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,50,'bbc6538d-0fcd-410f-8d6e-e0b1e2bedc03',N'AAKRHC02',N'Felege hiwot health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',373,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,51,'4ebceebd-a314-4827-81b1-aa25f75c7f07',N'AAKHC03',N'Feres meda health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',373,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,51,'793c6ace-9007-4ed7-99bc-78e3b7470365',N'AAKRHC03',N'Feres meda health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',373,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,52,'1f96fd8a-5b05-49ca-9b71-2944f5aca032',N'AAKHC04',N'Gotera masalecha health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',373,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,52,'00b9ff50-b9c9-4d0a-b23a-37c7dc8c54be',N'AAKRHC04',N'Gotera masalecha health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',373,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,53,'0bef36df-2de5-4e37-88c9-a54947d71578',N'AAKHC05',N'Hiwot amba health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',373,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,53,'ab32d09b-6b79-47c2-840b-77962ef29069',N'AAKRHC05',N'Hiwot amba health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',373,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,54,'ac305d32-f076-46ae-81de-115a3f4d2a76',N'AAKHC06',N'Kazanchis health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',373,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,54,'572a1cb9-a3d8-44a0-809a-5031c813c6e8',N'AAKRHC06',N'Kazanchis health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',373,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,55,'ed1f8bd5-b89c-4580-926b-f095c613c155',N'AAKHC07',N'Kirkos health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',373,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,55,'df868a2e-af11-4581-814d-ea757cb776df',N'AAKRHC07',N'Kirkos health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',373,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,56,'8be483a1-3a17-492d-b11c-3543067e0c7c',N'AAKHC08',N'Meshualekia health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',373,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,56,'e551e54c-e094-4e96-b520-a93f0d37aadd',N'AAKRHC08',N'Meshualekia health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',373,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,57,'aac6939f-5e28-4f45-a068-ba953b84e268',N'AAKHC01',N'Alembank health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',434,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,57,'eb2158f5-8490-4902-93a6-15ccd1f3bbde',N'AAKLHC01',N'Alembank health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',434,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,58,'6498aa3e-3013-4612-82e0-a25865801a3a',N'AAKHC02',N'Keraniyo health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',434,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,58,'4695f749-1097-4fdf-96a9-cf60b3fcb5ce',N'AAKLHC02',N'Keraniyo health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',434,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,59,'630d752e-105d-4a3e-b106-3eb6a7cb0e68',N'AAKHC03',N'Woreda 1 health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',434,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,59,'7b2f2a1a-4fea-4d04-a766-76f20e6c032d',N'AAKLHC03',N'Woreda 1 health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',434,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,60,'9bc529ed-319b-45bd-ba70-77215ed87d94',N'AAKHC04',N'Woreda 3 health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',434,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,60,'51863ba0-4903-40d0-86de-8c07b5e9f5cc',N'AAKLHC04',N'Woreda 3 health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',434,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,61,'b8ab12c4-2313-45b1-89fc-585f2be78b93',N'AAKHC05',N'Woreda 5 health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',434,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,61,'ec48f388-e1b7-4404-b177-b1484c64c599',N'AAKLHC05',N'Woreda 5 health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',434,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,62,'8ce83b1e-eda2-413b-8e08-de8c585291a2',N'AAKHC06',N'Woreda 6 health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',434,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,62,'7e00936b-45a9-4ec0-b747-259e623ae5d2',N'AAKLHC06',N'Woreda 6 health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',434,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,63,'c3c4d12f-6246-4362-97ee-f1ffb07e2290',N'AAKHC07',N'Woreda 9 health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',434,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,63,'377c6eb3-4a04-4587-bd5a-6768390a6de5',N'AAKLHC07',N'Woreda 9 health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',434,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,64,'6d4641b1-dc30-4b6b-999b-b26a20a2d935',N'AALKHC01',N'Amoraw health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',501,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,64,'da6f997c-b9b2-475c-b500-0f671840b139',N'AALKHC01',N'Amoraw health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',501,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,65,'187eeac4-5220-43a5-869c-26af161f5de1',N'AALKHC02',N'Bole Arabsa health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',501,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,65,'293f69f8-186c-4ba5-b799-3a526bf8e007',N'AALKHC02',N'Bole Arabsa health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',501,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,66,'8baa2725-9475-406c-aaf8-9a16c30e8109',N'AALKHC03',N'Goro health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',501,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,66,'f6c09a61-aac8-46c4-94ed-49c6381faf26',N'AALKHC03',N'Goro health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',501,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,67,'c290476e-f8f5-4d66-be98-cdc7cfe3eb8b',N'AALKHC04',N'Woreda14 Hidase health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',501,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,67,'dee9b331-b779-4c11-9b70-bb1324930cb3',N'AALKHC04',N'Woreda14 Hidase health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',501,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,68,'0a18fabc-629a-473f-8492-af2e6336aacb',N'AALKHC05',N'Meri health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',501,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,68,'e21d8ff0-8aba-4f2e-9651-e8a2af3be249',N'AALKHC05',N'Meri health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',501,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,69,'fa77c959-8e09-4cf5-9c0f-34c5748f6bc4',N'AALKHC06',N'Summit health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',501,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,69,'6ccdf92d-f303-4633-90fb-6bc4e8a04827',N'AALKHC06',N'Summit health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',501,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,70,'416a3e2a-cd20-4e9c-8ae8-0c7723018b41',N'AALKHC07',N'Reay health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',501,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,70,'a5e2ce73-fddd-4dd6-a192-7243d0c8f2bf',N'AALKHC07',N'Reay health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',501,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,71,'8ddf3bc7-3c20-41e1-b9b5-c6f1fee4e9c6',N'AALKHC08',N'Woreda 2 health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',501,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,71,'a4134514-8192-440f-b675-c50c3465acf5',N'AALKHC08',N'Woreda 2 health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',501,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,72,'5705b559-142b-4b01-97cd-fb72799649c3',N'AALKHC09',N'Yeka Abado health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',501,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,72,'eab12bed-9576-4b47-a40e-269400482555',N'AALKHC09',N'Yeka Abado health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',501,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,73,'f258a610-5675-4851-a077-5e3bc5de34cc',N'AALHC01',N'Abinet health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',586,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,73,'de243f80-9430-4092-8399-e613e37666f9',N'AALDHC01',N'Abinet health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',586,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,74,'1e098c32-f151-40df-9c7c-dabf883c9e98',N'AALHC02',N'Beletishachew health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',586,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,74,'a709b5bd-2c79-4472-a779-2866487d20cd',N'AALDHC02',N'Beletishachew health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',586,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,75,'1849e7cf-5f5e-4559-b881-88d68a8e5c01',N'AALHC03',N'Dagim hidase health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',586,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,75,'3ecd83b7-a5be-4875-b77b-c938a4327bea',N'AALDHC03',N'Dagim hidase health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',586,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,76,'6b4fb6f5-8531-4847-9980-3bd0305f5511',N'AALHC04',N'General jagama kalo health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',586,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,76,'53c0998d-3643-4703-9097-53bffc82baca',N'AALDHC04',N'General jagama kalo health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',586,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,77,'a41a9b10-04af-4fe1-8082-232701eb282e',N'AALHC05',N'Hidase fire health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',586,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,77,'ce8d666a-713b-4f1a-952e-33ec32d800de',N'AALDHC05',N'Hidase fire health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',586,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,78,'27eb7b96-e1f0-444c-830b-163424024b4c',N'AALHC06',N'Lideta health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',586,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,78,'8069e739-4a92-497a-a572-e9bacce04d47',N'AALDHC06',N'Lideta health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',586,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,79,'a6de435f-b9eb-4c89-a0b0-e4da4c637828',N'AALHC07',N'Woreda 4 health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',586,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,79,'423dd185-4cac-45a9-85de-a27b494a60f3',N'AALDHC07',N'Woreda 4 health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',586,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,80,'9768b618-34b2-4103-8cc0-4c183c5c6ed9',N'AALHC08',N'Tekelhaymanot health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',586,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,80,'601a0d5b-82be-43ad-861c-38069fc534e2',N'AALDHC08',N'Tekelhaymanot health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',586,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,81,'a9e80412-32d3-4b92-a249-6c876ce5b509',N'AANHC01',N'NSL no1 health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',647,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,81,'1b8aaa0f-27d8-420c-a36f-648843622489',N'AANSHC01',N'NSL no1 health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',647,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,82,'098ef35f-57e9-4fae-a8f6-54466bda6c70',N'AANHC02',N'Woreda 1 health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',647,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,82,'e4129730-c61d-4e05-8944-f2ee21239b6f',N'AANSHC02',N'Woreda 1 health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',647,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,83,'3c0e5b9e-3678-4720-a2fa-547e66005f1b',N'AANHC03',N'Woreda 2 health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',647,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,83,'8b4e68b3-ec22-471e-b96d-77b785cb42a0',N'AANSHC03',N'Woreda 2 health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',647,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,84,'97c6c871-d0e8-47a4-b3a7-027ef58cdb4c',N'AANHC04',N'Woreda 5 health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',647,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,84,'f4460e19-2f08-4de9-aac9-e95230652f8c',N'AANSHC04',N'Woreda 5 health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',647,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,85,'36738149-9aee-493b-bf89-8aafd69fc4a3',N'AANHC05',N'Woreda 6 health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',647,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,85,'ca0c9839-ba37-4123-98b2-e31f0a70c6ce',N'AANSHC05',N'Woreda 6 health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',647,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,86,'dc5f0653-e788-4214-8721-bb72453c14ac',N'AANHC06',N'Woreda 10 health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',647,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,86,'dabc70fe-59b9-40b5-9508-15e40590956d',N'AANSHC06',N'Woreda 10 health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',647,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,87,'3237434b-a6dc-407e-b760-11cc3bcb99b2',N'AANHC07',N'Woreda 11 health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',647,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,87,'3c1b082f-6992-443d-9386-b0647c985f3e',N'AANSHC07',N'Woreda 11 health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',647,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,88,'1714156c-be3f-44a1-9ee7-a30a312c06e3',N'AANHC08',N'Woreda 12 health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',647,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,88,'98684a8e-c34b-4dba-af2f-6f46421509c7',N'AANSHC08',N'Woreda 12 health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',647,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,89,'5b531ad0-dd8d-4b40-95f1-31ab1b9abd01',N'AAYHC01',N'Entoto no 1 health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',738,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,89,'cbb27270-22ee-407b-b4d7-895a5abfe5b0',N'AAYKHC01',N'Entoto no 1 health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',738,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,90,'d9abe792-fbbc-45f8-8ebe-77e14c5f2067',N'AAYHC02',N'Entoto no 2 health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',738,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,90,'d4d8bfc7-5f64-47b4-a62f-47742ecce3eb',N'AAYKHC02',N'Entoto no 2 health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',738,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,91,'0ed0e3d4-4829-4138-a410-323f5b62593d',N'AAYHC03',N'Koria zemachochi health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',738,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,91,'b082eee4-f47e-4f54-89b3-35454a705f02',N'AAYKHC03',N'Koria zemachochi health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',738,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,92,'c1acb505-7db9-4e45-a19c-16c5c03a540e',N'AAYHC04',N'Kotebe health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',738,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,92,'38ddb48b-ea1a-4cc0-b8ee-5992209230b9',N'AAYKHC04',N'Kotebe health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',738,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,93,'648c5baa-58fc-4bb8-8859-aef3ce3a6d13',N'AAYHC05',N'Woreda 1 health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',738,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,93,'667cd543-071d-47ab-8a6a-2f1b8ae7a8c4',N'AAYKHC05',N'Woreda 1 health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',738,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,94,'00a35608-c131-4af3-81de-7387174f33c5',N'AAYHC06',N'Woreda 7 health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',738,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,94,'1f1e1592-ed8e-490d-a544-49d3485b42c1',N'AAYKHC06',N'Woreda 7 health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',738,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,95,'1d95840e-355e-48e4-a1ef-0fdbaf8c0c1b',N'AAYHC07',N'Woreda 8 health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',738,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,95,'2dbb62e3-1090-43b9-9a4f-785c07912c89',N'AAYKHC07',N'Woreda 8 health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',738,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,96,'f5f5e144-7157-4029-9e4a-ba49ec90e861',N'AAYHC08',N'Woreda 10 health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',738,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,96,'e3f5d932-7a65-4740-81a7-8eff8766b3ab',N'AAYKHC08',N'Woreda 10 health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',738,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,97,'1d92a3e9-35ad-4638-bba6-2ff77873117a',N'AAYHC09',N'Woreda 12 health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',738,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,97,'d9f7de64-c18b-42d2-9fe9-97a1529fff07',N'AAYKHC09',N'Woreda 12 health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',738,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,98,'c84eebdc-7d47-4153-9b70-b9c3fb86784d',N'AAYHC10',N'Yeka health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',738,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,98,'5e95da34-5ae1-46c9-92b1-778f983b33c5',N'AAYKHC10',N'Yeka health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',738,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,99,'40c55c6f-44a6-4b24-b6bf-3d0925f86b6c',N'AAYHC11',N'Ferensay Health Center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',738,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,99,'b732917a-456d-4896-ac77-77023a4e4257',N'AAYKHC11',N'Ferensay Health Center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',738,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,100,'9e360026-7879-4b4f-badb-a58ac8f9ff4d',N'AAYHC12',N'Korea Meterian Memorial Health Center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',738,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,100,'f9cdf399-e035-4218-a4bd-c8f2e6728aa6',N'AAYKHC12',N'Korea Meterian Memorial Health Center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',738,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,101,'31a1fefc-bfa5-47e7-9dee-fc810ec55401',N'AAYHC13',N'Abuare Health Center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',738,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,101,'14591259-e250-4ae2-811b-3fe16c53e7f8',N'AAYKHC13',N'Abuare Health Center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',738,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
-VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,102,'c7e8eee5-d494-4405-a461-709fc8da86fe',N'AAYHC14',N'Chefe Health Center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',738,6,NULL);
+VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,102,'75580065-ba9a-4e23-8050-a8519dd59754',N'AAYKHC14',N'Chefe Health Center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',738,6,NULL);
 
 
 -- tblBatchRun
