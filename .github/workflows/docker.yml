@@ -19,9 +19,9 @@ jobs:
         password: ${{ secrets.GITHUB_TOKEN }}
     - name: Build the pgsql EMPTY Docker image
       run: |
-         docker build . --target base --tag ghcr.io/openimis/openimis-pgsql:${{ github.event.inputs.tag }}-base
-         docker push ghcr.io/openimis/openimis-pgsql:${{ github.event.inputs.tag }}-base
+         docker build . --target base --tag ghcr.io/yabtsegaaschalew/openimis-pgsql:${{ github.event.inputs.tag }}-base
+         docker push ghcr.io/yabtsegaaschalew/openimis-pgsql:${{ github.event.inputs.tag }}-base
     - name: Build the pgsql DEMO Docker image
       run: |
-         docker build . --tag ghcr.io/openimis/openimis-pgsql:${{ github.event.inputs.tag }}
-         docker push ghcr.io/openimis/openimis-pgsql:${{ github.event.inputs.tag }}
+         docker build . --tag ghcr.io/yabtsegaaschalew/openimis-pgsql:${{ github.event.inputs.tag }}
+         docker push ghcr.io/yabtsegaaschalew/openimis-pgsql:${{ github.event.inputs.tag }}
