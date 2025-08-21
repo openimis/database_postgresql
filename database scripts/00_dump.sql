@@ -8952,8 +8952,7 @@ VALUES ('f0415c4d-b392-4bb7-80ca-be9b312a4e46', 3, 'AA_AK_01', 'Woreda 1', 2,
 INSERT INTO "tblLocations" 
 ("RowId", "LocationId", "LocationCode", "LocationName", "ParentLocationId", 
  "LocationType", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserId", 
- "MalePopulation", "FemalePopulation", "OtherPopulation", "Families", "LocationUUID")
-VALUES ('e38109bb-13a6-4230-ac9f-3c55cc15a7b9', 4, 'AA_AK_01', 'Ketena 01', 3, 
+ "MalePopulation", "FemalePopulation", "OtherPopulation", "Families", "LocationUUID")VALUES ('e38109bb-13a6-4230-ac9f-3c55cc15a7b9', 4, 'AA_AK_01', 'Ketena 01', 3, 
  'K', CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 
  NULL, NULL, NULL, NULL, '6a00d817-b515-408b-8c07-3f5975aa5fb4');
 

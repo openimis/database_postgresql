@@ -6824,8 +6824,7 @@ VALUES ('fc759b7f-53ad-4348-b11d-24bc8c9f2adc', 815, 'AA_Y_13_', 'Ketena 04', 81
 INSERT INTO "tblLocations" 
 ("RowId", "LocationId", "LocationCode", "LocationName", "ParentLocationId", 
  "LocationType", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserId", 
- "MalePopulation", "FemalePopulation", "OtherPopulation", "Families", "LocationUUID")
-VALUES ('da704387-1b8d-479a-8ff3-4f7bab6c68b4', 816, 'AA_Y_13_', 'Ketena 05', 811, 
+ "MalePopulation", "FemalePopulation", "OtherPopulation", "Families", "LocationUUID")VALUES ('da704387-1b8d-479a-8ff3-4f7bab6c68b4', 816, 'AA_Y_13_', 'Ketena 05', 811, 
  'K', CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 
  NULL, NULL, NULL, NULL, 'c80d7492-feb1-4fe7-932d-8f1580dc5a58');
 -- tblHFSublevel

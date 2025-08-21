@@ -6979,8 +6979,7 @@ VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,79,'423dd185-4
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
 VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,80,'601a0d5b-82be-43ad-861c-38069fc534e2',N'AALDHC08',N'Tekelhaymanot health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',586,6,NULL);
-INSERT INTO "tblHF"
-("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
+INSERT INTO "tblHF"("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
 VALUES (CAST(N'2025-01-01T00:00:00.000' AS timestamptz),NULL,NULL,81,'1b8aaa0f-27d8-420c-a36f-648843622489',N'AANSHC01',N'NSL no1 health center',N'',N'C',N'',N'',N'',N'',N'O',0::boolean,1,5,N'G',647,6,NULL);
 INSERT INTO "tblHF"
 ("ValidityFrom","ValidityTo","LegacyID","HFID","HFUUID","HFCode","HFName","AccCode","HFLevel","HFAddress","Phone","Fax","eMail","HFCareType","OffLine","AuditUserID","PLItemID","LegalForm","LocationId","PLServiceID","HFSublevel")
