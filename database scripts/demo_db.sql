@@ -1073,36 +1073,944 @@ INSERT INTO "tblLocations" ("RowId", "LocationId", "LocationCode", "LocationName
 
 -- tblHF
 -- Total facilities (one per Woreda): 134
-INSERT INTO "tblHF" ("HfID", "HFCode", "HFName", "LegalForm", "HFLevel", "HFSublevel", "HFAddress", "LocationId", "Phone", "Fax", "eMail", "HFCareType", "PLServiceID", "PLItemID", "AccCode", "OffLine", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID", "HfUUID") VALUES (1, N'JMHOS001', N'Jambero District Hospital', N'G', N'H', NULL, N'Lantern Road 21\nP.O.Box 3425', 55, N'', N'', N'', N'B', 7, 8, N'DL0002', 0::boolean, CAST(N'2017-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 2, N'026e088a-fbd5-474e-8d42-069958a34127');
-INSERT INTO "tblHF" ("HfID", "HFCode", "HFName", "LegalForm", "HFLevel", "HFSublevel", "HFAddress", "LocationId", "Phone", "Fax", "eMail", "HFCareType", "PLServiceID", "PLItemID", "AccCode", "OffLine", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID", "HfUUID") VALUES (2, N'RAHOS001', N'Rapta District Hospital', N'G', N'H', NULL, N'Danchi Road 234\nP.O.Box 2715', 17, N'', N'', N'', N'B', 7, 8, N'', 0::boolean, CAST(N'2017-01-01T00:00:00.000' AS timestamptz), NULL, 2, 2, N'd8a25f21-f36a-4d4d-9e58-1db8ffbe7036');
-INSERT INTO "tblHF" ("HfID", "HFCode", "HFName", "LegalForm", "HFLevel", "HFSublevel", "HFAddress", "LocationId", "Phone", "Fax", "eMail", "HFCareType", "PLServiceID", "PLItemID", "AccCode", "OffLine", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID", "HfUUID") VALUES (3, N'RAHO001', N'Rapta District Hospital', N'G', N'H', NULL, N'Danchi Road 234\nP.O.Box 2715', 17, N'', N'', N'', N'B', 7, 8, N'', 0::boolean, CAST(N'2016-01-01T00:00:00.000' AS timestamptz), CAST(N'2016-12-31T00:00:00.000' AS timestamptz), 2, 2, N'221cad8d-2a7d-46d5-8369-734d405b519f');
-INSERT INTO "tblHF" ("HfID", "HFCode", "HFName", "LegalForm", "HFLevel", "HFSublevel", "HFAddress", "LocationId", "Phone", "Fax", "eMail", "HFCareType", "PLServiceID", "PLItemID", "AccCode", "OffLine", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID", "HfUUID") VALUES (4, N'UPHOS001', N'Uptol District Hospital', N'G', N'H', NULL, N'Abijan road 2512\nP.O.Box 9564', 56, N'', N'', N'', N'B', 7, 8, N'', 0::boolean, CAST(N'2017-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 2, N'e5131cc5-bcd6-460c-b6bb-54da3f2506f2');
-INSERT INTO "tblHF" ("HfID", "HFCode", "HFName", "LegalForm", "HFLevel", "HFSublevel", "HFAddress", "LocationId", "Phone", "Fax", "eMail", "HFCareType", "PLServiceID", "PLItemID", "AccCode", "OffLine", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID", "HfUUID") VALUES (5, N'ROHOS001', N'Rajo District Hospital', N'G', N'H', NULL, N'Calogri road 176\nP.O.Box 7453', 19, N'', N'', N'', N'B', 17, 6, N'', 0::boolean, CAST(N'2017-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 2, N'1ebc4a36-d143-45eb-ab93-d7e973d8f14b');
-INSERT INTO "tblHF" ("HfID", "HFCode", "HFName", "LegalForm", "HFLevel", "HFSublevel", "HFAddress", "LocationId", "Phone", "Fax", "eMail", "HFCareType", "PLServiceID", "PLItemID", "AccCode", "OffLine", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID", "HfUUID") VALUES (6, N'VIHOS001', N'Vida District Hospital', N'G', N'H', NULL, N'Eolard road 78\nP.O.Box 3785', 20, N'', N'', N'', N'B', 17, 6, N'', 0::boolean, CAST(N'2017-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 2, N'05c0d312-7cf2-4e21-8004-a78eec008f5a');
-INSERT INTO "tblHF" ("HfID", "HFCode", "HFName", "LegalForm", "HFLevel", "HFSublevel", "HFAddress", "LocationId", "Phone", "Fax", "eMail", "HFCareType", "PLServiceID", "PLItemID", "AccCode", "OffLine", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID", "HfUUID") VALUES (7, N'JMHC001', N'Jamini Health Centre', N'G', N'C', NULL, N'Reduci road 42', 55, N'', N'', N'', N'O', 6, 5, N'', 0::boolean, CAST(N'2017-01-01T00:00:00.000' AS timestamptz), NULL, 7, 2, N'7e0d15b9-aa6f-4e2e-9b69-0332f2d78a07');
-INSERT INTO "tblHF" ("HfID", "HFCode", "HFName", "LegalForm", "HFLevel", "HFSublevel", "HFAddress", "LocationId", "Phone", "Fax", "eMail", "HFCareType", "PLServiceID", "PLItemID", "AccCode", "OffLine", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID", "HfUUID") VALUES (8, N'RAHC001', N'Zuja Health Centre', N'G', N'C', NULL, N'Tubi road 26', 17, N'', N'', N'', N'O', 6, 5, N'', 0::boolean, CAST(N'2017-01-01T00:00:00.000' AS timestamptz), NULL, 8, 2, N'8403fe10-dc83-41a0-90a2-9fab63928275');
-INSERT INTO "tblHF" ("HfID", "HFCode", "HFName", "LegalForm", "HFLevel", "HFSublevel", "HFAddress", "LocationId", "Phone", "Fax", "eMail", "HFCareType", "PLServiceID", "PLItemID", "AccCode", "OffLine", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID", "HfUUID") VALUES (9, N'UPHC001', N'Tzah Health Centre', N'G', N'C', NULL, N'Gufui road 84', 56, N'', N'', N'', N'O', 6, 5, N'', 0::boolean, CAST(N'2017-01-01T00:00:00.000' AS timestamptz), NULL, 9, 2, N'fb83cef0-d793-4574-a5e7-9481d7c4777a');
-INSERT INTO "tblHF" ("HfID", "HFCode", "HFName", "LegalForm", "HFLevel", "HFSublevel", "HFAddress", "LocationId", "Phone", "Fax", "eMail", "HFCareType", "PLServiceID", "PLItemID", "AccCode", "OffLine", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID", "HfUUID") VALUES (10, N'ROHC001', N'Fulhui Health Centre', N'G', N'C', NULL, N'Layout road 867', 19, N'', N'', N'', N'O', 16, 9, N'', 0::boolean, CAST(N'2017-01-01T00:00:00.000' AS timestamptz), NULL, 10, 2, N'0e095e81-9d5d-4b39-9ac7-91d22509bf06');
-INSERT INTO "tblHF" ("HfID", "HFCode", "HFName", "LegalForm", "HFLevel", "HFSublevel", "HFAddress", "LocationId", "Phone", "Fax", "eMail", "HFCareType", "PLServiceID", "PLItemID", "AccCode", "OffLine", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID", "HfUUID") VALUES (11, N'VIHC001', N'Juilöa Health Centre', N'G', N'C', NULL, N'Guazn Health Centre', 20, N'', N'', N'', N'O', 16, 9, N'', 0::boolean, CAST(N'2017-01-01T00:00:00.000' AS timestamptz), NULL, 11, 2, N'bc1da96c-ad55-4978-9dca-59335adc7469');
-INSERT INTO "tblHF" ("HfID", "HFCode", "HFName", "LegalForm", "HFLevel", "HFSublevel", "HFAddress", "LocationId", "Phone", "Fax", "eMail", "HFCareType", "PLServiceID", "PLItemID", "AccCode", "OffLine", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID", "HfUUID") VALUES (12, N'JMDP001', N'Huda Dispensary', N'G', N'D', NULL, N'Jolywel road 675', 55, N'', N'', N'', N'O', 5, 1, N'', 0::boolean, CAST(N'2017-01-01T00:00:00.000' AS timestamptz), NULL, 12, 2, N'079e777b-b12b-4763-a646-3773e906f9d7');
-INSERT INTO "tblHF" ("HfID", "HFCode", "HFName", "LegalForm", "HFLevel", "HFSublevel", "HFAddress", "LocationId", "Phone", "Fax", "eMail", "HFCareType", "PLServiceID", "PLItemID", "AccCode", "OffLine", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID", "HfUUID") VALUES (13, N'RADS002', N'Kitua Dispensary', N'G', N'D', NULL, N'Lado road 756', 17, N'', N'', N'', N'O', 5, 1, N'', 0::boolean, CAST(N'2017-01-01T00:00:00.000' AS timestamptz), NULL, 13, 2, N'f988cfd9-eba2-446e-8e6d-bfcbf8e53b9a');
-INSERT INTO "tblHF" ("HfID", "HFCode", "HFName", "LegalForm", "HFLevel", "HFSublevel", "HFAddress", "LocationId", "Phone", "Fax", "eMail", "HFCareType", "PLServiceID", "PLItemID", "AccCode", "OffLine", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID", "HfUUID") VALUES (14, N'RADS001', N'Kitua Dispensary', N'G', N'C', NULL, N'Lado road 756', 17, N'', N'', N'', N'O', NULL, NULL, N'', 0::boolean, CAST(N'2016-01-01T00:00:00.000' AS timestamptz), CAST(N'2016-12-31T00:00:00.000' AS timestamptz), 13, 2, N'b04d9279-b88f-48a8-bde0-90447b4f8341');
-INSERT INTO "tblHF" ("HfID", "HFCode", "HFName", "LegalForm", "HFLevel", "HFSublevel", "HFAddress", "LocationId", "Phone", "Fax", "eMail", "HFCareType", "PLServiceID", "PLItemID", "AccCode", "OffLine", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID", "HfUUID") VALUES (15, N'JMDP001', N'Huda dispensary', N'G', N'D', NULL, N'Jolywel road 675', 55, N'', N'', N'', N'O', NULL, NULL, N'', 0::boolean, CAST(N'2016-01-01T00:00:00.000' AS timestamptz), CAST(N'2016-12-31T00:00:00.000' AS timestamptz), 12, 2, N'42af9132-1caf-4980-a88e-02463662c3c0');
-INSERT INTO "tblHF" ("HfID", "HFCode", "HFName", "LegalForm", "HFLevel", "HFSublevel", "HFAddress", "LocationId", "Phone", "Fax", "eMail", "HFCareType", "PLServiceID", "PLItemID", "AccCode", "OffLine", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID", "HfUUID") VALUES (16, N'UPDS001', N'Loai Dispensary', N'G', N'D', NULL, N'Zuta road 862', 56, N'', N'', N'', N'O', 5, 1, N'', 0::boolean, CAST(N'2017-01-01T00:00:00.000' AS timestamptz), NULL, 16, 2, N'1d43dfbf-c160-4373-b774-bee598c83262');
-INSERT INTO "tblHF" ("HfID", "HFCode", "HFName", "LegalForm", "HFLevel", "HFSublevel", "HFAddress", "LocationId", "Phone", "Fax", "eMail", "HFCareType", "PLServiceID", "PLItemID", "AccCode", "OffLine", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID", "HfUUID") VALUES (17, N'RADS001', N'Yuahn Dispensary', N'G', N'D', NULL, N'Gunda road 723', 19, N'', N'', N'', N'O', 14, 2, N'', 0::boolean, CAST(N'2017-01-01T00:00:00.000' AS timestamptz), NULL, 17, 2, N'8782079c-aa5b-43c3-97ab-b8b8a3fa5df2');
-INSERT INTO "tblHF" ("HfID", "HFCode", "HFName", "LegalForm", "HFLevel", "HFSublevel", "HFAddress", "LocationId", "Phone", "Fax", "eMail", "HFCareType", "PLServiceID", "PLItemID", "AccCode", "OffLine", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID", "HfUUID") VALUES (18, N'VIDS001', N'Viru Dispensary', N'G', N'D', NULL, N'Uitly road 1', 20, N'', N'', N'', N'O', 14, 2, N'', 0::boolean, CAST(N'2017-01-01T00:00:00.000' AS timestamptz), NULL, 18, 2, N'5c08e764-04ed-42a0-bbea-fe0ea4c08a3f');
-INSERT INTO "tblHF" ("HfID", "HFCode", "HFName", "LegalForm", "HFLevel", "HFSublevel", "HFAddress", "LocationId", "Phone", "Fax", "eMail", "HFCareType", "PLServiceID", "PLItemID", "AccCode", "OffLine", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID", "HfUUID") VALUES (19, N'RADS001', N'Kitua Dispensary', N'G', N'D', NULL, N'Lado road 756', 17, N'', N'', N'', N'O', NULL, NULL, N'', 0::boolean, CAST(N'2016-01-01T00:00:00.000' AS timestamptz), CAST(N'2016-12-31T00:00:00.000' AS timestamptz), 13, 2, N'0f3f2132-4a14-47e7-882a-4e97078782da');
-INSERT INTO "tblHF" ("HfID", "HFCode", "HFName", "LegalForm", "HFLevel", "HFSublevel", "HFAddress", "LocationId", "Phone", "Fax", "eMail", "HFCareType", "PLServiceID", "PLItemID", "AccCode", "OffLine", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID", "HfUUID") VALUES (20, N'VIDS001', N'Viru Dispensary', N'G', N'D', NULL, N'Uitly road 1', 20, N'', N'', N'', N'O', NULL, NULL, N'', 0::boolean, CAST(N'2016-01-01T00:00:00.000' AS timestamptz), CAST(N'2016-12-31T00:00:00.000' AS timestamptz), 18, 2, N'f13ef73e-d6e6-445b-8930-552403503986');
-INSERT INTO "tblHF" ("HfID", "HFCode", "HFName", "LegalForm", "HFLevel", "HFSublevel", "HFAddress", "LocationId", "Phone", "Fax", "eMail", "HFCareType", "PLServiceID", "PLItemID", "AccCode", "OffLine", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID", "HfUUID") VALUES (21, N'VIHC001', N'Juilöa Health Centre', N'G', N'C', NULL, N'Guazn Health Centre', 20, N'', N'', N'', N'O', NULL, NULL, N'', 0::boolean, CAST(N'2016-01-01T00:00:00.000' AS timestamptz), CAST(N'2016-12-31T00:00:00.000' AS timestamptz), 11, 2, N'8ab9bc91-4a56-40fd-9262-3720700bfc1c');
-INSERT INTO "tblHF" ("HfID", "HFCode", "HFName", "LegalForm", "HFLevel", "HFSublevel", "HFAddress", "LocationId", "Phone", "Fax", "eMail", "HFCareType", "PLServiceID", "PLItemID", "AccCode", "OffLine", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID", "HfUUID") VALUES (22, N'UPHC001', N'Tzah Health Centre', N'G', N'C', NULL, N'Gufui road 84', 56, N'', N'', N'', N'O', NULL, NULL, N'', 0::boolean, CAST(N'2016-01-01T00:00:00.000' AS timestamptz), CAST(N'2016-12-31T00:00:00.000' AS timestamptz), 9, 2, N'8c4e661f-8090-40c6-8885-30966ee152c6');
-INSERT INTO "tblHF" ("HfID", "HFCode", "HFName", "LegalForm", "HFLevel", "HFSublevel", "HFAddress", "LocationId", "Phone", "Fax", "eMail", "HFCareType", "PLServiceID", "PLItemID", "AccCode", "OffLine", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID", "HfUUID") VALUES (23, N'UPDS001', N'Loai Dispensary', N'G', N'D', NULL, N'Zuta road 862', 56, N'', N'', N'', N'O', NULL, NULL, N'', 0::boolean, CAST(N'2016-01-01T00:00:00.000' AS timestamptz), CAST(N'2016-12-31T00:00:00.000' AS timestamptz), 16, 2, N'44bde314-a991-4f3e-abc3-90be82f46dc3');
-INSERT INTO "tblHF" ("HfID", "HFCode", "HFName", "LegalForm", "HFLevel", "HFSublevel", "HFAddress", "LocationId", "Phone", "Fax", "eMail", "HFCareType", "PLServiceID", "PLItemID", "AccCode", "OffLine", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID", "HfUUID") VALUES (24, N'ROHC001', N'Fulhui Health Centre', N'G', N'C', NULL, N'Layout road 867', 19, N'', N'', N'', N'O', NULL, NULL, N'', 0::boolean, CAST(N'2016-01-01T00:00:00.000' AS timestamptz), CAST(N'2016-12-31T00:00:00.000' AS timestamptz), 10, 2, N'7bded7a7-da68-4bea-9670-e499281f9b8b');
-INSERT INTO "tblHF" ("HfID", "HFCode", "HFName", "LegalForm", "HFLevel", "HFSublevel", "HFAddress", "LocationId", "Phone", "Fax", "eMail", "HFCareType", "PLServiceID", "PLItemID", "AccCode", "OffLine", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID", "HfUUID") VALUES (25, N'RAHC001', N'Zuja Health Centre', N'G', N'C', NULL, N'Tubi road 26', 17, N'', N'', N'', N'O', NULL, NULL, N'', 0::boolean, CAST(N'2016-01-01T00:00:00.000' AS timestamptz), CAST(N'2016-12-31T00:00:00.000' AS timestamptz), 8, 2, N'239a2e7a-a917-4ccf-83c3-cf30b2d409ad');
-INSERT INTO "tblHF" ("HfID", "HFCode", "HFName", "LegalForm", "HFLevel", "HFSublevel", "HFAddress", "LocationId", "Phone", "Fax", "eMail", "HFCareType", "PLServiceID", "PLItemID", "AccCode", "OffLine", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID", "HfUUID") VALUES (26, N'RADS002', N'Kitua Dispensary', N'G', N'D', NULL, N'Lado road 756', 17, N'', N'', N'', N'O', NULL, NULL, N'', 0::boolean, CAST(N'2016-01-01T00:00:00.000' AS timestamptz), CAST(N'2016-12-31T00:00:00.000' AS timestamptz), 13, 2, N'd288d860-2c20-4609-a36f-d25dd92c2fef');
-INSERT INTO "tblHF" ("HfID", "HFCode", "HFName", "LegalForm", "HFLevel", "HFSublevel", "HFAddress", "LocationId", "Phone", "Fax", "eMail", "HFCareType", "PLServiceID", "PLItemID", "AccCode", "OffLine", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID", "HfUUID") VALUES (27, N'RADS001', N'Yuahn Dispensary', N'G', N'D', NULL, N'Gunda road 723', 19, N'', N'', N'', N'O', NULL, NULL, N'', 0::boolean, CAST(N'2016-01-01T00:00:00.000' AS timestamptz), CAST(N'2016-12-31T00:00:00.000' AS timestamptz), 17, 2, N'c5f64695-ef67-44b0-aa47-9392e799bd67');
-INSERT INTO "tblHF" ("HfID", "HFCode", "HFName", "LegalForm", "HFLevel", "HFSublevel", "HFAddress", "LocationId", "Phone", "Fax", "eMail", "HFCareType", "PLServiceID", "PLItemID", "AccCode", "OffLine", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID", "HfUUID") VALUES (28, N'JMDP001', N'Huda Dispensary', N'G', N'D', NULL, N'Jolywel road 675', 55, N'', N'', N'', N'O', NULL, NULL, N'', 0::boolean, CAST(N'2016-01-01T00:00:00.000' AS timestamptz), CAST(N'2016-12-31T00:00:00.000' AS timestamptz), 12, 2, N'9f931acf-cc80-4d56-a17e-c54afc0c2e80');
-INSERT INTO "tblHF" ("HfID", "HFCode", "HFName", "LegalForm", "HFLevel", "HFSublevel", "HFAddress", "LocationId", "Phone", "Fax", "eMail", "HFCareType", "PLServiceID", "PLItemID", "AccCode", "OffLine", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID", "HfUUID") VALUES (29, N'JMHC001', N'Jamini Health Centre', N'G', N'C', NULL, N'Reduci road 42', 55, N'', N'', N'', N'O', 5, 1, N'', 0::boolean, CAST(N'2016-01-01T00:00:00.000' AS timestamptz), CAST(N'2016-12-31T00:00:00.000' AS timestamptz), 7, 2, N'a7526c02-3444-43f5-b151-b7b12cafc9e0');
-
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (1, 'AK01C1', 'Woreda 01 Health Center', 'G', 'C', NULL, 'Address not specified', 10003,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '8bcf31a3-f652-4925-a920-79026258ce75');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (2, 'AK02C1', 'Woreda 02 Health Center', 'G', 'C', NULL, 'Address not specified', 10009,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '9b40a402-0314-4d97-9891-203440ce4ce8');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (3, 'AK03C1', 'Woreda 03 Health Center', 'G', 'C', NULL, 'Address not specified', 10015,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'a62901ca-b8e0-42aa-92d9-7231cd751607');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (4, 'AK04C1', 'Woreda 04 Health Center', 'G', 'C', NULL, 'Address not specified', 10021,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '30f89f05-aedd-47ee-baae-02d1e32c58e7');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (5, 'AK05C1', 'Woreda 05 Health Center', 'G', 'C', NULL, 'Address not specified', 10027,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '0adf8610-c91e-4d62-b165-9247cb4f38df');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (6, 'AK06C1', 'Woreda 06 Health Center', 'G', 'C', NULL, 'Address not specified', 10033,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'c3732bbc-cb80-4869-b645-2959febd2c99');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (7, 'AK07C1', 'Woreda 07 Health Center', 'G', 'C', NULL, 'Address not specified', 10039,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '3461f4e1-021d-45e0-b667-73c686e2e236');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (8, 'AK08C1', 'Woreda 08 Health Center', 'G', 'C', NULL, 'Address not specified', 10045,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '94354540-0910-41de-943c-952307b1397a');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (9, 'AK09C1', 'Woreda 09 Health Center', 'G', 'C', NULL, 'Address not specified', 10051,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'b0aed89a-c4f7-44af-9faa-4167e16c1357');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (10, 'AK10C1', 'Woreda 10 Health Center', 'G', 'C', NULL, 'Address not specified', 10057,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'de0d20e2-07b3-4c8f-9554-19f16c82bb45');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (11, 'AK11C1', 'Woreda 11 Health Center', 'G', 'C', NULL, 'Address not specified', 10063,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '9d1fd8b9-3418-450e-9fb4-044ca08ecd79');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (12, 'AK12C1', 'Woreda 12 Health Center', 'G', 'C', NULL, 'Address not specified', 10069,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'a4d2461a-5194-4e15-8bb3-821b8065a1d3');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (13, 'AK13C1', 'Woreda 13 Health Center', 'G', 'C', NULL, 'Address not specified', 10075,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '4a7b03d7-884b-405c-aceb-b3e28971be64');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (14, 'AK14C1', 'Woreda 14 Health Center', 'G', 'C', NULL, 'Address not specified', 10081,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '1bc4a667-206a-400a-baf7-9c659d132d7c');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (15, 'AK01C1', 'Woreda 01 Health Center', 'G', 'C', NULL, 'Address not specified', 10088,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'a8d0518d-e0a0-4809-b0bd-cd7b5eeb7566');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (16, 'AK02C1', 'Woreda 02 Health Center', 'G', 'C', NULL, 'Address not specified', 10094,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '8af52ed5-976a-4e7f-a705-a12a1708b603');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (17, 'AK03C1', 'Woreda 03 Health Center', 'G', 'C', NULL, 'Address not specified', 10100,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'd676647e-3ed6-4a55-bbc5-871bd989957d');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (18, 'AK04C1', 'Woreda 04 Health Center', 'G', 'C', NULL, 'Address not specified', 10106,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '99a8c739-9197-4e98-abe1-a30ac303e3ed');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (19, 'AK05C1', 'Woreda 05 Health Center', 'G', 'C', NULL, 'Address not specified', 10112,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '46070465-21bd-4f58-b864-2fe3c07122d7');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (20, 'AK06C1', 'Woreda 06 Health Center', 'G', 'C', NULL, 'Address not specified', 10118,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '420f8393-0709-423b-9865-5faa8ce870cf');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (21, 'AK07C1', 'Woreda 07 Health Center', 'G', 'C', NULL, 'Address not specified', 10124,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '53bc83ef-c1b5-4947-8f2f-8b819d7951db');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (22, 'AK08C1', 'Woreda 08 Health Center', 'G', 'C', NULL, 'Address not specified', 10130,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'd5565015-1eef-46e2-a846-ed0d7de2f262');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (23, 'AK09C1', 'Woreda 09 Health Center', 'G', 'C', NULL, 'Address not specified', 10136,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'd0fb4593-7230-4746-898e-d1500ded59bc');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (24, 'AK10C1', 'Woreda 10 Health Center', 'G', 'C', NULL, 'Address not specified', 10142,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '9c7966d8-6e66-4c5d-829a-f38f620fad49');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (25, 'AK11C1', 'Woreda 11 Health Center', 'G', 'C', NULL, 'Address not specified', 10148,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'ce2485f6-eb06-44c2-803b-cd9d7b16ce5a');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (26, 'AK12C1', 'Woreda 12 Health Center', 'G', 'C', NULL, 'Address not specified', 10154,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'f5991da9-93e0-4404-adf7-3dc316a5b219');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (27, 'AK13C1', 'Woreda 13 Health Center', 'G', 'C', NULL, 'Address not specified', 10160,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '3ed30c9c-1dd3-409a-9726-e5920eb7fd6a');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (28, 'AR01C1', 'Woreda 01 Health Center', 'G', 'C', NULL, 'Address not specified', 10167,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'e6554b79-cd59-4166-b61a-970b9bc384c1');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (29, 'AR02C1', 'Woreda 02 Health Center', 'G', 'C', NULL, 'Address not specified', 10173,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'f64154e2-c792-4c0b-b391-596b3711420f');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (30, 'AR03C1', 'Woreda 03 Health Center', 'G', 'C', NULL, 'Address not specified', 10179,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '275f6018-cad0-486f-8234-67a6f448887b');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (31, 'AR04C1', 'Woreda 04 Health Center', 'G', 'C', NULL, 'Address not specified', 10185,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '6a5636d7-4930-4890-a378-a818e751e8da');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (32, 'AR05C1', 'Woreda 05 Health Center', 'G', 'C', NULL, 'Address not specified', 10191,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '2b25148b-41ba-4088-a45e-8a4f3273a527');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (33, 'AR06C1', 'Woreda 06 Health Center', 'G', 'C', NULL, 'Address not specified', 10197,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'e20155f1-a09a-4595-94f1-731fc7efcbae');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (34, 'AR07C1', 'Woreda 07 Health Center', 'G', 'C', NULL, 'Address not specified', 10203,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '60cfb9b3-e798-486a-a547-a1f2ee682490');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (35, 'AR08C1', 'Woreda 08 Health Center', 'G', 'C', NULL, 'Address not specified', 10209,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'bdb27739-cca3-48de-83be-c95a1c73dd64');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (36, 'AR09C1', 'Woreda 09 Health Center', 'G', 'C', NULL, 'Address not specified', 10215,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '45f40ac9-744d-4c85-8eaa-b5a08425d995');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (37, 'AR10C1', 'Woreda 10 Health Center', 'G', 'C', NULL, 'Address not specified', 10221,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '60269d4f-f0ab-4afc-95e9-4e4e4884232a');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (38, 'BO01C1', 'Woreda 01 Health Center', 'G', 'C', NULL, 'Address not specified', 10228,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '62d8c7e0-cc93-4b44-99e7-8e625471bb0f');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (39, 'BO02C1', 'Woreda 02 Health Center', 'G', 'C', NULL, 'Address not specified', 10234,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'da64499a-6a85-48a0-ad67-3a4178996fd9');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (40, 'BO03C1', 'Woreda 03 Health Center', 'G', 'C', NULL, 'Address not specified', 10240,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '7c26870e-03f0-4ea0-87b8-3735ebc34403');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (41, 'BO04C1', 'Woreda 04 Health Center', 'G', 'C', NULL, 'Address not specified', 10246,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '881f380c-2ff9-4696-a26e-0e311a0f1f60');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (42, 'BO05C1', 'Woreda 05 Health Center', 'G', 'C', NULL, 'Address not specified', 10252,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'd75d2969-b0c3-4643-bdcf-b414f922e18f');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (43, 'BO06C1', 'Woreda 06 Health Center', 'G', 'C', NULL, 'Address not specified', 10258,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '20cb2f91-a441-4e11-934a-7d85fdd67c95');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (44, 'BO07C1', 'Woreda 07 Health Center', 'G', 'C', NULL, 'Address not specified', 10264,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '7a5de96e-2e13-4493-8099-134dbe1a7399');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (45, 'BO08C1', 'Woreda 08 Health Center', 'G', 'C', NULL, 'Address not specified', 10270,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '383f6b4d-09ec-46d1-ad43-dd7830531d77');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (46, 'BO09C1', 'Woreda 09 Health Center', 'G', 'C', NULL, 'Address not specified', 10276,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '2937beb8-92f7-4993-9dcb-633a8e82c7f0');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (47, 'BO10C1', 'Woreda 10 Health Center', 'G', 'C', NULL, 'Address not specified', 10282,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'd99406bd-8a09-4096-b0cb-49f70ef85f7b');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (48, 'BO11C1', 'Woreda 11 Health Center', 'G', 'C', NULL, 'Address not specified', 10288,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'bf9f00c5-20ad-4741-baca-5298c8409227');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (49, 'BO12C1', 'Woreda 12 Health Center', 'G', 'C', NULL, 'Address not specified', 10294,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '0c6bb4d2-e03b-4c08-929e-a5e1f57c9484');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (50, 'BO13C1', 'Woreda 13 Health Center', 'G', 'C', NULL, 'Address not specified', 10300,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'f6b3260e-701f-4c39-b39c-b5ee6a84d7a0');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (51, 'BO14C1', 'Woreda 14 Health Center', 'G', 'C', NULL, 'Address not specified', 10306,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '4d8ceb29-75ca-40fd-a747-570d51939709');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (52, 'GU01C1', 'Woreda 01 Health Center', 'G', 'C', NULL, 'Address not specified', 10313,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '4dec3913-b3e9-455f-8fca-b628deca597f');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (53, 'GU02C1', 'Woreda 02 Health Center', 'G', 'C', NULL, 'Address not specified', 10319,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '1e017998-7a7a-4c20-87f2-f404b9980ac1');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (54, 'GU03C1', 'Woreda 03 Health Center', 'G', 'C', NULL, 'Address not specified', 10325,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'a5fe69ae-3c00-4e42-b2bf-3e22290e6cca');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (55, 'GU04C1', 'Woreda 04 Health Center', 'G', 'C', NULL, 'Address not specified', 10331,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '7f42b2ac-cc7e-4bb2-8ba7-e1af3d964eaa');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (56, 'GU05C1', 'Woreda 05 Health Center', 'G', 'C', NULL, 'Address not specified', 10337,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '38b669b0-27ef-4884-baed-cf27fe5828ab');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (57, 'GU06C1', 'Woreda 06 Health Center', 'G', 'C', NULL, 'Address not specified', 10343,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'ebf83545-9782-42cc-902c-2ab2f99344fb');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (58, 'GU07C1', 'Woreda 07 Health Center', 'G', 'C', NULL, 'Address not specified', 10349,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'fea24028-5a25-4fb9-aa26-1626be82584a');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (59, 'GU08C1', 'Woreda 08 Health Center', 'G', 'C', NULL, 'Address not specified', 10355,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'fb2e7b8a-b5b3-4cf9-98b5-9861aac81073');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (60, 'GU09C1', 'Woreda 09 Health Center', 'G', 'C', NULL, 'Address not specified', 10361,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'ac0d7f4b-6ce5-4400-844e-c03ee04de87d');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (61, 'GU10C1', 'Woreda 10 Health Center', 'G', 'C', NULL, 'Address not specified', 10367,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'a0be05ea-4cb4-435c-8f43-f2e2f51ad7fa');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (62, 'KI01C1', 'Woreda 01 Health Center', 'G', 'C', NULL, 'Address not specified', 10374,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '57a2a993-c8b7-4a57-bb48-1e986f5cfba4');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (63, 'KI02C1', 'Woreda 02 Health Center', 'G', 'C', NULL, 'Address not specified', 10380,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '74863744-eff8-4ad6-a56f-087222050ddf');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (64, 'KI03C1', 'Woreda 03 Health Center', 'G', 'C', NULL, 'Address not specified', 10386,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'f192be15-8860-40b6-b1bc-3c6d52f496bb');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (65, 'KI04C1', 'Woreda 04 Health Center', 'G', 'C', NULL, 'Address not specified', 10392,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'eff8cf0b-c1a1-4c98-a976-148d93171a2f');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (66, 'KI05C1', 'Woreda 05 Health Center', 'G', 'C', NULL, 'Address not specified', 10398,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '3224e163-0bce-4f4b-930b-b44249197fef');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (67, 'KI06C1', 'Woreda 06 Health Center', 'G', 'C', NULL, 'Address not specified', 10404,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'a1c340f2-c8a9-4cc0-95fb-262756623140');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (68, 'KI07C1', 'Woreda 07 Health Center', 'G', 'C', NULL, 'Address not specified', 10410,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '03a88920-a7a3-43ae-8c74-ce7a96014b38');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (69, 'KI08C1', 'Woreda 08 Health Center', 'G', 'C', NULL, 'Address not specified', 10416,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '7fb83dea-bab3-45c9-942a-a6eba85139e2');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (70, 'KI09C1', 'Woreda 09 Health Center', 'G', 'C', NULL, 'Address not specified', 10422,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '82410835-fb4f-48f1-a27f-3ec5a16ab105');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (71, 'KI10C1', 'Woreda 10 Health Center', 'G', 'C', NULL, 'Address not specified', 10428,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '00c46239-33bd-4ec4-be7a-4eb66c3b5a80');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (72, 'KK01C1', 'Woreda 01 Health Center', 'G', 'C', NULL, 'Address not specified', 10435,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'e2b0e558-45a0-446a-9dd4-9e85e56ee795');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (73, 'KK02C1', 'Woreda 02 Health Center', 'G', 'C', NULL, 'Address not specified', 10441,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '3c457365-563f-49c3-9f8e-9ad51b5238da');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (74, 'KK03C1', 'Woreda 03 Health Center', 'G', 'C', NULL, 'Address not specified', 10447,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '1757c17c-0870-4d33-91f2-dcab8ad66f1f');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (75, 'KK04C1', 'Woreda 04 Health Center', 'G', 'C', NULL, 'Address not specified', 10453,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'a67bc862-4ede-4260-89d6-844f22719778');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (76, 'KK05C1', 'Woreda 05 Health Center', 'G', 'C', NULL, 'Address not specified', 10459,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '35a1009a-346c-49bb-b72c-8085b869147a');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (77, 'KK06C1', 'Woreda 06 Health Center', 'G', 'C', NULL, 'Address not specified', 10465,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '3be04baf-f1a7-4ca4-9f89-c07013a65f97');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (78, 'KK07C1', 'Woreda 07 Health Center', 'G', 'C', NULL, 'Address not specified', 10471,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '77f64ee8-66da-43f1-9b64-4700971fe4f2');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (79, 'KK08C1', 'Woreda 08 Health Center', 'G', 'C', NULL, 'Address not specified', 10477,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '8cc2c02c-d671-4859-8e75-b7d5e9c4a6e5');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (80, 'KK09C1', 'Woreda 09 Health Center', 'G', 'C', NULL, 'Address not specified', 10483,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '03e900a7-c125-47f5-bd12-62dd86578fb0');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (81, 'KK10C1', 'Woreda 10 Health Center', 'G', 'C', NULL, 'Address not specified', 10489,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'f680c437-f403-4797-81d4-6741f2d7889f');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (82, 'KK11C1', 'Woreda 11 Health Center', 'G', 'C', NULL, 'Address not specified', 10495,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '3500609a-5d59-46ac-8b61-0e9633bb43a1');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (83, 'LK01C1', 'Woreda 01 Health Center', 'G', 'C', NULL, 'Address not specified', 10502,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '076176b0-1097-467f-b3c1-8cbc210b8ac4');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (84, 'LK02C1', 'Woreda 02 Health Center', 'G', 'C', NULL, 'Address not specified', 10508,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '7df5307c-ac80-4452-9e34-81c7f54c312c');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (85, 'LK03C1', 'Woreda 03 Health Center', 'G', 'C', NULL, 'Address not specified', 10514,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '72c67adf-38dd-480f-8178-a57005a75b7e');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (86, 'LK04C1', 'Woreda 04 Health Center', 'G', 'C', NULL, 'Address not specified', 10520,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '494e9970-0cfa-42d7-83e7-9a7b876e108e');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (87, 'LK05C1', 'Woreda 05 Health Center', 'G', 'C', NULL, 'Address not specified', 10526,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '70cd05c0-e21e-44f1-9214-639093a9fc33');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (88, 'LK06C1', 'Woreda 06 Health Center', 'G', 'C', NULL, 'Address not specified', 10532,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '58defe5a-df5b-49b6-898c-1ba758557908');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (89, 'LK07C1', 'Woreda 07 Health Center', 'G', 'C', NULL, 'Address not specified', 10538,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'dc20854f-d507-4769-ab41-0defd0bb2daa');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (90, 'LK08C1', 'Woreda 08 Health Center', 'G', 'C', NULL, 'Address not specified', 10544,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '983bd547-3f92-4ffc-961d-7c3739c071ae');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (91, 'LK09C1', 'Woreda 09 Health Center', 'G', 'C', NULL, 'Address not specified', 10550,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'bf622927-1970-429f-8a39-c7f7a2dc7129');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (92, 'LK10C1', 'Woreda 10 Health Center', 'G', 'C', NULL, 'Address not specified', 10556,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '52d7758d-3b84-4427-802a-1f5425cd4ba2');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (93, 'LK11C1', 'Woreda 11 Health Center', 'G', 'C', NULL, 'Address not specified', 10562,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'e942faa9-74eb-41e9-a5a0-fc4129353646');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (94, 'LK12C1', 'Woreda 12 Health Center', 'G', 'C', NULL, 'Address not specified', 10568,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'bd08d614-e8cc-4623-ae21-349f1e6f73ef');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (95, 'LK13C1', 'Woreda 13 Health Center', 'G', 'C', NULL, 'Address not specified', 10574,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '3cfad607-9215-4eb7-a152-f9cba5ca96fa');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (96, 'LK14C1', 'Woreda 14 Health Center', 'G', 'C', NULL, 'Address not specified', 10580,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'ad8e2a32-f08d-4219-b090-d9991eeaa7bd');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (97, 'LI01C1', 'Woreda 01 Health Center', 'G', 'C', NULL, 'Address not specified', 10587,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'cddfa767-f3a4-4b0e-9124-71cb3bd54d8c');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (98, 'LI02C1', 'Woreda 02 Health Center', 'G', 'C', NULL, 'Address not specified', 10593,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'e916642f-5ae2-4ad6-8b03-3a0d01841a92');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (99, 'LI03C1', 'Woreda 03 Health Center', 'G', 'C', NULL, 'Address not specified', 10599,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '40b07a7b-c27f-4f6c-8611-ba942b606183');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (100, 'LI04C1', 'Woreda 04 Health Center', 'G', 'C', NULL, 'Address not specified', 10605,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '4789a60a-6d34-4850-b383-a0bdb155105f');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (101, 'LI05C1', 'Woreda 05 Health Center', 'G', 'C', NULL, 'Address not specified', 10611,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '5ab858ec-14fe-4037-8230-924fe7ef52ae');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (102, 'LI06C1', 'Woreda 06 Health Center', 'G', 'C', NULL, 'Address not specified', 10617,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '3bbae9ee-b9d1-4982-9676-f7ccd080def8');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (103, 'LI07C1', 'Woreda 07 Health Center', 'G', 'C', NULL, 'Address not specified', 10623,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'adb500ba-fbfd-4479-b348-cb921b41ee0b');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (104, 'LI08C1', 'Woreda 08 Health Center', 'G', 'C', NULL, 'Address not specified', 10629,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'ad89a43c-3d50-46ee-9c59-216d0a82af9d');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (105, 'LI09C1', 'Woreda 09 Health Center', 'G', 'C', NULL, 'Address not specified', 10635,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '6bf00914-3d1c-48e2-945b-0293a97ed488');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (106, 'LI10C1', 'Woreda 10 Health Center', 'G', 'C', NULL, 'Address not specified', 10641,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '5440d118-44e0-4fe9-b978-9568930f1321');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (107, 'NS01C1', 'Woreda 01 Health Center', 'G', 'C', NULL, 'Address not specified', 10648,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '657f8374-584a-45e6-82f5-944d5813375d');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (108, 'NS02C1', 'Woreda 02 Health Center', 'G', 'C', NULL, 'Address not specified', 10654,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'a5db16f3-b3d7-4010-b78f-4fbd54fe1a10');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (109, 'NS03C1', 'Woreda 03 Health Center', 'G', 'C', NULL, 'Address not specified', 10660,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '8adb1854-2757-4ce8-8248-fb72860cd8f2');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (110, 'NS04C1', 'Woreda 04 Health Center', 'G', 'C', NULL, 'Address not specified', 10666,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'a4530402-4703-45b0-aa8a-7b1e4800421d');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (111, 'NS05C1', 'Woreda 05 Health Center', 'G', 'C', NULL, 'Address not specified', 10672,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'da031741-9256-48c8-934a-aba164688477');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (112, 'NS06C1', 'Woreda 06 Health Center', 'G', 'C', NULL, 'Address not specified', 10678,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'e5819d9e-8527-4c53-801c-4632001dae0c');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (113, 'NS07C1', 'Woreda 07 Health Center', 'G', 'C', NULL, 'Address not specified', 10684,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '8a6c869d-2444-445d-a296-48ca17bec365');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (114, 'NS08C1', 'Woreda 08 Health Center', 'G', 'C', NULL, 'Address not specified', 10690,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '48261deb-785c-460d-a5e7-bf931d5060ee');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (115, 'NS09C1', 'Woreda 09 Health Center', 'G', 'C', NULL, 'Address not specified', 10696,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '218ca8ff-baae-49ee-9469-98323a01965c');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (116, 'NS10C1', 'Woreda 10 Health Center', 'G', 'C', NULL, 'Address not specified', 10702,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'c66e8425-15bf-4d9d-b7c0-a57a973b250b');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (117, 'NS11C1', 'Woreda 11 Health Center', 'G', 'C', NULL, 'Address not specified', 10708,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'f58733e6-46a8-4eb3-b4bc-139413e60005');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (118, 'NS12C1', 'Woreda 12 Health Center', 'G', 'C', NULL, 'Address not specified', 10714,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'd4c3e973-d56d-46b4-99f4-249cd3e984b4');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (119, 'NS13C1', 'Woreda 13 Health Center', 'G', 'C', NULL, 'Address not specified', 10720,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'd2e76711-e009-4eed-afa6-f6f81f71ffca');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (120, 'NS14C1', 'Woreda 14 Health Center', 'G', 'C', NULL, 'Address not specified', 10726,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '44f792d8-2ed3-4871-a571-3ee31840b4b8');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (121, 'NS15C1', 'Woreda 15 Health Center', 'G', 'C', NULL, 'Address not specified', 10732,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '9ff7d4ce-4e88-4a8e-85c2-397415f71561');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (122, 'YE01C1', 'Woreda 01 Health Center', 'G', 'C', NULL, 'Address not specified', 10739,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '0bd40c28-4a61-462e-9499-8570d6c49543');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (123, 'YE02C1', 'Woreda 02 Health Center', 'G', 'C', NULL, 'Address not specified', 10745,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '5050f549-b0a6-4760-b691-3c6cc87acece');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (124, 'YE03C1', 'Woreda 03 Health Center', 'G', 'C', NULL, 'Address not specified', 10751,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '82d49fa0-e591-4167-8450-9d92a0640b37');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (125, 'YE04C1', 'Woreda 04 Health Center', 'G', 'C', NULL, 'Address not specified', 10757,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'a2292936-831d-4eb4-9f1d-69a739ac76e7');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (126, 'YE05C1', 'Woreda 05 Health Center', 'G', 'C', NULL, 'Address not specified', 10763,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '35c9dd60-003d-4e94-904c-4ab3aabbd3d2');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (127, 'YE06C1', 'Woreda 06 Health Center', 'G', 'C', NULL, 'Address not specified', 10769,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '7d36a541-8804-4f6e-9cda-cba5f93e37cf');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (128, 'YE07C1', 'Woreda 07 Health Center', 'G', 'C', NULL, 'Address not specified', 10775,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '7475d853-eb52-4226-95d1-8b9506dc5020');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (129, 'YE08C1', 'Woreda 08 Health Center', 'G', 'C', NULL, 'Address not specified', 10781,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'd138a247-c615-4b0a-b6d1-8252faf39f33');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (130, 'YE09C1', 'Woreda 09 Health Center', 'G', 'C', NULL, 'Address not specified', 10787,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '9cb2a376-b0e0-4348-9d5e-f76d38292f4e');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (131, 'YE10C1', 'Woreda 10 Health Center', 'G', 'C', NULL, 'Address not specified', 10793,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '55adf1b5-63fd-49a4-a1eb-1bda28bb107b');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (132, 'YE11C1', 'Woreda 11 Health Center', 'G', 'C', NULL, 'Address not specified', 10799,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'f017f35f-78fd-49c9-8836-303fd5eaf3ac');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (133, 'YE12C1', 'Woreda 12 Health Center', 'G', 'C', NULL, 'Address not specified', 10805,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'cebacddc-c52d-4e54-8a88-2b432fd9312b');
+INSERT INTO "tblHF"
+("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
+"Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
+"ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
+VALUES (134, 'YE13C1', 'Woreda 13 Health Center', 'G', 'C', NULL, 'Address not specified', 10811,
+'', '', '', 'O', NULL, NULL, '', 0::boolean,
+CAST(N'2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '905fd33b-1c42-4810-ad56-d6386aa7a23b');
 -- tblBatchRun
 INSERT INTO "tblBatchRun" ("RunID", "LocationId", "RunDate", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID", "RunYear", "RunMonth") VALUES (1, NULL, CAST(N'2019-01-24T00:46:41.027' AS timestamptz), CAST(N'2019-01-24T00:46:41.027' AS timestamptz), NULL, NULL, 1, 2018, 1);
 INSERT INTO "tblBatchRun" ("RunID", "LocationId", "RunDate", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID", "RunYear", "RunMonth") VALUES (2, 55, CAST(N'2019-04-21T05:08:14.080' AS timestamptz), CAST(N'2019-04-21T05:08:14.080' AS timestamptz), NULL, NULL, 1, 2019, 3);
