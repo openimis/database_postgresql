@@ -7682,7 +7682,6 @@ INSERT INTO "tblHF"
 VALUES (134, 'YE13C1', 'Woreda 13 Health Center', 'G', 'C', NULL, 'Address not specified', 811,
 '', '', '', 'O', NULL, NULL, '', FALSE,
 CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '905fd33b-1c42-4810-ad56-d6386aa7a23b');
-
 -- tblBatchRun
 INSERT INTO "tblBatchRun" ("RunID", "LocationId", "RunDate", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID", "RunYear", "RunMonth") VALUES (1, NULL, CAST(N'2019-01-24T00:46:41.027' AS timestamptz), CAST(N'2019-01-24T00:46:41.027' AS timestamptz), NULL, NULL, 1, 2018, 1);
 INSERT INTO "tblBatchRun" ("RunID", "LocationId", "RunDate", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID", "RunYear", "RunMonth") VALUES (2, 55, CAST(N'2019-04-21T05:08:14.080' AS timestamptz), CAST(N'2019-04-21T05:08:14.080' AS timestamptz), NULL, NULL, 1, 2019, 3);

@@ -6847,6 +6847,7 @@ COMMIT;
 -- tblHF
 
 
+
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
