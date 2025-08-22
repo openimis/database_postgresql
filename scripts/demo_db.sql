@@ -1123,21 +1123,21 @@ INSERT INTO "tblLocations"
  "MalePopulation", "FemalePopulation", "OtherPopulation", "Families", "LocationUUID")
 VALUES ('1',  1,   'AA',   'Addis Ababa',   NULL,   
  'C',   CAST(N'2024-01-01T00:00:00.000' AS timestamptz),   NULL,   NULL,   1,   
- NULL,   NULL,   NULL,   NULL,   N'86eafcb7-d258-41b8-884f-87b12a684bd0');
+ NULL,   NULL,   NULL,   NULL, N'5345ef14-12ab-4e98-a07c-1e08d7105df4');
 INSERT INTO "tblLocations" 
 ("RowId", "LocationId", "LocationCode", "LocationName", "ParentLocationId", 
  "LocationType", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserId", 
  "MalePopulation", "FemalePopulation", "OtherPopulation", "Families", "LocationUUID")
 VALUES ('2',  2,   'AA_AK',   'Addis Ketema',  1,   
  'S',   CAST(N'2024-01-01T00:00:00.000' AS timestamptz),   NULL,   NULL,   1,   
- NULL,   NULL,   NULL,   NULL,   N'e6fef01b-83f7-4ed1-bfbb-aa61f86175a9');
+ NULL,   NULL,   NULL,   NULL, N'e50da11b-3e50-483c-846b-0991c13c0935');
 INSERT INTO "tblLocations" 
 ("RowId", "LocationId", "LocationCode", "LocationName", "ParentLocationId", 
  "LocationType", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserId", 
  "MalePopulation", "FemalePopulation", "OtherPopulation", "Families", "LocationUUID")
 VALUES ('3',  3,   'AA_AK_01',   'Woreda 1',  2,   
  'W',   CAST(N'2024-01-01T00:00:00.000' AS timestamptz),   NULL,   NULL,   1,   
- NULL,   NULL,   NULL,   NULL,   N'1ddf6713-e183-446e-b3c2-91e2949a71e2');
+ NULL,   NULL,   NULL,   NULL,   N'8ed4eb0d-61ae-4022-8b4c-3076a619f957');
 INSERT INTO "tblLocations" 
 ("RowId", "LocationId", "LocationCode", "LocationName", "ParentLocationId", 
  "LocationType", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserId", 
