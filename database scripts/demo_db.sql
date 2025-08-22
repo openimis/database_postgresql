@@ -6742,7 +6742,8 @@ INSERT INTO "tblHFSublevel" ("HFSublevel", "HFSublevelDesc", "SortOrder", "AltLa
 COMMIT;
 
 -- tblHF
--- Total facilities (one per Woreda): 134
+
+
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
@@ -6756,931 +6757,931 @@ INSERT INTO "tblHF"
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (2, 'AK02C1', 'Woreda 02 Health Center', 'G', 'C', NULL, 'Address not specified', 9,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '9b40a402-0314-4d97-9891-203440ce4ce8');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '9b40a402-0314-4d97-9891-203440ce4ce8');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (3, 'AK03C1', 'Woreda 03 Health Center', 'G', 'C', NULL, 'Address not specified', 15,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, 'a62901ca-b8e0-42aa-92d9-7231cd751607');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'a62901ca-b8e0-42aa-92d9-7231cd751607');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (4, 'AK04C1', 'Woreda 04 Health Center', 'G', 'C', NULL, 'Address not specified', 21,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '30f89f05-aedd-47ee-baae-02d1e32c58e7');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '30f89f05-aedd-47ee-baae-02d1e32c58e7');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (5, 'AK05C1', 'Woreda 05 Health Center', 'G', 'C', NULL, 'Address not specified', 27,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '0adf8610-c91e-4d62-b165-9247cb4f38df');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '0adf8610-c91e-4d62-b165-9247cb4f38df');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (6, 'AK06C1', 'Woreda 06 Health Center', 'G', 'C', NULL, 'Address not specified', 33,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, 'c3732bbc-cb80-4869-b645-2959febd2c99');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'c3732bbc-cb80-4869-b645-2959febd2c99');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (7, 'AK07C1', 'Woreda 07 Health Center', 'G', 'C', NULL, 'Address not specified', 39,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '3461f4e1-021d-45e0-b667-73c686e2e236');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '3461f4e1-021d-45e0-b667-73c686e2e236');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (8, 'AK08C1', 'Woreda 08 Health Center', 'G', 'C', NULL, 'Address not specified', 45,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '94354540-0910-41de-943c-952307b1397a');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '94354540-0910-41de-943c-952307b1397a');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (9, 'AK09C1', 'Woreda 09 Health Center', 'G', 'C', NULL, 'Address not specified', 51,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, 'b0aed89a-c4f7-44af-9faa-4167e16c1357');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'b0aed89a-c4f7-44af-9faa-4167e16c1357');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (10, 'AK10C1', 'Woreda 10 Health Center', 'G', 'C', NULL, 'Address not specified', 57,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, 'de0d20e2-07b3-4c8f-9554-19f16c82bb45');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'de0d20e2-07b3-4c8f-9554-19f16c82bb45');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (11, 'AK11C1', 'Woreda 11 Health Center', 'G', 'C', NULL, 'Address not specified', 63,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '9d1fd8b9-3418-450e-9fb4-044ca08ecd79');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '9d1fd8b9-3418-450e-9fb4-044ca08ecd79');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (12, 'AK12C1', 'Woreda 12 Health Center', 'G', 'C', NULL, 'Address not specified', 69,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, 'a4d2461a-5194-4e15-8bb3-821b8065a1d3');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'a4d2461a-5194-4e15-8bb3-821b8065a1d3');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (13, 'AK13C1', 'Woreda 13 Health Center', 'G', 'C', NULL, 'Address not specified', 75,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '4a7b03d7-884b-405c-aceb-b3e28971be64');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '4a7b03d7-884b-405c-aceb-b3e28971be64');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (14, 'AK14C1', 'Woreda 14 Health Center', 'G', 'C', NULL, 'Address not specified', 81,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '1bc4a667-206a-400a-baf7-9c659d132d7c');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '1bc4a667-206a-400a-baf7-9c659d132d7c');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (15, 'AK01C1', 'Woreda 01 Health Center', 'G', 'C', NULL, 'Address not specified', 88,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, 'a8d0518d-e0a0-4809-b0bd-cd7b5eeb7566');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'a8d0518d-e0a0-4809-b0bd-cd7b5eeb7566');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (16, 'AK02C1', 'Woreda 02 Health Center', 'G', 'C', NULL, 'Address not specified', 94,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '8af52ed5-976a-4e7f-a705-a12a1708b603');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '8af52ed5-976a-4e7f-a705-a12a1708b603');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (17, 'AK03C1', 'Woreda 03 Health Center', 'G', 'C', NULL, 'Address not specified', 100,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, 'd676647e-3ed6-4a55-bbc5-871bd989957d');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'd676647e-3ed6-4a55-bbc5-871bd989957d');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (18, 'AK04C1', 'Woreda 04 Health Center', 'G', 'C', NULL, 'Address not specified', 106,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '99a8c739-9197-4e98-abe1-a30ac303e3ed');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '99a8c739-9197-4e98-abe1-a30ac303e3ed');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (19, 'AK05C1', 'Woreda 05 Health Center', 'G', 'C', NULL, 'Address not specified', 112,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '46070465-21bd-4f58-b864-2fe3c07122d7');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '46070465-21bd-4f58-b864-2fe3c07122d7');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (20, 'AK06C1', 'Woreda 06 Health Center', 'G', 'C', NULL, 'Address not specified', 118,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '420f8393-0709-423b-9865-5faa8ce870cf');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '420f8393-0709-423b-9865-5faa8ce870cf');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (21, 'AK07C1', 'Woreda 07 Health Center', 'G', 'C', NULL, 'Address not specified', 124,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '53bc83ef-c1b5-4947-8f2f-8b819d7951db');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '53bc83ef-c1b5-4947-8f2f-8b819d7951db');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (22, 'AK08C1', 'Woreda 08 Health Center', 'G', 'C', NULL, 'Address not specified', 130,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, 'd5565015-1eef-46e2-a846-ed0d7de2f262');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'd5565015-1eef-46e2-a846-ed0d7de2f262');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (23, 'AK09C1', 'Woreda 09 Health Center', 'G', 'C', NULL, 'Address not specified', 136,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, 'd0fb4593-7230-4746-898e-d1500ded59bc');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'd0fb4593-7230-4746-898e-d1500ded59bc');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (24, 'AK10C1', 'Woreda 10 Health Center', 'G', 'C', NULL, 'Address not specified', 142,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '9c7966d8-6e66-4c5d-829a-f38f620fad49');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '9c7966d8-6e66-4c5d-829a-f38f620fad49');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (25, 'AK11C1', 'Woreda 11 Health Center', 'G', 'C', NULL, 'Address not specified', 148,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, 'ce2485f6-eb06-44c2-803b-cd9d7b16ce5a');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'ce2485f6-eb06-44c2-803b-cd9d7b16ce5a');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (26, 'AK12C1', 'Woreda 12 Health Center', 'G', 'C', NULL, 'Address not specified', 154,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, 'f5991da9-93e0-4404-adf7-3dc316a5b219');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'f5991da9-93e0-4404-adf7-3dc316a5b219');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (27, 'AK13C1', 'Woreda 13 Health Center', 'G', 'C', NULL, 'Address not specified', 160,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '3ed30c9c-1dd3-409a-9726-e5920eb7fd6a');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '3ed30c9c-1dd3-409a-9726-e5920eb7fd6a');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (28, 'AR01C1', 'Woreda 01 Health Center', 'G', 'C', NULL, 'Address not specified', 167,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, 'e6554b79-cd59-4166-b61a-970b9bc384c1');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'e6554b79-cd59-4166-b61a-970b9bc384c1');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (29, 'AR02C1', 'Woreda 02 Health Center', 'G', 'C', NULL, 'Address not specified', 173,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, 'f64154e2-c792-4c0b-b391-596b3711420f');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'f64154e2-c792-4c0b-b391-596b3711420f');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (30, 'AR03C1', 'Woreda 03 Health Center', 'G', 'C', NULL, 'Address not specified', 179,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '275f6018-cad0-486f-8234-67a6f448887b');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '275f6018-cad0-486f-8234-67a6f448887b');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (31, 'AR04C1', 'Woreda 04 Health Center', 'G', 'C', NULL, 'Address not specified', 185,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '6a5636d7-4930-4890-a378-a818e751e8da');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '6a5636d7-4930-4890-a378-a818e751e8da');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (32, 'AR05C1', 'Woreda 05 Health Center', 'G', 'C', NULL, 'Address not specified', 191,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '2b25148b-41ba-4088-a45e-8a4f3273a527');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '2b25148b-41ba-4088-a45e-8a4f3273a527');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (33, 'AR06C1', 'Woreda 06 Health Center', 'G', 'C', NULL, 'Address not specified', 197,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, 'e20155f1-a09a-4595-94f1-731fc7efcbae');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'e20155f1-a09a-4595-94f1-731fc7efcbae');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (34, 'AR07C1', 'Woreda 07 Health Center', 'G', 'C', NULL, 'Address not specified', 203,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '60cfb9b3-e798-486a-a547-a1f2ee682490');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '60cfb9b3-e798-486a-a547-a1f2ee682490');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (35, 'AR08C1', 'Woreda 08 Health Center', 'G', 'C', NULL, 'Address not specified', 209,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, 'bdb27739-cca3-48de-83be-c95a1c73dd64');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'bdb27739-cca3-48de-83be-c95a1c73dd64');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (36, 'AR09C1', 'Woreda 09 Health Center', 'G', 'C', NULL, 'Address not specified', 215,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '45f40ac9-744d-4c85-8eaa-b5a08425d995');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '45f40ac9-744d-4c85-8eaa-b5a08425d995');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (37, 'AR10C1', 'Woreda 10 Health Center', 'G', 'C', NULL, 'Address not specified', 221,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '60269d4f-f0ab-4afc-95e9-4e4e4884232a');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '60269d4f-f0ab-4afc-95e9-4e4e4884232a');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (38, 'BO01C1', 'Woreda 01 Health Center', 'G', 'C', NULL, 'Address not specified', 228,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '62d8c7e0-cc93-4b44-99e7-8e625471bb0f');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '62d8c7e0-cc93-4b44-99e7-8e625471bb0f');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (39, 'BO02C1', 'Woreda 02 Health Center', 'G', 'C', NULL, 'Address not specified', 234,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, 'da64499a-6a85-48a0-ad67-3a4178996fd9');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'da64499a-6a85-48a0-ad67-3a4178996fd9');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (40, 'BO03C1', 'Woreda 03 Health Center', 'G', 'C', NULL, 'Address not specified', 240,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '7c26870e-03f0-4ea0-87b8-3735ebc34403');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '7c26870e-03f0-4ea0-87b8-3735ebc34403');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (41, 'BO04C1', 'Woreda 04 Health Center', 'G', 'C', NULL, 'Address not specified', 246,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '881f380c-2ff9-4696-a26e-0e311a0f1f60');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '881f380c-2ff9-4696-a26e-0e311a0f1f60');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (42, 'BO05C1', 'Woreda 05 Health Center', 'G', 'C', NULL, 'Address not specified', 252,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, 'd75d2969-b0c3-4643-bdcf-b414f922e18f');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'd75d2969-b0c3-4643-bdcf-b414f922e18f');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (43, 'BO06C1', 'Woreda 06 Health Center', 'G', 'C', NULL, 'Address not specified', 258,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '20cb2f91-a441-4e11-934a-7d85fdd67c95');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '20cb2f91-a441-4e11-934a-7d85fdd67c95');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (44, 'BO07C1', 'Woreda 07 Health Center', 'G', 'C', NULL, 'Address not specified', 264,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '7a5de96e-2e13-4493-8099-134dbe1a7399');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '7a5de96e-2e13-4493-8099-134dbe1a7399');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (45, 'BO08C1', 'Woreda 08 Health Center', 'G', 'C', NULL, 'Address not specified', 270,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '383f6b4d-09ec-46d1-ad43-dd7830531d77');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '383f6b4d-09ec-46d1-ad43-dd7830531d77');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (46, 'BO09C1', 'Woreda 09 Health Center', 'G', 'C', NULL, 'Address not specified', 276,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '2937beb8-92f7-4993-9dcb-633a8e82c7f0');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '2937beb8-92f7-4993-9dcb-633a8e82c7f0');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (47, 'BO10C1', 'Woreda 10 Health Center', 'G', 'C', NULL, 'Address not specified', 282,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, 'd99406bd-8a09-4096-b0cb-49f70ef85f7b');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'd99406bd-8a09-4096-b0cb-49f70ef85f7b');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (48, 'BO11C1', 'Woreda 11 Health Center', 'G', 'C', NULL, 'Address not specified', 288,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, 'bf9f00c5-20ad-4741-baca-5298c8409227');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'bf9f00c5-20ad-4741-baca-5298c8409227');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (49, 'BO12C1', 'Woreda 12 Health Center', 'G', 'C', NULL, 'Address not specified', 294,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '0c6bb4d2-e03b-4c08-929e-a5e1f57c9484');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '0c6bb4d2-e03b-4c08-929e-a5e1f57c9484');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (50, 'BO13C1', 'Woreda 13 Health Center', 'G', 'C', NULL, 'Address not specified', 300,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, 'f6b3260e-701f-4c39-b39c-b5ee6a84d7a0');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'f6b3260e-701f-4c39-b39c-b5ee6a84d7a0');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (51, 'BO14C1', 'Woreda 14 Health Center', 'G', 'C', NULL, 'Address not specified', 306,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '4d8ceb29-75ca-40fd-a747-570d51939709');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '4d8ceb29-75ca-40fd-a747-570d51939709');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (52, 'GU01C1', 'Woreda 01 Health Center', 'G', 'C', NULL, 'Address not specified', 313,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '4dec3913-b3e9-455f-8fca-b628deca597f');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '4dec3913-b3e9-455f-8fca-b628deca597f');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (53, 'GU02C1', 'Woreda 02 Health Center', 'G', 'C', NULL, 'Address not specified', 319,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '1e017998-7a7a-4c20-87f2-f404b9980ac1');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '1e017998-7a7a-4c20-87f2-f404b9980ac1');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (54, 'GU03C1', 'Woreda 03 Health Center', 'G', 'C', NULL, 'Address not specified', 325,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, 'a5fe69ae-3c00-4e42-b2bf-3e22290e6cca');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'a5fe69ae-3c00-4e42-b2bf-3e22290e6cca');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (55, 'GU04C1', 'Woreda 04 Health Center', 'G', 'C', NULL, 'Address not specified', 331,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '7f42b2ac-cc7e-4bb2-8ba7-e1af3d964eaa');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '7f42b2ac-cc7e-4bb2-8ba7-e1af3d964eaa');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (56, 'GU05C1', 'Woreda 05 Health Center', 'G', 'C', NULL, 'Address not specified', 337,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '38b669b0-27ef-4884-baed-cf27fe5828ab');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '38b669b0-27ef-4884-baed-cf27fe5828ab');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (57, 'GU06C1', 'Woreda 06 Health Center', 'G', 'C', NULL, 'Address not specified', 343,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, 'ebf83545-9782-42cc-902c-2ab2f99344fb');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'ebf83545-9782-42cc-902c-2ab2f99344fb');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (58, 'GU07C1', 'Woreda 07 Health Center', 'G', 'C', NULL, 'Address not specified', 349,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, 'fea24028-5a25-4fb9-aa26-1626be82584a');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'fea24028-5a25-4fb9-aa26-1626be82584a');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (59, 'GU08C1', 'Woreda 08 Health Center', 'G', 'C', NULL, 'Address not specified', 355,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, 'fb2e7b8a-b5b3-4cf9-98b5-9861aac81073');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'fb2e7b8a-b5b3-4cf9-98b5-9861aac81073');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (60, 'GU09C1', 'Woreda 09 Health Center', 'G', 'C', NULL, 'Address not specified', 361,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, 'ac0d7f4b-6ce5-4400-844e-c03ee04de87d');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'ac0d7f4b-6ce5-4400-844e-c03ee04de87d');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (61, 'GU10C1', 'Woreda 10 Health Center', 'G', 'C', NULL, 'Address not specified', 367,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, 'a0be05ea-4cb4-435c-8f43-f2e2f51ad7fa');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'a0be05ea-4cb4-435c-8f43-f2e2f51ad7fa');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (62, 'KI01C1', 'Woreda 01 Health Center', 'G', 'C', NULL, 'Address not specified', 374,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '57a2a993-c8b7-4a57-bb48-1e986f5cfba4');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '57a2a993-c8b7-4a57-bb48-1e986f5cfba4');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (63, 'KI02C1', 'Woreda 02 Health Center', 'G', 'C', NULL, 'Address not specified', 380,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '74863744-eff8-4ad6-a56f-087222050ddf');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '74863744-eff8-4ad6-a56f-087222050ddf');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (64, 'KI03C1', 'Woreda 03 Health Center', 'G', 'C', NULL, 'Address not specified', 386,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, 'f192be15-8860-40b6-b1bc-3c6d52f496bb');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'f192be15-8860-40b6-b1bc-3c6d52f496bb');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (65, 'KI04C1', 'Woreda 04 Health Center', 'G', 'C', NULL, 'Address not specified', 392,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, 'eff8cf0b-c1a1-4c98-a976-148d93171a2f');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'eff8cf0b-c1a1-4c98-a976-148d93171a2f');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (66, 'KI05C1', 'Woreda 05 Health Center', 'G', 'C', NULL, 'Address not specified', 398,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '3224e163-0bce-4f4b-930b-b44249197fef');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '3224e163-0bce-4f4b-930b-b44249197fef');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (67, 'KI06C1', 'Woreda 06 Health Center', 'G', 'C', NULL, 'Address not specified', 404,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, 'a1c340f2-c8a9-4cc0-95fb-262756623140');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'a1c340f2-c8a9-4cc0-95fb-262756623140');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (68, 'KI07C1', 'Woreda 07 Health Center', 'G', 'C', NULL, 'Address not specified', 410,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '03a88920-a7a3-43ae-8c74-ce7a96014b38');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '03a88920-a7a3-43ae-8c74-ce7a96014b38');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (69, 'KI08C1', 'Woreda 08 Health Center', 'G', 'C', NULL, 'Address not specified', 416,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '7fb83dea-bab3-45c9-942a-a6eba85139e2');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '7fb83dea-bab3-45c9-942a-a6eba85139e2');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (70, 'KI09C1', 'Woreda 09 Health Center', 'G', 'C', NULL, 'Address not specified', 422,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '82410835-fb4f-48f1-a27f-3ec5a16ab105');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '82410835-fb4f-48f1-a27f-3ec5a16ab105');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (71, 'KI10C1', 'Woreda 10 Health Center', 'G', 'C', NULL, 'Address not specified', 428,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '00c46239-33bd-4ec4-be7a-4eb66c3b5a80');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '00c46239-33bd-4ec4-be7a-4eb66c3b5a80');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (72, 'KK01C1', 'Woreda 01 Health Center', 'G', 'C', NULL, 'Address not specified', 435,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, 'e2b0e558-45a0-446a-9dd4-9e85e56ee795');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'e2b0e558-45a0-446a-9dd4-9e85e56ee795');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (73, 'KK02C1', 'Woreda 02 Health Center', 'G', 'C', NULL, 'Address not specified', 441,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '3c457365-563f-49c3-9f8e-9ad51b5238da');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '3c457365-563f-49c3-9f8e-9ad51b5238da');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (74, 'KK03C1', 'Woreda 03 Health Center', 'G', 'C', NULL, 'Address not specified', 447,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '1757c17c-0870-4d33-91f2-dcab8ad66f1f');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '1757c17c-0870-4d33-91f2-dcab8ad66f1f');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (75, 'KK04C1', 'Woreda 04 Health Center', 'G', 'C', NULL, 'Address not specified', 453,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, 'a67bc862-4ede-4260-89d6-844f22719778');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'a67bc862-4ede-4260-89d6-844f22719778');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (76, 'KK05C1', 'Woreda 05 Health Center', 'G', 'C', NULL, 'Address not specified', 459,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '35a9a-346c-49bb-b72c-8085b869147a');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '35a9a-346c-49bb-b72c-8085b869147a');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (77, 'KK06C1', 'Woreda 06 Health Center', 'G', 'C', NULL, 'Address not specified', 465,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '3be04baf-f1a7-4ca4-9f89-c07013a65f97');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '3be04baf-f1a7-4ca4-9f89-c07013a65f97');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (78, 'KK07C1', 'Woreda 07 Health Center', 'G', 'C', NULL, 'Address not specified', 471,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '77f64ee8-66da-43f1-9b64-4700971fe4f2');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '77f64ee8-66da-43f1-9b64-4700971fe4f2');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (79, 'KK08C1', 'Woreda 08 Health Center', 'G', 'C', NULL, 'Address not specified', 477,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '8cc2c02c-d671-4859-8e75-b7d5e9c4a6e5');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '8cc2c02c-d671-4859-8e75-b7d5e9c4a6e5');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (80, 'KK09C1', 'Woreda 09 Health Center', 'G', 'C', NULL, 'Address not specified',483,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '03e900a7-c125-47f5-bd12-62dd86578fb0');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '03e900a7-c125-47f5-bd12-62dd86578fb0');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (81, 'KK10C1', 'Woreda 10 Health Center', 'G', 'C', NULL, 'Address not specified', 489,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, 'f680c437-f403-4797-81d4-6741f2d7889f');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'f680c437-f403-4797-81d4-6741f2d7889f');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (82, 'KK11C1', 'Woreda 11 Health Center', 'G', 'C', NULL, 'Address not specified', 495,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '3500609a-5d59-46ac-8b61-0e9633bb43a1');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '3500609a-5d59-46ac-8b61-0e9633bb43a1');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (83, 'LK01C1', 'Woreda 01 Health Center', 'G', 'C', NULL, 'Address not specified', 502,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '076176b0-1097-467f-b3c1-8cbc210b8ac4');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '076176b0-1097-467f-b3c1-8cbc210b8ac4');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (84, 'LK02C1', 'Woreda 02 Health Center', 'G', 'C', NULL, 'Address not specified', 508,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '7df5307c-ac80-4452-9e34-81c7f54c312c');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '7df5307c-ac80-4452-9e34-81c7f54c312c');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (85, 'LK03C1', 'Woreda 03 Health Center', 'G', 'C', NULL, 'Address not specified', 514,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '72c67adf-38dd-480f-8178-a57005a75b7e');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '72c67adf-38dd-480f-8178-a57005a75b7e');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (86, 'LK04C1', 'Woreda 04 Health Center', 'G', 'C', NULL, 'Address not specified', 520,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '494e9970-0cfa-42d7-83e7-9a7b876e108e');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '494e9970-0cfa-42d7-83e7-9a7b876e108e');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (87, 'LK05C1', 'Woreda 05 Health Center', 'G', 'C', NULL, 'Address not specified', 526,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '70cd05c0-e21e-44f1-9214-639093a9fc33');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '70cd05c0-e21e-44f1-9214-639093a9fc33');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (88, 'LK06C1', 'Woreda 06 Health Center', 'G', 'C', NULL, 'Address not specified', 532,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '58defe5a-df5b-49b6-898c-1ba758557908');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '58defe5a-df5b-49b6-898c-1ba758557908');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (89, 'LK07C1', 'Woreda 07 Health Center', 'G', 'C', NULL, 'Address not specified', 538,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, 'dc20854f-d507-4769-ab41-0defd0bb2daa');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'dc20854f-d507-4769-ab41-0defd0bb2daa');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (90, 'LK08C1', 'Woreda 08 Health Center', 'G', 'C', NULL, 'Address not specified', 544,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '983bd547-3f92-4ffc-961d-7c3739c071ae');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '983bd547-3f92-4ffc-961d-7c3739c071ae');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (91, 'LK09C1', 'Woreda 09 Health Center', 'G', 'C', NULL, 'Address not specified', 550,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, 'bf622927-1970-429f-8a39-c7f7a2dc7129');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'bf622927-1970-429f-8a39-c7f7a2dc7129');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (92, 'LK10C1', 'Woreda 10 Health Center', 'G', 'C', NULL, 'Address not specified', 556,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '52d7758d-3b84-4427-802a-1f5425cd4ba2');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '52d7758d-3b84-4427-802a-1f5425cd4ba2');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (93, 'LK11C1', 'Woreda 11 Health Center', 'G', 'C', NULL, 'Address not specified', 562,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, 'e942faa9-74eb-41e9-a5a0-fc4129353646');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'e942faa9-74eb-41e9-a5a0-fc4129353646');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (94, 'LK12C1', 'Woreda 12 Health Center', 'G', 'C', NULL, 'Address not specified', 568,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, 'bd08d614-e8cc-4623-ae21-349f1e6f73ef');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'bd08d614-e8cc-4623-ae21-349f1e6f73ef');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (95, 'LK13C1', 'Woreda 13 Health Center', 'G', 'C', NULL, 'Address not specified', 574,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '3cfad607-9215-4eb7-a152-f9cba5ca96fa');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '3cfad607-9215-4eb7-a152-f9cba5ca96fa');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (96, 'LK14C1', 'Woreda 14 Health Center', 'G', 'C', NULL, 'Address not specified', 580,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, 'ad8e2a32-f08d-4219-b090-d9991eeaa7bd');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'ad8e2a32-f08d-4219-b090-d9991eeaa7bd');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (97, 'LI01C1', 'Woreda 01 Health Center', 'G', 'C', NULL, 'Address not specified', 587,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, 'cddfa767-f3a4-4b0e-9124-71cb3bd54d8c');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'cddfa767-f3a4-4b0e-9124-71cb3bd54d8c');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (98, 'LI02C1', 'Woreda 02 Health Center', 'G', 'C', NULL, 'Address not specified', 593,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, 'e916642f-5ae2-4ad6-8b03-3a0d01841a92');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'e916642f-5ae2-4ad6-8b03-3a0d01841a92');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (99, 'LI03C1', 'Woreda 03 Health Center', 'G', 'C', NULL, 'Address not specified', 599,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '40b07a7b-c27f-4f6c-8611-ba942b606183');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '40b07a7b-c27f-4f6c-8611-ba942b606183');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (100, 'LI04C1', 'Woreda 04 Health Center', 'G', 'C', NULL, 'Address not specified', 605,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '4789a60a-6d34-4850-b383-a0bdb155105f');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '4789a60a-6d34-4850-b383-a0bdb155105f');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (101, 'LI05C1', 'Woreda 05 Health Center', 'G', 'C', NULL, 'Address not specified', 611,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '5ab858ec-14fe-4037-8230-924fe7ef52ae');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '5ab858ec-14fe-4037-8230-924fe7ef52ae');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (102, 'LI06C1', 'Woreda 06 Health Center', 'G', 'C', NULL, 'Address not specified', 617,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '3bbae9ee-b9d1-4982-9676-f7ccd080def8');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '3bbae9ee-b9d1-4982-9676-f7ccd080def8');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (103, 'LI07C1', 'Woreda 07 Health Center', 'G', 'C', NULL, 'Address not specified', 623,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, 'adb500ba-fbfd-4479-b348-cb921b41ee0b');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'adb500ba-fbfd-4479-b348-cb921b41ee0b');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (104, 'LI08C1', 'Woreda 08 Health Center', 'G', 'C', NULL, 'Address not specified', 629,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, 'ad89a43c-3d50-46ee-9c59-216d0a82af9d');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'ad89a43c-3d50-46ee-9c59-216d0a82af9d');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (105, 'LI09C1', 'Woreda 09 Health Center', 'G', 'C', NULL, 'Address not specified', 635,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '6bf00914-3d1c-48e2-945b-0293a97ed488');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '6bf00914-3d1c-48e2-945b-0293a97ed488');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (106, 'LI10C1', 'Woreda 10 Health Center', 'G', 'C', NULL, 'Address not specified', 641,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '5440d118-44e0-4fe9-b978-9568930f1321');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '5440d118-44e0-4fe9-b978-9568930f1321');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (107, 'NS01C1', 'Woreda 01 Health Center', 'G', 'C', NULL, 'Address not specified', 648,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '657f8374-584a-45e6-82f5-944d5813375d');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '657f8374-584a-45e6-82f5-944d5813375d');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (108, 'NS02C1', 'Woreda 02 Health Center', 'G', 'C', NULL, 'Address not specified', 654,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, 'a5db16f3-b3d7-4010-b78f-4fbd54fe1a10');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'a5db16f3-b3d7-4010-b78f-4fbd54fe1a10');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (109, 'NS03C1', 'Woreda 03 Health Center', 'G', 'C', NULL, 'Address not specified', 660,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '8adb1854-2757-4ce8-8248-fb72860cd8f2');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '8adb1854-2757-4ce8-8248-fb72860cd8f2');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (110, 'NS04C1', 'Woreda 04 Health Center', 'G', 'C', NULL, 'Address not specified', 666,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, 'a4530402-4703-45b0-aa8a-7b1e4800421d');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'a4530402-4703-45b0-aa8a-7b1e4800421d');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (111, 'NS05C1', 'Woreda 05 Health Center', 'G', 'C', NULL, 'Address not specified', 672,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, 'da031741-9256-48c8-934a-aba164688477');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'da031741-9256-48c8-934a-aba164688477');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (112, 'NS06C1', 'Woreda 06 Health Center', 'G', 'C', NULL, 'Address not specified', 678,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, 'e5819d9e-8527-4c53-801c-4632001dae0c');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'e5819d9e-8527-4c53-801c-4632001dae0c');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (113, 'NS07C1', 'Woreda 07 Health Center', 'G', 'C', NULL, 'Address not specified', 684,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '8a6c869d-2444-445d-a296-48ca17bec365');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '8a6c869d-2444-445d-a296-48ca17bec365');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (114, 'NS08C1', 'Woreda 08 Health Center', 'G', 'C', NULL, 'Address not specified', 690,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '48261deb-785c-460d-a5e7-bf931d5060ee');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '48261deb-785c-460d-a5e7-bf931d5060ee');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (115, 'NS09C1', 'Woreda 09 Health Center', 'G', 'C', NULL, 'Address not specified', 696,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '218ca8ff-baae-49ee-9469-98323a01965c');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '218ca8ff-baae-49ee-9469-98323a01965c');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (116, 'NS10C1', 'Woreda 10 Health Center', 'G', 'C', NULL, 'Address not specified', 702,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, 'c66e8425-15bf-4d9d-b7c0-a57a973b250b');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'c66e8425-15bf-4d9d-b7c0-a57a973b250b');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (117, 'NS11C1', 'Woreda 11 Health Center', 'G', 'C', NULL, 'Address not specified', 708,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, 'f58733e6-46a8-4eb3-b4bc-139413e60005');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'f58733e6-46a8-4eb3-b4bc-139413e60005');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (118, 'NS12C1', 'Woreda 12 Health Center', 'G', 'C', NULL, 'Address not specified', 714,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, 'd4c3e973-d56d-46b4-99f4-249cd3e984b4');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'd4c3e973-d56d-46b4-99f4-249cd3e984b4');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (119, 'NS13C1', 'Woreda 13 Health Center', 'G', 'C', NULL, 'Address not specified', 720,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, 'd2e76711-e009-4eed-afa6-f6f81f71ffca');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'd2e76711-e009-4eed-afa6-f6f81f71ffca');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (120, 'NS14C1', 'Woreda 14 Health Center', 'G', 'C', NULL, 'Address not specified', 726,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '44f792d8-2ed3-4871-a571-3ee31840b4b8');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '44f792d8-2ed3-4871-a571-3ee31840b4b8');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (121, 'NS15C1', 'Woreda 15 Health Center', 'G', 'C', NULL, 'Address not specified', 732,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '9ff7d4ce-4e88-4a8e-85c2-397415f71561');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '9ff7d4ce-4e88-4a8e-85c2-397415f71561');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (122, 'YE01C1', 'Woreda 01 Health Center', 'G', 'C', NULL, 'Address not specified', 739,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '0bd40c28-4a61-462e-9499-8570d6c49543');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '0bd40c28-4a61-462e-9499-8570d6c49543');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (123, 'YE02C1', 'Woreda 02 Health Center', 'G', 'C', NULL, 'Address not specified', 745,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '5050f549-b0a6-4760-b691-3c6cc87acece');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '5050f549-b0a6-4760-b691-3c6cc87acece');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (124, 'YE03C1', 'Woreda 03 Health Center', 'G', 'C', NULL, 'Address not specified', 751,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '82d49fa0-e591-4167-8450-9d92a0640b37');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '82d49fa0-e591-4167-8450-9d92a0640b37');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (125, 'YE04C1', 'Woreda 04 Health Center', 'G', 'C', NULL, 'Address not specified', 757,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, 'a2292936-831d-4eb4-9f1d-69a739ac76e7');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'a2292936-831d-4eb4-9f1d-69a739ac76e7');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (126, 'YE05C1', 'Woreda 05 Health Center', 'G', 'C', NULL, 'Address not specified', 763,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '35c9dd60-003d-4e94-904c-4ab3aabbd3d2');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '35c9dd60-003d-4e94-904c-4ab3aabbd3d2');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (127, 'YE06C1', 'Woreda 06 Health Center', 'G', 'C', NULL, 'Address not specified', 769,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '7d36a541-8804-4f6e-9cda-cba5f93e37cf');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '7d36a541-8804-4f6e-9cda-cba5f93e37cf');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (128, 'YE07C1', 'Woreda 07 Health Center', 'G', 'C', NULL, 'Address not specified', 775,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '7475d853-eb52-4226-95d1-8b9506dc5020');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '7475d853-eb52-4226-95d1-8b9506dc5020');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (129, 'YE08C1', 'Woreda 08 Health Center', 'G', 'C', NULL, 'Address not specified', 781,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, 'd138a247-c615-4b0a-b6d1-8252faf39f33');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'd138a247-c615-4b0a-b6d1-8252faf39f33');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (130, 'YE09C1', 'Woreda 09 Health Center', 'G', 'C', NULL, 'Address not specified', 787,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '9cb2a376-b0e0-4348-9d5e-f76d38292f4e');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '9cb2a376-b0e0-4348-9d5e-f76d38292f4e');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (131, 'YE10C1', 'Woreda 10 Health Center', 'G', 'C', NULL, 'Address not specified', 793,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '55adf1b5-63fd-49a4-a1eb-1bda28bb107b');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '55adf1b5-63fd-49a4-a1eb-1bda28bb107b');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (132, 'YE11C1', 'Woreda 11 Health Center', 'G', 'C', NULL, 'Address not specified', 799,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, 'f017f35f-78fd-49c9-8836-303fd5eaf3ac');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'f017f35f-78fd-49c9-8836-303fd5eaf3ac');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (133, 'YE12C1', 'Woreda 12 Health Center', 'G', 'C', NULL, 'Address not specified', 805,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, 'cebacddc-c52d-4e54-8a88-2b432fd9312b');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, 'cebacddc-c52d-4e54-8a88-2b432fd9312b');
 INSERT INTO "tblHF"
 ("HfID","HFCode","HFName","LegalForm","HFLevel","HFSublevel","HFAddress","LocationId",
 "Phone","Fax","eMail","HFCareType","PLServiceID","PLItemID","AccCode","OffLine",
 "ValidityFrom","ValidityTo","LegacyID","AuditUserID","HfUUID")
 VALUES (134, 'YE13C1', 'Woreda 13 Health Center', 'G', 'C', NULL, 'Address not specified', 811,
 '', '', '', 'O', NULL, NULL, '', FALSE,
-CAST('2024-01-01T00:00:00.000N' AS timestamptz), NULL, NULL, 1, '905fd33b-1c42-4810-ad56-d6386aa7a23b');
+CAST('2024-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 1, '905fd33b-1c42-4810-ad56-d6386aa7a23b');
 
 -- tblBatchRun
 INSERT INTO "tblBatchRun" ("RunID", "LocationId", "RunDate", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID", "RunYear", "RunMonth") VALUES (1, NULL, CAST(N'2019-01-24T00:46:41.027' AS timestamptz), CAST(N'2019-01-24T00:46:41.027' AS timestamptz), NULL, NULL, 1, 2018, 1);
