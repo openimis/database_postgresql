@@ -3323,8 +3323,8 @@ INSERT INTO "tblPayerType" ("Code", "PayerType", "AltLanguage", "SortOrder") VAL
 INSERT INTO "tblPayerType" ("Code", "PayerType", "AltLanguage", "SortOrder") VALUES (N'P', N'Private Organization', NULL, NULL);
 
 -- tblPayer
-INSERT INTO "tblPayer" ("PayerID", "PayerType", "PayerName", "PayerAddress", "LocationId", "Phone", "Fax", "eMail", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID", "PayerUUID") VALUES (1, N'C', N'Coffee Farmers Association', N'HR Manager\nCoffee Farmers Association\nHolobo 29\nP.B. Box 128\nJambero, Ultha\n', 17, N'+2552127867576', N'', N'', CAST(N'2017-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 2, N'23602095-e132-4d4d-ac77-a64508323273');
-INSERT INTO "tblPayer" ("PayerID", "PayerType", "PayerName", "PayerAddress", "LocationId", "Phone", "Fax", "eMail", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID", "PayerUUID") VALUES (2, N'C', N'Coffee Farmers Association', N'HR Manager\nCoffee Farmers Association\nHolobo 29\nP.B. Box 128\nJambero, Ultha\n', 55, N'+2552127867576', N'', N'', CAST(N'2016-01-01T00:00:00.000' AS timestamptz), CAST(N'2016-12-31T00:00:00.000' AS timestamptz), 1, 2, N'4e96409c-d1dc-4a32-99ad-b46d654c8b9d');
+INSERT INTO "tblPayer" ("PayerID", "PayerType", "PayerName", "PayerAddress", "LocationId", "Phone", "Fax", "eMail", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID", "PayerUUID") VALUES (1, N'C', N'Coffee Farmers Association', N'HR Manager\nCoffee Farmers Association\nHolobo 29\nP.B. Box 128\nJambero, Ultha\n', 313, N'+2552127867576', N'', N'', CAST(N'2017-01-01T00:00:00.000' AS timestamptz), NULL, NULL, 2, N'23602095-e132-4d4d-ac77-a64508323273');
+INSERT INTO "tblPayer" ("PayerID", "PayerType", "PayerName", "PayerAddress", "LocationId", "Phone", "Fax", "eMail", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID", "PayerUUID") VALUES (2, N'C', N'Coffee Farmers Association', N'HR Manager\nCoffee Farmers Association\nHolobo 29\nP.B. Box 128\nJambero, Ultha\n', 313, N'+2552127867576', N'', N'', CAST(N'2016-01-01T00:00:00.000' AS timestamptz), CAST(N'2016-12-31T00:00:00.000' AS timestamptz), 1, 2, N'4e96409c-d1dc-4a32-99ad-b46d654c8b9d');
 
 
 -- tblPremium
