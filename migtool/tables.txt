@@ -84,7 +84,6 @@ tblHealthStatus
 tblIdentificationTypes
 tblIMISDefaults
 tblIMISDefaultsPhone
-tblLogins
 tblOfficerVillages
 tblPayerType
 tblPayment

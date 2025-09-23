@@ -3484,18 +3484,6 @@ CREATE SEQUENCE "public"."tblLocations_LocationId_seq"
 ALTER SEQUENCE "public"."tblLocations_LocationId_seq" OWNED BY "public"."tblLocations"."LocationId";
 
 
---
--- TOC entry 344 (class 1259 OID 25399)
--- Name: tblLogins; Type: TABLE; Schema: public; Owner: postgres
---
-
-CREATE TABLE "public"."tblLogins" (
-    "LoginId" integer NOT NULL,
-    "UserId" integer,
-    "LogTime" timestamp with time zone,
-    "LogAction" integer
-);
-
 
 -- ALTER TABLE "public"."tblLogins" OWNER TO "postgres";
 
@@ -6868,14 +6856,6 @@ ALTER TABLE ONLY "public"."tblLocations"
     ADD CONSTRAINT "tblLocations_pkey" PRIMARY KEY ("LocationId");
 
 
---
--- TOC entry 3689 (class 2606 OID 25403)
--- Name: tblLogins tblLogins_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
---
-
-ALTER TABLE ONLY "public"."tblLogins"
-    ADD CONSTRAINT "tblLogins_pkey" PRIMARY KEY ("LoginId");
-
 
 --
 -- TOC entry 3721 (class 2606 OID 25592)
@@ -8066,15 +8046,6 @@ ALTER TABLE ONLY "public"."tblHealthStatus"
 
 
 --
--- TOC entry 3817 (class 2606 OID 25404)
--- Name: tblLogins FK_tblLogins_tblUsers; Type: FK CONSTRAINT; Schema: public; Owner: postgres
---
-
-ALTER TABLE ONLY "public"."tblLogins"
-    ADD CONSTRAINT "FK_tblLogins_tblUsers" FOREIGN KEY ("UserId") REFERENCES "public"."tblUsers"("UserID") DEFERRABLE INITIALLY DEFERRED;
-
-
---
 -- TOC entry 3826 (class 2606 OID 25593)
 -- Name: tblOfficerVillages FK_tblOfficerVillages_tblLocations; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
@@ -8856,7 +8827,7 @@ INSERT INTO "public"."tblUsers" ("UserID", "LanguageID", "LastName", "OtherNames
 INSERT INTO "tblUsersDistricts" ("UserDistrictID", "UserID", "LocationId", "ValidityFrom", "ValidityTo", "LegacyID", "AuditUserID") VALUES (1, 1, 1, CAST(N'2017-12-16T14:26:37.713' AS timestamptz), NULL, NULL, 1);
 
 -- tblRole
-INSERT INTO "tblRole" ("RoleName", "AltLanguage", "IsSystem", "IsBlocked", "ValidityFrom", "ValidityTo", "AuditUserID", "LegacyID", "RoleUUID") VALUES (N'IMIS Administrator', NULL, 64, 0::boolean, CAST(N'2019-05-10T05:08:23.190' AS timestamptz), NULL, NULL, NULL, N'e794c4ab-3554-4f14-98c4-a5c72d6c3e9a');
+INSERT INTO "tblRole" ("RoleID", "RoleName", "AltLanguage", "IsSystem", "IsBlocked", "ValidityFrom", "ValidityTo", "AuditUserID", "LegacyID", "RoleUUID") VALUES (1, N'IMIS Administrator', NULL, 64, 0::boolean, CAST(N'2019-05-10T05:08:23.190' AS timestamptz), NULL, NULL, NULL, N'e794c4ab-3554-4f14-98c4-a5c72d6c3e9a');
 
 -- tblUserRole
 INSERT INTO "tblUserRole" ("UserRoleID", "UserID", "RoleID", "ValidityFrom", "ValidityTo", "AudituserID", "LegacyID") VALUES (1, 1, 1, CAST(N'2019-05-10T05:08:23.313' AS timestamptz), NULL, 3, NULL);
