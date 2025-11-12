@@ -11,4 +11,4 @@ RUN chmod u+x install_postgres_json_schema_extension.sh
 RUN ./install_postgres_json_schema_extension.sh
 
 FROM base AS demo
-COPY ["database scripts/demo_db.sql", "/docker-entrypoint-initdb.d/"]
+COPY ["scripts/demo_db.sql", "/docker-entrypoint-initdb.d/"]
