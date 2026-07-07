@@ -1,4 +1,4 @@
-FROM postgres:13-alpine AS base
+FROM postgres:14-alpine AS base
 
 # Script to detect whether the database has finished initializing
 COPY ["true_isready.sh", "/usr/local/bin/"]
