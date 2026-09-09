@@ -1,5 +1,10 @@
-FROM postgres:13-alpine AS base
+FROM postgres:18-alpine AS base
 
+# Volume should not be mounted on  /var/lib/postgresql/data anymore but on var/lib/postgresql
+# volumes:
+#  - database:/var/lib/postgresql
+# pg13 dataabse are not compatible, use pgdump and reload database
+# migration compose will be part of the dist_dkr
 # Script to detect whether the database has finished initializing
 COPY ["true_isready.sh", "/usr/local/bin/"]
 COPY ["database scripts/00_dump.sql", "database scripts/0[2345]_*.sql", "database scripts/json_schema_extension.sql", "/docker-entrypoint-initdb.d/"]
