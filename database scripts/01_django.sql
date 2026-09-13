@@ -237,9 +237,9 @@ CREATE INDEX "django_session_session_key_c0390e0f_like" ON "public"."django_sess
 -- TOC entry 3722 (class 2606 OID 20267)
 -- Name: auth_permission auth_permission_content_type_id_2f476e4b_fk_django_co; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
-
-ALTER TABLE ONLY "public"."auth_permission"
-    ADD CONSTRAINT "auth_permission_content_type_id_2f476e4b_fk_django_co" FOREIGN KEY ("content_type_id") REFERENCES "public"."django_content_type"("id") DEFERRABLE INITIALLY DEFERRED;
+-- duplication of "auth_permission_content_type_id_2f476e4b_fk_django_co" constraint
+-- ALTER TABLE ONLY "public"."auth_permission"
+--     ADD CONSTRAINT "auth_permission_content_type_id_2f476e4b_fk_django_co" FOREIGN KEY ("content_type_id") REFERENCES "public"."django_content_type"("id") DEFERRABLE INITIALLY DEFERRED;
 
 
 --
@@ -276,7 +276,7 @@ CREATE TABLE "public"."auth_permission" (
 );
 
 
-ALTER TABLE "public"."auth_permission" OWNER TO "postgres";
+-- ALTER TABLE "public"."auth_permission" OWNER TO "postgres";
 
 --
 -- TOC entry 206 (class 1259 OID 20241)
@@ -292,7 +292,7 @@ CREATE SEQUENCE "public"."auth_permission_id_seq"
     CACHE 1;
 
 
-ALTER TABLE "public"."auth_permission_id_seq" OWNER TO "postgres";
+-- ALTER TABLE "public"."auth_permission_id_seq" OWNER TO "postgres";
 
 --
 -- TOC entry 3993 (class 0 OID 0)
@@ -332,6 +332,58 @@ ALTER TABLE ONLY "public"."auth_permission"
 --
 
 CREATE INDEX "auth_permission_content_type_id_2f476e4b" ON "public"."auth_permission" USING "btree" ("content_type_id");
+
+
+--
+-- Table: public.auth_group
+--
+
+CREATE TABLE "public"."auth_group" (
+    "id" serial PRIMARY KEY,
+    "name" varchar(150) NOT NULL
+);
+
+--
+-- Constraints
+--
+
+ALTER TABLE ONLY "public"."auth_group"
+    ADD CONSTRAINT "auth_group_name_a6ea08ec_uniq" UNIQUE ("name");
+
+
+--
+-- Table: public.auth_group_permissions
+--
+
+CREATE TABLE "public"."auth_group_permissions" (
+    "id" serial PRIMARY KEY,
+    "group_id" integer NOT NULL,
+    "permission_id" integer NOT NULL
+);
+
+
+--
+-- Foreign Keys
+--
+
+ALTER TABLE ONLY "public"."auth_group_permissions"
+    ADD CONSTRAINT "auth_group_permissions_permission_id_84c5c92e_fk_auth_permission_id"
+    FOREIGN KEY ("permission_id") REFERENCES "public"."auth_permission"("id") DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Indexes
+--
+
+CREATE INDEX "auth_group_permissions_group_id_b120cbf9"
+    ON "public"."auth_group_permissions" ("group_id");
+
+CREATE INDEX "auth_group_permissions_permission_id_84c5c92e"
+    ON "public"."auth_group_permissions" ("permission_id");
+
+CREATE UNIQUE INDEX "auth_group_permissions_group_id_permission_id_0cd325b0_uniq"
+    ON "public"."auth_group_permissions" ("group_id", "permission_id")
+    WHERE ("group_id" IS NOT NULL AND "permission_id" IS NOT NULL);
 
 --
 -- TOC entry 3724 (class 2606 OID 20281)
